@@ -16,9 +16,13 @@ Neues Motiv: Eintrag in `katalog.mjs` und in jeder `i18n/<code>.mjs`, `./gen.sh`
 
 ## Automatik: neue Bilder nach Nachfrage
 
+Läuft täglich als **Claude-Code-Routine in der Cloud** (Ablauf: `automatik/cloud.md`), der Laptop muss nicht an sein. Die PRs prüft die GitHub Action „Prüfung“ (`automatik/pruefe-pr.sh`) und merged sie bei grünem Ergebnis automatisch, sofern sie nur Inhalte ändern. Umgebung der Routine: Setup installiert ImageMagick, rsvg und google-genai; Variablen `GOOGLE_SA_KEY_JSON`, `GOOGLE_CLOUD_PROJECT`, `GOOGLE_CLOUD_LOCATION`, `GENAI_IMAGE_MODEL`, `UMAMI_URL`, `UMAMI_USER`, `UMAMI_PASSWORD`; Netzwerk „Custom“ mit der Umami-Domain.
+
+Reserve auf dem Laptop (gleiche Schritte):
+
 Ein systemd-User-Timer (`automatik/systemd/`, verlinkt nach `~/.config/systemd/user/`) startet täglich `automatik/lauf.sh`:
 
-1. `automatik/statistik.mjs` fragt Umami nach Downloads/Drucken seit dem letzten Lauf. Unter 50 passiert nichts – außer die Jahreszeit auf der Startseite muss wechseln (dann nur neu bauen) oder ein Anlass aus `saison.mjs` steht in den nächsten 3 Wochen an und sein Thema fehlt (dann legt Claude es an).
+1. `automatik/vorbereiten.sh` mit `automatik/statistik.mjs` fragt Umami nach Downloads/Drucken seit dem letzten Lauf. Unter 50 passiert nichts – außer die Jahreszeit auf der Startseite muss wechseln (dann nur neu bauen) oder ein Anlass aus `saison.mjs` steht in den nächsten 3 Wochen an und sein Thema fehlt (dann legt Claude es an).
 2. `claude -p` arbeitet `automatik/auftrag.md` ab: höchstens 5 neue Motive in den gefragtesten Themen, Bilder erzeugen und prüfen, alle Sprachen ergänzen.
 3. Das Skript prüft (keine entfernten Bilder, Übersetzungen vollständig, keine Farbe), baut und öffnet einen Pull Request mit Vorschau. Live erst nach dem Merge.
 
