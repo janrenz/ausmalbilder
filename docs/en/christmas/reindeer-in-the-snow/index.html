@@ -39,6 +39,7 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="/stil.css">
+<script defer src="/ausmalen.js"></script>
 <script defer src="https://umami-wwuskowincn5xs0nx5pucyc0.uds.university/script.js" data-website-id="04dc4c77-67fc-49d4-a541-818a1bfeef85" data-domains="malkiste.eu" data-do-not-track="true"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Colouring pages","item":"https://malkiste.eu/en/"},{"@type":"ListItem","position":2,"name":"Christmas","item":"https://malkiste.eu/en/christmas/"},{"@type":"ListItem","position":3,"name":"Reindeer in the Snow","item":"https://malkiste.eu/en/christmas/reindeer-in-the-snow/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ImageObject","name":"Colouring page: Reindeer in the Snow","description":"Reindeer with a scarf among snowy fir trees","inLanguage":"en","contentUrl":"https://malkiste.eu/bilder/rentier.png","thumbnailUrl":"https://malkiste.eu/bilder/rentier.webp","license":"https://creativecommons.org/publicdomain/zero/1.0/","acquireLicensePage":"https://malkiste.eu/en/about/","creditText":"Malkiste","copyrightNotice":"CC0 1.0","encodingFormat":"image/png","width":896,"height":1200}</script>
@@ -66,6 +67,7 @@
     
     <p>Reindeer with a scarf among snowy fir trees. A free colouring page from the <a href="/en/christmas/">Christmas</a> topic, to print in A4.</p>
     <p class="knoepfe">
+      <button class="knopf" type="button" data-ausmalen data-umami-event="ausmalen" data-umami-event-bild="rentier" data-umami-event-thema="weihnachten" data-umami-event-sprache="en">🎨 Colour online</button>
       <a class="knopf" href="/bilder/rentier.pdf" download="colouring-page-reindeer-in-the-snow.pdf" data-umami-event="pdf" data-umami-event-bild="rentier" data-umami-event-thema="weihnachten" data-umami-event-sprache="en">Download PDF</a>
       <button class="knopf zweit" type="button" onclick="window.print()" data-umami-event="drucken" data-umami-event-bild="rentier" data-umami-event-thema="weihnachten" data-umami-event-sprache="en">Print</button>
       <a class="knopf zweit" href="/bilder/rentier.png" download="colouring-page-reindeer-in-the-snow.png" data-umami-event="png" data-umami-event-bild="rentier" data-umami-event-thema="weihnachten" data-umami-event-sprache="en">PNG</a>
@@ -84,6 +86,28 @@
   <span>Snowman</span></a></li><li class="karte"><a href="/en/christmas/gingerbread-house/">
   <img src="/bilder/lebkuchenhaus.webp" width="480" height="643" alt="Colouring page: Gingerbread house with icing and sweets" loading="lazy" decoding="async">
   <span>Gingerbread House</span></a></li></ul></section>
+<dialog class="malen" id="malen" aria-labelledby="malen-titel" data-bild="/bilder/rentier.png" data-datei="colouring-page-reindeer-in-the-snow-coloured">
+<div class="buehne"><div class="malflaeche"><canvas width="896" height="1200" aria-label="Colouring page: Reindeer with a scarf among snowy fir trees"></canvas><img alt="" width="896" height="1200" draggable="false"></div></div>
+<form class="malleiste" method="dialog">
+  <h2 id="malen-titel">Colour online</h2>
+  <fieldset class="werkzeuge"><legend class="sr">Tools</legend>
+    <label><input type="radio" name="werkzeug" value="fuellen" checked><span><span aria-hidden="true">🪣</span> <span class="wort">Fill</span></span></label><label><input type="radio" name="werkzeug" value="filzstift"><span><span aria-hidden="true">🖊️</span> <span class="wort">Felt-tip pen</span></span></label><label><input type="radio" name="werkzeug" value="buntstift"><span><span aria-hidden="true">✏️</span> <span class="wort">Coloured pencil</span></span></label><label><input type="radio" name="werkzeug" value="wachsmaler"><span><span aria-hidden="true">🖍️</span> <span class="wort">Crayon</span></span></label><label><input type="radio" name="werkzeug" value="radierer"><span><span aria-hidden="true">🧽</span> <span class="wort">Eraser</span></span></label>
+  </fieldset>
+  <fieldset class="groessen"><legend class="sr">Pen size</legend>
+    <label><input type="radio" name="groesse" value="klein"><span class="klein" title="Small"><span class="sr">Small</span></span></label><label><input type="radio" name="groesse" value="mittel" checked><span class="mittel" title="Medium"><span class="sr">Medium</span></span></label><label><input type="radio" name="groesse" value="gross"><span class="gross" title="Large"><span class="sr">Large</span></span></label>
+  </fieldset>
+  <fieldset class="farben"><legend class="sr">Colours</legend>
+    <label><input type="radio" name="farbe" value="#e53935" checked><span style="--f:#e53935" title="Red"><span class="sr">Red</span></span></label><label><input type="radio" name="farbe" value="#fb8c00"><span style="--f:#fb8c00" title="Orange"><span class="sr">Orange</span></span></label><label><input type="radio" name="farbe" value="#fdd835"><span style="--f:#fdd835" title="Yellow"><span class="sr">Yellow</span></span></label><label><input type="radio" name="farbe" value="#7cb342"><span style="--f:#7cb342" title="Light green"><span class="sr">Light green</span></span></label><label><input type="radio" name="farbe" value="#2e7d32"><span style="--f:#2e7d32" title="Dark green"><span class="sr">Dark green</span></span></label><label><input type="radio" name="farbe" value="#26a69a"><span style="--f:#26a69a" title="Turquoise"><span class="sr">Turquoise</span></span></label><label><input type="radio" name="farbe" value="#4fc3f7"><span style="--f:#4fc3f7" title="Light blue"><span class="sr">Light blue</span></span></label><label><input type="radio" name="farbe" value="#1e88e5"><span style="--f:#1e88e5" title="Blue"><span class="sr">Blue</span></span></label><label><input type="radio" name="farbe" value="#283593"><span style="--f:#283593" title="Dark blue"><span class="sr">Dark blue</span></span></label><label><input type="radio" name="farbe" value="#8e24aa"><span style="--f:#8e24aa" title="Purple"><span class="sr">Purple</span></span></label><label><input type="radio" name="farbe" value="#f48fb1"><span style="--f:#f48fb1" title="Pink"><span class="sr">Pink</span></span></label><label><input type="radio" name="farbe" value="#8d6e63"><span style="--f:#8d6e63" title="Brown"><span class="sr">Brown</span></span></label><label><input type="radio" name="farbe" value="#f5cba7"><span style="--f:#f5cba7" title="Peach"><span class="sr">Peach</span></span></label><label><input type="radio" name="farbe" value="#9e9e9e"><span style="--f:#9e9e9e" title="Grey"><span class="sr">Grey</span></span></label><label><input type="radio" name="farbe" value="#212121"><span style="--f:#212121" title="Black"><span class="sr">Black</span></span></label><label><input type="radio" name="farbe" value="#ffffff"><span style="--f:#ffffff" title="White"><span class="sr">White</span></span></label>
+    <label class="eigene"><input type="radio" name="farbe" value="eigene"><input type="color" value="#ff8a3d" aria-label="Your own colour" title="Your own colour"></label>
+  </fieldset>
+  <div class="aktionen">
+    <button class="knopf zweit" type="button" data-aktion="zurueck" disabled>↶ Undo</button>
+    <button class="knopf zweit" type="button" data-aktion="neu" data-frage="Clear everything and start again?">Start again</button>
+    <button class="knopf" type="button" data-aktion="speichern" data-umami-event="ausgemalt" data-umami-event-bild="rentier" data-umami-event-thema="weihnachten" data-umami-event-sprache="en">Save picture</button>
+    <button class="knopf zweit" value="zu">✕ Close</button>
+  </div>
+</form>
+</dialog>
 </main>
 <footer class="fuss">
   <p><strong>Malkiste</strong> – free printable colouring pages for kids, parents, nurseries and schools.</p>

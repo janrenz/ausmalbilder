@@ -39,6 +39,7 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="/stil.css">
+<script defer src="/ausmalen.js"></script>
 <script defer src="https://umami-wwuskowincn5xs0nx5pucyc0.uds.university/script.js" data-website-id="04dc4c77-67fc-49d4-a541-818a1bfeef85" data-domains="malkiste.eu" data-do-not-track="true"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Coloriages","item":"https://malkiste.eu/fr/"},{"@type":"ListItem","position":2,"name":"Véhicules","item":"https://malkiste.eu/fr/vehicules/"},{"@type":"ListItem","position":3,"name":"Camion de pompiers","item":"https://malkiste.eu/fr/vehicules/camion-pompiers/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ImageObject","name":"Coloriage : Camion de pompiers","description":"Camion de pompiers avec une échelle et une lance à incendie","inLanguage":"fr","contentUrl":"https://malkiste.eu/bilder/feuerwehrauto.png","thumbnailUrl":"https://malkiste.eu/bilder/feuerwehrauto.webp","license":"https://creativecommons.org/publicdomain/zero/1.0/","acquireLicensePage":"https://malkiste.eu/fr/a-propos/","creditText":"Malkiste","copyrightNotice":"CC0 1.0","encodingFormat":"image/png","width":896,"height":1200}</script>
@@ -66,6 +67,7 @@
     
     <p>Camion de pompiers avec une échelle et une lance à incendie. Un coloriage gratuit du thème <a href="/fr/vehicules/">Véhicules</a>, à imprimer en A4.</p>
     <p class="knoepfe">
+      <button class="knopf" type="button" data-ausmalen data-umami-event="ausmalen" data-umami-event-bild="feuerwehrauto" data-umami-event-thema="fahrzeuge" data-umami-event-sprache="fr">🎨 Colorier en ligne</button>
       <a class="knopf" href="/bilder/feuerwehrauto.pdf" download="coloriage-camion-pompiers.pdf" data-umami-event="pdf" data-umami-event-bild="feuerwehrauto" data-umami-event-thema="fahrzeuge" data-umami-event-sprache="fr">Télécharger le PDF</a>
       <button class="knopf zweit" type="button" onclick="window.print()" data-umami-event="drucken" data-umami-event-bild="feuerwehrauto" data-umami-event-thema="fahrzeuge" data-umami-event-sprache="fr">Imprimer</button>
       <a class="knopf zweit" href="/bilder/feuerwehrauto.png" download="coloriage-camion-pompiers.png" data-umami-event="png" data-umami-event-bild="feuerwehrauto" data-umami-event-thema="fahrzeuge" data-umami-event-sprache="fr">PNG</a>
@@ -84,6 +86,28 @@
   <span>Camion-poubelle</span></a></li><li class="karte"><a href="/fr/vehicules/ambulance/">
   <img src="/bilder/krankenwagen.webp" width="480" height="643" alt="Coloriage : Ambulance avec gyrophare devant un hôpital" loading="lazy" decoding="async">
   <span>Ambulance</span></a></li></ul></section>
+<dialog class="malen" id="malen" aria-labelledby="malen-titel" data-bild="/bilder/feuerwehrauto.png" data-datei="coloriage-camion-pompiers-colorie">
+<div class="buehne"><div class="malflaeche"><canvas width="896" height="1200" aria-label="Coloriage : Camion de pompiers avec une échelle et une lance à incendie"></canvas><img alt="" width="896" height="1200" draggable="false"></div></div>
+<form class="malleiste" method="dialog">
+  <h2 id="malen-titel">Colorier en ligne</h2>
+  <fieldset class="werkzeuge"><legend class="sr">Outils</legend>
+    <label><input type="radio" name="werkzeug" value="fuellen" checked><span><span aria-hidden="true">🪣</span> <span class="wort">Remplir</span></span></label><label><input type="radio" name="werkzeug" value="filzstift"><span><span aria-hidden="true">🖊️</span> <span class="wort">Feutre</span></span></label><label><input type="radio" name="werkzeug" value="buntstift"><span><span aria-hidden="true">✏️</span> <span class="wort">Crayon de couleur</span></span></label><label><input type="radio" name="werkzeug" value="wachsmaler"><span><span aria-hidden="true">🖍️</span> <span class="wort">Craie grasse</span></span></label><label><input type="radio" name="werkzeug" value="radierer"><span><span aria-hidden="true">🧽</span> <span class="wort">Gomme</span></span></label>
+  </fieldset>
+  <fieldset class="groessen"><legend class="sr">Taille du crayon</legend>
+    <label><input type="radio" name="groesse" value="klein"><span class="klein" title="Petit"><span class="sr">Petit</span></span></label><label><input type="radio" name="groesse" value="mittel" checked><span class="mittel" title="Moyen"><span class="sr">Moyen</span></span></label><label><input type="radio" name="groesse" value="gross"><span class="gross" title="Grand"><span class="sr">Grand</span></span></label>
+  </fieldset>
+  <fieldset class="farben"><legend class="sr">Couleurs</legend>
+    <label><input type="radio" name="farbe" value="#e53935" checked><span style="--f:#e53935" title="Rouge"><span class="sr">Rouge</span></span></label><label><input type="radio" name="farbe" value="#fb8c00"><span style="--f:#fb8c00" title="Orange"><span class="sr">Orange</span></span></label><label><input type="radio" name="farbe" value="#fdd835"><span style="--f:#fdd835" title="Jaune"><span class="sr">Jaune</span></span></label><label><input type="radio" name="farbe" value="#7cb342"><span style="--f:#7cb342" title="Vert clair"><span class="sr">Vert clair</span></span></label><label><input type="radio" name="farbe" value="#2e7d32"><span style="--f:#2e7d32" title="Vert foncé"><span class="sr">Vert foncé</span></span></label><label><input type="radio" name="farbe" value="#26a69a"><span style="--f:#26a69a" title="Turquoise"><span class="sr">Turquoise</span></span></label><label><input type="radio" name="farbe" value="#4fc3f7"><span style="--f:#4fc3f7" title="Bleu clair"><span class="sr">Bleu clair</span></span></label><label><input type="radio" name="farbe" value="#1e88e5"><span style="--f:#1e88e5" title="Bleu"><span class="sr">Bleu</span></span></label><label><input type="radio" name="farbe" value="#283593"><span style="--f:#283593" title="Bleu foncé"><span class="sr">Bleu foncé</span></span></label><label><input type="radio" name="farbe" value="#8e24aa"><span style="--f:#8e24aa" title="Violet"><span class="sr">Violet</span></span></label><label><input type="radio" name="farbe" value="#f48fb1"><span style="--f:#f48fb1" title="Rose"><span class="sr">Rose</span></span></label><label><input type="radio" name="farbe" value="#8d6e63"><span style="--f:#8d6e63" title="Marron"><span class="sr">Marron</span></span></label><label><input type="radio" name="farbe" value="#f5cba7"><span style="--f:#f5cba7" title="Pêche"><span class="sr">Pêche</span></span></label><label><input type="radio" name="farbe" value="#9e9e9e"><span style="--f:#9e9e9e" title="Gris"><span class="sr">Gris</span></span></label><label><input type="radio" name="farbe" value="#212121"><span style="--f:#212121" title="Noir"><span class="sr">Noir</span></span></label><label><input type="radio" name="farbe" value="#ffffff"><span style="--f:#ffffff" title="Blanc"><span class="sr">Blanc</span></span></label>
+    <label class="eigene"><input type="radio" name="farbe" value="eigene"><input type="color" value="#ff8a3d" aria-label="Couleur au choix" title="Couleur au choix"></label>
+  </fieldset>
+  <div class="aktionen">
+    <button class="knopf zweit" type="button" data-aktion="zurueck" disabled>↶ Annuler</button>
+    <button class="knopf zweit" type="button" data-aktion="neu" data-frage="Tout effacer et recommencer ?">Recommencer</button>
+    <button class="knopf" type="button" data-aktion="speichern" data-umami-event="ausgemalt" data-umami-event-bild="feuerwehrauto" data-umami-event-thema="fahrzeuge" data-umami-event-sprache="fr">Enregistrer l’image</button>
+    <button class="knopf zweit" value="zu">✕ Fermer</button>
+  </div>
+</form>
+</dialog>
 </main>
 <footer class="fuss">
   <p><strong>Malkiste</strong> – coloriages gratuits à imprimer pour les enfants, les parents, la crèche et l'école.</p>

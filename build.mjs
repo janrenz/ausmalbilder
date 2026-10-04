@@ -99,7 +99,7 @@ var l=navigator.languages&&navigator.languages.length?navigator.languages:[navig
 for(var i=0;i<l.length;i++){var k=String(l[i]).slice(0,2).toLowerCase();if(z[k]){c=k;break}}
 if(c!=="de")location.replace(z[c]+location.hash)})()</script>`;
 
-function seite(L, { pfad, titel, beschreibung, inhalt, ogBild, jsonld = [], robots, varianten }) {
+function seite(L, { pfad, titel, beschreibung, inhalt, ogBild, jsonld = [], robots, varianten, skript }) {
   const u = L.ui;
   const kanon = `${SITE}/${pfad}`;
   const og = ogBild ? `${SITE}/${ogBild}` : `${SITE}/og.jpg`;
@@ -132,6 +132,7 @@ ${alternativen.filter(([S]) => S !== L).map(([S]) => `<meta property="og:locale:
 <link rel="icon" href="${url("favicon.svg")}" type="image/svg+xml">
 <link rel="apple-touch-icon" href="${url("apple-touch-icon.png")}">
 <link rel="stylesheet" href="${url("stil.css")}">
+${skript ? `<script defer src="${url(skript)}"></script>` : ""}
 ${UMAMI ? `<script defer src="${UMAMI.url}/script.js" data-website-id="${UMAMI.id}" data-domains="${new URL(SITE).hostname}" data-do-not-track="true"></script>` : ""}
 ${jsonld.map((j) => `<script type="application/ld+json">${JSON.stringify(j)}</script>`).join("\n")}
 </head>
@@ -167,6 +168,38 @@ const krumenLd = (teile) => ({
   "@context": "https://schema.org", "@type": "BreadcrumbList",
   itemListElement: teile.map(([n, p], i) => ({ "@type": "ListItem", position: i + 1, name: n, item: `${SITE}/${p}` })),
 });
+
+// Online ausmalen: Vollbild-Dialog auf jeder Bildseite, Logik in static/ausmalen.js
+const FARBEN = ["#e53935", "#fb8c00", "#fdd835", "#7cb342", "#2e7d32", "#26a69a", "#4fc3f7", "#1e88e5",
+  "#283593", "#8e24aa", "#f48fb1", "#8d6e63", "#f5cba7", "#9e9e9e", "#212121", "#ffffff"];
+const WERKZEUGE = [["fuellen", "🪣"], ["filzstift", "🖊️"], ["buntstift", "✏️"], ["wachsmaler", "🖍️"], ["radierer", "🧽"]];
+const malDialog = (L, b, datei, ereignis) => {
+  const u = L.ui;
+  const namen = u.farbnamen.split("|");
+  const wahl = (name, wert, inhalt, an) => `<label><input type="radio" name="${name}" value="${wert}"${an ? " checked" : ""}>${inhalt}</label>`;
+  return `<dialog class="malen" id="malen" aria-labelledby="malen-titel" data-bild="${url(`bilder/${b.slug}.png`)}" data-datei="${esc(`${datei}-${u.ausmalenDatei}`)}">
+<div class="buehne"><div class="malflaeche"><canvas width="896" height="1200" aria-label="${esc(fuelle(u.bildAlt, { alt: L.bilder[b.slug].alt }))}"></canvas><img alt="" width="896" height="1200" draggable="false"></div></div>
+<form class="malleiste" method="dialog">
+  <h2 id="malen-titel">${esc(u.ausmalen)}</h2>
+  <fieldset class="werkzeuge"><legend class="sr">${esc(u.werkzeuge)}</legend>
+    ${WERKZEUGE.map(([k, i], n) => wahl("werkzeug", k, `<span><span aria-hidden="true">${i}</span> <span class="wort">${esc(u[k])}</span></span>`, n === 0)).join("")}
+  </fieldset>
+  <fieldset class="groessen"><legend class="sr">${esc(u.groesse)}</legend>
+    ${["klein", "mittel", "gross"].map((k) => wahl("groesse", k, `<span class="${k}" title="${esc(u[k])}"><span class="sr">${esc(u[k])}</span></span>`, k === "mittel")).join("")}
+  </fieldset>
+  <fieldset class="farben"><legend class="sr">${esc(u.farben)}</legend>
+    ${FARBEN.map((f, i) => wahl("farbe", f, `<span style="--f:${f}" title="${esc(namen[i])}"><span class="sr">${esc(namen[i])}</span></span>`, i === 0)).join("")}
+    <label class="eigene"><input type="radio" name="farbe" value="eigene"><input type="color" value="#ff8a3d" aria-label="${esc(u.eigeneFarbe)}" title="${esc(u.eigeneFarbe)}"></label>
+  </fieldset>
+  <div class="aktionen">
+    <button class="knopf zweit" type="button" data-aktion="zurueck" disabled>↶ ${esc(u.rueckgaengig)}</button>
+    <button class="knopf zweit" type="button" data-aktion="neu" data-frage="${esc(u.neuFrage)}">${esc(u.neuAnfangen)}</button>
+    <button class="knopf" type="button" data-aktion="speichern" data-umami-event="ausgemalt" ${ereignis}>${esc(u.speichern)}</button>
+    <button class="knopf zweit" value="zu">✕ ${esc(u.schliessen)}</button>
+  </div>
+</form>
+</dialog>`;
+};
 
 const alterLabel = (L, t) => (t.stil === "erwachsen" ? L.ui.erwachsene : t.stil ? L.ui.ab8 : "");
 
@@ -277,7 +310,7 @@ for (const L of sprachen) {
         pfad: pfadBild(L, t, b), varianten: bildV,
         titel: `${fuelle(u.bildTitel, { titel: B.titel })} | ${NAME}`,
         beschreibung: fuelle(u.bildBeschreibung, { titel: B.titel, alt: B.alt }),
-        ogBild: `bilder/${b.slug}-og.jpg`,
+        ogBild: `bilder/${b.slug}-og.jpg`, skript: "ausmalen.js",
         jsonld: [krumenLd(bk), {
           "@context": "https://schema.org", "@type": "ImageObject", name: fuelle(u.bildH1, { titel: B.titel }), description: B.alt, inLanguage: L.code,
           contentUrl: `${SITE}/bilder/${b.slug}.png`, thumbnailUrl: `${SITE}/bilder/${b.slug}.webp`,
@@ -294,6 +327,7 @@ for (const L of sprachen) {
     ${alterLabel(L, t) ? `<p class="alter">${esc(alterLabel(L, t))}</p>` : ""}
     <p>${fuelle(esc(u.bildText), { alt: esc(B.alt), link: `<a href="${url(pfadThema(L, t))}">${esc(T.name)}</a>` })}</p>
     <p class="knoepfe">
+      <button class="knopf" type="button" data-ausmalen data-umami-event="ausmalen" ${ereignis}>🎨 ${esc(u.ausmalen)}</button>
       <a class="knopf" href="${url(`bilder/${b.slug}.pdf`)}" download="${datei}.pdf" data-umami-event="pdf" ${ereignis}>${esc(u.pdf)}</a>
       <button class="knopf zweit" type="button" onclick="window.print()" data-umami-event="drucken" ${ereignis}>${esc(u.drucken)}</button>
       <a class="knopf zweit" href="${url(`bilder/${b.slug}.png`)}" download="${datei}.png" data-umami-event="png" ${ereignis}>PNG</a>
@@ -303,7 +337,8 @@ for (const L of sprachen) {
   </div>
 </article>
 <section aria-labelledby="aehnlich"><h2 id="aehnlich">${esc(fuelle(u.mehrVon, { thema: T.name }))}</h2>
-<ul class="raster">${t.bilder.filter((x) => x !== b).map((x) => karte(L, t, x)).join("")}</ul></section>`,
+<ul class="raster">${t.bilder.filter((x) => x !== b).map((x) => karte(L, t, x)).join("")}</ul></section>
+${malDialog(L, b, datei, ereignis)}`,
       }));
       if (L.code === "de") sitemap.push([bildV, datum([b])]);
     });

@@ -6,6 +6,7 @@ Statische Seite mit gemeinfreien (CC0) Ausmalbildern in 8 Sprachen: https://malk
 - `i18n/de.mjs` – deutsche Oberfläche und Rechtstexte; `i18n/<code>.mjs` – Übersetzungen (en, fr, es, it, nl, pl, pt) mit eigenen URL-Pfaden
 - `i18n/pruefe.mjs <code>` – prüft eine Übersetzung auf Vollständigkeit, Platzhalter und gültige Pfade
 - `gen.sh` – erzeugt fehlende Bilder in `src/bilder/` mit `gen-image` (Gemini) und speichert sie als Graustufen
+- `static/ausmalen.js` – Online-Ausmalen im Browser (Dialog auf jeder Bildseite, `#ausmalen` öffnet ihn direkt): Farbeimer, Filz-, Bunt-, Wachsmalstift, Radierer, Rückgängig, Speichern als PNG; nichts wird gespeichert oder hochgeladen
 - `build.mjs` – bereitet Bilder auf (WebP, A4-PDF, OG-Bild) und schreibt die Seite nach `docs/` (Deutsch in der Wurzel, andere Sprachen unter `/<code>/`, hreflang + Sitemap). Die Startseite `/` leitet Besucher von außen per Skript in ihre Browsersprache um (nicht unterstützt → Englisch), Crawler und Klicks innerhalb der Seite nicht
 - GitHub Pages liefert `docs/` vom Branch `main` aus. Eigene Domain: Datei `CNAME` mit dem Domainnamen anlegen, neu bauen.
 

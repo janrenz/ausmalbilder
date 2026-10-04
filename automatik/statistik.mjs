@@ -38,12 +38,12 @@ async function api(pfad, params = {}) {
 const liste = (rows) => rows.map((r) => ({ wert: r.x ?? r.value, n: Number(r.y ?? r.total ?? r.count ?? 0) })).filter((r) => r.wert != null);
 
 const ereignisse = Object.fromEntries(liste(await api("metrics", { type: "event" })).map((r) => [r.wert, r.n]));
-const downloads = (ereignisse.pdf || 0) + (ereignisse.drucken || 0) + (ereignisse.png || 0);
+const downloads = (ereignisse.pdf || 0) + (ereignisse.drucken || 0) + (ereignisse.png || 0) + (ereignisse.ausgemalt || 0);
 
-// Pro Eigenschaft über alle drei Ereignisse summieren
+// Pro Eigenschaft über alle Download-Ereignisse summieren (ausgemalt = online ausgemaltes Bild gespeichert)
 async function summe(eigenschaft) {
   const z = {};
-  for (const ev of ["pdf", "drucken", "png"]) {
+  for (const ev of ["pdf", "drucken", "png", "ausgemalt"]) {
     if (!ereignisse[ev]) continue;
     for (const r of liste(await api("event-data/values", { event: ev, propertyName: eigenschaft }))) z[r.wert] = (z[r.wert] || 0) + r.n;
   }

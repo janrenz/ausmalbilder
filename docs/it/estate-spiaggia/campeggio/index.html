@@ -39,6 +39,7 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="/stil.css">
+<script defer src="/ausmalen.js"></script>
 <script defer src="https://umami-wwuskowincn5xs0nx5pucyc0.uds.university/script.js" data-website-id="04dc4c77-67fc-49d4-a541-818a1bfeef85" data-domains="malkiste.eu" data-do-not-track="true"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Disegni da colorare","item":"https://malkiste.eu/it/"},{"@type":"ListItem","position":2,"name":"Estate e spiaggia","item":"https://malkiste.eu/it/estate-spiaggia/"},{"@type":"ListItem","position":3,"name":"Campeggio","item":"https://malkiste.eu/it/estate-spiaggia/campeggio/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ImageObject","name":"Disegno da colorare: Campeggio","description":"Tenda sul lago con falò","inLanguage":"it","contentUrl":"https://malkiste.eu/bilder/camping.png","thumbnailUrl":"https://malkiste.eu/bilder/camping.webp","license":"https://creativecommons.org/publicdomain/zero/1.0/","acquireLicensePage":"https://malkiste.eu/it/informazioni/","creditText":"Malkiste","copyrightNotice":"CC0 1.0","encodingFormat":"image/png","width":896,"height":1200}</script>
@@ -66,6 +67,7 @@
     
     <p>Tenda sul lago con falò. Un disegno da colorare gratuito del tema <a href="/it/estate-spiaggia/">Estate e spiaggia</a>, da stampare in A4.</p>
     <p class="knoepfe">
+      <button class="knopf" type="button" data-ausmalen data-umami-event="ausmalen" data-umami-event-bild="camping" data-umami-event-thema="sommer" data-umami-event-sprache="it">🎨 Colora online</button>
       <a class="knopf" href="/bilder/camping.pdf" download="disegno-da-colorare-campeggio.pdf" data-umami-event="pdf" data-umami-event-bild="camping" data-umami-event-thema="sommer" data-umami-event-sprache="it">Scarica il PDF</a>
       <button class="knopf zweit" type="button" onclick="window.print()" data-umami-event="drucken" data-umami-event-bild="camping" data-umami-event-thema="sommer" data-umami-event-sprache="it">Stampa</button>
       <a class="knopf zweit" href="/bilder/camping.png" download="disegno-da-colorare-campeggio.png" data-umami-event="png" data-umami-event-bild="camping" data-umami-event-thema="sommer" data-umami-event-sprache="it">PNG</a>
@@ -84,6 +86,28 @@
   <span>Giornata in spiaggia</span></a></li><li class="karte"><a href="/it/estate-spiaggia/picnic/">
   <img src="/bilder/picknick.webp" width="480" height="643" alt="Disegno da colorare: Coperta da picnic con cesto sotto un albero" loading="lazy" decoding="async">
   <span>Picnic</span></a></li></ul></section>
+<dialog class="malen" id="malen" aria-labelledby="malen-titel" data-bild="/bilder/camping.png" data-datei="disegno-da-colorare-campeggio-colorato">
+<div class="buehne"><div class="malflaeche"><canvas width="896" height="1200" aria-label="Disegno da colorare: Tenda sul lago con falò"></canvas><img alt="" width="896" height="1200" draggable="false"></div></div>
+<form class="malleiste" method="dialog">
+  <h2 id="malen-titel">Colora online</h2>
+  <fieldset class="werkzeuge"><legend class="sr">Strumenti</legend>
+    <label><input type="radio" name="werkzeug" value="fuellen" checked><span><span aria-hidden="true">🪣</span> <span class="wort">Riempi</span></span></label><label><input type="radio" name="werkzeug" value="filzstift"><span><span aria-hidden="true">🖊️</span> <span class="wort">Pennarello</span></span></label><label><input type="radio" name="werkzeug" value="buntstift"><span><span aria-hidden="true">✏️</span> <span class="wort">Matita colorata</span></span></label><label><input type="radio" name="werkzeug" value="wachsmaler"><span><span aria-hidden="true">🖍️</span> <span class="wort">Pastello a cera</span></span></label><label><input type="radio" name="werkzeug" value="radierer"><span><span aria-hidden="true">🧽</span> <span class="wort">Gomma</span></span></label>
+  </fieldset>
+  <fieldset class="groessen"><legend class="sr">Dimensione</legend>
+    <label><input type="radio" name="groesse" value="klein"><span class="klein" title="Piccola"><span class="sr">Piccola</span></span></label><label><input type="radio" name="groesse" value="mittel" checked><span class="mittel" title="Media"><span class="sr">Media</span></span></label><label><input type="radio" name="groesse" value="gross"><span class="gross" title="Grande"><span class="sr">Grande</span></span></label>
+  </fieldset>
+  <fieldset class="farben"><legend class="sr">Colori</legend>
+    <label><input type="radio" name="farbe" value="#e53935" checked><span style="--f:#e53935" title="Rosso"><span class="sr">Rosso</span></span></label><label><input type="radio" name="farbe" value="#fb8c00"><span style="--f:#fb8c00" title="Arancione"><span class="sr">Arancione</span></span></label><label><input type="radio" name="farbe" value="#fdd835"><span style="--f:#fdd835" title="Giallo"><span class="sr">Giallo</span></span></label><label><input type="radio" name="farbe" value="#7cb342"><span style="--f:#7cb342" title="Verde chiaro"><span class="sr">Verde chiaro</span></span></label><label><input type="radio" name="farbe" value="#2e7d32"><span style="--f:#2e7d32" title="Verde scuro"><span class="sr">Verde scuro</span></span></label><label><input type="radio" name="farbe" value="#26a69a"><span style="--f:#26a69a" title="Turchese"><span class="sr">Turchese</span></span></label><label><input type="radio" name="farbe" value="#4fc3f7"><span style="--f:#4fc3f7" title="Azzurro"><span class="sr">Azzurro</span></span></label><label><input type="radio" name="farbe" value="#1e88e5"><span style="--f:#1e88e5" title="Blu"><span class="sr">Blu</span></span></label><label><input type="radio" name="farbe" value="#283593"><span style="--f:#283593" title="Blu scuro"><span class="sr">Blu scuro</span></span></label><label><input type="radio" name="farbe" value="#8e24aa"><span style="--f:#8e24aa" title="Viola"><span class="sr">Viola</span></span></label><label><input type="radio" name="farbe" value="#f48fb1"><span style="--f:#f48fb1" title="Rosa"><span class="sr">Rosa</span></span></label><label><input type="radio" name="farbe" value="#8d6e63"><span style="--f:#8d6e63" title="Marrone"><span class="sr">Marrone</span></span></label><label><input type="radio" name="farbe" value="#f5cba7"><span style="--f:#f5cba7" title="Pesca"><span class="sr">Pesca</span></span></label><label><input type="radio" name="farbe" value="#9e9e9e"><span style="--f:#9e9e9e" title="Grigio"><span class="sr">Grigio</span></span></label><label><input type="radio" name="farbe" value="#212121"><span style="--f:#212121" title="Nero"><span class="sr">Nero</span></span></label><label><input type="radio" name="farbe" value="#ffffff"><span style="--f:#ffffff" title="Bianco"><span class="sr">Bianco</span></span></label>
+    <label class="eigene"><input type="radio" name="farbe" value="eigene"><input type="color" value="#ff8a3d" aria-label="Colore a scelta" title="Colore a scelta"></label>
+  </fieldset>
+  <div class="aktionen">
+    <button class="knopf zweit" type="button" data-aktion="zurueck" disabled>↶ Annulla</button>
+    <button class="knopf zweit" type="button" data-aktion="neu" data-frage="Cancellare tutto e ricominciare?">Ricomincia</button>
+    <button class="knopf" type="button" data-aktion="speichern" data-umami-event="ausgemalt" data-umami-event-bild="camping" data-umami-event-thema="sommer" data-umami-event-sprache="it">Salva disegno</button>
+    <button class="knopf zweit" value="zu">✕ Chiudi</button>
+  </div>
+</form>
+</dialog>
 </main>
 <footer class="fuss">
   <p><strong>Malkiste</strong> – disegni da colorare gratis da stampare per bambini, genitori, asilo e scuola.</p>

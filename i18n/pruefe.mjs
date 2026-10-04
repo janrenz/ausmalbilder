@@ -9,6 +9,7 @@ for (const k of Object.keys(de.ui)) {
   if (typeof l.ui?.[k] !== "string") { fehler.push(`ui.${k} fehlt`); continue; }
   for (const p of de.ui[k].match(/\{\w+\}/g) || []) if (!l.ui[k].includes(p)) fehler.push(`ui.${k}: Platzhalter ${p} fehlt`);
 }
+if (l.ui?.farbnamen?.split("|").length !== de.ui.farbnamen.split("|").length) fehler.push(`ui.farbnamen: ${de.ui.farbnamen.split("|").length} Namen mit | getrennt erwartet`);
 for (const k of Object.keys(de.seiten)) {
   const s = l.seiten?.[k];
   if (!s) { fehler.push(`seiten.${k} fehlt`); continue; }

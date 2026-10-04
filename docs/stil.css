@@ -94,3 +94,46 @@ main { max-width: 1160px; margin: 0 auto; padding: 0 16px 48px; }
 .alter { display: inline-block; background: var(--akzent-hell); border-radius: 999px; padding: 2px 12px; font-size: .9rem; font-weight: 700; margin: 0; }
 .sprachen { font-size: .9rem; }
 @media print { .sprachwahl { display: none; } }
+
+/* Online ausmalen */
+.malen { width: 100vw; height: 100dvh; max-width: none; max-height: none; margin: 0; padding: 0; border: 0; background: var(--papier); color: var(--tinte); }
+.malen[open] { display: grid; grid-template-columns: minmax(0, 1fr) 320px; }
+.malen::backdrop { background: rgba(0, 0, 0, .5); }
+.buehne { container-type: size; display: grid; place-items: center; padding: 12px; min-height: 0; }
+.malflaeche { position: relative; width: min(100cqw, 100cqh * 896 / 1200); aspect-ratio: 896 / 1200; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(0, 0, 0, .18); }
+.malflaeche canvas, .malflaeche img { position: absolute; inset: 0; width: 100%; height: 100%; }
+.malflaeche canvas { touch-action: none; cursor: crosshair; }
+.malflaeche img { mix-blend-mode: multiply; pointer-events: none; user-select: none; }
+.malleiste { margin: 0; overflow-y: auto; padding: 16px; background: var(--karte); border-left: 3px dashed var(--rand); display: flex; flex-direction: column; gap: 14px; }
+.malleiste h2 { margin: 0; font-size: 1.3rem; }
+.malleiste fieldset { border: 0; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.malleiste label { position: relative; cursor: pointer; }
+.malleiste input[type="radio"] { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.malleiste input:focus-visible + span { outline: 3px solid var(--akzent); outline-offset: 2px; }
+.werkzeuge label > span { display: block; padding: 7px 12px; border: 2px solid var(--rand); border-radius: 999px; font-weight: 700; font-size: .95rem; }
+.werkzeuge input:checked + span { background: var(--akzent); border-color: var(--akzent); color: var(--auf-akzent); }
+.groessen label > span { display: grid; place-items: center; width: 44px; height: 44px; border: 2px solid var(--rand); border-radius: 50%; }
+.groessen label > span::before { content: ""; display: block; border-radius: 50%; background: var(--tinte); width: 6px; height: 6px; }
+.groessen .mittel::before { width: 12px; height: 12px; }
+.groessen .gross::before { width: 22px; height: 22px; }
+.groessen input:checked + span { border-color: var(--akzent); background: var(--akzent-hell); }
+.farben label > span { display: block; width: 38px; height: 38px; border-radius: 50%; background: var(--f); border: 2px solid rgba(0, 0, 0, .25); }
+.farben input:checked + span, .farben .eigene input:checked ~ input { box-shadow: 0 0 0 3px var(--karte), 0 0 0 6px var(--tinte); }
+.farben input[type="color"] { display: block; width: 38px; height: 38px; padding: 0; border: 2px solid rgba(0, 0, 0, .25); border-radius: 50%; background: conic-gradient(red, yellow, lime, cyan, blue, magenta, red); cursor: pointer; }
+.farben input[type="color"]::-webkit-color-swatch-wrapper { padding: 6px; }
+.farben input[type="color"]::-webkit-color-swatch { border: 0; border-radius: 50%; }
+.farben input[type="color"]::-moz-color-swatch { border: 0; border-radius: 50%; }
+.aktionen { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; }
+.aktionen .knopf { padding: 9px 16px; font-size: .95rem; }
+.aktionen .knopf:disabled { opacity: .45; cursor: default; filter: none; }
+@media (max-width: 760px) {
+  .malen[open] { grid-template-columns: 1fr; grid-template-rows: minmax(0, 1fr) auto; }
+  .malleiste { border-left: 0; border-top: 3px dashed var(--rand); padding: 10px 12px; gap: 8px; max-height: 48dvh; }
+  .malleiste h2, .werkzeuge .wort { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .werkzeuge label > span { font-size: 1.3rem; padding: 4px 12px; }
+  .groessen label > span { width: 38px; height: 38px; }
+  .farben label > span, .farben input[type="color"] { width: 32px; height: 32px; }
+  .farben input[type="color"]::-webkit-color-swatch-wrapper { padding: 4px; }
+  .aktionen .knopf { padding: 7px 12px; font-size: .85rem; }
+}
+@media print { .malen { display: none !important; } }

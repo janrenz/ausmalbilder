@@ -39,6 +39,7 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="/stil.css">
+<script defer src="/ausmalen.js"></script>
 <script defer src="https://umami-wwuskowincn5xs0nx5pucyc0.uds.university/script.js" data-website-id="04dc4c77-67fc-49d4-a541-818a1bfeef85" data-domains="malkiste.eu" data-do-not-track="true"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Kleurplaten","item":"https://malkiste.eu/nl/"},{"@type":"ListItem","position":2,"name":"Mode","item":"https://malkiste.eu/nl/mode/"},{"@type":"ListItem","position":3,"name":"Outfits ontwerpen","item":"https://malkiste.eu/nl/mode/outfits-ontwerpen/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ImageObject","name":"Kleurplaat: Outfits ontwerpen","description":"Drie jonge modellen in verschillende outfits: streetwear, jurk en spijkerjasje","inLanguage":"nl","contentUrl":"https://malkiste.eu/bilder/mode-outfits.png","thumbnailUrl":"https://malkiste.eu/bilder/mode-outfits.webp","license":"https://creativecommons.org/publicdomain/zero/1.0/","acquireLicensePage":"https://malkiste.eu/nl/over-de-kleurplaten/","creditText":"Malkiste","copyrightNotice":"CC0 1.0","encodingFormat":"image/png","width":896,"height":1200}</script>
@@ -66,6 +67,7 @@
     <p class="alter">vanaf 8 jaar</p>
     <p>Drie jonge modellen in verschillende outfits: streetwear, jurk en spijkerjasje. Een gratis kleurplaat uit het thema <a href="/nl/mode/">Mode</a> – om te printen in A4.</p>
     <p class="knoepfe">
+      <button class="knopf" type="button" data-ausmalen data-umami-event="ausmalen" data-umami-event-bild="mode-outfits" data-umami-event-thema="mode" data-umami-event-sprache="nl">🎨 Online kleuren</button>
       <a class="knopf" href="/bilder/mode-outfits.pdf" download="kleurplaat-outfits-ontwerpen.pdf" data-umami-event="pdf" data-umami-event-bild="mode-outfits" data-umami-event-thema="mode" data-umami-event-sprache="nl">Pdf downloaden</a>
       <button class="knopf zweit" type="button" onclick="window.print()" data-umami-event="drucken" data-umami-event-bild="mode-outfits" data-umami-event-thema="mode" data-umami-event-sprache="nl">Printen</button>
       <a class="knopf zweit" href="/bilder/mode-outfits.png" download="kleurplaat-outfits-ontwerpen.png" data-umami-event="png" data-umami-event-bild="mode-outfits" data-umami-event-thema="mode" data-umami-event-sprache="nl">PNG</a>
@@ -84,6 +86,28 @@
   <span>Kledingkast</span></a></li><li class="karte"><a href="/nl/mode/accessoires/">
   <img src="/bilder/mode-accessoires.webp" width="480" height="643" alt="Kleurplaat: Tassen, zonnebrillen, hoeden en sieraden" loading="lazy" decoding="async">
   <span>Accessoires</span></a></li></ul></section>
+<dialog class="malen" id="malen" aria-labelledby="malen-titel" data-bild="/bilder/mode-outfits.png" data-datei="kleurplaat-outfits-ontwerpen-ingekleurd">
+<div class="buehne"><div class="malflaeche"><canvas width="896" height="1200" aria-label="Kleurplaat: Drie jonge modellen in verschillende outfits: streetwear, jurk en spijkerjasje"></canvas><img alt="" width="896" height="1200" draggable="false"></div></div>
+<form class="malleiste" method="dialog">
+  <h2 id="malen-titel">Online kleuren</h2>
+  <fieldset class="werkzeuge"><legend class="sr">Gereedschap</legend>
+    <label><input type="radio" name="werkzeug" value="fuellen" checked><span><span aria-hidden="true">🪣</span> <span class="wort">Vullen</span></span></label><label><input type="radio" name="werkzeug" value="filzstift"><span><span aria-hidden="true">🖊️</span> <span class="wort">Viltstift</span></span></label><label><input type="radio" name="werkzeug" value="buntstift"><span><span aria-hidden="true">✏️</span> <span class="wort">Kleurpotlood</span></span></label><label><input type="radio" name="werkzeug" value="wachsmaler"><span><span aria-hidden="true">🖍️</span> <span class="wort">Waskrijt</span></span></label><label><input type="radio" name="werkzeug" value="radierer"><span><span aria-hidden="true">🧽</span> <span class="wort">Gum</span></span></label>
+  </fieldset>
+  <fieldset class="groessen"><legend class="sr">Stiftdikte</legend>
+    <label><input type="radio" name="groesse" value="klein"><span class="klein" title="Klein"><span class="sr">Klein</span></span></label><label><input type="radio" name="groesse" value="mittel" checked><span class="mittel" title="Middel"><span class="sr">Middel</span></span></label><label><input type="radio" name="groesse" value="gross"><span class="gross" title="Groot"><span class="sr">Groot</span></span></label>
+  </fieldset>
+  <fieldset class="farben"><legend class="sr">Kleuren</legend>
+    <label><input type="radio" name="farbe" value="#e53935" checked><span style="--f:#e53935" title="Rood"><span class="sr">Rood</span></span></label><label><input type="radio" name="farbe" value="#fb8c00"><span style="--f:#fb8c00" title="Oranje"><span class="sr">Oranje</span></span></label><label><input type="radio" name="farbe" value="#fdd835"><span style="--f:#fdd835" title="Geel"><span class="sr">Geel</span></span></label><label><input type="radio" name="farbe" value="#7cb342"><span style="--f:#7cb342" title="Lichtgroen"><span class="sr">Lichtgroen</span></span></label><label><input type="radio" name="farbe" value="#2e7d32"><span style="--f:#2e7d32" title="Donkergroen"><span class="sr">Donkergroen</span></span></label><label><input type="radio" name="farbe" value="#26a69a"><span style="--f:#26a69a" title="Turquoise"><span class="sr">Turquoise</span></span></label><label><input type="radio" name="farbe" value="#4fc3f7"><span style="--f:#4fc3f7" title="Lichtblauw"><span class="sr">Lichtblauw</span></span></label><label><input type="radio" name="farbe" value="#1e88e5"><span style="--f:#1e88e5" title="Blauw"><span class="sr">Blauw</span></span></label><label><input type="radio" name="farbe" value="#283593"><span style="--f:#283593" title="Donkerblauw"><span class="sr">Donkerblauw</span></span></label><label><input type="radio" name="farbe" value="#8e24aa"><span style="--f:#8e24aa" title="Paars"><span class="sr">Paars</span></span></label><label><input type="radio" name="farbe" value="#f48fb1"><span style="--f:#f48fb1" title="Roze"><span class="sr">Roze</span></span></label><label><input type="radio" name="farbe" value="#8d6e63"><span style="--f:#8d6e63" title="Bruin"><span class="sr">Bruin</span></span></label><label><input type="radio" name="farbe" value="#f5cba7"><span style="--f:#f5cba7" title="Perzik"><span class="sr">Perzik</span></span></label><label><input type="radio" name="farbe" value="#9e9e9e"><span style="--f:#9e9e9e" title="Grijs"><span class="sr">Grijs</span></span></label><label><input type="radio" name="farbe" value="#212121"><span style="--f:#212121" title="Zwart"><span class="sr">Zwart</span></span></label><label><input type="radio" name="farbe" value="#ffffff"><span style="--f:#ffffff" title="Wit"><span class="sr">Wit</span></span></label>
+    <label class="eigene"><input type="radio" name="farbe" value="eigene"><input type="color" value="#ff8a3d" aria-label="Eigen kleur" title="Eigen kleur"></label>
+  </fieldset>
+  <div class="aktionen">
+    <button class="knopf zweit" type="button" data-aktion="zurueck" disabled>↶ Ongedaan maken</button>
+    <button class="knopf zweit" type="button" data-aktion="neu" data-frage="Alles wissen en opnieuw beginnen?">Opnieuw beginnen</button>
+    <button class="knopf" type="button" data-aktion="speichern" data-umami-event="ausgemalt" data-umami-event-bild="mode-outfits" data-umami-event-thema="mode" data-umami-event-sprache="nl">Tekening opslaan</button>
+    <button class="knopf zweit" value="zu">✕ Sluiten</button>
+  </div>
+</form>
+</dialog>
 </main>
 <footer class="fuss">
   <p><strong>Malkiste</strong> – gratis kleurplaten om te printen voor kinderen, ouders, opvang en school.</p>

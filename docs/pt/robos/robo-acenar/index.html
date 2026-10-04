@@ -39,6 +39,7 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="/stil.css">
+<script defer src="/ausmalen.js"></script>
 <script defer src="https://umami-wwuskowincn5xs0nx5pucyc0.uds.university/script.js" data-website-id="04dc4c77-67fc-49d4-a541-818a1bfeef85" data-domains="malkiste.eu" data-do-not-track="true"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Desenhos para colorir","item":"https://malkiste.eu/pt/"},{"@type":"ListItem","position":2,"name":"Robôs","item":"https://malkiste.eu/pt/robos/"},{"@type":"ListItem","position":3,"name":"Robô a acenar","item":"https://malkiste.eu/pt/robos/robo-acenar/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ImageObject","name":"Desenho para colorir: Robô a acenar","description":"Robô simpático com antenas a acenar","inLanguage":"pt","contentUrl":"https://malkiste.eu/bilder/roboter-winkt.png","thumbnailUrl":"https://malkiste.eu/bilder/roboter-winkt.webp","license":"https://creativecommons.org/publicdomain/zero/1.0/","acquireLicensePage":"https://malkiste.eu/pt/sobre/","creditText":"Malkiste","copyrightNotice":"CC0 1.0","encodingFormat":"image/png","width":896,"height":1200}</script>
@@ -66,6 +67,7 @@
     
     <p>Robô simpático com antenas a acenar. Um desenho para colorir grátis do tema <a href="/pt/robos/">Robôs</a> – para imprimir em A4.</p>
     <p class="knoepfe">
+      <button class="knopf" type="button" data-ausmalen data-umami-event="ausmalen" data-umami-event-bild="roboter-winkt" data-umami-event-thema="roboter" data-umami-event-sprache="pt">🎨 Pintar online</button>
       <a class="knopf" href="/bilder/roboter-winkt.pdf" download="desenho-para-colorir-robo-acenar.pdf" data-umami-event="pdf" data-umami-event-bild="roboter-winkt" data-umami-event-thema="roboter" data-umami-event-sprache="pt">Descarregar PDF</a>
       <button class="knopf zweit" type="button" onclick="window.print()" data-umami-event="drucken" data-umami-event-bild="roboter-winkt" data-umami-event-thema="roboter" data-umami-event-sprache="pt">Imprimir</button>
       <a class="knopf zweit" href="/bilder/roboter-winkt.png" download="desenho-para-colorir-robo-acenar.png" data-umami-event="png" data-umami-event-bild="roboter-winkt" data-umami-event-thema="roboter" data-umami-event-sprache="pt">PNG</a>
@@ -84,6 +86,28 @@
   <span>Robô no espaço</span></a></li><li class="karte"><a href="/pt/robos/robos-amigos/">
   <img src="/bilder/roboter-freunde.webp" width="480" height="643" alt="Desenho para colorir: Três robôs diferentes de mãos dadas" loading="lazy" decoding="async">
   <span>Robôs amigos</span></a></li></ul></section>
+<dialog class="malen" id="malen" aria-labelledby="malen-titel" data-bild="/bilder/roboter-winkt.png" data-datei="desenho-para-colorir-robo-acenar-pintado">
+<div class="buehne"><div class="malflaeche"><canvas width="896" height="1200" aria-label="Desenho para colorir: Robô simpático com antenas a acenar"></canvas><img alt="" width="896" height="1200" draggable="false"></div></div>
+<form class="malleiste" method="dialog">
+  <h2 id="malen-titel">Pintar online</h2>
+  <fieldset class="werkzeuge"><legend class="sr">Ferramentas</legend>
+    <label><input type="radio" name="werkzeug" value="fuellen" checked><span><span aria-hidden="true">🪣</span> <span class="wort">Preencher</span></span></label><label><input type="radio" name="werkzeug" value="filzstift"><span><span aria-hidden="true">🖊️</span> <span class="wort">Marcador</span></span></label><label><input type="radio" name="werkzeug" value="buntstift"><span><span aria-hidden="true">✏️</span> <span class="wort">Lápis de cor</span></span></label><label><input type="radio" name="werkzeug" value="wachsmaler"><span><span aria-hidden="true">🖍️</span> <span class="wort">Lápis de cera</span></span></label><label><input type="radio" name="werkzeug" value="radierer"><span><span aria-hidden="true">🧽</span> <span class="wort">Borracha</span></span></label>
+  </fieldset>
+  <fieldset class="groessen"><legend class="sr">Tamanho</legend>
+    <label><input type="radio" name="groesse" value="klein"><span class="klein" title="Pequeno"><span class="sr">Pequeno</span></span></label><label><input type="radio" name="groesse" value="mittel" checked><span class="mittel" title="Médio"><span class="sr">Médio</span></span></label><label><input type="radio" name="groesse" value="gross"><span class="gross" title="Grande"><span class="sr">Grande</span></span></label>
+  </fieldset>
+  <fieldset class="farben"><legend class="sr">Cores</legend>
+    <label><input type="radio" name="farbe" value="#e53935" checked><span style="--f:#e53935" title="Vermelho"><span class="sr">Vermelho</span></span></label><label><input type="radio" name="farbe" value="#fb8c00"><span style="--f:#fb8c00" title="Laranja"><span class="sr">Laranja</span></span></label><label><input type="radio" name="farbe" value="#fdd835"><span style="--f:#fdd835" title="Amarelo"><span class="sr">Amarelo</span></span></label><label><input type="radio" name="farbe" value="#7cb342"><span style="--f:#7cb342" title="Verde-claro"><span class="sr">Verde-claro</span></span></label><label><input type="radio" name="farbe" value="#2e7d32"><span style="--f:#2e7d32" title="Verde-escuro"><span class="sr">Verde-escuro</span></span></label><label><input type="radio" name="farbe" value="#26a69a"><span style="--f:#26a69a" title="Turquesa"><span class="sr">Turquesa</span></span></label><label><input type="radio" name="farbe" value="#4fc3f7"><span style="--f:#4fc3f7" title="Azul-claro"><span class="sr">Azul-claro</span></span></label><label><input type="radio" name="farbe" value="#1e88e5"><span style="--f:#1e88e5" title="Azul"><span class="sr">Azul</span></span></label><label><input type="radio" name="farbe" value="#283593"><span style="--f:#283593" title="Azul-escuro"><span class="sr">Azul-escuro</span></span></label><label><input type="radio" name="farbe" value="#8e24aa"><span style="--f:#8e24aa" title="Roxo"><span class="sr">Roxo</span></span></label><label><input type="radio" name="farbe" value="#f48fb1"><span style="--f:#f48fb1" title="Cor-de-rosa"><span class="sr">Cor-de-rosa</span></span></label><label><input type="radio" name="farbe" value="#8d6e63"><span style="--f:#8d6e63" title="Castanho"><span class="sr">Castanho</span></span></label><label><input type="radio" name="farbe" value="#f5cba7"><span style="--f:#f5cba7" title="Pêssego"><span class="sr">Pêssego</span></span></label><label><input type="radio" name="farbe" value="#9e9e9e"><span style="--f:#9e9e9e" title="Cinzento"><span class="sr">Cinzento</span></span></label><label><input type="radio" name="farbe" value="#212121"><span style="--f:#212121" title="Preto"><span class="sr">Preto</span></span></label><label><input type="radio" name="farbe" value="#ffffff"><span style="--f:#ffffff" title="Branco"><span class="sr">Branco</span></span></label>
+    <label class="eigene"><input type="radio" name="farbe" value="eigene"><input type="color" value="#ff8a3d" aria-label="Cor à escolha" title="Cor à escolha"></label>
+  </fieldset>
+  <div class="aktionen">
+    <button class="knopf zweit" type="button" data-aktion="zurueck" disabled>↶ Anular</button>
+    <button class="knopf zweit" type="button" data-aktion="neu" data-frage="Apagar tudo e recomeçar?">Recomeçar</button>
+    <button class="knopf" type="button" data-aktion="speichern" data-umami-event="ausgemalt" data-umami-event-bild="roboter-winkt" data-umami-event-thema="roboter" data-umami-event-sprache="pt">Guardar desenho</button>
+    <button class="knopf zweit" value="zu">✕ Fechar</button>
+  </div>
+</form>
+</dialog>
 </main>
 <footer class="fuss">
   <p><strong>Malkiste</strong> – desenhos para colorir grátis para imprimir, para crianças, pais, infantário e escola.</p>

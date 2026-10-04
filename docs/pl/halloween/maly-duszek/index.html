@@ -39,6 +39,7 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="/stil.css">
+<script defer src="/ausmalen.js"></script>
 <script defer src="https://umami-wwuskowincn5xs0nx5pucyc0.uds.university/script.js" data-website-id="04dc4c77-67fc-49d4-a541-818a1bfeef85" data-domains="malkiste.eu" data-do-not-track="true"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Kolorowanki","item":"https://malkiste.eu/pl/"},{"@type":"ListItem","position":2,"name":"Halloween","item":"https://malkiste.eu/pl/halloween/"},{"@type":"ListItem","position":3,"name":"Mały duszek","item":"https://malkiste.eu/pl/halloween/maly-duszek/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ImageObject","name":"Kolorowanka: Mały duszek","description":"przyjazny mały duszek przed starym domem","inLanguage":"pl","contentUrl":"https://malkiste.eu/bilder/gespenst.png","thumbnailUrl":"https://malkiste.eu/bilder/gespenst.webp","license":"https://creativecommons.org/publicdomain/zero/1.0/","acquireLicensePage":"https://malkiste.eu/pl/o-kolorowankach/","creditText":"Malkiste","copyrightNotice":"CC0 1.0","encodingFormat":"image/png","width":896,"height":1200}</script>
@@ -66,6 +67,7 @@
     
     <p>przyjazny mały duszek przed starym domem. Darmowa kolorowanka z tematu <a href="/pl/halloween/">Halloween</a> – do wydrukowania w formacie A4.</p>
     <p class="knoepfe">
+      <button class="knopf" type="button" data-ausmalen data-umami-event="ausmalen" data-umami-event-bild="gespenst" data-umami-event-thema="halloween" data-umami-event-sprache="pl">🎨 Koloruj online</button>
       <a class="knopf" href="/bilder/gespenst.pdf" download="kolorowanka-maly-duszek.pdf" data-umami-event="pdf" data-umami-event-bild="gespenst" data-umami-event-thema="halloween" data-umami-event-sprache="pl">Pobierz PDF</a>
       <button class="knopf zweit" type="button" onclick="window.print()" data-umami-event="drucken" data-umami-event-bild="gespenst" data-umami-event-thema="halloween" data-umami-event-sprache="pl">Drukuj</button>
       <a class="knopf zweit" href="/bilder/gespenst.png" download="kolorowanka-maly-duszek.png" data-umami-event="png" data-umami-event-bild="gespenst" data-umami-event-thema="halloween" data-umami-event-sprache="pl">PNG</a>
@@ -86,6 +88,28 @@
   <span>Mały nietoperz</span></a></li><li class="karte"><a href="/pl/halloween/rodzina-dyn/">
   <img src="/bilder/kuerbis-familie.webp" width="480" height="643" alt="Kolorowanka: cztery wydrążone dynie różnej wielkości na drewnianych schodach przed domem, na poręczy siedzi sowa" loading="lazy" decoding="async">
   <span>Rodzina dyń na schodach</span></a></li></ul></section>
+<dialog class="malen" id="malen" aria-labelledby="malen-titel" data-bild="/bilder/gespenst.png" data-datei="kolorowanka-maly-duszek-pokolorowany">
+<div class="buehne"><div class="malflaeche"><canvas width="896" height="1200" aria-label="Kolorowanka: przyjazny mały duszek przed starym domem"></canvas><img alt="" width="896" height="1200" draggable="false"></div></div>
+<form class="malleiste" method="dialog">
+  <h2 id="malen-titel">Koloruj online</h2>
+  <fieldset class="werkzeuge"><legend class="sr">Narzędzia</legend>
+    <label><input type="radio" name="werkzeug" value="fuellen" checked><span><span aria-hidden="true">🪣</span> <span class="wort">Wypełnij</span></span></label><label><input type="radio" name="werkzeug" value="filzstift"><span><span aria-hidden="true">🖊️</span> <span class="wort">Flamaster</span></span></label><label><input type="radio" name="werkzeug" value="buntstift"><span><span aria-hidden="true">✏️</span> <span class="wort">Kredka</span></span></label><label><input type="radio" name="werkzeug" value="wachsmaler"><span><span aria-hidden="true">🖍️</span> <span class="wort">Kredka świecowa</span></span></label><label><input type="radio" name="werkzeug" value="radierer"><span><span aria-hidden="true">🧽</span> <span class="wort">Gumka</span></span></label>
+  </fieldset>
+  <fieldset class="groessen"><legend class="sr">Grubość</legend>
+    <label><input type="radio" name="groesse" value="klein"><span class="klein" title="Mała"><span class="sr">Mała</span></span></label><label><input type="radio" name="groesse" value="mittel" checked><span class="mittel" title="Średnia"><span class="sr">Średnia</span></span></label><label><input type="radio" name="groesse" value="gross"><span class="gross" title="Duża"><span class="sr">Duża</span></span></label>
+  </fieldset>
+  <fieldset class="farben"><legend class="sr">Kolory</legend>
+    <label><input type="radio" name="farbe" value="#e53935" checked><span style="--f:#e53935" title="Czerwony"><span class="sr">Czerwony</span></span></label><label><input type="radio" name="farbe" value="#fb8c00"><span style="--f:#fb8c00" title="Pomarańczowy"><span class="sr">Pomarańczowy</span></span></label><label><input type="radio" name="farbe" value="#fdd835"><span style="--f:#fdd835" title="Żółty"><span class="sr">Żółty</span></span></label><label><input type="radio" name="farbe" value="#7cb342"><span style="--f:#7cb342" title="Jasnozielony"><span class="sr">Jasnozielony</span></span></label><label><input type="radio" name="farbe" value="#2e7d32"><span style="--f:#2e7d32" title="Ciemnozielony"><span class="sr">Ciemnozielony</span></span></label><label><input type="radio" name="farbe" value="#26a69a"><span style="--f:#26a69a" title="Turkusowy"><span class="sr">Turkusowy</span></span></label><label><input type="radio" name="farbe" value="#4fc3f7"><span style="--f:#4fc3f7" title="Błękitny"><span class="sr">Błękitny</span></span></label><label><input type="radio" name="farbe" value="#1e88e5"><span style="--f:#1e88e5" title="Niebieski"><span class="sr">Niebieski</span></span></label><label><input type="radio" name="farbe" value="#283593"><span style="--f:#283593" title="Granatowy"><span class="sr">Granatowy</span></span></label><label><input type="radio" name="farbe" value="#8e24aa"><span style="--f:#8e24aa" title="Fioletowy"><span class="sr">Fioletowy</span></span></label><label><input type="radio" name="farbe" value="#f48fb1"><span style="--f:#f48fb1" title="Różowy"><span class="sr">Różowy</span></span></label><label><input type="radio" name="farbe" value="#8d6e63"><span style="--f:#8d6e63" title="Brązowy"><span class="sr">Brązowy</span></span></label><label><input type="radio" name="farbe" value="#f5cba7"><span style="--f:#f5cba7" title="Brzoskwiniowy"><span class="sr">Brzoskwiniowy</span></span></label><label><input type="radio" name="farbe" value="#9e9e9e"><span style="--f:#9e9e9e" title="Szary"><span class="sr">Szary</span></span></label><label><input type="radio" name="farbe" value="#212121"><span style="--f:#212121" title="Czarny"><span class="sr">Czarny</span></span></label><label><input type="radio" name="farbe" value="#ffffff"><span style="--f:#ffffff" title="Biały"><span class="sr">Biały</span></span></label>
+    <label class="eigene"><input type="radio" name="farbe" value="eigene"><input type="color" value="#ff8a3d" aria-label="Własny kolor" title="Własny kolor"></label>
+  </fieldset>
+  <div class="aktionen">
+    <button class="knopf zweit" type="button" data-aktion="zurueck" disabled>↶ Cofnij</button>
+    <button class="knopf zweit" type="button" data-aktion="neu" data-frage="Wyczyścić wszystko i zacząć od nowa?">Zacznij od nowa</button>
+    <button class="knopf" type="button" data-aktion="speichern" data-umami-event="ausgemalt" data-umami-event-bild="gespenst" data-umami-event-thema="halloween" data-umami-event-sprache="pl">Zapisz obrazek</button>
+    <button class="knopf zweit" value="zu">✕ Zamknij</button>
+  </div>
+</form>
+</dialog>
 </main>
 <footer class="fuss">
   <p><strong>Malkiste</strong> – darmowe kolorowanki do druku dla dzieci, rodziców, przedszkola i szkoły.</p>
