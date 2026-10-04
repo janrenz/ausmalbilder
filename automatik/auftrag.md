@@ -23,7 +23,7 @@ Füge **höchstens 5 neue Bilder** hinzu, dort wo die Nachfrage am größten ist
 
 Steht am Ende dieses Auftrags ein **Anlass für diesen Lauf**, legst du dieses Thema zusätzlich an (es zählt nicht zu den 5 Bildern nach Nachfrage). Der Kalender dazu steht in `saison.mjs`; dort ist das Thema schon eingetragen, du änderst `saison.mjs` nicht.
 
-- Neues Thema in `katalog.mjs` mit genau dem angegebenen `slug`, dazu `name`, `titel` (mit Suchbegriff „… Ausmalbilder“) und `intro` (2 Sätze). Einsortieren neben verwandte Themen (Feste zu Festen, Jahreszeiten zu Jahreszeiten).
+- Neues Thema in `katalog.mjs` mit genau dem angegebenen `slug`, dazu `name`, `titel` (mit Suchbegriff, richtig geschrieben: „Tier-Ausmalbilder“ mit Bindestrich bzw. „Ausmalbilder mit Feen & Elfen“, nicht „Tiere Ausmalbilder“) und `intro` (2 Sätze). Einsortieren neben verwandte Themen (Feste zu Festen, Jahreszeiten zu Jahreszeiten).
 - **5–6 Bilder** nach den `ideen` aus dem Anlass. Die Themen sollen das ganze Jahr taugen, nicht nur am Stichtag (zum Beispiel „Deutschland“ mit Sehenswürdigkeiten statt nur Feiertagsszenen).
 - Für kleine Kinder (kein `stil`), außer die Ideen verlangen Details.
 - Keine Flaggen in Farbe (die Bilder sind ohnehin schwarz-weiß), keine Wappen, Hoheitszeichen, Parteien oder Personen des öffentlichen Lebens.
@@ -36,7 +36,7 @@ Steht am Ende dieses Auftrags ein **Anlass für diesen Lauf**, legst du dieses T
 Erlaubt sind nur diese Befehle, **genau so, ohne Pipes, Umleitungen oder `&&`**: `./gen.sh` (mit Timeout 600000 aufrufen), `automatik/pruefbogen.sh <slugs…>`, `node i18n/pruefe.mjs <code>`, `rm src/bilder/<slug>.png`, `ls …`. Dateien liest und änderst du mit Read/Edit/Write/Grep.
 
 
-1. **Katalog:** Neue Bilder im passenden Thema in `katalog.mjs` anhängen. Felder: `slug` (deutsch, kleingeschrieben, Bindestriche, eindeutig im ganzen Katalog), `titel`, `alt` (beschreibt, was auf dem Bild zu sehen ist), `prompt` (Englisch, nur das Motiv; der Stil kommt aus `gen.sh`). Ein neues Thema bekommt `slug`, `name`, `titel` (mit Suchbegriff „… Ausmalbilder“), `intro` (2 Sätze), ggf. `stil`/`alter` wie bei den bestehenden Themen für größere Kinder.
+1. **Katalog:** Neue Bilder im passenden Thema in `katalog.mjs` anhängen. Felder: `slug` (deutsch, kleingeschrieben, Bindestriche, eindeutig im ganzen Katalog), `titel`, `alt` (beschreibt, was auf dem Bild zu sehen ist), `prompt` (Englisch, nur das Motiv; der Stil kommt aus `gen.sh`). Ein neues Thema bekommt `slug`, `name`, `titel` (mit Suchbegriff, richtig geschrieben: „Tier-Ausmalbilder“ mit Bindestrich bzw. „Ausmalbilder mit Feen & Elfen“, nicht „Tiere Ausmalbilder“), `intro` (2 Sätze), ggf. `stil`/`alter` wie bei den bestehenden Themen für größere Kinder.
 2. **Bilder erzeugen:** `./gen.sh` erzeugt alle fehlenden Bilder.
 3. **Prüfen:** `automatik/pruefbogen.sh <slug> …` für alle neuen Bilder. Sieh dir `.pruef/bogen.jpg` für den Überblick und **jede Detailansicht** `.pruef/detail/<slug>-oben.jpg` und `-unten.jpg` an (Read-Tool) – im Kontaktbogen sind Fehler wie ein Tier mit zwei Köpfen zu klein. Verwirf ein Bild (`rm src/bilder/<slug>.png`), präzisiere den Prompt und erzeuge neu, wenn:
    - eine Figur falsch gebaut ist: falsche Zahl an Köpfen, Augen, Beinen, Armen, Händen oder Fingern, verschmolzene oder doppelte Körper (zähle bei jeder Figur nach),

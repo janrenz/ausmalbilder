@@ -2,7 +2,7 @@
 // `stil`: fehlt = einfach für kleine Kinder, "detail" = größere Kinder (8+), "erwachsen" = sehr fein.
 export const themen = [
   {
-    slug: "einhorn", name: "Einhorn", titel: "Einhorn Ausmalbilder",
+    slug: "einhorn", name: "Einhorn", titel: "Einhorn-Ausmalbilder",
     intro: "Einhörner gehören zu den beliebtesten Motiven überhaupt. Hier gibt es verträumte Einhorn-Ausmalbilder mit Regenbogen, Sternen und Blumenwiese – zum kostenlosen Ausdrucken.",
     bilder: [
       { slug: "einhorn-regenbogen", titel: "Einhorn mit Regenbogen", alt: "Einhorn auf einer Blumenwiese mit Regenbogen und lächelnden Wolken", prompt: "a cute unicorn standing in a meadow with flowers and a rainbow with smiling clouds" },
@@ -15,7 +15,7 @@ export const themen = [
     ],
   },
   {
-    slug: "dinosaurier", name: "Dinosaurier", titel: "Dinosaurier Ausmalbilder",
+    slug: "dinosaurier", name: "Dinosaurier", titel: "Dinosaurier-Ausmalbilder",
     intro: "Ob T-Rex, Langhals oder Triceratops: Diese Dinosaurier-Ausmalbilder sind freundlich gezeichnet und haben große Flächen, die schon Kindergartenkinder gut ausmalen können.",
     bilder: [
       { slug: "dino-t-rex", titel: "Freundlicher T-Rex", alt: "Lachender Tyrannosaurus Rex zwischen Palmen und Vulkan", prompt: "a friendly smiling Tyrannosaurus rex standing between palm trees with a volcano in the background" },
@@ -26,7 +26,7 @@ export const themen = [
     ],
   },
   {
-    slug: "pferde", name: "Pferde", titel: "Pferde Ausmalbilder",
+    slug: "pferde", name: "Pferde", titel: "Pferde-Ausmalbilder",
     intro: "Pferde-Ausmalbilder für kleine und große Pferdefans: ein Fohlen auf der Weide, ein Pony mit geflochtener Mähne und ein Pferd beim Springen.",
     bilder: [
       { slug: "pferd-fohlen", titel: "Pferd mit Fohlen", alt: "Stute und Fohlen auf der Weide am Zaun", prompt: "a horse mare and her foal standing in a pasture next to a wooden fence, with trees and hills" },
@@ -37,7 +37,7 @@ export const themen = [
     ],
   },
   {
-    slug: "tiere", name: "Haustiere", titel: "Tiere Ausmalbilder: Katze, Hund & Hase",
+    slug: "tiere", name: "Haustiere", titel: "Tier-Ausmalbilder: Katze, Hund & Hase",
     intro: "Katze, Hund und Hase: Haustiere sind ein Klassiker zum Ausmalen. Die Bilder sind einfach gehalten und eignen sich besonders für Kinder ab 3 Jahren.",
     bilder: [
       { slug: "katze-wollknaeuel", titel: "Katze mit Wollknäuel", alt: "Junge Katze spielt mit einem Wollknäuel", prompt: "a playful kitten playing with a ball of yarn on a rug" },
@@ -48,7 +48,7 @@ export const themen = [
     ],
   },
   {
-    slug: "meerjungfrau", name: "Meerjungfrau", titel: "Meerjungfrau Ausmalbilder",
+    slug: "meerjungfrau", name: "Meerjungfrau", titel: "Meerjungfrau-Ausmalbilder",
     intro: "Unterwasser-Märchen zum Ausmalen: Meerjungfrauen mit Muscheln, Fischen und Seepferdchen – eigene Zeichnungen, keine bekannten Filmfiguren.",
     bilder: [
       { slug: "meerjungfrau-fels", titel: "Meerjungfrau auf dem Felsen", alt: "Meerjungfrau sitzt auf einem Felsen im Meer, Wellen und Möwen", prompt: "a young mermaid girl sitting on a rock in the sea with waves and seagulls, original character" },
@@ -59,7 +59,7 @@ export const themen = [
     ],
   },
   {
-    slug: "fahrzeuge", name: "Fahrzeuge", titel: "Fahrzeuge Ausmalbilder: Feuerwehr, Bagger & Traktor",
+    slug: "fahrzeuge", name: "Fahrzeuge", titel: "Fahrzeug-Ausmalbilder: Feuerwehr, Bagger & Traktor",
     intro: "Tatütata! Feuerwehrauto, Bagger und Traktor sind die Lieblingsfahrzeuge vieler Kinder. Diese Ausmalbilder haben klare Linien und große Flächen.",
     bilder: [
       { slug: "feuerwehrauto", titel: "Feuerwehrauto", alt: "Feuerwehrauto mit Leiter und Wasserschlauch", prompt: "a fire truck with a ladder and a water hose, side view, no logos, no text" },
@@ -70,7 +70,7 @@ export const themen = [
     ],
   },
   {
-    slug: "bauernhof", name: "Bauernhof", titel: "Bauernhof Ausmalbilder",
+    slug: "bauernhof", name: "Bauernhof", titel: "Bauernhof-Ausmalbilder",
     intro: "Auf dem Bauernhof ist was los: Kuh, Schwein, Hühner und die rote Scheune warten darauf, bunt gemalt zu werden.",
     bilder: [
       { slug: "bauernhof-scheune", titel: "Scheune mit Tieren", alt: "Bauernhof mit Scheune, Kuh, Schwein und Huhn", prompt: "a farm scene with a barn, a cow, a pig and a chicken, sun in the sky" },
@@ -79,7 +79,7 @@ export const themen = [
     ],
   },
   {
-    slug: "weltraum", name: "Weltraum", titel: "Weltraum Ausmalbilder",
+    slug: "weltraum", name: "Weltraum", titel: "Weltraum-Ausmalbilder",
     intro: "Raketen, Planeten und Astronautinnen: Weltraum-Ausmalbilder für kleine Entdecker, die von den Sternen träumen.",
     bilder: [
       { slug: "rakete", titel: "Rakete im All", alt: "Rakete fliegt an Planeten und Sternen vorbei", prompt: "a rocket flying through space past planets with rings and stars" },
@@ -90,7 +90,7 @@ export const themen = [
     ],
   },
   {
-    slug: "unterwasser", name: "Unterwasser", titel: "Unterwasser & Meerestiere Ausmalbilder",
+    slug: "unterwasser", name: "Unterwasser", titel: "Ausmalbilder mit Unterwasserwelt & Meerestieren",
     intro: "Wal, Schildkröte und Krake: Meerestiere zum Ausmalen, mit Korallen, Blasen und Seetang.",
     bilder: [
       { slug: "schildkroete", titel: "Meeresschildkröte", alt: "Meeresschildkröte schwimmt über ein Korallenriff", prompt: "a sea turtle swimming above a coral reef with bubbles" },
@@ -101,7 +101,7 @@ export const themen = [
     ],
   },
   {
-    slug: "herbst", name: "Herbst", titel: "Herbst Ausmalbilder",
+    slug: "herbst", name: "Herbst", titel: "Herbst-Ausmalbilder",
     intro: "Bunte Blätter, Igel und Drachensteigen: Herbst-Ausmalbilder für Kita, Schule und gemütliche Nachmittage zu Hause.",
     bilder: [
       { slug: "igel-laub", titel: "Igel im Laub", alt: "Igel mit Apfel auf dem Rücken im Herbstlaub", prompt: "a hedgehog carrying an apple on its spines in a pile of autumn leaves with mushrooms" },
@@ -112,7 +112,7 @@ export const themen = [
     ],
   },
   {
-    slug: "deutschland", name: "Deutschland", titel: "Deutschland Ausmalbilder: Sehenswürdigkeiten & Landkarte",
+    slug: "deutschland", name: "Deutschland", titel: "Deutschland-Ausmalbilder: Sehenswürdigkeiten & Landkarte",
     intro: "Vom Brandenburger Tor bis zum Leuchtturm an der Nordsee: Diese Deutschland-Ausmalbilder zeigen bekannte Bauwerke und die Landkarte zum Ausmalen. Passend zum Tag der Deutschen Einheit, für den Sachunterricht oder vor der nächsten Reise.",
     bilder: [
       { slug: "brandenburger-tor", titel: "Brandenburger Tor", alt: "Das Brandenburger Tor in Berlin mit Säulen und dem Pferdegespann obenauf, davor Bäume und Tauben", prompt: "the Brandenburg Gate in Berlin seen from the front: a wide neoclassical gate with six tall columns forming five passages, a chariot pulled by four horses on top, a few trees and pigeons in front, sky with simple clouds, complete gate fully visible" },
@@ -124,7 +124,7 @@ export const themen = [
     ],
   },
   {
-    slug: "halloween", name: "Halloween", titel: "Halloween Ausmalbilder",
+    slug: "halloween", name: "Halloween", titel: "Halloween-Ausmalbilder",
     intro: "Gruselig, aber nicht zu sehr: Halloween-Ausmalbilder mit Kürbis, kleinem Gespenst und Hexenkatze – passend für Kinder.",
     bilder: [
       { slug: "kuerbis", titel: "Lachender Kürbis", alt: "Geschnitzter Kürbis mit lachendem Gesicht, Fledermäuse und Mond", prompt: "a carved jack-o-lantern pumpkin with a friendly smile, bats and a full moon, not scary" },
@@ -136,7 +136,7 @@ export const themen = [
     ],
   },
   {
-    slug: "sankt-martin", name: "Sankt Martin", titel: "Sankt Martin & Laternen Ausmalbilder",
+    slug: "sankt-martin", name: "Sankt Martin", titel: "Ausmalbilder zu Sankt Martin & Laternen",
     intro: "Ich geh mit meiner Laterne: Ausmalbilder zu Sankt Martin und zum Laternenumzug im November.",
     bilder: [
       { slug: "martin-mantel", titel: "Sankt Martin teilt den Mantel", alt: "Reiter auf einem Pferd teilt seinen Mantel mit einem Bettler im Schnee", prompt: "Saint Martin on horseback cutting his cloak in half with a sword to share with a poor man sitting in the snow, gentle storybook style" },
@@ -145,7 +145,7 @@ export const themen = [
     ],
   },
   {
-    slug: "weihnachten", name: "Weihnachten", titel: "Weihnachten Ausmalbilder",
+    slug: "weihnachten", name: "Weihnachten", titel: "Weihnachts-Ausmalbilder",
     intro: "Tannenbaum, Weihnachtsmann und Schneemann: Weihnachts-Ausmalbilder für die Adventszeit.",
     bilder: [
       { slug: "tannenbaum", titel: "Geschmückter Tannenbaum", alt: "Weihnachtsbaum mit Kugeln, Stern und Geschenken", prompt: "a decorated Christmas tree with baubles and a star on top, gifts underneath" },
@@ -156,7 +156,7 @@ export const themen = [
     ],
   },
   {
-    slug: "ostern", name: "Ostern", titel: "Ostern Ausmalbilder",
+    slug: "ostern", name: "Ostern", titel: "Oster-Ausmalbilder",
     intro: "Osterhase, Ostereier und Küken: Ausmalbilder für den Osterkorb und die Osterdeko.",
     bilder: [
       { slug: "osterhase", titel: "Osterhase mit Korb", alt: "Osterhase trägt einen Korb voller Ostereier", prompt: "an Easter bunny carrying a basket full of decorated Easter eggs in a spring meadow" },
@@ -167,7 +167,7 @@ export const themen = [
     ],
   },
   {
-    slug: "mandala", name: "Mandala", titel: "Mandala Ausmalbilder für Kinder",
+    slug: "mandala", name: "Mandala", titel: "Mandala-Ausmalbilder für Kinder",
     intro: "Mandalas beruhigen und fördern die Feinmotorik. Diese Mandalas sind kindgerecht: mit Tieren, Blumen und Sternen.",
     bilder: [
       { slug: "mandala-blume", titel: "Blumen-Mandala", alt: "Rundes Mandala aus Blüten und Blättern", prompt: "a circular symmetric flower mandala with petals and leaves, medium detail suitable for children aged 6-10, centered on the page" },
@@ -178,7 +178,7 @@ export const themen = [
     ],
   },
   {
-    slug: "maerchen", name: "Ritter & Prinzessin", titel: "Ritter, Prinzessin & Drachen Ausmalbilder",
+    slug: "maerchen", name: "Ritter & Prinzessin", titel: "Ausmalbilder mit Rittern, Prinzessinnen & Drachen",
     intro: "Märchenhafte Ausmalbilder: eine Burg, ein freundlicher Drache und Prinzessin und Ritter – alles eigene Figuren.",
     bilder: [
       { slug: "burg", titel: "Märchenburg", alt: "Burg mit Türmen, Fahnen und Zugbrücke", prompt: "a fairy tale castle with towers, flags without symbols, a drawbridge and a moat" },
@@ -189,7 +189,7 @@ export const themen = [
     ],
   },
   {
-    slug: "natur", name: "Blumen & Schmetterlinge", titel: "Blumen & Schmetterlinge Ausmalbilder",
+    slug: "natur", name: "Blumen & Schmetterlinge", titel: "Ausmalbilder mit Blumen & Schmetterlingen",
     intro: "Frühling zum Ausmalen: Schmetterlinge, Sonnenblumen und Marienkäfer – mal einfach, mal etwas detaillierter.",
     bilder: [
       { slug: "schmetterling", titel: "Großer Schmetterling", alt: "Großer Schmetterling mit verzierten Flügeln über Blumen", prompt: "a large butterfly with ornate patterned wings above a few flowers" },
@@ -200,7 +200,7 @@ export const themen = [
     ],
   },
   {
-    slug: "zoo", name: "Zootiere", titel: "Zootiere Ausmalbilder: Löwe, Elefant & Giraffe",
+    slug: "zoo", name: "Zootiere", titel: "Zootier-Ausmalbilder: Löwe, Elefant & Giraffe",
     intro: "Ein Ausflug in den Zoo zum Ausmalen: Löwe, Elefant, Giraffe, Zebra und Affe – freundlich gezeichnet mit großen Flächen.",
     bilder: [
       { slug: "loewe", titel: "Löwe", alt: "Lächelnder Löwe mit großer Mähne in der Savanne", prompt: "a friendly smiling lion with a big mane in the savanna with acacia trees" },
@@ -211,7 +211,7 @@ export const themen = [
     ],
   },
   {
-    slug: "waldtiere", name: "Waldtiere", titel: "Waldtiere Ausmalbilder: Fuchs, Eule & Reh",
+    slug: "waldtiere", name: "Waldtiere", titel: "Waldtier-Ausmalbilder: Fuchs, Eule & Reh",
     intro: "Fuchs, Eule, Reh, Bär und Waschbär: Diese Waldtiere-Ausmalbilder passen zu Waldtagen in Kita und Schule.",
     bilder: [
       { slug: "fuchs", titel: "Fuchs", alt: "Fuchs sitzt zwischen Farnen und Pilzen im Wald", prompt: "a cute fox sitting among ferns and mushrooms in the forest" },
@@ -222,7 +222,7 @@ export const themen = [
     ],
   },
   {
-    slug: "sport", name: "Sport", titel: "Sport Ausmalbilder: Fußball, Ballett & mehr",
+    slug: "sport", name: "Sport", titel: "Sport-Ausmalbilder: Fußball, Ballett & mehr",
     intro: "Für kleine Sportskanonen: Fußball, Ballett, Schwimmen, Radfahren und Turnen zum Ausmalen.",
     bilder: [
       { slug: "fussball", titel: "Fußball", alt: "Kind schießt einen Fußball aufs Tor", prompt: "a child kicking a football towards a goal with a net, plain jersey without numbers or logos" },
@@ -233,7 +233,7 @@ export const themen = [
     ],
   },
   {
-    slug: "berufe", name: "Berufe", titel: "Berufe Ausmalbilder",
+    slug: "berufe", name: "Berufe", titel: "Berufe-Ausmalbilder",
     intro: "Was willst du mal werden? Ärztin, Feuerwehrmann, Bäcker, Polizistin oder Bauarbeiter – Berufe zum Ausmalen und Erzählen.",
     bilder: [
       { slug: "aerztin", titel: "Ärztin", alt: "Ärztin mit Stethoskop untersucht einen Teddybären", prompt: "a friendly doctor with a stethoscope examining a teddy bear, no text, no cross symbols" },
@@ -244,7 +244,7 @@ export const themen = [
     ],
   },
   {
-    slug: "verkehr", name: "Zug, Flugzeug & Schiff", titel: "Zug, Flugzeug & Schiff Ausmalbilder",
+    slug: "verkehr", name: "Zug, Flugzeug & Schiff", titel: "Ausmalbilder mit Zug, Flugzeug & Schiff",
     intro: "Ab in den Urlaub: Eisenbahn, Flugzeug, Schiff, Hubschrauber und Heißluftballon zum Ausmalen.",
     bilder: [
       { slug: "eisenbahn", titel: "Dampflok", alt: "Dampflok mit Waggons fährt über eine Brücke", prompt: "a steam locomotive with wagons crossing a bridge over a valley, no text, no faces on the train" },
@@ -255,7 +255,7 @@ export const themen = [
     ],
   },
   {
-    slug: "feen", name: "Feen & Elfen", titel: "Feen & Elfen Ausmalbilder",
+    slug: "feen", name: "Feen & Elfen", titel: "Ausmalbilder mit Feen & Elfen",
     intro: "Zauberhafte Feen und Elfen mit Flügeln, Blüten und Pilzhäusern – eigene Figuren, zum kostenlosen Ausdrucken.",
     bilder: [
       { slug: "fee-blume", titel: "Blumenfee", alt: "Fee mit Schmetterlingsflügeln sitzt auf einer Blüte", prompt: "a little fairy with butterfly wings sitting on a big flower blossom, original character" },
@@ -266,7 +266,7 @@ export const themen = [
     ],
   },
   {
-    slug: "roboter", name: "Roboter", titel: "Roboter Ausmalbilder",
+    slug: "roboter", name: "Roboter", titel: "Roboter-Ausmalbilder",
     intro: "Piep, piep! Freundliche Roboter zum Ausmalen – mit Antennen, Zahnrädern und Knöpfen.",
     bilder: [
       { slug: "roboter-winkt", titel: "Winkender Roboter", alt: "Freundlicher Roboter mit Antennen winkt", prompt: "a friendly boxy robot with antennas waving, gears and bolts around" },
@@ -277,7 +277,7 @@ export const themen = [
     ],
   },
   {
-    slug: "piraten", name: "Piraten", titel: "Piraten Ausmalbilder",
+    slug: "piraten", name: "Piraten", titel: "Piraten-Ausmalbilder",
     intro: "Ahoi! Piratenschiff, Schatzkarte und Papagei – Piraten-Ausmalbilder für kleine Abenteurer.",
     bilder: [
       { slug: "piratenschiff", titel: "Piratenschiff", alt: "Piratenschiff mit Segeln auf hoher See", prompt: "a pirate ship with sails on the sea with waves, a flag with a simple skull, friendly style" },
@@ -288,7 +288,7 @@ export const themen = [
     ],
   },
   {
-    slug: "essen", name: "Essen & Süßes", titel: "Essen Ausmalbilder: Obst, Eis & Kuchen",
+    slug: "essen", name: "Essen & Süßes", titel: "Essen-Ausmalbilder: Obst, Eis & Kuchen",
     intro: "Lecker ausmalen: Obst und Gemüse mit Gesichtern, Eis, Kuchen, Pizza und Cupcakes.",
     bilder: [
       { slug: "obst", titel: "Obst mit Gesichtern", alt: "Apfel, Banane, Erdbeere und Birne mit lachenden Gesichtern", prompt: "cute fruits with smiling faces: apple, banana, strawberry, pear, grapes" },
@@ -299,7 +299,7 @@ export const themen = [
     ],
   },
   {
-    slug: "sommer", name: "Sommer & Strand", titel: "Sommer & Strand Ausmalbilder",
+    slug: "sommer", name: "Sommer & Strand", titel: "Ausmalbilder zu Sommer & Strand",
     intro: "Ferien zum Ausmalen: Sandburg, Leuchtturm, Eis am Strand und Picknick im Grünen.",
     bilder: [
       { slug: "sandburg", titel: "Sandburg", alt: "Kinder bauen eine Sandburg am Strand", prompt: "children building a sandcastle on the beach with buckets and spades, sun and waves, everything as black outlines on white with nothing filled in" },
@@ -310,7 +310,7 @@ export const themen = [
     ],
   },
   {
-    slug: "winter", name: "Winter", titel: "Winter Ausmalbilder",
+    slug: "winter", name: "Winter", titel: "Winter-Ausmalbilder",
     intro: "Schnee, Schlitten und Pinguine: Winter-Ausmalbilder für kalte Tage.",
     bilder: [
       { slug: "schlitten", titel: "Schlittenfahren", alt: "Kinder fahren mit dem Schlitten einen Hügel hinunter", prompt: "children sledding down a snowy hill, snowflakes and pine trees" },
@@ -321,7 +321,7 @@ export const themen = [
     ],
   },
   {
-    slug: "geburtstag", name: "Geburtstag", titel: "Geburtstag Ausmalbilder",
+    slug: "geburtstag", name: "Geburtstag", titel: "Geburtstags-Ausmalbilder",
     intro: "Für die Geburtstagsfeier: Kuchen, Luftballons, Geschenke und Partytiere – auch schön als selbst gemalte Glückwunschkarte.",
     bilder: [
       { slug: "geburtstagskuchen", titel: "Geburtstagskuchen", alt: "Geburtstagskuchen mit Kerzen und Luftballons", prompt: "a birthday cake with candles, balloons and confetti, no text, no numbers" },
@@ -332,7 +332,7 @@ export const themen = [
     ],
   },
   {
-    slug: "musik", name: "Musik", titel: "Musik Ausmalbilder: Instrumente",
+    slug: "musik", name: "Musik", titel: "Musik-Ausmalbilder: Instrumente",
     intro: "Trommel, Gitarre, Geige und Klavier: Musikinstrumente zum Ausmalen für kleine Musikerinnen und Musiker.",
     bilder: [
       { slug: "gitarre", titel: "Gitarre", alt: "Gitarre mit Notenschlüssel und Noten", prompt: "an acoustic guitar with musical notes floating around" },
@@ -343,7 +343,7 @@ export const themen = [
     ],
   },
   {
-    slug: "krabbeltiere", name: "Krabbeltiere", titel: "Krabbeltiere Ausmalbilder: Biene, Schnecke & Raupe",
+    slug: "krabbeltiere", name: "Krabbeltiere", titel: "Krabbeltier-Ausmalbilder: Biene, Schnecke & Raupe",
     intro: "Kleine Tiere ganz groß: Biene, Schnecke, Raupe, Libelle und Ameise zum Ausmalen.",
     bilder: [
       { slug: "biene", titel: "Biene", alt: "Biene fliegt zu einer Blume, daneben ein Bienenstock", prompt: "a cute bee flying to a flower next to a beehive and honeycomb" },
@@ -354,7 +354,7 @@ export const themen = [
     ],
   },
   {
-    slug: "mode", name: "Mode", stil: "detail", alter: "8+", titel: "Mode Ausmalbilder für größere Kinder",
+    slug: "mode", name: "Mode", stil: "detail", alter: "8+", titel: "Mode-Ausmalbilder für größere Kinder",
     intro: "Für Modedesignerinnen und -designer von morgen: Outfits, Kleider, Sneaker und ein Laufsteg zum Gestalten – detailliertere Ausmalbilder für Kinder ab 8 Jahren.",
     bilder: [
       { slug: "mode-outfits", titel: "Outfits entwerfen", alt: "Drei junge Models in verschiedenen Outfits: Streetwear, Kleid und Jeansjacke", prompt: "three teenage fashion figures standing side by side in different outfits: streetwear hoodie with cargo pants, a summer dress, a denim jacket with skirt, full body, fashion illustration" },
@@ -365,7 +365,7 @@ export const themen = [
     ],
   },
   {
-    slug: "autos", name: "Autos", stil: "detail", alter: "8+", titel: "Autos Ausmalbilder: Sportwagen, Oldtimer & Rennwagen",
+    slug: "autos", name: "Autos", stil: "detail", alter: "8+", titel: "Auto-Ausmalbilder: Sportwagen, Oldtimer & Rennwagen",
     intro: "Sportwagen, Rennwagen, Oldtimer, Geländewagen und Monstertruck – detaillierte Auto-Ausmalbilder für größere Kinder. Alle Fahrzeuge sind frei erfunden, ohne echte Marken.",
     bilder: [
       { slug: "auto-sportwagen", titel: "Sportwagen", alt: "Flacher Sportwagen auf einer Küstenstraße", prompt: "a sleek futuristic sports car with rounded invented body shape driving on a coastal road with mountains, three-quarter view, clearly fictional design that does not resemble any real car model or manufacturer, no brand logos, no license plate text" },
@@ -376,7 +376,7 @@ export const themen = [
     ],
   },
   {
-    slug: "raumfahrt", name: "Raumfahrt", stil: "detail", alter: "8+", titel: "Raumfahrt Ausmalbilder: Raketen, Rover & Raumstation",
+    slug: "raumfahrt", name: "Raumfahrt", stil: "detail", alter: "8+", titel: "Raumfahrt-Ausmalbilder: Raketen, Rover & Raumstation",
     intro: "Für Raumfahrtfans: Raketenstart, Mars-Rover, Astronautin beim Außeneinsatz, Raumstation und Mondlandung – detailreich und realistischer gezeichnet.",
     bilder: [
       { slug: "raumfahrt-start", titel: "Raketenstart", alt: "Große Rakete hebt von der Startrampe ab, mit Rauchwolken", prompt: "a large multi-stage rocket lifting off from a launch pad with a service tower and huge smoke clouds, realistic style, no flags, no text" },
@@ -387,7 +387,7 @@ export const themen = [
     ],
   },
   {
-    slug: "technik", name: "Technik", stil: "detail", alter: "8+", titel: "Technik Ausmalbilder: Maschinen, Zahnräder & Erfindungen",
+    slug: "technik", name: "Technik", stil: "detail", alter: "8+", titel: "Technik-Ausmalbilder: Maschinen, Zahnräder & Erfindungen",
     intro: "Für Tüftler: Zahnradgetriebe, Windkraft, ein Roboterarm, eine Dampfmaschine und eine Drohne – technische Ausmalbilder für größere Kinder.",
     bilder: [
       { slug: "technik-zahnraeder", titel: "Zahnräder", alt: "Ineinandergreifende Zahnräder verschiedener Größe", prompt: "a complex arrangement of interlocking gears and cogs of different sizes with springs and bolts, filling the page" },
