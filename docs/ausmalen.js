@@ -135,27 +135,98 @@
     return true;
   }
 
+  // ---------- Zoom ----------
+  // Die Malfläche wird per CSS-Transform vergrößert; punkt() rechnet über getBoundingClientRect, malt also weiter genau.
+  const buehne = dlg.querySelector(".buehne");
+  const flaeche = dlg.querySelector(".malflaeche");
+  const ZOOM_MAX = 6;
+  let zoom = 1, tx = 0, ty = 0;
+  function ansicht() {
+    const w = flaeche.offsetWidth, h = flaeche.offsetHeight;
+    zoom = Math.min(ZOOM_MAX, Math.max(1, zoom));
+    // Das vergrößerte Bild deckt immer die ganze Malfläche ab
+    tx = Math.min(0, Math.max(w * (1 - zoom), tx));
+    ty = Math.min(0, Math.max(h * (1 - zoom), ty));
+    flaeche.style.transform = zoom === 1 ? "" : `translate(${tx}px, ${ty}px) scale(${zoom})`;
+    dlg.classList.toggle("gezoomt", zoom > 1);
+  }
+  // Zoomt so, dass der Punkt unter (cx, cy) auf dem Bildschirm dort bleibt
+  function zoomeAuf(neu, cx, cy) {
+    const r = flaeche.getBoundingClientRect();
+    const lx = (cx - r.left) / zoom, ly = (cy - r.top) / zoom; // Punkt in unvergrößerten Pixeln
+    const z = Math.min(ZOOM_MAX, Math.max(1, neu));
+    tx = cx - (r.left - tx) - lx * z;
+    ty = cy - (r.top - ty) - ly * z;
+    zoom = z;
+    ansicht();
+  }
+  const mitte = () => { const r = buehne.getBoundingClientRect(); return [r.left + r.width / 2, r.top + r.height / 2]; };
+  dlg.querySelector('[data-zoom="rein"]').addEventListener("click", () => zoomeAuf(zoom * 1.5, ...mitte()));
+  dlg.querySelector('[data-zoom="raus"]').addEventListener("click", () => zoomeAuf(zoom / 1.5, ...mitte()));
+  dlg.querySelector('[data-zoom="ganz"]').addEventListener("click", () => { zoom = 1; tx = ty = 0; ansicht(); });
+  buehne.addEventListener("wheel", (e) => {
+    e.preventDefault();
+    if (e.ctrlKey || e.metaKey) zoomeAuf(zoom * Math.exp(-Math.max(-100, Math.min(100, e.deltaY)) * 0.002), e.clientX, e.clientY); // Trackpad-Geste kommt als Strg+Rad, eine Mausrast ≈ ×1,2
+    else if (zoom > 1) { tx -= e.deltaX; ty -= e.deltaY; ansicht(); }
+  }, { passive: false });
+  addEventListener("resize", () => { zoom = 1; tx = ty = 0; ansicht(); });
+
   // ---------- Zeiger ----------
+  // Ein Finger malt, zwei Finger zoomen und verschieben. Kommt der zweite Finger dazu, wird der angefangene Strich zurückgenommen.
+  // Der Farbeimer füllt erst beim Loslassen, damit der erste Finger einer Zoom-Geste nichts einfärbt.
   const punkt = (e) => {
     const r = leinwand.getBoundingClientRect();
     return [(e.clientX - r.left) * W / r.width, (e.clientY - r.top) * H / r.height];
   };
-  leinwand.addEventListener("pointerdown", (e) => {
-    if (!wand || stift || (e.pointerType === "mouse" && e.button !== 0)) return;
+  const finger = new Map();
+  let geste = null;   // { abstand, z, mx, my } während zwei Finger liegen
+  let schieben = null; // Hand-Werkzeug: letzter Punkt
+  let tippen = null;  // Farbeimer: Startpunkt
+  const imBild = (e) => { const r = leinwand.getBoundingClientRect(); return e.clientX >= r.left && e.clientX <= r.right && e.clientY >= r.top && e.clientY <= r.bottom; };
+  function zweiFinger() {
+    const [a, b] = [...finger.values()];
+    return { abstand: Math.hypot(a.x - b.x, a.y - b.y) || 1, mx: (a.x + b.x) / 2, my: (a.y + b.y) / 2 };
+  }
+  buehne.addEventListener("pointerdown", (e) => {
+    if (!wand || e.target.closest(".zoom") || (e.pointerType === "mouse" && e.button !== 0)) return;
     e.preventDefault();
-    const [x, y] = punkt(e);
-    sichern();
-    if (wert("werkzeug") === "fuellen") {
-      if (fuellen(x, y, farbe())) geaendert = true;
-      else rueckgaengig();
+    buehne.setPointerCapture(e.pointerId);
+    finger.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    if (finger.size === 2) {
+      if (stift) { rueckgaengig(); stift = null; }
+      tippen = schieben = null;
+      geste = { ...zweiFinger(), z: zoom };
       return;
     }
-    leinwand.setPointerCapture(e.pointerId);
+    if (finger.size > 2 || geste) return;
+    const w = wert("werkzeug");
+    if (w === "verschieben") { schieben = { x: e.clientX, y: e.clientY }; return; }
+    if (!imBild(e)) return;
+    const [x, y] = punkt(e);
+    if (w === "fuellen") { tippen = { id: e.pointerId, x: e.clientX, y: e.clientY, px: x, py: y }; return; }
+    sichern();
     stift = { id: e.pointerId, x, y };
     strich(x, y, x, y);
     geaendert = true;
   });
-  leinwand.addEventListener("pointermove", (e) => {
+  buehne.addEventListener("pointermove", (e) => {
+    if (!finger.has(e.pointerId)) return;
+    finger.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    if (geste && finger.size === 2) {
+      const g = zweiFinger();
+      tx += g.mx - geste.mx; ty += g.my - geste.my;
+      geste.mx = g.mx; geste.my = g.my;
+      ansicht();
+      zoomeAuf(geste.z * g.abstand / geste.abstand, g.mx, g.my);
+      return;
+    }
+    if (schieben) {
+      tx += e.clientX - schieben.x; ty += e.clientY - schieben.y;
+      schieben = { x: e.clientX, y: e.clientY };
+      ansicht();
+      return;
+    }
+    if (tippen && Math.hypot(e.clientX - tippen.x, e.clientY - tippen.y) > 12) tippen = null;
     if (!stift || e.pointerId !== stift.id) return;
     for (const ev of e.getCoalescedEvents?.() || [e]) {
       const [x, y] = punkt(ev);
@@ -163,9 +234,19 @@
       stift.x = x; stift.y = y;
     }
   });
-  const ende = (e) => { if (stift && e.pointerId === stift.id) stift = null; };
-  leinwand.addEventListener("pointerup", ende);
-  leinwand.addEventListener("pointercancel", ende);
+  const ende = (e) => {
+    if (!finger.delete(e.pointerId)) return;
+    if (e.type === "pointerup" && tippen?.id === e.pointerId && !geste) {
+      sichern();
+      if (fuellen(tippen.px, tippen.py, farbe())) geaendert = true;
+      else rueckgaengig();
+    }
+    tippen = null;
+    if (stift?.id === e.pointerId) stift = null;
+    if (!finger.size) { geste = null; schieben = null; } // erst wenn alle Finger weg sind, wieder malen
+  };
+  buehne.addEventListener("pointerup", ende);
+  buehne.addEventListener("pointercancel", ende);
 
   // ---------- Knöpfe ----------
   eigene.addEventListener("input", () => { dlg.querySelector('input[name="farbe"][value="eigene"]').checked = true; });

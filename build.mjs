@@ -181,13 +181,14 @@ const krumenLd = (teile) => ({
 // Online ausmalen: Vollbild-Dialog auf jeder Bildseite, Logik in static/ausmalen.js
 const FARBEN = ["#e53935", "#fb8c00", "#fdd835", "#7cb342", "#2e7d32", "#26a69a", "#4fc3f7", "#1e88e5",
   "#283593", "#8e24aa", "#f48fb1", "#8d6e63", "#f5cba7", "#9e9e9e", "#212121", "#ffffff"];
-const WERKZEUGE = [["fuellen", "🪣"], ["filzstift", "🖊️"], ["buntstift", "✏️"], ["wachsmaler", "🖍️"], ["radierer", "🧽"]];
+const WERKZEUGE = [["fuellen", "🪣"], ["filzstift", "🖊️"], ["buntstift", "✏️"], ["wachsmaler", "🖍️"], ["radierer", "🧽"], ["verschieben", "✋"]];
 const malDialog = (L, b, datei, ereignis) => {
   const u = L.ui;
   const namen = u.farbnamen.split("|");
   const wahl = (name, wert, inhalt, an) => `<label><input type="radio" name="${name}" value="${wert}"${an ? " checked" : ""}>${inhalt}</label>`;
   return `<dialog class="malen" id="malen" aria-labelledby="malen-titel" data-bild="${url(`bilder/${b.slug}.png`)}" data-datei="${esc(`${datei}-${u.ausmalenDatei}`)}">
-<div class="buehne"><div class="malflaeche"><canvas width="896" height="1200" aria-label="${esc(fuelle(u.bildAlt, { alt: L.bilder[b.slug].alt }))}"></canvas><img alt="" width="896" height="1200" draggable="false"></div></div>
+<div class="buehne"><div class="malflaeche"><canvas width="896" height="1200" aria-label="${esc(fuelle(u.bildAlt, { alt: L.bilder[b.slug].alt }))}"></canvas><img alt="" width="896" height="1200" draggable="false"></div>
+  <div class="zoom"><button type="button" data-zoom="rein" title="${esc(u.zoomRein)}" aria-label="${esc(u.zoomRein)}">+</button><button type="button" data-zoom="raus" title="${esc(u.zoomRaus)}" aria-label="${esc(u.zoomRaus)}">−</button><button type="button" data-zoom="ganz" title="${esc(u.zoomGanz)}" aria-label="${esc(u.zoomGanz)}">⤢</button></div></div>
 <form class="malleiste" method="dialog">
   <h2 id="malen-titel">${esc(u.ausmalen)}</h2>
   <fieldset class="werkzeuge"><legend class="sr">${esc(u.werkzeuge)}</legend>

@@ -32,6 +32,7 @@ Erlaubt sind nur diese Befehle, **genau so, ohne Pipes, Umleitungen oder `&&`**:
    - es wie ein Foto einer Buchseite aussieht statt wie eine flache Zeichnung,
    - ein Fahrzeug, Produkt oder eine Figur einem echten Modell, einer Marke oder einer bekannten Figur ähnelt (Autos: Lamborghini, Porsche, VW-Käfer, Jeep, Land Rover, Chevrolet – lieber klar erfunden oder sehr alt),
    - das Motiv zu klein auf der Seite sitzt oder nicht zum Titel passt,
+   - ein rundes oder freistehendes Motiv (Mandala, Kranz, Figur) am Rand angeschnitten ist. Solche Prompts brauchen von Anfang an „the complete … fully visible inside the page with a wide white margin on all four sides, nothing cut off at the edges“, weil der Stil in `gen.sh` sonst die ganze Seite füllt,
    - der Stil nicht zum Thema passt (kleine Kinder: dicke Linien, große Flächen; `detail`: feiner und realistischer; `erwachsen`: sehr fein).
    Höchstens 3 Versuche pro Bild; klappt es dann nicht, nimm das Bild wieder aus dem Katalog.
    Wenn du einen Prompt änderst, passe auch `alt` an das an, was das Bild **tatsächlich** zeigt.

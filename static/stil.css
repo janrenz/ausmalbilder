@@ -100,10 +100,16 @@ main { max-width: 1160px; margin: 0 auto; padding: 0 16px 48px; }
 .malen { width: 100vw; height: 100dvh; max-width: none; max-height: none; margin: 0; padding: 0; border: 0; background: var(--papier); color: var(--tinte); }
 .malen[open] { display: grid; grid-template-columns: minmax(0, 1fr) 320px; }
 .malen::backdrop { background: rgba(0, 0, 0, .5); }
-.buehne { container-type: size; display: grid; place-items: center; padding: 12px; min-height: 0; }
+.buehne { container-type: size; position: relative; display: grid; place-items: center; padding: 12px; min-height: 0; overflow: hidden; touch-action: none; }
 .malflaeche { position: relative; width: min(100cqw, 100cqh * 896 / 1200); aspect-ratio: 896 / 1200; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(0, 0, 0, .18); }
 .malflaeche canvas, .malflaeche img { position: absolute; inset: 0; width: 100%; height: 100%; }
+.malflaeche { transform-origin: 0 0; }
 .malflaeche canvas { touch-action: none; cursor: crosshair; }
+.malen:has(input[value="verschieben"]:checked) .malflaeche canvas { cursor: grab; }
+.zoom { position: absolute; right: 12px; bottom: 12px; display: flex; flex-direction: column; gap: 6px; }
+.zoom button { width: 44px; height: 44px; border-radius: 50%; border: 2px solid var(--rand); background: var(--karte); color: var(--tinte); font-family: inherit; font-size: 1.5rem; font-weight: 700; line-height: 1; cursor: pointer; box-shadow: 0 2px 8px rgba(0, 0, 0, .15); }
+.zoom button:hover { border-color: var(--akzent); }
+.malen:not(.gezoomt) [data-zoom="ganz"], .malen:not(.gezoomt) [data-zoom="raus"] { opacity: .4; }
 .malflaeche img { object-fit: cover; object-position: top; mix-blend-mode: multiply; pointer-events: none; user-select: none; }
 .malleiste { margin: 0; overflow-y: auto; padding: 16px; background: var(--karte); border-left: 3px dashed var(--rand); display: flex; flex-direction: column; gap: 14px; }
 .malleiste h2 { margin: 0; font-size: 1.3rem; }
