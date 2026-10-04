@@ -1,4 +1,5 @@
 // Themen und Motive. `prompt` beschreibt nur das Motiv; der Stil wird in gen.sh ergänzt.
+// `stil`: fehlt = einfach für kleine Kinder, "detail" = größere Kinder (8+), "erwachsen" = sehr fein.
 export const themen = [
   {
     slug: "einhorn", name: "Einhorn", titel: "Einhorn Ausmalbilder",
@@ -7,6 +8,8 @@ export const themen = [
       { slug: "einhorn-regenbogen", titel: "Einhorn mit Regenbogen", alt: "Einhorn auf einer Blumenwiese mit Regenbogen und lächelnden Wolken", prompt: "a cute unicorn standing in a meadow with flowers and a rainbow with smiling clouds" },
       { slug: "einhorn-sterne", titel: "Fliegendes Einhorn mit Sternen", alt: "Einhorn mit Flügeln fliegt zwischen Sternen und Mond", prompt: "a cute winged unicorn flying through the night sky with a crescent moon and big stars" },
       { slug: "einhorn-baby", titel: "Baby-Einhorn mit Mama", alt: "Einhorn-Mama und Baby-Einhorn kuscheln zwischen Herzen", prompt: "a mother unicorn and a baby unicorn cuddling together, surrounded by a few hearts and flowers" },
+      { slug: "einhorn-schloss", titel: "Einhorn vor dem Schloss", alt: "Einhorn steht vor einem Märchenschloss mit Türmen", prompt: "a unicorn standing in front of a fairy tale castle with towers and a path of flowers" },
+      { slug: "einhorn-kuchen", titel: "Einhorn mit Geburtstagskuchen", alt: "Einhorn mit Partyhut neben einem Kuchen mit Kerzen", prompt: "a cute unicorn wearing a party hat next to a big layered cake with candles and balloons" },
     ],
   },
   {
@@ -16,6 +19,8 @@ export const themen = [
       { slug: "dino-t-rex", titel: "Freundlicher T-Rex", alt: "Lachender Tyrannosaurus Rex zwischen Palmen und Vulkan", prompt: "a friendly smiling Tyrannosaurus rex standing between palm trees with a volcano in the background" },
       { slug: "dino-langhals", titel: "Langhals-Dinosaurier", alt: "Brachiosaurus frisst Blätter von einem hohen Baum", prompt: "a gentle long-necked brachiosaurus eating leaves from a tall tree, with ferns at its feet" },
       { slug: "dino-ei", titel: "Dino-Baby schlüpft", alt: "Kleiner Triceratops schlüpft aus einem Ei im Nest", prompt: "a baby triceratops hatching out of a cracked egg in a nest, other eggs around, cute style" },
+      { slug: "dino-stegosaurus", titel: "Stegosaurus", alt: "Stegosaurus mit Rückenplatten am Fluss", prompt: "a friendly stegosaurus with back plates walking along a river with ferns and rocks" },
+      { slug: "dino-flugsaurier", titel: "Flugsaurier über dem Vulkan", alt: "Flugsaurier fliegen über Felsen und einen Vulkan", prompt: "two friendly pterodactyls flying over cliffs and a smoking volcano" },
     ],
   },
   {
@@ -25,6 +30,8 @@ export const themen = [
       { slug: "pferd-fohlen", titel: "Pferd mit Fohlen", alt: "Stute und Fohlen auf der Weide am Zaun", prompt: "a horse mare and her foal standing in a pasture next to a wooden fence, with trees and hills" },
       { slug: "pferd-pony", titel: "Pony mit Zöpfen", alt: "Pony mit geflochtener Mähne und Schleifen", prompt: "a sweet pony with braided mane decorated with bows, standing near a stable, front three-quarter view" },
       { slug: "pferd-springen", titel: "Pferd beim Springen", alt: "Pferd springt über ein Hindernis", prompt: "a horse jumping over a show jumping obstacle with poles, no rider, dynamic but simple" },
+      { slug: "pferd-reiterin", titel: "Mädchen reitet aus", alt: "Mädchen mit Reithelm reitet auf einem Pferd über einen Feldweg", prompt: "a girl with a riding helmet riding a horse on a country path with trees" },
+      { slug: "pferd-stall", titel: "Pferd im Stall", alt: "Pferd schaut aus der Stalltür, daneben Heu und Eimer", prompt: "a horse looking out of a stable door with hay, a bucket and a horseshoe" },
     ],
   },
   {
@@ -34,6 +41,8 @@ export const themen = [
       { slug: "katze-wollknaeuel", titel: "Katze mit Wollknäuel", alt: "Junge Katze spielt mit einem Wollknäuel", prompt: "a playful kitten playing with a ball of yarn on a rug" },
       { slug: "hund-knochen", titel: "Hund mit Knochen", alt: "Fröhlicher Hund sitzt mit Knochen vor seiner Hundehütte", prompt: "a happy puppy sitting in front of its dog house with a bone and a plain empty food bowl, no sign and no name plate on the dog house" },
       { slug: "hase-karotte", titel: "Hase mit Karotte", alt: "Hase knabbert an einer Karotte im Gemüsebeet", prompt: "a cute rabbit holding a carrot in a vegetable garden" },
+      { slug: "meerschweinchen", titel: "Meerschweinchen", alt: "Zwei Meerschweinchen fressen Salat", prompt: "two cute guinea pigs eating lettuce and a carrot on straw" },
+      { slug: "goldfisch", titel: "Goldfisch im Glas", alt: "Goldfisch schwimmt in einem runden Glas mit Pflanzen", prompt: "a goldfish swimming in a round fishbowl with plants and pebbles, a cat watching curiously" },
     ],
   },
   {
@@ -43,6 +52,8 @@ export const themen = [
       { slug: "meerjungfrau-fels", titel: "Meerjungfrau auf dem Felsen", alt: "Meerjungfrau sitzt auf einem Felsen im Meer, Wellen und Möwen", prompt: "a young mermaid girl sitting on a rock in the sea with waves and seagulls, original character" },
       { slug: "meerjungfrau-fische", titel: "Meerjungfrau mit Fischen", alt: "Meerjungfrau schwimmt mit Fischen zwischen Korallen", prompt: "a young mermaid swimming with friendly fish among corals and seaweed, original character" },
       { slug: "meerjungfrau-seepferdchen", titel: "Meerjungfrau mit Seepferdchen", alt: "Meerjungfrau mit Seepferdchen und Muschelschatz", prompt: "a little mermaid with a seahorse friend and an open seashell with a pearl, original character" },
+      { slug: "meerjungfrau-schloss", titel: "Meerjungfrau vor dem Unterwasserschloss", alt: "Meerjungfrau schwimmt vor einem Schloss aus Muscheln", prompt: "a young mermaid swimming in front of an underwater castle made of shells and coral, original character" },
+      { slug: "meerjungfrau-delfin", titel: "Meerjungfrau mit Delfin", alt: "Meerjungfrau springt mit einem Delfin aus den Wellen", prompt: "a young mermaid and a dolphin jumping out of the waves together, original character" },
     ],
   },
   {
@@ -52,6 +63,8 @@ export const themen = [
       { slug: "feuerwehrauto", titel: "Feuerwehrauto", alt: "Feuerwehrauto mit Leiter und Wasserschlauch", prompt: "a fire truck with a ladder and a water hose, side view, no logos, no text" },
       { slug: "bagger", titel: "Bagger auf der Baustelle", alt: "Bagger hebt Erde auf einer Baustelle mit Pylonen", prompt: "an excavator digging dirt on a construction site with traffic cones, no logos, no text" },
       { slug: "traktor", titel: "Traktor mit Anhänger", alt: "Traktor zieht einen Anhänger mit Heuballen", prompt: "a farm tractor pulling a trailer loaded with hay bales on a country road, no logos, no text" },
+      { slug: "muellauto", titel: "Müllauto", alt: "Müllauto mit Mülltonnen in der Straße", prompt: "a garbage truck on a street with trash bins, no logos, no text" },
+      { slug: "krankenwagen", titel: "Krankenwagen", alt: "Krankenwagen mit Blaulicht vor einem Krankenhaus", prompt: "an ambulance with a siren light in front of a hospital building, no text, no letters, no cross symbol" },
     ],
   },
   {
@@ -70,6 +83,8 @@ export const themen = [
       { slug: "rakete", titel: "Rakete im All", alt: "Rakete fliegt an Planeten und Sternen vorbei", prompt: "a rocket flying through space past planets with rings and stars" },
       { slug: "astronaut", titel: "Astronaut auf dem Mond", alt: "Kind im Raumanzug winkt auf dem Mond, Erde im Hintergrund", prompt: "a child astronaut in a spacesuit waving on the moon surface with craters, planet Earth in the sky, a flag without any symbol" },
       { slug: "ufo-alien", titel: "Freundliches Alien", alt: "Freundliches Alien winkt aus einer fliegenden Untertasse", prompt: "a friendly cute alien waving from a flying saucer above a small planet" },
+      { slug: "planeten", titel: "Unser Sonnensystem", alt: "Sonne und Planeten auf ihren Bahnen", prompt: "the solar system with the sun and planets on their orbits, simple shapes, stars" },
+      { slug: "raumstation", titel: "Raumstation", alt: "Raumstation mit Solarflügeln über der Erde", prompt: "a space station with solar panels orbiting above planet Earth, a small rocket nearby, no flags, no text" },
     ],
   },
   {
@@ -79,6 +94,8 @@ export const themen = [
       { slug: "schildkroete", titel: "Meeresschildkröte", alt: "Meeresschildkröte schwimmt über ein Korallenriff", prompt: "a sea turtle swimming above a coral reef with bubbles" },
       { slug: "wal", titel: "Wal mit Fontäne", alt: "Lächelnder Wal spritzt Wasser aus dem Blasloch", prompt: "a smiling whale spouting water from its blowhole, waves and a small boat" },
       { slug: "krake", titel: "Kleiner Oktopus", alt: "Oktopus mit acht Armen zwischen Muscheln und Seesternen", prompt: "a cute octopus waving its arms among shells, starfish and seaweed" },
+      { slug: "clownfisch", titel: "Fische im Riff", alt: "Bunte Fische und Anemonen im Korallenriff", prompt: "tropical fish swimming among sea anemones and corals" },
+      { slug: "hai", titel: "Freundlicher Hai", alt: "Lächelnder Hai mit kleinen Fischen", prompt: "a friendly smiling shark with small fish and bubbles, not scary" },
     ],
   },
   {
@@ -88,6 +105,8 @@ export const themen = [
       { slug: "igel-laub", titel: "Igel im Laub", alt: "Igel mit Apfel auf dem Rücken im Herbstlaub", prompt: "a hedgehog carrying an apple on its spines in a pile of autumn leaves with mushrooms" },
       { slug: "drachen-steigen", titel: "Drachen steigen lassen", alt: "Kind lässt einen Drachen über einem Feld steigen", prompt: "a child flying a kite on a windy autumn hill with falling leaves" },
       { slug: "eichhoernchen", titel: "Eichhörnchen mit Nuss", alt: "Eichhörnchen hält eine Nuss auf einem Ast mit Eicheln", prompt: "a squirrel holding a nut sitting on a tree branch with acorns and oak leaves" },
+      { slug: "kuerbisernte", titel: "Kürbisernte", alt: "Kürbisse, Äpfel und eine Schubkarre im Garten", prompt: "an autumn harvest scene with pumpkins, apples in a basket and a wheelbarrow in a garden" },
+      { slug: "regenschirm", titel: "Kind mit Regenschirm", alt: "Kind in Gummistiefeln springt mit Regenschirm in eine Pfütze", prompt: "a child in rubber boots with an umbrella jumping into a puddle, falling leaves and raindrops" },
     ],
   },
   {
@@ -97,6 +116,8 @@ export const themen = [
       { slug: "kuerbis", titel: "Lachender Kürbis", alt: "Geschnitzter Kürbis mit lachendem Gesicht, Fledermäuse und Mond", prompt: "a carved jack-o-lantern pumpkin with a friendly smile, bats and a full moon, not scary" },
       { slug: "gespenst", titel: "Kleines Gespenst", alt: "Freundliches kleines Gespenst vor einem alten Haus", prompt: "a cute friendly little ghost floating in front of an old house with a crooked fence, not scary" },
       { slug: "hexe-katze", titel: "Hexenkatze auf dem Besen", alt: "Katze mit Hexenhut fliegt auf einem Besen am Mond vorbei", prompt: "a cute cat wearing a witch hat flying on a broomstick past the moon, not scary" },
+      { slug: "kostuem-kinder", titel: "Kinder im Kostüm", alt: "Kinder als Gespenst, Hexe und Kürbis mit Süßigkeitenkörben", prompt: "three children in costumes (ghost, witch, pumpkin) holding candy baskets, cute not scary" },
+      { slug: "fledermaus", titel: "Kleine Fledermaus", alt: "Lächelnde Fledermaus hängt kopfüber an einem Ast", prompt: "a cute smiling bat hanging upside down from a tree branch under a full moon" },
     ],
   },
   {
@@ -115,6 +136,8 @@ export const themen = [
       { slug: "tannenbaum", titel: "Geschmückter Tannenbaum", alt: "Weihnachtsbaum mit Kugeln, Stern und Geschenken", prompt: "a decorated Christmas tree with baubles and a star on top, gifts underneath" },
       { slug: "weihnachtsmann", titel: "Weihnachtsmann mit Rentier", alt: "Weihnachtsmann mit Geschenkesack und Rentier im Schnee", prompt: "Santa Claus with a sack of presents next to a reindeer in the snow" },
       { slug: "schneemann", titel: "Schneemann", alt: "Schneemann mit Schal, Mütze und Karottennase", prompt: "a happy snowman with scarf, hat and carrot nose, snowflakes and small houses" },
+      { slug: "lebkuchenhaus", titel: "Lebkuchenhaus", alt: "Lebkuchenhaus mit Zuckerguss und Süßigkeiten", prompt: "a gingerbread house with icing, candy canes and sweets, snow on the roof" },
+      { slug: "rentier", titel: "Rentier im Schnee", alt: "Rentier mit Schal zwischen verschneiten Tannen", prompt: "a cute reindeer wearing a scarf between snowy fir trees" },
     ],
   },
   {
@@ -124,6 +147,8 @@ export const themen = [
       { slug: "osterhase", titel: "Osterhase mit Korb", alt: "Osterhase trägt einen Korb voller Ostereier", prompt: "an Easter bunny carrying a basket full of decorated Easter eggs in a spring meadow" },
       { slug: "ostereier", titel: "Ostereier zum Verzieren", alt: "Sechs große Ostereier mit Mustern", prompt: "six large Easter eggs with different simple patterns (stripes, dots, zigzag, flowers) filling the whole page, stacked in a big woven basket on grass with spring flowers" },
       { slug: "kueken-ei", titel: "Küken im Ei", alt: "Küken schaut aus einem Ei zwischen Tulpen", prompt: "a little chick peeking out of a cracked eggshell between tulips" },
+      { slug: "osterlamm", titel: "Lamm auf der Frühlingswiese", alt: "Kleines Lamm zwischen Blumen und Ostereiern", prompt: "a little lamb in a spring meadow with flowers and a few decorated eggs" },
+      { slug: "osterhasen-familie", titel: "Hasenfamilie bemalt Eier", alt: "Hasenfamilie bemalt Ostereier mit Pinseln", prompt: "a family of bunnies painting Easter eggs with brushes and unlabeled paint pots, no words anywhere" },
     ],
   },
   {
@@ -133,6 +158,8 @@ export const themen = [
       { slug: "mandala-blume", titel: "Blumen-Mandala", alt: "Rundes Mandala aus Blüten und Blättern", prompt: "a circular symmetric flower mandala with petals and leaves, medium detail suitable for children aged 6-10, centered on the page" },
       { slug: "mandala-tiere", titel: "Tier-Mandala", alt: "Rundes Mandala mit Schmetterlingen und Marienkäfern", prompt: "a circular symmetric mandala made of butterflies, ladybugs and leaves, medium detail for children, centered" },
       { slug: "mandala-stern", titel: "Sternen-Mandala", alt: "Rundes Mandala mit Sternen und Monden", prompt: "a circular symmetric mandala with stars and crescent moons, medium detail for children, centered" },
+      { slug: "mandala-einfach", titel: "Einfaches Mandala", alt: "Einfaches Mandala mit großen Flächen für kleine Kinder", prompt: "a very simple circular mandala with few large shapes (hearts, circles, petals) for small children aged 3-5, centered" },
+      { slug: "mandala-herz", titel: "Herz-Mandala", alt: "Mandala in Herzform mit Blüten", prompt: "a heart-shaped mandala with flowers and swirls, medium detail for children, centered" },
     ],
   },
   {
@@ -142,6 +169,8 @@ export const themen = [
       { slug: "burg", titel: "Märchenburg", alt: "Burg mit Türmen, Fahnen und Zugbrücke", prompt: "a fairy tale castle with towers, flags without symbols, a drawbridge and a moat" },
       { slug: "drache", titel: "Freundlicher Drache", alt: "Kleiner lächelnder Drache sitzt auf einem Schatz", prompt: "a small friendly smiling dragon sitting on a pile of treasure coins" },
       { slug: "prinzessin-ritter", titel: "Prinzessin und Ritter", alt: "Prinzessin und kleiner Ritter mit Holzschwert vor einer Burg", prompt: "a little princess with a crown and a little knight with a wooden sword standing together in front of a castle, original characters" },
+      { slug: "hexenhaus", titel: "Hexenhaus im Wald", alt: "Kleines verwunschenes Haus im Wald mit Pilzen", prompt: "a small enchanted cottage in the forest with a crooked chimney, mushrooms and a path, friendly not scary" },
+      { slug: "zauberer", titel: "Kleiner Zauberer", alt: "Kind mit Zauberhut und Zauberstab zaubert Sterne", prompt: "a child wizard with a pointed hat and magic wand casting stars, a spell book and a cat, original character" },
     ],
   },
   {
@@ -151,6 +180,217 @@ export const themen = [
       { slug: "schmetterling", titel: "Großer Schmetterling", alt: "Großer Schmetterling mit verzierten Flügeln über Blumen", prompt: "a large butterfly with ornate patterned wings above a few flowers" },
       { slug: "sonnenblumen", titel: "Sonnenblumen", alt: "Drei Sonnenblumen mit Biene", prompt: "three tall sunflowers with a bee flying nearby" },
       { slug: "marienkaefer", titel: "Marienkäfer auf dem Blatt", alt: "Marienkäfer sitzt auf einem großen Blatt mit Tautropfen", prompt: "a cute ladybug sitting on a big leaf with dew drops and small flowers" },
+      { slug: "regenbogen-blumen", titel: "Blumenwiese mit Regenbogen", alt: "Blumenwiese mit Regenbogen und Sonne", prompt: "a flower meadow with tulips, daisies and a rainbow with a smiling sun" },
+      { slug: "baum-jahreszeiten", titel: "Großer Baum", alt: "Großer Baum mit Vogelhaus und Schaukel", prompt: "a big tree with a birdhouse, a swing and birds, grass and flowers below" },
+    ],
+  },
+  {
+    slug: "zoo", name: "Zootiere", titel: "Zootiere Ausmalbilder: Löwe, Elefant & Giraffe",
+    intro: "Ein Ausflug in den Zoo zum Ausmalen: Löwe, Elefant, Giraffe, Zebra und Affe – freundlich gezeichnet mit großen Flächen.",
+    bilder: [
+      { slug: "loewe", titel: "Löwe", alt: "Lächelnder Löwe mit großer Mähne in der Savanne", prompt: "a friendly smiling lion with a big mane in the savanna with acacia trees" },
+      { slug: "elefant", titel: "Elefant", alt: "Elefant spritzt mit dem Rüssel Wasser", prompt: "a happy elephant spraying water with its trunk near a pond" },
+      { slug: "giraffe", titel: "Giraffe", alt: "Giraffe frisst Blätter von einem Baum", prompt: "a tall giraffe eating leaves from an acacia tree" },
+      { slug: "zebra", titel: "Zebra", alt: "Zebra mit Fohlen auf der Wiese", prompt: "a zebra with its foal standing in tall grass" },
+      { slug: "affe", titel: "Affe an der Liane", alt: "Affe schaukelt an einer Liane und hält eine Banane", prompt: "a cheeky monkey swinging on a jungle vine holding a banana" },
+    ],
+  },
+  {
+    slug: "waldtiere", name: "Waldtiere", titel: "Waldtiere Ausmalbilder: Fuchs, Eule & Reh",
+    intro: "Fuchs, Eule, Reh, Bär und Waschbär: Diese Waldtiere-Ausmalbilder passen zu Waldtagen in Kita und Schule.",
+    bilder: [
+      { slug: "fuchs", titel: "Fuchs", alt: "Fuchs sitzt zwischen Farnen und Pilzen im Wald", prompt: "a cute fox sitting among ferns and mushrooms in the forest" },
+      { slug: "eule", titel: "Eule", alt: "Eule sitzt nachts auf einem Ast vor dem Mond", prompt: "a cute owl sitting on a branch at night in front of a big moon" },
+      { slug: "reh", titel: "Reh mit Kitz", alt: "Reh und Rehkitz auf einer Waldlichtung", prompt: "a deer doe and her spotted fawn in a forest clearing" },
+      { slug: "baer", titel: "Bär mit Honig", alt: "Bär nascht Honig aus einer Honigwabe, Bienen fliegen herum", prompt: "a cute bear licking honey dripping from a honeycomb in a hollow tree, bees flying around, black outlines only, no pots, no jars, no labels" },
+      { slug: "waschbaer", titel: "Waschbär", alt: "Waschbär schaut aus einem hohlen Baumstamm", prompt: "a raccoon peeking out of a hollow tree trunk with leaves" },
+    ],
+  },
+  {
+    slug: "sport", name: "Sport", titel: "Sport Ausmalbilder: Fußball, Ballett & mehr",
+    intro: "Für kleine Sportskanonen: Fußball, Ballett, Schwimmen, Radfahren und Turnen zum Ausmalen.",
+    bilder: [
+      { slug: "fussball", titel: "Fußball", alt: "Kind schießt einen Fußball aufs Tor", prompt: "a child kicking a football towards a goal with a net, plain jersey without numbers or logos" },
+      { slug: "ballett", titel: "Ballerina", alt: "Mädchen im Tutu tanzt Ballett auf der Bühne", prompt: "a little ballerina in a tutu dancing on a stage with curtains" },
+      { slug: "schwimmen", titel: "Schwimmen", alt: "Kind schwimmt mit Schwimmbrille im Becken", prompt: "a child swimming in a pool with goggles, splashes and a lane rope" },
+      { slug: "fahrrad", titel: "Radfahren", alt: "Kind mit Helm fährt Fahrrad durch den Park", prompt: "a child wearing a helmet riding a bicycle through a park" },
+      { slug: "turnen", titel: "Turnen", alt: "Kind macht einen Handstand auf der Turnmatte", prompt: "a child doing a cartwheel on a gym mat with a balance beam in the background" },
+    ],
+  },
+  {
+    slug: "berufe", name: "Berufe", titel: "Berufe Ausmalbilder",
+    intro: "Was willst du mal werden? Ärztin, Feuerwehrmann, Bäcker, Polizistin oder Bauarbeiter – Berufe zum Ausmalen und Erzählen.",
+    bilder: [
+      { slug: "aerztin", titel: "Ärztin", alt: "Ärztin mit Stethoskop untersucht einen Teddybären", prompt: "a friendly doctor with a stethoscope examining a teddy bear, no text, no cross symbols" },
+      { slug: "feuerwehrmann", titel: "Feuerwehrmann", alt: "Feuerwehrmann mit Helm und Schlauch rettet eine Katze", prompt: "a firefighter with helmet and hose rescuing a cat from a tree, no text, no badges" },
+      { slug: "baecker", titel: "Bäcker", alt: "Bäcker mit Kochmütze und frischem Brot", prompt: "a baker with a chef hat holding a tray of fresh bread and pretzels in a bakery shop, no signs, no shop name" },
+      { slug: "polizistin", titel: "Polizistin", alt: "Polizistin hilft Kindern über die Straße", prompt: "a friendly police officer helping children cross the street at a zebra crossing, no text, no badges, no emblems" },
+      { slug: "bauarbeiter", titel: "Bauarbeiter", alt: "Bauarbeiter mit Helm und Schubkarre auf der Baustelle", prompt: "a construction worker with a hard hat pushing a wheelbarrow of bricks on a building site, no text" },
+    ],
+  },
+  {
+    slug: "verkehr", name: "Zug, Flugzeug & Schiff", titel: "Zug, Flugzeug & Schiff Ausmalbilder",
+    intro: "Ab in den Urlaub: Eisenbahn, Flugzeug, Schiff, Hubschrauber und Heißluftballon zum Ausmalen.",
+    bilder: [
+      { slug: "eisenbahn", titel: "Dampflok", alt: "Dampflok mit Waggons fährt über eine Brücke", prompt: "a steam locomotive with wagons crossing a bridge over a valley, no text, no faces on the train" },
+      { slug: "flugzeug", titel: "Flugzeug", alt: "Flugzeug fliegt über Wolken und Berge", prompt: "a passenger airplane flying above clouds and mountains, no logos, no text" },
+      { slug: "segelschiff", titel: "Segelschiff", alt: "Segelschiff auf dem Meer mit Möwen", prompt: "a sailing ship on the sea with waves, seagulls and a lighthouse" },
+      { slug: "hubschrauber", titel: "Hubschrauber", alt: "Hubschrauber fliegt über eine Stadt", prompt: "a helicopter flying over a small town, no text, no logos" },
+      { slug: "heissluftballon", titel: "Heißluftballon", alt: "Drei Heißluftballons über Hügeln", prompt: "three hot air balloons with patterns floating over hills and a village, everything as uncolored outlines only" },
+    ],
+  },
+  {
+    slug: "feen", name: "Feen & Elfen", titel: "Feen & Elfen Ausmalbilder",
+    intro: "Zauberhafte Feen und Elfen mit Flügeln, Blüten und Pilzhäusern – eigene Figuren, zum kostenlosen Ausdrucken.",
+    bilder: [
+      { slug: "fee-blume", titel: "Blumenfee", alt: "Fee mit Schmetterlingsflügeln sitzt auf einer Blüte", prompt: "a little fairy with butterfly wings sitting on a big flower blossom, original character" },
+      { slug: "fee-pilzhaus", titel: "Feenhaus im Pilz", alt: "Kleines Haus in einem Pilz mit Fee und Leiter", prompt: "a tiny fairy house inside a mushroom with a door, windows and a ladder, a fairy waving" },
+      { slug: "fee-zauberstab", titel: "Fee mit Zauberstab", alt: "Fee fliegt mit Zauberstab und streut Sternenstaub", prompt: "a fairy flying with a magic wand sprinkling stars, original character" },
+      { slug: "elfe-wald", titel: "Waldelfe", alt: "Elfe sitzt mit Tieren auf einem Baumstumpf", prompt: "a forest elf child sitting on a tree stump with a rabbit and a bird, original character" },
+      { slug: "fee-mond", titel: "Fee auf dem Mond", alt: "Fee sitzt auf der Mondsichel zwischen Sternen", prompt: "a fairy sitting on a crescent moon among stars and clouds, original character" },
+    ],
+  },
+  {
+    slug: "roboter", name: "Roboter", titel: "Roboter Ausmalbilder",
+    intro: "Piep, piep! Freundliche Roboter zum Ausmalen – mit Antennen, Zahnrädern und Knöpfen.",
+    bilder: [
+      { slug: "roboter-winkt", titel: "Winkender Roboter", alt: "Freundlicher Roboter mit Antennen winkt", prompt: "a friendly boxy robot with antennas waving, gears and bolts around" },
+      { slug: "roboter-hund", titel: "Roboterhund", alt: "Roboterhund spielt mit einem Ball", prompt: "a cute robot dog playing with a ball" },
+      { slug: "roboter-werkstatt", titel: "Roboter-Werkstatt", alt: "Kind baut mit Werkzeug einen Roboter", prompt: "a child building a robot in a workshop with tools, screws and a toolbox, no labels or words anywhere" },
+      { slug: "roboter-weltall", titel: "Roboter im Weltall", alt: "Roboter schwebt mit Raketenrucksack zwischen Planeten", prompt: "a cute robot with a jetpack floating between planets and stars" },
+      { slug: "roboter-freunde", titel: "Roboter-Freunde", alt: "Drei verschiedene Roboter halten sich an den Händen", prompt: "three different cute robots (round, square, tall) holding hands in a park with trees and clouds, filling the page, all outlines black on white with nothing filled in" },
+    ],
+  },
+  {
+    slug: "piraten", name: "Piraten", titel: "Piraten Ausmalbilder",
+    intro: "Ahoi! Piratenschiff, Schatzkarte und Papagei – Piraten-Ausmalbilder für kleine Abenteurer.",
+    bilder: [
+      { slug: "piratenschiff", titel: "Piratenschiff", alt: "Piratenschiff mit Segeln auf hoher See", prompt: "a pirate ship with sails on the sea with waves, a flag with a simple skull, friendly style" },
+      { slug: "pirat-kind", titel: "Kleiner Pirat", alt: "Kind als Pirat mit Augenklappe und Fernrohr", prompt: "a child pirate with eye patch, hat and telescope standing on a ship deck, original character" },
+      { slug: "schatzkiste", titel: "Schatzkiste", alt: "Offene Schatzkiste voller Münzen und Edelsteine am Strand", prompt: "an open treasure chest full of coins and gems on a beach with palm trees" },
+      { slug: "papagei", titel: "Papagei", alt: "Papagei mit Piratenhut auf einem Fass", prompt: "a parrot wearing a tiny pirate hat sitting on a barrel" },
+      { slug: "schatzinsel", titel: "Schatzinsel", alt: "Insel mit Palmen und Schatzkarte", prompt: "a small treasure island with palm trees, a dotted path and an X mark, a rowing boat" },
+    ],
+  },
+  {
+    slug: "essen", name: "Essen & Süßes", titel: "Essen Ausmalbilder: Obst, Eis & Kuchen",
+    intro: "Lecker ausmalen: Obst und Gemüse mit Gesichtern, Eis, Kuchen, Pizza und Cupcakes.",
+    bilder: [
+      { slug: "obst", titel: "Obst mit Gesichtern", alt: "Apfel, Banane, Erdbeere und Birne mit lachenden Gesichtern", prompt: "cute fruits with smiling faces: apple, banana, strawberry, pear, grapes" },
+      { slug: "eis", titel: "Eis", alt: "Eiswaffeln mit mehreren Kugeln und Streuseln", prompt: "three ice cream cones with scoops and sprinkles, black and white outlines only" },
+      { slug: "kuchen", titel: "Torte", alt: "Große Torte mit Früchten und Sahne", prompt: "a big layered cake with strawberries and cream on a cake stand" },
+      { slug: "pizza", titel: "Pizza", alt: "Pizza mit Belag und einem Stück, das herausgezogen wird", prompt: "a whole pizza with toppings and a slice being pulled out with stretchy cheese" },
+      { slug: "gemuese", titel: "Gemüse", alt: "Karotte, Tomate, Brokkoli und Gurke mit Gesichtern", prompt: "cute vegetables with smiling faces: carrot, tomato, broccoli, cucumber, corn" },
+    ],
+  },
+  {
+    slug: "sommer", name: "Sommer & Strand", titel: "Sommer & Strand Ausmalbilder",
+    intro: "Ferien zum Ausmalen: Sandburg, Leuchtturm, Eis am Strand und Picknick im Grünen.",
+    bilder: [
+      { slug: "sandburg", titel: "Sandburg", alt: "Kinder bauen eine Sandburg am Strand", prompt: "children building a sandcastle on the beach with buckets and spades, sun and waves, everything as black outlines on white with nothing filled in" },
+      { slug: "leuchtturm", titel: "Leuchtturm", alt: "Leuchtturm an der Küste mit Möwen", prompt: "a striped lighthouse on rocks by the sea with seagulls and a boat" },
+      { slug: "strand", titel: "Strandtag", alt: "Sonnenschirm, Liegestuhl und Ball am Strand", prompt: "a beach scene with parasol, deck chair, beach ball, shells and a crab" },
+      { slug: "camping", titel: "Camping", alt: "Zelt am See mit Lagerfeuer", prompt: "a tent by a lake with a campfire, trees and mountains" },
+      { slug: "picknick", titel: "Picknick", alt: "Picknickdecke mit Korb unter einem Baum", prompt: "a picnic blanket with a basket, sandwiches and fruit under a tree, a teddy bear" },
+    ],
+  },
+  {
+    slug: "winter", name: "Winter", titel: "Winter Ausmalbilder",
+    intro: "Schnee, Schlitten und Pinguine: Winter-Ausmalbilder für kalte Tage.",
+    bilder: [
+      { slug: "schlitten", titel: "Schlittenfahren", alt: "Kinder fahren mit dem Schlitten einen Hügel hinunter", prompt: "children sledding down a snowy hill, snowflakes and pine trees" },
+      { slug: "pinguin", titel: "Pinguine", alt: "Pinguin-Familie auf dem Eis", prompt: "a family of penguins on ice floes, one sliding on its belly" },
+      { slug: "eisbaer", titel: "Eisbär", alt: "Eisbär mit Jungem im Schnee", prompt: "a polar bear mother with her cub in the snow" },
+      { slug: "schneeflocken", titel: "Schneeflocken", alt: "Große verzierte Schneeflocken", prompt: "several large ornate snowflakes of different designs filling the page" },
+      { slug: "schlittschuh", titel: "Schlittschuhlaufen", alt: "Kind läuft Schlittschuh auf einem zugefrorenen See", prompt: "a child ice skating on a frozen lake with a scarf and hat, snowy trees" },
+    ],
+  },
+  {
+    slug: "geburtstag", name: "Geburtstag", titel: "Geburtstag Ausmalbilder",
+    intro: "Für die Geburtstagsfeier: Kuchen, Luftballons, Geschenke und Partytiere – auch schön als selbst gemalte Glückwunschkarte.",
+    bilder: [
+      { slug: "geburtstagskuchen", titel: "Geburtstagskuchen", alt: "Geburtstagskuchen mit Kerzen und Luftballons", prompt: "a birthday cake with candles, balloons and confetti, no text, no numbers" },
+      { slug: "luftballons", titel: "Luftballons", alt: "Bündel Luftballons mit Bändern", prompt: "a bunch of balloons of different shapes with ribbons, stars and confetti" },
+      { slug: "geschenke", titel: "Geschenke", alt: "Stapel Geschenke mit Schleifen", prompt: "a pile of wrapped presents with bows and patterns" },
+      { slug: "partytiere", titel: "Party mit Tieren", alt: "Bär, Hase und Katze feiern mit Partyhüten", prompt: "a bear, a bunny and a cat wearing party hats celebrating with cake and balloons" },
+      { slug: "kindergeburtstag", titel: "Kindergeburtstag", alt: "Kinder spielen auf einer Geburtstagsparty mit Girlanden", prompt: "children at a birthday party playing with streamers, bunting garland without letters, cake on a table" },
+    ],
+  },
+  {
+    slug: "musik", name: "Musik", titel: "Musik Ausmalbilder: Instrumente",
+    intro: "Trommel, Gitarre, Geige und Klavier: Musikinstrumente zum Ausmalen für kleine Musikerinnen und Musiker.",
+    bilder: [
+      { slug: "gitarre", titel: "Gitarre", alt: "Gitarre mit Notenschlüssel und Noten", prompt: "an acoustic guitar with musical notes floating around" },
+      { slug: "trommel", titel: "Trommel", alt: "Kind spielt Trommel", prompt: "a child playing a drum with drumsticks, musical notes around" },
+      { slug: "klavier", titel: "Klavier", alt: "Katze sitzt auf einem Klavier", prompt: "a piano with a cat sitting on top, musical notes" },
+      { slug: "geige", titel: "Geige", alt: "Bär spielt Geige im Wald", prompt: "a teddy bear playing a violin in a forest clearing" },
+      { slug: "band", titel: "Tierband", alt: "Tiere spielen zusammen in einer Band", prompt: "an animal band: a frog with a trumpet, a mouse with a flute and a dog with a drum on a small stage" },
+    ],
+  },
+  {
+    slug: "krabbeltiere", name: "Krabbeltiere", titel: "Krabbeltiere Ausmalbilder: Biene, Schnecke & Raupe",
+    intro: "Kleine Tiere ganz groß: Biene, Schnecke, Raupe, Libelle und Ameise zum Ausmalen.",
+    bilder: [
+      { slug: "biene", titel: "Biene", alt: "Biene fliegt zu einer Blume, daneben ein Bienenstock", prompt: "a cute bee flying to a flower next to a beehive and honeycomb" },
+      { slug: "schnecke", titel: "Schnecke", alt: "Schnecke mit gemustertem Haus auf einem Blatt", prompt: "a cute snail with a patterned spiral shell on a leaf with raindrops" },
+      { slug: "raupe", titel: "Raupe", alt: "Raupe knabbert an einem Apfel", prompt: "a cute caterpillar eating through an apple and leaves" },
+      { slug: "libelle", titel: "Libelle", alt: "Libelle über einem Teich mit Seerosen", prompt: "a dragonfly with detailed wings above a pond with water lilies and reeds" },
+      { slug: "ameise", titel: "Ameisen", alt: "Ameisen tragen Blätter und Krümel zu ihrem Hügel", prompt: "cute ants carrying a leaf and crumbs to their anthill" },
+    ],
+  },
+  {
+    slug: "mode", name: "Mode", stil: "detail", alter: "8+", titel: "Mode Ausmalbilder für größere Kinder",
+    intro: "Für Modedesignerinnen und -designer von morgen: Outfits, Kleider, Sneaker und ein Laufsteg zum Gestalten – detailliertere Ausmalbilder für Kinder ab 8 Jahren.",
+    bilder: [
+      { slug: "mode-outfits", titel: "Outfits entwerfen", alt: "Drei junge Models in verschiedenen Outfits: Streetwear, Kleid und Jeansjacke", prompt: "three teenage fashion figures standing side by side in different outfits: streetwear hoodie with cargo pants, a summer dress, a denim jacket with skirt, full body, fashion illustration" },
+      { slug: "mode-laufsteg", titel: "Laufsteg", alt: "Model läuft über einen Laufsteg mit Publikum und Scheinwerfern", prompt: "a fashion show runway with a model in an elegant gown walking, audience silhouettes and spotlights" },
+      { slug: "mode-sneaker", titel: "Sneaker gestalten", alt: "Zwei große Sneaker mit Mustern zum Gestalten", prompt: "two large sneakers from the side with patterned panels and laces, ready to be designed, no brand logos" },
+      { slug: "mode-kleiderschrank", titel: "Kleiderschrank", alt: "Offener Kleiderschrank mit Kleidung, Taschen und Schuhen", prompt: "an open wardrobe full of clothes on hangers, handbags, hats and shoes, detailed" },
+      { slug: "mode-accessoires", titel: "Accessoires", alt: "Taschen, Sonnenbrillen, Hüte und Schmuck", prompt: "a collection of fashion accessories: handbags, sunglasses, hats, scarves, jewelry and a watch, arranged across the page, no logos" },
+    ],
+  },
+  {
+    slug: "autos", name: "Autos", stil: "detail", alter: "8+", titel: "Autos Ausmalbilder: Sportwagen, Oldtimer & Rennwagen",
+    intro: "Sportwagen, Rennwagen, Oldtimer, Geländewagen und Monstertruck – detaillierte Auto-Ausmalbilder für größere Kinder. Alle Fahrzeuge sind frei erfunden, ohne echte Marken.",
+    bilder: [
+      { slug: "auto-sportwagen", titel: "Sportwagen", alt: "Flacher Sportwagen auf einer Küstenstraße", prompt: "a sleek futuristic sports car with rounded invented body shape driving on a coastal road with mountains, three-quarter view, clearly fictional design that does not resemble any real car model or manufacturer, no brand logos, no license plate text" },
+      { slug: "auto-rennwagen", titel: "Rennwagen", alt: "Formel-Rennwagen auf der Rennstrecke", prompt: "an open-wheel formula race car on a race track with curbs and grandstand, fictional design, no logos, no numbers, no sponsor text" },
+      { slug: "auto-oldtimer", titel: "Oldtimer", alt: "Alter Oldtimer mit Speichenrädern auf einer Dorfstraße mit Kopfsteinpflaster", prompt: "a generic veteran car from around 1905 with spoked wheels, carriage lamps and an open bench seat (strictly black ink lines only, no gold, no yellow, no color) on a cobblestone village street, no signs or writing, clearly fictional design that does not resemble any real car model or manufacturer, no text, no logos" },
+      { slug: "auto-gelaende", titel: "Geländewagen", alt: "Geländewagen fährt durch Schlamm und über Felsen", prompt: "an invented futuristic expedition rover-style off-road vehicle with rounded body, roof rack and huge tyres driving over rocks and through mud in a forest, clearly fictional design that does not resemble any real car model or manufacturer, no logos" },
+      { slug: "auto-monstertruck", titel: "Monstertruck", alt: "Monstertruck springt über Autos", prompt: "a monster truck with huge tires jumping over a ramp, dirt flying, fictional design, no text, no logos" },
+    ],
+  },
+  {
+    slug: "raumfahrt", name: "Raumfahrt", stil: "detail", alter: "8+", titel: "Raumfahrt Ausmalbilder: Raketen, Rover & Raumstation",
+    intro: "Für Raumfahrtfans: Raketenstart, Mars-Rover, Astronautin beim Außeneinsatz, Raumstation und Mondlandung – detailreich und realistischer gezeichnet.",
+    bilder: [
+      { slug: "raumfahrt-start", titel: "Raketenstart", alt: "Große Rakete hebt von der Startrampe ab, mit Rauchwolken", prompt: "a large multi-stage rocket lifting off from a launch pad with a service tower and huge smoke clouds, realistic style, no flags, no text" },
+      { slug: "raumfahrt-rover", titel: "Mars-Rover", alt: "Rover mit sechs Rädern erkundet die Marslandschaft", prompt: "a six-wheeled planetary rover exploring rocky Mars terrain with craters and distant mountains, realistic style, no text" },
+      { slug: "raumfahrt-ausseneinsatz", titel: "Außeneinsatz", alt: "Astronautin schwebt im Raumanzug neben einer Raumstation, die Erde unter ihr", prompt: "an astronaut in a detailed spacesuit on a spacewalk tethered to a space station, Earth below, realistic style, no flags, no text" },
+      { slug: "raumfahrt-mondlandung", titel: "Mondlandung", alt: "Mondlandefähre auf dem Mond, Astronaut und Fußspuren", prompt: "a lunar lander on the moon surface with an astronaut, footprints and Earth rising on the horizon, realistic style, no flags, no text" },
+      { slug: "raumfahrt-teleskop", titel: "Weltraumteleskop", alt: "Weltraumteleskop mit goldenen Spiegelsegmenten vor Galaxien", prompt: "a space telescope with hexagonal mirror segments and sunshield floating in space with galaxies and nebulae, realistic style, no text" },
+    ],
+  },
+  {
+    slug: "technik", name: "Technik", stil: "detail", alter: "8+", titel: "Technik Ausmalbilder: Maschinen, Zahnräder & Erfindungen",
+    intro: "Für Tüftler: Zahnradgetriebe, Windkraft, ein Roboterarm, eine Dampfmaschine und eine Drohne – technische Ausmalbilder für größere Kinder.",
+    bilder: [
+      { slug: "technik-zahnraeder", titel: "Zahnräder", alt: "Ineinandergreifende Zahnräder verschiedener Größe", prompt: "a complex arrangement of interlocking gears and cogs of different sizes with springs and bolts, filling the page" },
+      { slug: "technik-windrad", titel: "Windkraftanlagen", alt: "Windräder auf Hügeln und Solarfelder", prompt: "wind turbines on rolling hills with solar panel fields and a small village, detailed" },
+      { slug: "technik-roboterarm", titel: "Roboterarm", alt: "Industrieroboterarm in einer Werkhalle", prompt: "an industrial robotic arm assembling parts on a conveyor belt in a factory hall, detailed, no text" },
+      { slug: "technik-dampfmaschine", titel: "Dampfmaschine", alt: "Alte Dampfmaschine mit Kesseln, Rohren und Schwungrad", prompt: "an old steam engine machine with boiler, pipes, pressure gauges and a big flywheel, detailed technical illustration, no text" },
+      { slug: "technik-drohne", titel: "Drohne", alt: "Quadrocopter-Drohne fliegt über einer Stadt", prompt: "a quadcopter drone with camera flying above a city with buildings and a park, detailed, no logos" },
+    ],
+  },
+  {
+    slug: "mandala-erwachsene", name: "Mandalas für Erwachsene", stil: "erwachsen", alter: "Erwachsene", titel: "Mandalas für Erwachsene zum Ausdrucken",
+    intro: "Feine, detailreiche Mandalas zum Entspannen: Blüten, Ornamente, Federn, Tiere und Zentangle-Muster – kostenlos als A4-PDF.",
+    bilder: [
+      { slug: "mandala-ornament", titel: "Ornament-Mandala", alt: "Sehr feines kreisrundes Mandala mit Ornamenten", prompt: "an intricate highly detailed circular mandala with fine ornamental patterns, many small segments, for adults, centered" },
+      { slug: "mandala-lotus", titel: "Lotus-Mandala", alt: "Detailreiches Mandala mit Lotusblüten", prompt: "an intricate lotus flower mandala with layered petals and fine filigree details, for adults, centered" },
+      { slug: "mandala-eule", titel: "Eulen-Mandala", alt: "Eule aus feinen Mandala-Mustern", prompt: "an owl drawn entirely with intricate zentangle and mandala patterns, highly detailed, for adults" },
+      { slug: "mandala-feder", titel: "Federn-Mandala", alt: "Kreis aus verzierten Federn", prompt: "a circular mandala made of ornate decorated feathers radiating from the center, highly detailed, for adults" },
+      { slug: "mandala-zentangle", titel: "Zentangle-Muster", alt: "Seitenfüllendes Zentangle-Muster", prompt: "a full-page zentangle pattern with many different intricate tangles and fine sections, for adults" },
     ],
   },
 ];
