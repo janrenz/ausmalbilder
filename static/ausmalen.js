@@ -29,7 +29,7 @@
         c.width = W; c.height = H;
         const x = c.getContext("2d");
         x.fillStyle = "#fff"; x.fillRect(0, 0, W, H);
-        x.drawImage(linien, 0, 0, W, H);
+        x.drawImage(linien, 0, 0, W, H, 0, 0, W, H); // nur die Zeichnung, ohne den Streifen mit „malkiste.eu“ darunter
         const d = x.getImageData(0, 0, W, H).data;
         wand = new Uint8Array(W * H);
         for (let i = 0; i < wand.length; i++) wand[i] = d[i * 4] < 160 ? 1 : 0;
@@ -177,13 +177,14 @@
     geaendert = false;
   });
   dlg.querySelector('[data-aktion="speichern"]').addEventListener("click", () => {
+    // Die Vorlage ist höher als die Leinwand: Der Streifen mit „malkiste.eu“ kommt mit ins gespeicherte Bild
     const c = document.createElement("canvas");
-    c.width = W; c.height = H;
+    c.width = W; c.height = Math.max(H, linien.naturalHeight);
     const x = c.getContext("2d");
-    x.fillStyle = "#fff"; x.fillRect(0, 0, W, H);
+    x.fillStyle = "#fff"; x.fillRect(0, 0, c.width, c.height);
     x.drawImage(leinwand, 0, 0);
     x.globalCompositeOperation = "multiply";
-    x.drawImage(linien, 0, 0, W, H);
+    x.drawImage(linien, 0, 0);
     c.toBlob((blob) => {
       const a = document.createElement("a");
       a.href = URL.createObjectURL(blob);

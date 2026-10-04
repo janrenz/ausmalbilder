@@ -56,6 +56,8 @@ const pfadSeite = (L, k) => `${prefix(L)}${L.seiten[k].pfad}/`;
 // ---------- Bilder ----------
 const veraltet = (ziel, quelle) => !existsSync(ziel) || statSync(ziel).mtimeMs < statSync(quelle).mtimeMs;
 const magick = (...args) => execFileSync("magick", args, { stdio: "inherit" });
+const MARKE_TEXT = new URL(SITE).hostname;
+const MARKE_HOEHE = 44;
 const CACHE = ".cache"; // aufbereitete Bilder bleiben zwischen Builds erhalten
 mkdirSync(CACHE, { recursive: true });
 for (const b of alleBilder) {
@@ -75,10 +77,17 @@ for (const b of alleBilder) {
     magick(druck, "-resize", "x630", "-background", "#fff7ec", "-gravity", "center",
       "-extent", "1200x630", "-quality", "80", og);
   }
+  // Download-Fassung: weißer Streifen unten mit „malkiste.eu“, damit der Hinweis nie im Motiv liegt
+  const marke = join(CACHE, `${b.slug}-marke.png`);
+  if (veraltet(marke, druck)) {
+    magick(druck, "-background", "white", "-gravity", "south", "-splice", `0x${MARKE_HOEHE}`,
+      "-font", "Liberation-Sans-Bold", "-pointsize", "22", "-fill", "#8a8a8a", "-annotate", "+0+12", MARKE_TEXT,
+      "-strip", "-define", "png:color-type=0", "-define", "png:bit-depth=8", marke);
+  }
   const pdf = join(CACHE, `${b.slug}.pdf`);
-  if (veraltet(pdf, druck)) {
+  if (veraltet(pdf, marke)) {
     // Ohne Neuberechnen: Bild auf A4-Seitenverhältnis auffüllen, Dichte so, dass die Breite A4 füllt
-    magick(druck, "-bordercolor", "white", "-border", "40", "-background", "white", "-gravity", "center",
+    magick(marke, "-bordercolor", "white", "-border", "40", "-background", "white", "-gravity", "center",
       "-extent", "976x1380", "-units", "PixelsPerInch", "-density", "118", "-compress", "Zip", pdf);
   }
 }
@@ -220,7 +229,11 @@ const schreibe = (p, inhalt) => {
 };
 
 mkdirSync(join(OUT, "bilder"), { recursive: true });
-for (const f of readdirSync(CACHE)) copyFileSync(join(CACHE, f), join(OUT, "bilder", f));
+// bilder/<slug>.png ist die Download-Fassung mit Hinweis, die unmarkierte Druckvorlage bleibt im Cache
+for (const f of readdirSync(CACHE)) {
+  if (f.endsWith(".png") && !f.endsWith("-marke.png")) continue;
+  copyFileSync(join(CACHE, f), join(OUT, "bilder", f.replace(/-marke\.png$/, ".png")));
+}
 for (const f of readdirSync("static")) copyFileSync(join("static", f), join(OUT, f));
 if (existsSync("CNAME")) copyFileSync("CNAME", join(OUT, "CNAME"));
 copyFileSync(join(CACHE, `${themen[0].bilder[0].slug}-og.jpg`), join(OUT, "og.jpg"));
@@ -315,7 +328,7 @@ for (const L of sprachen) {
           "@context": "https://schema.org", "@type": "ImageObject", name: fuelle(u.bildH1, { titel: B.titel }), description: B.alt, inLanguage: L.code,
           contentUrl: `${SITE}/bilder/${b.slug}.png`, thumbnailUrl: `${SITE}/bilder/${b.slug}.webp`,
           license: "https://creativecommons.org/publicdomain/zero/1.0/", acquireLicensePage: `${SITE}/${pfadSeite(L, "ueber")}`,
-          creditText: NAME, copyrightNotice: "CC0 1.0", encodingFormat: "image/png", width: 896, height: 1200,
+          creditText: NAME, copyrightNotice: "CC0 1.0", encodingFormat: "image/png", width: 896, height: 1200 + MARKE_HOEHE,
         }],
         inhalt: `${krumen(L, bk)}
 <article class="bild">
