@@ -24,6 +24,17 @@ Ist in `janrenz/ausmalbilder` noch ein offener Pull Request der Automatik (Branc
 
 Lies `.pruef/auftrag.md` vollständig und arbeite ihn genau so ab, wie er dort steht (Bilder nach Nachfrage und/oder Anlass-Thema, Prüfbogen ansehen, Übersetzungen, Zusammenfassung in `.pruef/zusammenfassung.md`). `./gen.sh` mit langem Timeout aufrufen (10 Minuten). Kein git in diesem Schritt.
 
+### 4b. Unabhängige Prüfung
+
+Hat Schritt 4 neue Bilder ergeben (neue slugs im Katalog), lass sie von einem **unabhängigen Prüf-Agenten** begutachten: Starte mit dem Agent-Tool einen neuen Agenten, gib ihm den vollständigen Inhalt von `automatik/qs.md` als Auftrag und dazu die Liste der neuen slugs mit Titel und `alt`. Er hat die Bilder nicht erzeugt und sieht sie zum ersten Mal.
+
+- Speichere seine JSON-Antwort unverändert als `.pruef/qs.json`.
+- Für jedes Bild mit `"ok": false`: `rm src/bilder/<slug>.png`, den Prompt in `katalog.mjs` um die genannten Mängel ergänzen (z. B. „every sheep has exactly one head and four legs“), `./gen.sh`, `automatik/pruefbogen.sh <slug>`, dann wieder einen **neuen** Prüf-Agenten nur für diese slugs starten und `.pruef/qs.json` mit dem Ergebnis aktualisieren.
+- Höchstens 3 Versuche je Bild insgesamt. Besteht ein Bild dann nicht, nimm es aus `katalog.mjs` und aus allen `i18n/*.mjs` heraus.
+- Schreib das Ergebnis in `.pruef/zusammenfassung.md` (Abschnitt **Prüf-Agent**: was beanstandet und wie behoben wurde).
+
+`automatik/abschliessen.sh` bricht ab, wenn für ein neues Bild in `.pruef/qs.json` kein `"ok": true` steht.
+
 ## 5. Abschließen
 
 1. Neuen Branch anlegen: `auto/neue-bilder-<JJJJ-MM-TT>`. Lässt die Umgebung nur `claude/…` zu, nimm `claude/malkiste-<JJJJ-MM-TT>`.

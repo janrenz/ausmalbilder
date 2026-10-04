@@ -18,7 +18,7 @@ export LC_ALL=C
 [ "$(git rev-parse --is-shallow-repository)" = "true" ] && git fetch -q --unshallow origin || true
 
 mkdir -p .pruef
-rm -f .pruef/zusammenfassung.md .pruef/bogen.jpg .pruef/auftrag.md .pruef/entscheidung .pruef/farbe-neu.txt
+rm -rf .pruef/zusammenfassung.md .pruef/bogen.jpg .pruef/auftrag.md .pruef/entscheidung .pruef/farbe-neu.txt .pruef/qs.json .pruef/detail
 
 # Jahreszeit und Anlässe (saison.mjs): Stimmt „Passend zur Jahreszeit“ auf main noch? Steht ein Anlass
 # bevor, für den es noch kein Thema gibt?

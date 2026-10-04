@@ -38,7 +38,8 @@ Erlaubt sind nur diese Befehle, **genau so, ohne Pipes, Umleitungen oder `&&`**:
 
 1. **Katalog:** Neue Bilder im passenden Thema in `katalog.mjs` anhängen. Felder: `slug` (deutsch, kleingeschrieben, Bindestriche, eindeutig im ganzen Katalog), `titel`, `alt` (beschreibt, was auf dem Bild zu sehen ist), `prompt` (Englisch, nur das Motiv; der Stil kommt aus `gen.sh`). Ein neues Thema bekommt `slug`, `name`, `titel` (mit Suchbegriff „… Ausmalbilder“), `intro` (2 Sätze), ggf. `stil`/`alter` wie bei den bestehenden Themen für größere Kinder.
 2. **Bilder erzeugen:** `./gen.sh` erzeugt alle fehlenden Bilder.
-3. **Prüfen:** `automatik/pruefbogen.sh <slug> …` für alle neuen Bilder, dann `.pruef/bogen.jpg` **ansehen** (Read-Tool). Verwirf ein Bild (`rm src/bilder/<slug>.png`), präzisiere den Prompt und erzeuge neu, wenn:
+3. **Prüfen:** `automatik/pruefbogen.sh <slug> …` für alle neuen Bilder. Sieh dir `.pruef/bogen.jpg` für den Überblick und **jede Detailansicht** `.pruef/detail/<slug>-oben.jpg` und `-unten.jpg` an (Read-Tool) – im Kontaktbogen sind Fehler wie ein Tier mit zwei Köpfen zu klein. Verwirf ein Bild (`rm src/bilder/<slug>.png`), präzisiere den Prompt und erzeuge neu, wenn:
+   - eine Figur falsch gebaut ist: falsche Zahl an Köpfen, Augen, Beinen, Armen, Händen oder Fingern, verschmolzene oder doppelte Körper (zähle bei jeder Figur nach),
    - Schrift, Buchstaben, Zahlen, Schilder oder Etiketten im Bild sind (häufig: Töpfe, Läden, Kisten, Fahrzeuge),
    - der Farbtest anschlägt oder sichtbar Flächen gefüllt sind,
    - es wie ein Foto einer Buchseite aussieht statt wie eine flache Zeichnung,

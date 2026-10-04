@@ -23,6 +23,11 @@ echo "Neue Bilder: ${#NEU[@]} (${NEU[*]:-})"
 [ ${#NEU[@]} -le $MAX_BILDER ] || fehler "${#NEU[@]} neue Bilder statt höchstens $MAX_BILDER."
 for s in "${NEU[@]}"; do [ -f "src/bilder/$s.png" ] || fehler "Bild $s fehlt."; done
 for l in en fr es it nl pl pt; do node i18n/pruefe.mjs "$l" || fehler "Übersetzung $l unvollständig."; done
+# Unabhängige Prüfung (automatik/qs.md): jedes neue Bild braucht ein "ok": true in .pruef/qs.json
+for s in "${NEU[@]}"; do
+  node -e 'const q=JSON.parse(require("fs").readFileSync(".pruef/qs.json","utf8"));const e=q.find(x=>x.slug===process.argv[1]);process.exit(e&&e.ok===true?0:1)' "$s" 2>/dev/null \
+    || fehler "Bild $s hat keine bestandene Prüfung in .pruef/qs.json (automatik/qs.md)."
+done
 if [ ${#NEU[@]} -gt 0 ]; then
   automatik/pruefbogen.sh "${NEU[@]}" | tee .pruef/farbe-neu.txt
   ! grep -q 'FARBE IM ORIGINAL' .pruef/farbe-neu.txt || fehler "Farbe in einem neuen Bild."
