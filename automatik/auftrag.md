@@ -19,6 +19,18 @@ Füge **höchstens 5 neue Bilder** hinzu, dort wo die Nachfrage am größten ist
 3. Höchstens **ein neues Thema** pro Lauf, und nur wenn die Daten klar eine Lücke zeigen (z. B. ein Bild wird stark geladen, passt aber nur halb in sein Thema). Ein neues Thema bekommt mindestens 3 Bilder (die zählen zu den 5).
 4. Achte auf die Saison: Läuft der Lauf in den 6 Wochen vor einem Fest (Halloween, Sankt Martin, Weihnachten, Ostern, Fasching), darf ein Bild dafür dabei sein, auch wenn die Statistik es noch nicht zeigt.
 
+## Anlass-Thema
+
+Steht am Ende dieses Auftrags ein **Anlass für diesen Lauf**, legst du dieses Thema zusätzlich an (es zählt nicht zu den 5 Bildern nach Nachfrage). Der Kalender dazu steht in `saison.mjs`; dort ist das Thema schon eingetragen, du änderst `saison.mjs` nicht.
+
+- Neues Thema in `katalog.mjs` mit genau dem angegebenen `slug`, dazu `name`, `titel` (mit Suchbegriff „… Ausmalbilder“) und `intro` (2 Sätze). Einsortieren neben verwandte Themen (Feste zu Festen, Jahreszeiten zu Jahreszeiten).
+- **5–6 Bilder** nach den `ideen` aus dem Anlass. Die Themen sollen das ganze Jahr taugen, nicht nur am Stichtag (zum Beispiel „Deutschland“ mit Sehenswürdigkeiten statt nur Feiertagsszenen).
+- Für kleine Kinder (kein `stil`), außer die Ideen verlangen Details.
+- Keine Flaggen in Farbe (die Bilder sind ohnehin schwarz-weiß), keine Wappen, Hoheitszeichen, Parteien oder Personen des öffentlichen Lebens.
+- Landkarten und Umrisse (z. B. Deutschlandkarte) müssen **erkennbar stimmen**. Vergleiche mit deinem Wissen über die echte Form. Ist der Umriss nach 3 Versuchen verzerrt, lass das Bild weg.
+- Übersetzungen wie bei jedem neuen Thema in allen sieben Sprachen, mit übersetzten `pfad`-Werten.
+- In der Zusammenfassung ein eigener Punkt **Anlass-Thema** mit den Bildern und was verworfen wurde.
+
 ## Umsetzung
 
 Erlaubt sind nur diese Befehle, **genau so, ohne Pipes, Umleitungen oder `&&`**: `./gen.sh` (mit Timeout 600000 aufrufen), `automatik/pruefbogen.sh <slugs…>`, `node i18n/pruefe.mjs <code>`, `rm src/bilder/<slug>.png`, `ls …`. Dateien liest und änderst du mit Read/Edit/Write/Grep.

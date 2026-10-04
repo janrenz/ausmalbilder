@@ -6,6 +6,7 @@ import { existsSync, mkdirSync, rmSync, statSync, writeFileSync, copyFileSync, r
 import { join, dirname } from "node:path";
 import { themen } from "./katalog.mjs";
 import de from "./i18n/de.mjs";
+import { saisonThemen } from "./saison.mjs";
 
 const SITE = (process.env.SITE_URL || (existsSync("CNAME") ? `https://${readFileSync("CNAME", "utf8").trim()}` : "https://janrenz.github.io/ausmalbilder")).replace(/\/$/, "");
 const BASE = new URL(SITE).pathname.replace(/\/$/, "");
@@ -14,10 +15,11 @@ const OUT = "docs";
 const SRC = "src/bilder";
 const HEUTE = new Date().toISOString().slice(0, 10);
 const CODES = ["de", "en", "fr", "es", "it", "nl", "pl", "pt"];
-const SAISON = ["halloween", "herbst", "sankt-martin", "weihnachten"];
 // Reichweitenmessung (Umami, selbst gehostet, cookielos). Ohne umami.json wird kein Skript eingebunden.
 const UMAMI = existsSync("umami.json") ? JSON.parse(readFileSync("umami.json", "utf8")) : null;
 
+// „Passend zur Jahreszeit“ kommt aus dem Kalender in saison.mjs, nach dem Datum des Builds
+const SAISON = saisonThemen(themen.map((t) => t.slug), HEUTE);
 const alleBilder = themen.flatMap((t) => t.bilder.map((b) => ({ ...b, thema: t })));
 
 // lastmod für die Sitemap: letzter Commit des Quellbilds statt Build-Datum, sonst ignoriert Google das Feld
@@ -56,10 +58,13 @@ const pfadSeite = (L, k) => `${prefix(L)}${L.seiten[k].pfad}/`;
 // ---------- Bilder ----------
 const veraltet = (ziel, quelle) => !existsSync(ziel) || statSync(ziel).mtimeMs < statSync(quelle).mtimeMs;
 const magick = (...args) => execFileSync("magick", args, { stdio: "inherit" });
-const MARKE_TEXT = new URL(SITE).hostname;
 const MARKE_HOEHE = 44;
+// Logo (logo/erzeuge.mjs): im Kopf direkt eingebettet, der Stempel landet als Bild unter jedem Download
+const LOGO = readFileSync("static/logo.svg", "utf8").trim();
+const STEMPEL = join(".cache", "stempel.png");
 const CACHE = ".cache"; // aufbereitete Bilder bleiben zwischen Builds erhalten
 mkdirSync(CACHE, { recursive: true });
+if (veraltet(STEMPEL, "logo/stempel.svg")) magick("-background", "none", "-density", "300", "logo/stempel.svg", "-resize", "x30", STEMPEL);
 for (const b of alleBilder) {
   const q = join(SRC, `${b.slug}.png`);
   if (!existsSync(q)) throw new Error(`Bild fehlt: ${q}`);
@@ -79,10 +84,10 @@ for (const b of alleBilder) {
   }
   // Download-Fassung: weißer Streifen unten mit „malkiste.eu“, damit der Hinweis nie im Motiv liegt
   const marke = join(CACHE, `${b.slug}-marke.png`);
-  if (veraltet(marke, druck)) {
+  if (veraltet(marke, druck) || veraltet(marke, STEMPEL)) {
     magick(druck, "-background", "white", "-gravity", "south", "-splice", `0x${MARKE_HOEHE}`,
-      "-font", "Liberation-Sans-Bold", "-pointsize", "22", "-fill", "#8a8a8a", "-annotate", "+0+12", MARKE_TEXT,
-      "-strip", "-define", "png:color-type=0", "-define", "png:bit-depth=8", marke);
+      STEMPEL, "-gravity", "south", "-geometry", "+0+7", "-composite",
+      "-colorspace", "Gray", "-strip", "-define", "png:color-type=0", "-define", "png:bit-depth=8", marke);
   }
   const pdf = join(CACHE, `${b.slug}.pdf`);
   if (veraltet(pdf, marke)) {
@@ -139,6 +144,7 @@ ${alternativen.filter(([S]) => S !== L).map(([S]) => `<meta property="og:locale:
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#ff8a3d">
 <link rel="icon" href="${url("favicon.svg")}" type="image/svg+xml">
+<link rel="icon" href="${url("favicon-32.png")}" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="${url("apple-touch-icon.png")}">
 <link rel="stylesheet" href="${url("stil.css")}">
 ${skript ? `<script defer src="${url(skript)}"></script>` : ""}
@@ -148,7 +154,7 @@ ${jsonld.map((j) => `<script type="application/ld+json">${JSON.stringify(j)}</sc
 <body>
 <a class="skip" href="#inhalt">${esc(u.skip)}</a>
 <header class="kopf">
-  <a class="marke" href="${url(pfadStart(L))}"><span class="klecks" aria-hidden="true">🖍️</span> ${NAME}</a>
+  <a class="marke" href="${url(pfadStart(L))}" aria-label="${NAME}">${LOGO}</a>
   <nav aria-label="${esc(u.navThemen)}"><ul>
     ${themen.slice(0, 7).map((t) => `<li><a href="${url(pfadThema(L, t))}">${esc(L.themen[t.slug].name)}</a></li>`).join("")}
     <li><a href="${url(pfadStart(L) + "#themen")}">${esc(u.alleThemen)}</a></li>
@@ -232,13 +238,15 @@ const schreibe = (p, inhalt) => {
 mkdirSync(join(OUT, "bilder"), { recursive: true });
 // bilder/<slug>.png ist die Download-Fassung mit Hinweis, die unmarkierte Druckvorlage bleibt im Cache
 for (const f of readdirSync(CACHE)) {
-  if (f.endsWith(".png") && !f.endsWith("-marke.png")) continue;
+  if (f.endsWith(".png") && !f.endsWith("-marke.png")) continue; // auch stempel.png
   copyFileSync(join(CACHE, f), join(OUT, "bilder", f.replace(/-marke\.png$/, ".png")));
 }
 for (const f of readdirSync("static")) copyFileSync(join("static", f), join(OUT, f));
 if (existsSync("CNAME")) copyFileSync("CNAME", join(OUT, "CNAME"));
 copyFileSync(join(CACHE, `${themen[0].bilder[0].slug}-og.jpg`), join(OUT, "og.jpg"));
-magick("-background", "#ff8a3d", join("static", "favicon.svg"), "-resize", "180x180", "-flatten", join(OUT, "apple-touch-icon.png"));
+magick("-background", "white", "-density", "600", join("static", "favicon.svg"), "-resize", "140x140", "-gravity", "center", "-extent", "180x180", "-flatten", join(OUT, "apple-touch-icon.png"));
+magick("-background", "none", "-density", "300", join("static", "favicon.svg"), "-resize", "32x32", join(OUT, "favicon-32.png"));
+copyFileSync("logo/stempel.svg", join(OUT, "stempel.svg"));
 
 const sitemap = []; // [varianten-Funktion, lastmod]
 const kleine = themen.filter((t) => !t.stil);
@@ -266,10 +274,10 @@ for (const L of sprachen) {
   <img src="${url(`bilder/${themen[0].bilder[0].slug}.webp`)}" width="480" height="643" alt="${esc(fuelle(u.bildAlt, { alt: L.bilder[themen[0].bilder[0].slug].alt }))}" fetchpriority="high">
 </section>
 
-<section aria-labelledby="saison">
+${SAISON.length ? `<section aria-labelledby="saison">
   <h2 id="saison">${esc(u.saison)}</h2>
   <ul class="raster">${SAISON.map((s) => themen.find((t) => t.slug === s)).map((t) => karte(L, t, t.bilder[0])).join("")}</ul>
-</section>
+</section>` : ""}
 
 <section aria-labelledby="themen">
   <h2 id="themen">${esc(u.kleineKinder)}</h2>
@@ -395,5 +403,6 @@ ${sitemap.flatMap(([v, lastmod]) => {
 `);
 schreibe("robots.txt", `User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`);
 schreibe(".nojekyll", "");
+schreibe("saison.txt", `${SAISON.join(" ")}\n`); // automatik/lauf.sh vergleicht damit, ob die Startseite neu gebaut werden muss
 
 console.log(`fertig: ${sprachen.map((s) => s.code).join(", ")} · ${themen.length} Themen · ${alleBilder.length} Bilder → ${OUT}/ (${SITE})`);
