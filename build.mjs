@@ -71,6 +71,35 @@ const STEMPEL = join(CACHE, "stempel.png");
 mkdirSync(CACHE, { recursive: true });
 if (veraltet(STEMPEL, "logo/stempel.svg")) rsvg("-h", "30", "logo/stempel.svg", "-o", STEMPEL);
 
+// PDF-Metadaten: ImageMagick trägt nur sich selbst ein. Titel, Quelle (Bildseite auf malkiste.eu) und Autor kommen
+// als inkrementelle Aktualisierung ans Dateiende: neues Info-Objekt, neue Querverweistabelle, Trailer mit /Prev.
+// Kein Zusatzprogramm nötig, und ohne Datumsangaben bleibt die Datei bei gleichem Bild byte-gleich.
+const pdfAngaben = (b) => {
+  const L = sprachen.find((S) => S.code === "de");
+  return {
+    Title: `${L.bilder[b.slug].titel} – Ausmalbild`,
+    Author: `${NAME} – ${new URL(SITE).hostname}`,
+    Subject: `Kostenloses Ausmalbild von ${SITE}/${pfadBild(L, b.thema, b)}`,
+    Keywords: `Ausmalbild, Malvorlage, ${L.themen[b.thema.slug].name}, ${new URL(SITE).hostname}`,
+    Creator: SITE, Producer: SITE,
+  };
+};
+const pdfText = (t) => "<FEFF" + [...t].map((z) => { const c = z.codePointAt(0);
+  const e = c > 0xffff ? [0xd800 + ((c - 0x10000) >> 10), 0xdc00 + ((c - 0x10000) & 0x3ff)] : [c];
+  return e.map((u) => u.toString(16).padStart(4, "0").toUpperCase()).join(""); }).join("") + ">";
+function pdfMitAngaben(daten, meta) {
+  const text = daten.toString("latin1");
+  const prev = Number(text.match(/startxref\s+(\d+)\s+%%EOF\s*$/)[1]);
+  const trailer = text.slice(text.lastIndexOf("trailer"));
+  const groesse = Number(trailer.match(/\/Size\s+(\d+)/)[1]), wurzel = trailer.match(/\/Root\s+(\d+ \d+ R)/)[1];
+  const kopf = text.endsWith("\n") ? "" : "\n";
+  const objekt = `${groesse} 0 obj\n<< ${Object.entries(meta).map(([k, v]) => `/${k} ${pdfText(v)}`).join(" ")} >>\nendobj\n`;
+  const start = daten.length + kopf.length, xref = start + objekt.length;
+  const nachtrag = `${kopf}${objekt}xref\n${groesse} 1\n${String(start).padStart(10, "0")} 00000 n \ntrailer\n` +
+    `<< /Size ${groesse + 1} /Root ${wurzel} /Info ${groesse} 0 R /Prev ${prev} >>\nstartxref\n${xref}\n%%EOF\n`;
+  return Buffer.concat([daten, Buffer.from(nachtrag, "latin1")]);
+}
+
 // Fingerabdruck je Bild: Quelle + Stempel + Verarbeitung. docs/bilder/quellen.json hält fest, woraus die
 // veröffentlichten Dateien entstanden sind. Ein frischer Klon ohne .cache (Cloud, GitHub) übernimmt sie von dort,
 // statt alle Bilder neu zu rechnen – sonst wären nach jedem Lauf alle Bilddateien geändert.
@@ -83,7 +112,8 @@ const ausgaben = (slug) => [[`${slug}.webp`, `${slug}.webp`], [`${slug}-gross.we
 for (const b of alleBilder) {
   const q = join(SRC, `${b.slug}.png`);
   if (!existsSync(q)) throw new Error(`Bild fehlt: ${q}`);
-  const fp = (fingerabdruck[b.slug] = sha(readFileSync(q), VERARBEITUNG));
+  const meta = pdfAngaben(b);
+  const fp = (fingerabdruck[b.slug] = sha(readFileSync(q), VERARBEITUNG, JSON.stringify(meta)));
   const fertig = ausgaben(b.slug);
   // Unverändertes Bild: die veröffentlichte Fassung gilt, auch wenn der Cache fehlt oder anders ist
   if (veroeffentlicht[b.slug] === fp && fertig.every(([, d]) => existsSync(join(OUT, "bilder", d)))) {
@@ -112,10 +142,13 @@ for (const b of alleBilder) {
       "-colorspace", "Gray", "-strip", "-define", "png:color-type=0", "-define", "png:bit-depth=8", marke);
   }
   const pdf = join(CACHE, `${b.slug}.pdf`);
-  if (veraltet(pdf, marke)) {
+  const pdfMetaDatei = join(CACHE, `${b.slug}.pdf.json`);
+  if (veraltet(pdf, marke) || !existsSync(pdfMetaDatei) || readFileSync(pdfMetaDatei, "utf8") !== JSON.stringify(meta)) {
     // Ohne Neuberechnen: Bild auf A4-Seitenverhältnis auffüllen, Dichte so, dass die Breite A4 füllt
     magick(marke, "-bordercolor", "white", "-border", "40", "-background", "white", "-gravity", "center",
       "-extent", "976x1380", "-units", "PixelsPerInch", "-density", "118", "-compress", "Zip", pdf);
+    writeFileSync(pdf, pdfMitAngaben(readFileSync(pdf), meta));
+    writeFileSync(pdfMetaDatei, JSON.stringify(meta));
   }
 }
 
