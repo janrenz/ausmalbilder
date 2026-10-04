@@ -20,6 +20,17 @@ const UMAMI = existsSync("umami.json") ? JSON.parse(readFileSync("umami.json", "
 
 const alleBilder = themen.flatMap((t) => t.bilder.map((b) => ({ ...b, thema: t })));
 
+// lastmod für die Sitemap: letzter Commit des Quellbilds statt Build-Datum, sonst ignoriert Google das Feld
+const bildDatum = {};
+try {
+  let d = HEUTE;
+  for (const z of execFileSync("git", ["log", "--format=%cs", "--name-only", "--", SRC], { encoding: "utf8" }).split("\n")) {
+    if (/^\d{4}-\d{2}-\d{2}$/.test(z)) d = z;
+    else if (z.startsWith(`${SRC}/`)) bildDatum[z.slice(SRC.length + 1, -4)] ??= d;
+  }
+} catch { /* kein git: alles bekommt das Build-Datum */ }
+const datum = (bilder) => bilder.map((b) => bildDatum[b.slug] || HEUTE).sort().at(-1);
+
 // ---------- Sprachen ----------
 const sprachen = [];
 for (const code of CODES) {
@@ -78,6 +89,16 @@ const url = (p) => `${BASE}/${p}`;
 const fuelle = (s, werte) => s.replace(/\{(\w+)\}/g, (m, k) => (k in werte ? werte[k] : m));
 
 // `varianten`: Funktion L -> Pfad dieser Seite in Sprache L (für hreflang und Sprachwahl)
+// Nur die deutsche Startseite (zugleich x-default): wer von außen kommt, landet in seiner Browsersprache.
+// Kein Speichern auf dem Gerät: wer innerhalb der Seite auf „/“ klickt (Referrer von hier), bleibt.
+// Crawler werden nicht umgeleitet, damit die deutsche Startseite indexiert bleibt.
+const sprachweiche = () => `<script>(function(){var z=${JSON.stringify(Object.fromEntries(sprachen.map((S) => [S.code, url(pfadStart(S))])))};
+try{if(document.referrer&&new URL(document.referrer).host===location.host)return}catch(e){}
+if(/bot|crawl|spider|slurp|preview|lighthouse|headless/i.test(navigator.userAgent))return;
+var l=navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||""],c="en";
+for(var i=0;i<l.length;i++){var k=String(l[i]).slice(0,2).toLowerCase();if(z[k]){c=k;break}}
+if(c!=="de")location.replace(z[c]+location.hash)})()</script>`;
+
 function seite(L, { pfad, titel, beschreibung, inhalt, ogBild, jsonld = [], robots, varianten }) {
   const u = L.ui;
   const kanon = `${SITE}/${pfad}`;
@@ -88,6 +109,7 @@ function seite(L, { pfad, titel, beschreibung, inhalt, ogBild, jsonld = [], robo
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+${L.code === "de" && pfad === "" ? sprachweiche() : ""}
 <title>${esc(titel)}</title>
 <meta name="description" content="${esc(beschreibung)}">
 <link rel="canonical" href="${kanon}">
@@ -96,14 +118,19 @@ ${alternativen.length ? `<link rel="alternate" hreflang="x-default" href="${SITE
 ${robots ? `<meta name="robots" content="${robots}">` : ""}
 <meta property="og:type" content="website">
 <meta property="og:locale" content="${L.ogLocale}">
+${alternativen.filter(([S]) => S !== L).map(([S]) => `<meta property="og:locale:alternate" content="${S.ogLocale}">`).join("\n")}
 <meta property="og:site_name" content="${NAME}">
 <meta property="og:title" content="${esc(titel)}">
 <meta property="og:description" content="${esc(beschreibung)}">
 <meta property="og:url" content="${kanon}">
 <meta property="og:image" content="${og}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="${esc(titel)}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#ff8a3d">
 <link rel="icon" href="${url("favicon.svg")}" type="image/svg+xml">
+<link rel="apple-touch-icon" href="${url("apple-touch-icon.png")}">
 <link rel="stylesheet" href="${url("stil.css")}">
 ${UMAMI ? `<script defer src="${UMAMI.url}/script.js" data-website-id="${UMAMI.id}" data-domains="${new URL(SITE).hostname}" data-do-not-track="true"></script>` : ""}
 ${jsonld.map((j) => `<script type="application/ld+json">${JSON.stringify(j)}</script>`).join("\n")}
@@ -164,8 +191,9 @@ for (const f of readdirSync(CACHE)) copyFileSync(join(CACHE, f), join(OUT, "bild
 for (const f of readdirSync("static")) copyFileSync(join("static", f), join(OUT, f));
 if (existsSync("CNAME")) copyFileSync("CNAME", join(OUT, "CNAME"));
 copyFileSync(join(CACHE, `${themen[0].bilder[0].slug}-og.jpg`), join(OUT, "og.jpg"));
+magick("-background", "#ff8a3d", join("static", "favicon.svg"), "-resize", "180x180", "-flatten", join(OUT, "apple-touch-icon.png"));
 
-const sitemap = []; // [varianten-Funktion]
+const sitemap = []; // [varianten-Funktion, lastmod]
 const kleine = themen.filter((t) => !t.stil);
 const groessere = themen.filter((t) => t.stil);
 
@@ -212,7 +240,7 @@ for (const L of sprachen) {
   <p>${fuelle(u.tippsNutzung, { ueber: ueberPfad })}</p>
 </section>`,
   }));
-  if (L.code === "de") sitemap.push(startV);
+  if (L.code === "de") sitemap.push([startV, datum(alleBilder)]);
 
   // Themen- und Bildseiten
   for (const t of themen) {
@@ -236,7 +264,7 @@ for (const L of sprachen) {
 <section aria-labelledby="mehr"><h2 id="mehr">${esc(u.weitereThemen)}</h2>
 <ul class="raster themen">${verwandt.map((x) => themaKarte(L, x)).join("")}</ul></section>`,
     }));
-    if (L.code === "de") sitemap.push(themaV);
+    if (L.code === "de") sitemap.push([themaV, datum(t.bilder)]);
 
     t.bilder.forEach((b, i) => {
       const B = L.bilder[b.slug];
@@ -277,7 +305,7 @@ for (const L of sprachen) {
 <section aria-labelledby="aehnlich"><h2 id="aehnlich">${esc(fuelle(u.mehrVon, { thema: T.name }))}</h2>
 <ul class="raster">${t.bilder.filter((x) => x !== b).map((x) => karte(L, t, x)).join("")}</ul></section>`,
       }));
-      if (L.code === "de") sitemap.push(bildV);
+      if (L.code === "de") sitemap.push([bildV, datum([b])]);
     });
   }
 
@@ -293,7 +321,7 @@ for (const L of sprachen) {
       pfad: pfadSeite(L, k), varianten: seitenV, titel: `${s.titel} | ${NAME}`, beschreibung: s.beschreibung,
       robots: k === "ueber" ? undefined : "noindex, follow", inhalt: `<section class="text">${html}</section>`,
     }));
-    if (L.code === "de" && k === "ueber") sitemap.push(seitenV);
+    if (L.code === "de" && k === "ueber") sitemap.push([seitenV, null]);
   }
 }
 
@@ -307,12 +335,12 @@ schreibe("404.html", seite(sprachen[0], {
 // Sitemap mit hreflang-Alternativen: jede Sprachvariante als eigener Eintrag
 schreibe("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-${sitemap.flatMap((v) => {
+${sitemap.flatMap(([v, lastmod]) => {
   const alt = sprachen.map((S) => `<xhtml:link rel="alternate" hreflang="${S.code}" href="${SITE}/${v(S)}"/>`).join("") +
     `<xhtml:link rel="alternate" hreflang="x-default" href="${SITE}/${v(sprachen[0])}"/>`;
   const bild = alleBilder.find((b) => v(sprachen[0]).endsWith(`/${b.slug}/`));
   const img = bild ? `<image:image><image:loc>${SITE}/bilder/${bild.slug}.png</image:loc></image:image>` : "";
-  return sprachen.map((S) => `<url><loc>${SITE}/${v(S)}</loc><lastmod>${HEUTE}</lastmod>${alt}${img}</url>`);
+  return sprachen.map((S) => `<url><loc>${SITE}/${v(S)}</loc>${lastmod ? `<lastmod>${lastmod}</lastmod>` : ""}${alt}${img}</url>`);
 }).join("\n")}
 </urlset>
 `);
