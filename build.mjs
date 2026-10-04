@@ -276,7 +276,8 @@ const malDialog = (L, b, datei, ereignis, seitenUrl) => {
   </div>
 </form>
 <div class="videofenster" hidden><div class="videokarte" role="status" aria-live="polite">
-  <p class="videotext"></p><progress max="1" value="0"></progress>
+  <div class="malt" aria-hidden="true"><span>🖌️</span></div>
+  <p class="videotext"></p><progress max="1" value="0"></progress><p class="videodauer klein">${esc(u.videoDauer)}</p>
   <video playsinline controls hidden></video>
   <div class="videoknoepfe" hidden><button class="knopf" type="button" data-video="teilen" data-umami-event="video-teilen" ${ereignis}>${esc(u.teilen)}</button><button class="knopf zweit" type="button" data-video="speichern" data-umami-event="video-speichern" ${ereignis}>${esc(u.videoSpeichern)}</button></div>
   <button class="knopf zweit" type="button" data-video="zu">✕ ${esc(u.schliessen)}</button>

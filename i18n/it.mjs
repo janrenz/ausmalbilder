@@ -66,6 +66,7 @@ export default {
     "teilen": "Condividi",
     "video": "Video del disegno",
     "videoErstellen": "Stiamo creando il tuo video …",
+    "videoDauer": "A seconda del dispositivo ci vogliono circa 10-30 secondi: lascia aperta questa finestra.",
     "videoFertig": "Il tuo video è pronto!",
     "videoSpeichern": "Salva il video",
     "videoLeer": "Prima colora qualcosa: poi il video mostrerà come nasce il tuo disegno.",

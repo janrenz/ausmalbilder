@@ -66,6 +66,7 @@ export default {
     "teilen": "Partager",
     "video": "Vidéo du coloriage",
     "videoErstellen": "Ta vidéo est en cours de création …",
+    "videoDauer": "Selon ton appareil, cela prend environ 10 à 30 secondes – garde cette fenêtre ouverte.",
     "videoFertig": "Ta vidéo est prête !",
     "videoSpeichern": "Enregistrer la vidéo",
     "videoLeer": "Colorie d'abord quelque chose – la vidéo montrera ensuite comment ton dessin prend vie.",

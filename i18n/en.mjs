@@ -66,6 +66,7 @@ export default {
     "teilen": "Share",
     "video": "Colouring video",
     "videoErstellen": "Making your colouring video …",
+    "videoDauer": "Depending on your device this takes about 10 to 30 seconds – please keep this window open.",
     "videoFertig": "Your colouring video is ready!",
     "videoSpeichern": "Save video",
     "videoLeer": "Colour something in first – then the video shows how your picture came together.",

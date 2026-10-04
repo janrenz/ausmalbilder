@@ -66,6 +66,7 @@ export default {
     teilen: "Compartir",
     video: "Vídeo del dibujo",
     videoErstellen: "Se está creando tu vídeo …",
+    videoDauer: "Según el dispositivo tarda unos 10 a 30 segundos; deja esta ventana abierta.",
     videoFertig: "¡Tu vídeo está listo!",
     videoSpeichern: "Guardar vídeo",
     videoLeer: "Primero colorea algo y el vídeo mostrará cómo nace tu dibujo.",

@@ -318,28 +318,30 @@
   const fenster = dlg.querySelector(".videofenster");
   const vtext = fenster.querySelector(".videotext"), balken = fenster.querySelector("progress");
   const vorschau = fenster.querySelector("video"), vknoepfe = fenster.querySelector(".videoknoepfe");
+  const warten = [fenster.querySelector(".malt"), balken, fenster.querySelector(".videodauer")];
+  const wartend = (an) => { for (const el of warten) el.hidden = !an; };
   let videoDatei = null, abbruch = false;
   dlg.querySelector('[data-aktion="video"]').addEventListener("click", async () => {
     if (!aktionen.some(Boolean)) { alert(dlg.dataset.videoleer); return; }
     abbruch = false; videoDatei = null;
-    fenster.hidden = false; vorschau.hidden = vknoepfe.hidden = true; balken.hidden = false; balken.value = 0;
+    fenster.hidden = false; vorschau.hidden = vknoepfe.hidden = true; wartend(true); balken.value = 0;
     vtext.textContent = dlg.dataset.videoerstellen;
     try {
       const { erstelleVideo } = await import(new URL("ausmalen-video.mjs", SKRIPT));
       const { blob, endung } = await erstelleVideo({
         W, H, aktionen, maskeVon, zeichneStrich, linien, logo: new URL("logo.svg", SKRIPT).href,
         titel: dlg.dataset.titel, schluss: dlg.dataset.videoschluss, seite: dlg.dataset.seite,
-      }, (a) => { balken.value = a; });
+      }, (a) => { balken.value = a; vtext.textContent = `${dlg.dataset.videoerstellen} ${Math.round(a * 100)} %`; });
       if (abbruch) return;
       videoDatei = new File([blob], `${dlg.dataset.datei}.${endung}`, { type: blob.type });
       vorschau.src = URL.createObjectURL(videoDatei);
       vorschau.onloadedmetadata = () => { vorschau.currentTime = Math.max(0, vorschau.duration - 0.3); }; // fertiges Bild als Vorschau
-      vorschau.hidden = vknoepfe.hidden = false; balken.hidden = true;
+      vorschau.hidden = vknoepfe.hidden = false; wartend(false);
       vtext.textContent = dlg.dataset.videofertig;
       fenster.querySelector('[data-video="teilen"]').hidden = !kannTeilen(videoDatei);
     } catch (e) {
       console.error(e);
-      vtext.textContent = dlg.dataset.videofehler; balken.hidden = true;
+      vtext.textContent = dlg.dataset.videofehler; wartend(false);
     }
   });
   fenster.querySelector('[data-video="teilen"]').addEventListener("click", () => videoDatei && teilen(videoDatei));

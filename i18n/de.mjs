@@ -70,6 +70,7 @@ export default {
     teilen: "Teilen",
     video: "Mal-Video",
     videoErstellen: "Dein Mal-Video entsteht …",
+    videoDauer: "Das dauert je nach Gerät etwa 10 bis 30 Sekunden – bitte dieses Fenster offen lassen.",
     videoFertig: "Dein Mal-Video ist fertig!",
     videoSpeichern: "Video speichern",
     videoLeer: "Mal zuerst etwas aus – dann zeigt das Video, wie dein Bild entsteht.",

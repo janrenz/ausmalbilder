@@ -67,6 +67,7 @@ export default {
     teilen: "Udostępnij",
     video: "Film z kolorowania",
     videoErstellen: "Twój film powstaje …",
+    videoDauer: "W zależności od urządzenia trwa to około 10–30 sekund – nie zamykaj tego okna.",
     videoFertig: "Twój film jest gotowy!",
     videoSpeichern: "Zapisz film",
     videoLeer: "Najpierw coś pokoloruj – wtedy film pokaże, jak powstaje twój obrazek.",

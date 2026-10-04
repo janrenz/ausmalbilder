@@ -168,3 +168,11 @@ main { max-width: 1160px; margin: 0 auto; padding: 0 16px 48px; }
 .videokarte video { width: 100%; max-height: 52dvh; border-radius: 12px; background: #000; }
 .videoknoepfe { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
 .videokarte [hidden] { display: none; }
+/* Ladeanimation: ein Pinsel malt hin und her */
+.malt { width: 72px; height: 72px; border-radius: 50%; display: grid; place-items: center; font-size: 2.4rem;
+  background: conic-gradient(#e53935, #fdd835, #7cb342, #1e88e5, #8e24aa, #e53935); animation: drehen 3s linear infinite; }
+.malt span { animation: malen .6s ease-in-out infinite alternate; filter: drop-shadow(0 2px 3px rgba(0,0,0,.3)); }
+@keyframes drehen { to { filter: hue-rotate(360deg); } }
+@keyframes malen { from { transform: rotate(-25deg) translateX(-6px); } to { transform: rotate(20deg) translateX(6px); } }
+@media (prefers-reduced-motion: reduce) { .malt, .malt span { animation: none; } }
+.videodauer { color: var(--leise); font-weight: 400 !important; }

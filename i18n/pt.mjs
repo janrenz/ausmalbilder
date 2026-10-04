@@ -67,6 +67,7 @@ export default {
     teilen: "Partilhar",
     video: "Vídeo da pintura",
     videoErstellen: "O teu vídeo está a ser criado …",
+    videoDauer: "Dependendo do dispositivo, demora cerca de 10 a 30 segundos – mantém esta janela aberta.",
     videoFertig: "O teu vídeo está pronto!",
     videoSpeichern: "Guardar vídeo",
     videoLeer: "Pinta primeiro alguma coisa – depois o vídeo mostra como nasce o teu desenho.",

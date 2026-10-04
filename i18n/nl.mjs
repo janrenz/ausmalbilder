@@ -65,6 +65,7 @@ export default {
     teilen: "Delen",
     video: "Kleurvideo",
     videoErstellen: "Je kleurvideo wordt gemaakt …",
+    videoDauer: "Afhankelijk van je apparaat duurt dit ongeveer 10 tot 30 seconden – laat dit venster open.",
     videoFertig: "Je kleurvideo is klaar!",
     videoSpeichern: "Video opslaan",
     videoLeer: "Kleur eerst iets in – dan laat de video zien hoe je tekening ontstaat.",
