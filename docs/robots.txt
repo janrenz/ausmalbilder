@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://janrenz.github.io/ausmalbilder/sitemap.xml
+Sitemap: https://malkiste.eu/sitemap.xml

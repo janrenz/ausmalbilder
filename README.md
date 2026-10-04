@@ -1,6 +1,6 @@
 # Malkiste – kostenlose Ausmalbilder
 
-Statische Seite mit gemeinfreien (CC0) Ausmalbildern in 8 Sprachen: https://janrenz.github.io/ausmalbilder/
+Statische Seite mit gemeinfreien (CC0) Ausmalbildern in 8 Sprachen: https://malkiste.eu/
 
 - `katalog.mjs` – Themen, Motive, deutsche Texte und Bild-Prompts (`stil`: fehlt = kleine Kinder, `detail` = ab 8, `erwachsen`)
 - `i18n/de.mjs` – deutsche Oberfläche und Rechtstexte; `i18n/<code>.mjs` – Übersetzungen (en, fr, es, it, nl, pl, pt) mit eigenen URL-Pfaden
