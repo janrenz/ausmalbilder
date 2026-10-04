@@ -36,7 +36,8 @@ def load_config():
 
     Existing environment variables win, so a one-off override still works.
     """
-    key_json = os.environ.get("GOOGLE_SA_KEY_JSON", "").strip()
+    # Aus einem .env-Feld kann der Wert noch in einfachen Anführungszeichen kommen
+    key_json = os.environ.get("GOOGLE_SA_KEY_JSON", "").strip().strip("'")
     if key_json and not os.environ.get("GOOGLE_APPLICATION_CREDENTIALS"):
         import tempfile
         fd, path = tempfile.mkstemp(prefix="sa-", suffix=".json")
