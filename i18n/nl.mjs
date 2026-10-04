@@ -273,7 +273,7 @@ export default {
     "himmelstempel-peking": { titel: "Hemeltempel in Peking", alt: "De ronde tempel met drielaags dak op witte terrassen", pfad: "hemeltempel-peking" },
     "taj-mahal-agra": { titel: "Taj Mahal", alt: "Het witte mausoleum met grote koepel en vier minaretten, ervoor een lange vijver", pfad: "taj-mahal" },
     "pyramiden-gizeh": { titel: "Piramides van Gizeh", alt: "De drie grote piramides en de sfinx in de woestijn, ervoor kamelen", pfad: "piramides-van-gizeh" },
-    "tafelberg-kapstadt": { titel: "Tafelberg in Kaapstad", alt: "De platte Tafelberg boven Kaapstad, ervoor de haven en boten", pfad: "tafelberg-kaapstad" },
+    "tafelberg-kapstadt": { titel: "Tafelberg in Kaapstad", alt: "De platte Tafelberg boven Kaapstad, ervoor een strand en roeibootjes", pfad: "tafelberg-kaapstad" },
     "nyhavn-kopenhagen": { titel: "Nyhavn in Kopenhagen", alt: "Kleurrijke smalle huizen aan het havenkanaal met oude zeilschepen", pfad: "nyhavn-kopenhagen" },
     "strassenbahn-lissabon": { titel: "Tram in Lissabon", alt: "Een oude tram rijdt een steil straatje op", pfad: "tram-lissabon" },
     "kuerbis": { titel: "Lachende pompoen", alt: "Uitgesneden pompoen met lachend gezicht, vleermuizen en maan", pfad: "lachende-pompoen" },

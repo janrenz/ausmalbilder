@@ -275,7 +275,7 @@ export default {
     "himmelstempel-peking": { titel: "Templo do Céu em Pequim", alt: "O templo redondo com telhado de três níveis sobre terraços brancos", pfad: "templo-do-ceu-pequim" },
     "taj-mahal-agra": { titel: "Taj Mahal", alt: "O mausoléu branco com uma grande cúpula e quatro minaretes, à frente um longo espelho de água", pfad: "taj-mahal" },
     "pyramiden-gizeh": { titel: "Pirâmides de Gizé", alt: "As três grandes pirâmides e a Esfinge no deserto, à frente camelos", pfad: "piramides-de-gize" },
-    "tafelberg-kapstadt": { titel: "Montanha da Mesa na Cidade do Cabo", alt: "A Montanha da Mesa, de topo plano, sobre a Cidade do Cabo, à frente o porto e barcos", pfad: "montanha-da-mesa-cidade-do-cabo" },
+    "tafelberg-kapstadt": { titel: "Montanha da Mesa na Cidade do Cabo", alt: "A Montanha da Mesa, de topo plano, sobre a Cidade do Cabo, à frente uma praia e barcos a remos", pfad: "montanha-da-mesa-cidade-do-cabo" },
     "nyhavn-kopenhagen": { titel: "Nyhavn em Copenhaga", alt: "Casas estreitas e coloridas junto ao canal do porto com velhos veleiros", pfad: "nyhavn-copenhaga" },
     "strassenbahn-lissabon": { titel: "Elétrico de Lisboa", alt: "Um elétrico antigo sobe uma rua íngreme", pfad: "eletrico-lisboa" },
     "kuerbis": { titel: "Abóbora sorridente", alt: "Abóbora esculpida com cara sorridente, morcegos e lua", pfad: "aboboras-sorridente" },

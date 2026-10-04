@@ -859,7 +859,7 @@ export default {
     },
     "tafelberg-kapstadt": {
       "titel": "Table Mountain a Città del Capo",
-      "alt": "La Table Mountain dalla cima piatta sopra Città del Capo, davanti il porto e le barche",
+      "alt": "La Table Mountain dalla cima piatta sopra Città del Capo, davanti una spiaggia e barche a remi",
       "pfad": "table-mountain-citta-del-capo"
     },
     "nyhavn-kopenhagen": {

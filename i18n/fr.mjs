@@ -859,7 +859,7 @@ export default {
     },
     "tafelberg-kapstadt": {
       "titel": "Montagne de la Table au Cap",
-      "alt": "La montagne de la Table au sommet plat au-dessus du Cap, le port et des bateaux devant",
+      "alt": "La montagne de la Table au sommet plat au-dessus du Cap, devant une plage et des barques",
       "pfad": "montagne-de-la-table-le-cap"
     },
     "nyhavn-kopenhagen": {

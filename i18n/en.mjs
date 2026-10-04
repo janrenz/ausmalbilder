@@ -859,7 +859,7 @@ export default {
     },
     "tafelberg-kapstadt": {
       "titel": "Table Mountain, Cape Town",
-      "alt": "Flat-topped Table Mountain above Cape Town, the harbour and boats in front",
+      "alt": "Flat-topped Table Mountain above Cape Town, with a beach and rowing boats in front",
       "pfad": "table-mountain-cape-town"
     },
     "nyhavn-kopenhagen": {

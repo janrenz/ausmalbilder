@@ -275,7 +275,7 @@ export default {
     "himmelstempel-peking": { titel: "Świątynia Nieba w Pekinie", alt: "okrągła świątynia z trzypoziomowym dachem na białych tarasach", pfad: "swiatynia-nieba-pekin" },
     "taj-mahal-agra": { titel: "Tadż Mahal", alt: "białe mauzoleum z wielką kopułą i czterema minaretami, przed nim długi basen", pfad: "tadz-mahal" },
     "pyramiden-gizeh": { titel: "Piramidy w Gizie", alt: "trzy wielkie piramidy i Sfinks na pustyni, przed nimi wielbłądy", pfad: "piramidy-giza" },
-    "tafelberg-kapstadt": { titel: "Góra Stołowa w Kapsztadzie", alt: "płaska Góra Stołowa nad Kapsztadem, przed nią port i łodzie", pfad: "gora-stolowa-kapsztad" },
+    "tafelberg-kapstadt": { titel: "Góra Stołowa w Kapsztadzie", alt: "płaska Góra Stołowa nad Kapsztadem, przed nią plaża i łodzie wiosłowe", pfad: "gora-stolowa-kapsztad" },
     "nyhavn-kopenhagen": { titel: "Nyhavn w Kopenhadze", alt: "kolorowe wąskie domy nad kanałem portowym ze starymi żaglowcami", pfad: "nyhavn-kopenhaga" },
     "strassenbahn-lissabon": { titel: "Tramwaj w Lizbonie", alt: "stary tramwaj jedzie pod górę stromą uliczką", pfad: "tramwaj-lizbona" },
     "kuerbis": { titel: "Śmiejąca się dynia", alt: "wydrążona dynia z roześmianą buźką, nietoperze i księżyc", pfad: "smiejaca-sie-dynia" },
