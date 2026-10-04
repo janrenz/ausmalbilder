@@ -160,6 +160,18 @@ export default {
       "intro": "From the Brandenburg Gate to a lighthouse on the North Sea: these Germany colouring pages show famous buildings and a map of the country to colour in. Lovely for German Unity Day, for geography lessons or before your next trip.",
       "pfad": "germany"
     },
+    "staedte-deutschland": {
+      "name": "Cities in Germany",
+      "titel": "German Cities Colouring Pages: Famous Landmarks",
+      "intro": "From the Elbphilharmonie to the Porta Nigra: detailed colouring pages of landmarks in German cities. Great for geography lessons, before a school trip or as a souvenir of your last holiday.",
+      "pfad": "german-cities"
+    },
+    "staedte-welt": {
+      "name": "Cities of the World",
+      "titel": "Cities of the World: Colouring Pages of Famous Landmarks",
+      "intro": "The Eiffel Tower, the Colosseum, Big Ben and the Taj Mahal: detailed colouring pages of landmarks from around the world. A round-the-world trip to colour in, for geography, language lessons or just for fun.",
+      "pfad": "cities-of-the-world"
+    },
     "halloween": {
       "name": "Halloween",
       "titel": "Halloween Colouring Pages",
@@ -609,6 +621,256 @@ export default {
       "titel": "Lighthouse on the North Sea",
       "alt": "Striped lighthouse with two small houses on the dyke, sheep, a tidal creek and seagulls in the sky",
       "pfad": "north-sea-lighthouse"
+    },
+    "elbphilharmonie-hamburg": {
+      "titel": "Elbphilharmonie, Hamburg",
+      "alt": "The Elbphilharmonie with its wavy glass roof on top of the old brick warehouse, the river Elbe with boats in front",
+      "pfad": "elbphilharmonie-hamburg"
+    },
+    "speicherstadt-hamburg": {
+      "titel": "Speicherstadt, Hamburg",
+      "alt": "Brick warehouses with little towers along a canal, a harbour launch on the water",
+      "pfad": "speicherstadt-hamburg"
+    },
+    "marienplatz-muenchen": {
+      "titel": "Marienplatz, Munich",
+      "alt": "Munich's New Town Hall with its tall tower and glockenspiel, the Marian Column in front",
+      "pfad": "marienplatz-munich"
+    },
+    "frauenkirche-dresden": {
+      "titel": "Frauenkirche, Dresden",
+      "alt": "The Frauenkirche in Dresden with its large stone dome on the Neumarkt square",
+      "pfad": "frauenkirche-dresden"
+    },
+    "fernsehturm-berlin": {
+      "titel": "Berlin TV Tower",
+      "alt": "The Berlin TV Tower with its sphere, the Neptune Fountain below",
+      "pfad": "berlin-tv-tower"
+    },
+    "reichstag-berlin": {
+      "titel": "Reichstag, Berlin",
+      "alt": "The Reichstag building with its glass dome, a lawn in front",
+      "pfad": "reichstag-berlin"
+    },
+    "roemer-frankfurt": {
+      "titel": "Römer, Frankfurt",
+      "alt": "Half-timbered houses and the Römer town hall with stepped gables on the Römerberg square",
+      "pfad": "roemer-frankfurt"
+    },
+    "schloss-heidelberg": {
+      "titel": "Heidelberg Castle",
+      "alt": "The castle ruin on the wooded hillside above the rooftops of the old town and the river Neckar",
+      "pfad": "heidelberg-castle"
+    },
+    "stadtmusikanten-bremen": {
+      "titel": "Town Musicians of Bremen",
+      "alt": "A donkey, a dog, a cat and a rooster standing on top of each other as a bronze statue in front of Bremen Town Hall",
+      "pfad": "town-musicians-of-bremen"
+    },
+    "kaiserburg-nuernberg": {
+      "titel": "Nuremberg Castle",
+      "alt": "The Imperial Castle with its round tower high above the half-timbered houses of the old town",
+      "pfad": "nuremberg-castle"
+    },
+    "ploenlein-rothenburg": {
+      "titel": "Plönlein, Rothenburg",
+      "alt": "A crooked half-timbered house at a fork in the road between two gate towers",
+      "pfad": "ploenlein-rothenburg"
+    },
+    "dom-aachen": {
+      "titel": "Aachen Cathedral",
+      "alt": "Aachen Cathedral with its octagonal dome and Gothic windows",
+      "pfad": "aachen-cathedral"
+    },
+    "steinerne-bruecke-regensburg": {
+      "titel": "Stone Bridge, Regensburg",
+      "alt": "The old stone bridge with many arches over the Danube, the cathedral behind it",
+      "pfad": "stone-bridge-regensburg"
+    },
+    "altes-rathaus-bamberg": {
+      "titel": "Old Town Hall, Bamberg",
+      "alt": "The painted town hall standing on a bridge in the middle of the river",
+      "pfad": "old-town-hall-bamberg"
+    },
+    "voelkerschlachtdenkmal-leipzig": {
+      "titel": "Monument to the Battle of the Nations, Leipzig",
+      "alt": "The huge stone monument with a dome, a long pool in front",
+      "pfad": "battle-of-the-nations-monument-leipzig"
+    },
+    "schloss-schwerin": {
+      "titel": "Schwerin Castle",
+      "alt": "The fairy-tale castle with golden domes on an island in the lake",
+      "pfad": "schwerin-castle"
+    },
+    "sanssouci-potsdam": {
+      "titel": "Sanssouci Palace, Potsdam",
+      "alt": "The yellow palace with a dome above the vineyard terraces, a fountain in front",
+      "pfad": "sanssouci-palace-potsdam"
+    },
+    "porta-nigra-trier": {
+      "titel": "Porta Nigra, Trier",
+      "alt": "The large Roman city gate made of dark stone with two arches",
+      "pfad": "porta-nigra-trier"
+    },
+    "muenster-ulm": {
+      "titel": "Ulm Minster",
+      "alt": "Ulm Minster with the tallest church spire in the world rising above the old town",
+      "pfad": "ulm-minster"
+    },
+    "wartburg-eisenach": {
+      "titel": "Wartburg Castle, Eisenach",
+      "alt": "Wartburg Castle on a wooded hill",
+      "pfad": "wartburg-castle-eisenach"
+    },
+    "fachwerk-quedlinburg": {
+      "titel": "Half-Timbered Quedlinburg",
+      "alt": "Colourful half-timbered houses on the market square, the castle and collegiate church above",
+      "pfad": "quedlinburg"
+    },
+    "neues-rathaus-hannover": {
+      "titel": "New Town Hall, Hanover",
+      "alt": "The magnificent town hall with a large dome behind a pond",
+      "pfad": "new-town-hall-hanover"
+    },
+    "kaiserdom-speyer": {
+      "titel": "Imperial Cathedral, Speyer",
+      "alt": "The Romanesque cathedral with four towers and two domes, in front a park with trees",
+      "pfad": "imperial-cathedral-speyer"
+    },
+    "medienhafen-duesseldorf": {
+      "titel": "MedienHafen, Düsseldorf",
+      "alt": "Leaning, wavy buildings at the harbour, the Rhine Tower behind them",
+      "pfad": "medienhafen-duesseldorf"
+    },
+    "hafen-lindau": {
+      "titel": "Lindau Harbour",
+      "alt": "The harbour entrance with a lion statue and a lighthouse on Lake Constance",
+      "pfad": "lindau-harbour"
+    },
+    "eiffelturm-paris": {
+      "titel": "Eiffel Tower, Paris",
+      "alt": "The Eiffel Tower with its iron lattice, the Champ de Mars in front",
+      "pfad": "eiffel-tower-paris"
+    },
+    "big-ben-london": {
+      "titel": "Big Ben, London",
+      "alt": "The Big Ben clock tower next to the Houses of Parliament, a double-decker bus in front",
+      "pfad": "big-ben-london"
+    },
+    "tower-bridge-london": {
+      "titel": "Tower Bridge, London",
+      "alt": "Tower Bridge with its two towers over the Thames",
+      "pfad": "tower-bridge-london"
+    },
+    "kolosseum-rom": {
+      "titel": "Colosseum, Rome",
+      "alt": "The Colosseum with its many arches",
+      "pfad": "colosseum-rome"
+    },
+    "schiefer-turm-pisa": {
+      "titel": "Leaning Tower of Pisa",
+      "alt": "The leaning white tower with its arcades, the cathedral beside it",
+      "pfad": "leaning-tower-of-pisa"
+    },
+    "gondeln-venedig": {
+      "titel": "Gondolas in Venice",
+      "alt": "A canal with gondolas, palaces and the Rialto Bridge",
+      "pfad": "gondolas-venice"
+    },
+    "sagrada-familia-barcelona": {
+      "titel": "Sagrada Família, Barcelona",
+      "alt": "The Sagrada Família church with many pointed, ornate towers",
+      "pfad": "sagrada-familia-barcelona"
+    },
+    "grachten-amsterdam": {
+      "titel": "Amsterdam Canals",
+      "alt": "Narrow gabled houses along a canal, bicycles and a boat in front",
+      "pfad": "amsterdam-canals"
+    },
+    "karlsbruecke-prag": {
+      "titel": "Charles Bridge, Prague",
+      "alt": "The stone bridge with statues and a bridge tower, Prague Castle behind",
+      "pfad": "charles-bridge-prague"
+    },
+    "riesenrad-wien": {
+      "titel": "Giant Ferris Wheel, Vienna",
+      "alt": "The old Ferris wheel in the Prater with red cabins",
+      "pfad": "giant-ferris-wheel-vienna"
+    },
+    "akropolis-athen": {
+      "titel": "Acropolis, Athens",
+      "alt": "The Parthenon temple with its columns on the rock above the city",
+      "pfad": "acropolis-athens"
+    },
+    "basilius-kathedrale-moskau": {
+      "titel": "St Basil's Cathedral, Moscow",
+      "alt": "The church with colourful onion domes",
+      "pfad": "st-basils-cathedral-moscow"
+    },
+    "hagia-sophia-istanbul": {
+      "titel": "Hagia Sophia, Istanbul",
+      "alt": "The building with its large dome and four slender minarets",
+      "pfad": "hagia-sophia-istanbul"
+    },
+    "freiheitsstatue-new-york": {
+      "titel": "Statue of Liberty, New York",
+      "alt": "The Statue of Liberty with her torch on her pedestal on a small island",
+      "pfad": "statue-of-liberty-new-york"
+    },
+    "skyline-new-york": {
+      "titel": "New York Skyline",
+      "alt": "Manhattan skyscrapers with a yellow taxi in the foreground",
+      "pfad": "new-york-skyline"
+    },
+    "golden-gate-san-francisco": {
+      "titel": "Golden Gate Bridge",
+      "alt": "The suspension bridge with two tall towers over the bay",
+      "pfad": "golden-gate-bridge"
+    },
+    "christus-rio": {
+      "titel": "Christ the Redeemer, Rio",
+      "alt": "The statue of Christ with outstretched arms on the mountain above Rio",
+      "pfad": "christ-the-redeemer-rio"
+    },
+    "oper-sydney": {
+      "titel": "Sydney Opera House",
+      "alt": "The opera house with sail-like roofs at the harbour",
+      "pfad": "sydney-opera-house"
+    },
+    "pagode-kyoto": {
+      "titel": "Pagoda in Kyoto",
+      "alt": "A five-storey wooden pagoda among cherry trees",
+      "pfad": "pagoda-kyoto"
+    },
+    "himmelstempel-peking": {
+      "titel": "Temple of Heaven, Beijing",
+      "alt": "The round temple with a three-tiered roof on white terraces",
+      "pfad": "temple-of-heaven-beijing"
+    },
+    "taj-mahal-agra": {
+      "titel": "Taj Mahal",
+      "alt": "The white mausoleum with a large dome and four minarets, a long pool in front",
+      "pfad": "taj-mahal"
+    },
+    "pyramiden-gizeh": {
+      "titel": "Pyramids of Giza",
+      "alt": "The three great pyramids and the Sphinx in the desert, camels in front",
+      "pfad": "pyramids-of-giza"
+    },
+    "tafelberg-kapstadt": {
+      "titel": "Table Mountain, Cape Town",
+      "alt": "Flat-topped Table Mountain above Cape Town, the harbour and boats in front",
+      "pfad": "table-mountain-cape-town"
+    },
+    "nyhavn-kopenhagen": {
+      "titel": "Nyhavn, Copenhagen",
+      "alt": "Colourful narrow houses along the harbour canal with old sailing ships",
+      "pfad": "nyhavn-copenhagen"
+    },
+    "strassenbahn-lissabon": {
+      "titel": "Lisbon Tram",
+      "alt": "An old tram climbing a steep street",
+      "pfad": "lisbon-tram"
     },
     "kuerbis": {
       "titel": "Laughing Pumpkin",

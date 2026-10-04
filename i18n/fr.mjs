@@ -160,6 +160,18 @@ export default {
       "intro": "De la porte de Brandebourg au phare de la mer du Nord : ces coloriages sur l'Allemagne montrent des monuments célèbres et la carte du pays à colorier. Parfaits pour découvrir le pays en classe ou avant un voyage.",
       "pfad": "allemagne"
     },
+    "staedte-deutschland": {
+      "name": "Villes d'Allemagne",
+      "titel": "Coloriages villes d'Allemagne : monuments célèbres",
+      "intro": "De l'Elbphilharmonie à la Porta Nigra : des coloriages détaillés des monuments emblématiques des villes allemandes. Pour la géographie en classe, avant un voyage scolaire ou en souvenir des dernières vacances.",
+      "pfad": "villes-allemagne"
+    },
+    "staedte-welt": {
+      "name": "Villes du monde",
+      "titel": "Coloriages villes du monde : monuments célèbres",
+      "intro": "Tour Eiffel, Colisée, Big Ben et Taj Mahal : des coloriages détaillés des monuments du monde entier. Un tour du monde à colorier, pour la géographie, les cours de langue ou simplement pour le plaisir.",
+      "pfad": "villes-du-monde"
+    },
     "halloween": {
       "name": "Halloween",
       "titel": "Coloriages d'Halloween à imprimer",
@@ -609,6 +621,256 @@ export default {
       "titel": "Phare au bord de la mer du Nord",
       "alt": "Phare rayé avec deux petites maisons sur la digue, des moutons, un chenal et des mouettes dans le ciel",
       "pfad": "phare-mer-du-nord"
+    },
+    "elbphilharmonie-hamburg": {
+      "titel": "Elbphilharmonie de Hambourg",
+      "alt": "L'Elbphilharmonie avec son toit de verre ondulé posé sur l'ancien entrepôt en briques, l'Elbe et des bateaux devant",
+      "pfad": "elbphilharmonie-hambourg"
+    },
+    "speicherstadt-hamburg": {
+      "titel": "Speicherstadt de Hambourg",
+      "alt": "Entrepôts en briques avec des tourelles le long d'un canal, une vedette sur l'eau",
+      "pfad": "speicherstadt-hambourg"
+    },
+    "marienplatz-muenchen": {
+      "titel": "Marienplatz à Munich",
+      "alt": "Le nouvel hôtel de ville de Munich avec sa haute tour et son carillon, la colonne de la Vierge devant",
+      "pfad": "marienplatz-munich"
+    },
+    "frauenkirche-dresden": {
+      "titel": "Frauenkirche de Dresde",
+      "alt": "La Frauenkirche de Dresde avec sa grande coupole en pierre sur la place du Neumarkt",
+      "pfad": "frauenkirche-dresde"
+    },
+    "fernsehturm-berlin": {
+      "titel": "Tour de télévision de Berlin",
+      "alt": "La tour de télévision de Berlin avec sa boule, la fontaine de Neptune à ses pieds",
+      "pfad": "tour-television-berlin"
+    },
+    "reichstag-berlin": {
+      "titel": "Reichstag à Berlin",
+      "alt": "Le bâtiment du Reichstag avec sa coupole en verre, une pelouse devant",
+      "pfad": "reichstag-berlin"
+    },
+    "roemer-frankfurt": {
+      "titel": "Römer à Francfort",
+      "alt": "Maisons à colombages et l'hôtel de ville du Römer avec ses pignons à redents sur le Römerberg",
+      "pfad": "romer-francfort"
+    },
+    "schloss-heidelberg": {
+      "titel": "Château de Heidelberg",
+      "alt": "Les ruines du château sur la colline boisée, au-dessus des toits de la vieille ville et du Neckar",
+      "pfad": "chateau-heidelberg"
+    },
+    "stadtmusikanten-bremen": {
+      "titel": "Musiciens de Brême",
+      "alt": "L'âne, le chien, le chat et le coq juchés les uns sur les autres, en statue de bronze devant l'hôtel de ville de Brême",
+      "pfad": "musiciens-de-breme"
+    },
+    "kaiserburg-nuernberg": {
+      "titel": "Château impérial de Nuremberg",
+      "alt": "Le château impérial avec sa tour ronde dominant les maisons à colombages de la vieille ville",
+      "pfad": "chateau-imperial-nuremberg"
+    },
+    "ploenlein-rothenburg": {
+      "titel": "Plönlein à Rothenburg",
+      "alt": "Une maison à colombages penchée à une bifurcation, entre deux tours-portes",
+      "pfad": "plonlein-rothenburg"
+    },
+    "dom-aachen": {
+      "titel": "Cathédrale d'Aix-la-Chapelle",
+      "alt": "La cathédrale d'Aix-la-Chapelle avec sa coupole octogonale et ses fenêtres gothiques",
+      "pfad": "cathedrale-aix-la-chapelle"
+    },
+    "steinerne-bruecke-regensburg": {
+      "titel": "Pont de pierre de Ratisbonne",
+      "alt": "Le vieux pont de pierre aux nombreuses arches sur le Danube, la cathédrale derrière",
+      "pfad": "pont-de-pierre-ratisbonne"
+    },
+    "altes-rathaus-bamberg": {
+      "titel": "Ancien hôtel de ville de Bamberg",
+      "alt": "L'hôtel de ville peint, construit sur un pont au milieu de la rivière",
+      "pfad": "ancien-hotel-de-ville-bamberg"
+    },
+    "voelkerschlachtdenkmal-leipzig": {
+      "titel": "Monument de la Bataille des Nations à Leipzig",
+      "alt": "L'immense monument en pierre surmonté d'une coupole, un long bassin devant",
+      "pfad": "monument-bataille-des-nations-leipzig"
+    },
+    "schloss-schwerin": {
+      "titel": "Château de Schwerin",
+      "alt": "Le château de conte de fées aux coupoles dorées sur une île du lac",
+      "pfad": "chateau-schwerin"
+    },
+    "sanssouci-potsdam": {
+      "titel": "Château de Sanssouci à Potsdam",
+      "alt": "Le château jaune à coupole au-dessus des terrasses de vigne, une fontaine devant",
+      "pfad": "sanssouci-potsdam"
+    },
+    "porta-nigra-trier": {
+      "titel": "Porta Nigra à Trèves",
+      "alt": "La grande porte romaine en pierre sombre avec deux arches",
+      "pfad": "porta-nigra-treves"
+    },
+    "muenster-ulm": {
+      "titel": "Cathédrale d'Ulm",
+      "alt": "La cathédrale d'Ulm avec le plus haut clocher d'église du monde au-dessus de la vieille ville",
+      "pfad": "cathedrale-ulm"
+    },
+    "wartburg-eisenach": {
+      "titel": "Wartburg à Eisenach",
+      "alt": "Le château de la Wartburg sur une colline boisée",
+      "pfad": "wartburg-eisenach"
+    },
+    "fachwerk-quedlinburg": {
+      "titel": "Colombages de Quedlinburg",
+      "alt": "Maisons à colombages colorées sur la place du marché, le château et la collégiale au-dessus",
+      "pfad": "colombages-quedlinburg"
+    },
+    "neues-rathaus-hannover": {
+      "titel": "Nouvel hôtel de ville de Hanovre",
+      "alt": "Le somptueux hôtel de ville avec sa grande coupole derrière un étang",
+      "pfad": "nouvel-hotel-de-ville-hanovre"
+    },
+    "kaiserdom-speyer": {
+      "titel": "Cathédrale impériale de Spire",
+      "alt": "La cathédrale romane avec quatre tours et deux coupoles, devant un parc arboré",
+      "pfad": "cathedrale-imperiale-spire"
+    },
+    "medienhafen-duesseldorf": {
+      "titel": "Medienhafen de Düsseldorf",
+      "alt": "Bâtiments penchés et ondulés sur le port, la tour du Rhin derrière",
+      "pfad": "medienhafen-dusseldorf"
+    },
+    "hafen-lindau": {
+      "titel": "Port de Lindau",
+      "alt": "L'entrée du port avec la statue du lion et le phare sur le lac de Constance",
+      "pfad": "port-lindau"
+    },
+    "eiffelturm-paris": {
+      "titel": "Tour Eiffel à Paris",
+      "alt": "La tour Eiffel et sa charpente métallique, le Champ-de-Mars devant",
+      "pfad": "tour-eiffel-paris"
+    },
+    "big-ben-london": {
+      "titel": "Big Ben à Londres",
+      "alt": "La tour de l'horloge Big Ben à côté du Parlement, un bus à impériale devant",
+      "pfad": "big-ben-londres"
+    },
+    "tower-bridge-london": {
+      "titel": "Tower Bridge à Londres",
+      "alt": "Le Tower Bridge et ses deux tours au-dessus de la Tamise",
+      "pfad": "tower-bridge-londres"
+    },
+    "kolosseum-rom": {
+      "titel": "Colisée de Rome",
+      "alt": "Le Colisée et ses nombreuses arcades",
+      "pfad": "colisee-rome"
+    },
+    "schiefer-turm-pisa": {
+      "titel": "Tour de Pise",
+      "alt": "La tour penchée blanche avec ses galeries à colonnes, la cathédrale à côté",
+      "pfad": "tour-de-pise"
+    },
+    "gondeln-venedig": {
+      "titel": "Gondoles à Venise",
+      "alt": "Un canal avec des gondoles, des palais et le pont du Rialto",
+      "pfad": "gondoles-venise"
+    },
+    "sagrada-familia-barcelona": {
+      "titel": "Sagrada Família à Barcelone",
+      "alt": "La basilique de la Sagrada Família avec ses nombreuses tours pointues et ornées",
+      "pfad": "sagrada-familia-barcelone"
+    },
+    "grachten-amsterdam": {
+      "titel": "Canaux d'Amsterdam",
+      "alt": "Maisons étroites à pignons le long d'un canal, des vélos et un bateau devant",
+      "pfad": "canaux-amsterdam"
+    },
+    "karlsbruecke-prag": {
+      "titel": "Pont Charles à Prague",
+      "alt": "Le pont de pierre avec ses statues et sa tour, le château de Prague derrière",
+      "pfad": "pont-charles-prague"
+    },
+    "riesenrad-wien": {
+      "titel": "Grande roue de Vienne",
+      "alt": "La vieille grande roue du Prater avec ses cabines rouges",
+      "pfad": "grande-roue-vienne"
+    },
+    "akropolis-athen": {
+      "titel": "Acropole d'Athènes",
+      "alt": "Le Parthénon et ses colonnes sur le rocher qui domine la ville",
+      "pfad": "acropole-athenes"
+    },
+    "basilius-kathedrale-moskau": {
+      "titel": "Cathédrale Saint-Basile de Moscou",
+      "alt": "L'église aux bulbes colorés",
+      "pfad": "cathedrale-saint-basile-moscou"
+    },
+    "hagia-sophia-istanbul": {
+      "titel": "Sainte-Sophie à Istanbul",
+      "alt": "L'édifice avec sa grande coupole et quatre minarets élancés",
+      "pfad": "sainte-sophie-istanbul"
+    },
+    "freiheitsstatue-new-york": {
+      "titel": "Statue de la Liberté à New York",
+      "alt": "La statue de la Liberté avec sa torche sur son socle, sur une petite île",
+      "pfad": "statue-de-la-liberte-new-york"
+    },
+    "skyline-new-york": {
+      "titel": "Skyline de New York",
+      "alt": "Les gratte-ciel de Manhattan avec un taxi jaune au premier plan",
+      "pfad": "skyline-new-york"
+    },
+    "golden-gate-san-francisco": {
+      "titel": "Golden Gate Bridge",
+      "alt": "Le pont suspendu aux deux hauts pylônes au-dessus de la baie",
+      "pfad": "golden-gate-bridge"
+    },
+    "christus-rio": {
+      "titel": "Christ Rédempteur à Rio",
+      "alt": "La statue du Christ aux bras ouverts sur la montagne qui domine Rio",
+      "pfad": "christ-redempteur-rio"
+    },
+    "oper-sydney": {
+      "titel": "Opéra de Sydney",
+      "alt": "L'opéra aux toits en forme de voiles au bord du port",
+      "pfad": "opera-sydney"
+    },
+    "pagode-kyoto": {
+      "titel": "Pagode à Kyoto",
+      "alt": "Une pagode en bois à cinq étages parmi les cerisiers",
+      "pfad": "pagode-kyoto"
+    },
+    "himmelstempel-peking": {
+      "titel": "Temple du Ciel à Pékin",
+      "alt": "Le temple rond au toit à trois niveaux sur des terrasses blanches",
+      "pfad": "temple-du-ciel-pekin"
+    },
+    "taj-mahal-agra": {
+      "titel": "Taj Mahal",
+      "alt": "Le mausolée blanc avec sa grande coupole et ses quatre minarets, un long bassin devant",
+      "pfad": "taj-mahal"
+    },
+    "pyramiden-gizeh": {
+      "titel": "Pyramides de Gizeh",
+      "alt": "Les trois grandes pyramides et le Sphinx dans le désert, des chameaux devant",
+      "pfad": "pyramides-de-gizeh"
+    },
+    "tafelberg-kapstadt": {
+      "titel": "Montagne de la Table au Cap",
+      "alt": "La montagne de la Table au sommet plat au-dessus du Cap, le port et des bateaux devant",
+      "pfad": "montagne-de-la-table-le-cap"
+    },
+    "nyhavn-kopenhagen": {
+      "titel": "Nyhavn à Copenhague",
+      "alt": "Maisons étroites et colorées le long du canal du port, avec de vieux voiliers",
+      "pfad": "nyhavn-copenhague"
+    },
+    "strassenbahn-lissabon": {
+      "titel": "Tramway de Lisbonne",
+      "alt": "Un vieux tramway qui grimpe une ruelle en pente raide",
+      "pfad": "tramway-lisbonne"
     },
     "kuerbis": {
       "titel": "Citrouille rigolote",
