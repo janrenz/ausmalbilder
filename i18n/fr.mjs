@@ -154,6 +154,12 @@ export default {
       "intro": "Feuilles colorées, hérissons et cerfs-volants : des coloriages d'automne pour l'école, la maternelle et les après-midi cocooning à la maison.",
       "pfad": "automne"
     },
+    "deutschland": {
+      "name": "Allemagne",
+      "titel": "Coloriages Allemagne : monuments et carte",
+      "intro": "De la porte de Brandebourg au phare de la mer du Nord : ces coloriages sur l'Allemagne montrent des monuments célèbres et la carte du pays à colorier. Parfaits pour découvrir le pays en classe ou avant un voyage.",
+      "pfad": "allemagne"
+    },
     "halloween": {
       "name": "Halloween",
       "titel": "Coloriages d'Halloween à imprimer",
@@ -561,6 +567,36 @@ export default {
       "titel": "Enfant avec un parapluie",
       "alt": "Un enfant en bottes de pluie saute dans une flaque avec son parapluie",
       "pfad": "enfant-parapluie"
+    },
+    "brandenburger-tor": {
+      "titel": "La porte de Brandebourg",
+      "alt": "La porte de Brandebourg à Berlin avec ses colonnes et le quadrige au sommet, des arbres et des pigeons devant",
+      "pfad": "porte-de-brandebourg"
+    },
+    "deutschlandkarte": {
+      "titel": "Carte de l'Allemagne",
+      "alt": "Contour de l'Allemagne en carte muette avec les côtes de la mer du Nord et de la Baltique et quelques fleuves",
+      "pfad": "carte-allemagne"
+    },
+    "koelner-dom": {
+      "titel": "La cathédrale de Cologne",
+      "alt": "La cathédrale de Cologne avec ses deux hautes flèches, le pont sur le Rhin à côté et un bateau sur le fleuve",
+      "pfad": "cathedrale-de-cologne"
+    },
+    "schloss-neuschwanstein": {
+      "titel": "Le château de Neuschwanstein",
+      "alt": "Le château de Neuschwanstein et ses nombreuses tours sur un rocher devant les montagnes, des sapins en contrebas",
+      "pfad": "chateau-de-neuschwanstein"
+    },
+    "holstentor-luebeck": {
+      "titel": "La porte Holstentor à Lübeck",
+      "alt": "La porte Holstentor à Lübeck avec deux tours rondes aux toits pointus, des canards sur l'eau devant",
+      "pfad": "holstentor-lubeck"
+    },
+    "leuchtturm-nordsee": {
+      "titel": "Phare au bord de la mer du Nord",
+      "alt": "Phare rayé avec deux petites maisons sur la digue, des moutons, un chenal et des mouettes dans le ciel",
+      "pfad": "phare-mer-du-nord"
     },
     "kuerbis": {
       "titel": "Citrouille rigolote",

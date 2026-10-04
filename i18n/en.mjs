@@ -154,6 +154,12 @@ export default {
       "intro": "Colourful leaves, hedgehogs and kite flying: autumn colouring pages for nursery, school and cosy afternoons at home.",
       "pfad": "autumn"
     },
+    "deutschland": {
+      "name": "Germany",
+      "titel": "Germany Colouring Pages: Landmarks and Map",
+      "intro": "From the Brandenburg Gate to a lighthouse on the North Sea: these Germany colouring pages show famous buildings and a map of the country to colour in. Lovely for German Unity Day, for geography lessons or before your next trip.",
+      "pfad": "germany"
+    },
     "halloween": {
       "name": "Halloween",
       "titel": "Halloween Colouring Pages",
@@ -561,6 +567,36 @@ export default {
       "titel": "Child with an Umbrella",
       "alt": "Child in wellies jumping into a puddle with an umbrella",
       "pfad": "child-with-an-umbrella"
+    },
+    "brandenburger-tor": {
+      "titel": "Brandenburg Gate",
+      "alt": "The Brandenburg Gate in Berlin with its columns and the horse-drawn chariot on top, trees and pigeons in front",
+      "pfad": "brandenburg-gate"
+    },
+    "deutschlandkarte": {
+      "titel": "Map of Germany",
+      "alt": "Outline of Germany as a blank map with the North Sea and Baltic coasts and a few rivers",
+      "pfad": "map-of-germany"
+    },
+    "koelner-dom": {
+      "titel": "Cologne Cathedral",
+      "alt": "Cologne Cathedral with its two tall spires, the Rhine bridge beside it and a boat on the river",
+      "pfad": "cologne-cathedral"
+    },
+    "schloss-neuschwanstein": {
+      "titel": "Neuschwanstein Castle",
+      "alt": "Neuschwanstein Castle with many towers on a rocky hill in front of the mountains, fir trees below",
+      "pfad": "neuschwanstein-castle"
+    },
+    "holstentor-luebeck": {
+      "titel": "Holsten Gate in Lübeck",
+      "alt": "The Holsten Gate in Lübeck with two round towers and pointed roofs, ducks on the water in front",
+      "pfad": "holsten-gate-luebeck"
+    },
+    "leuchtturm-nordsee": {
+      "titel": "Lighthouse on the North Sea",
+      "alt": "Striped lighthouse with two small houses on the dyke, sheep, a tidal creek and seagulls in the sky",
+      "pfad": "north-sea-lighthouse"
     },
     "kuerbis": {
       "titel": "Laughing Pumpkin",

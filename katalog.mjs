@@ -112,6 +112,18 @@ export const themen = [
     ],
   },
   {
+    slug: "deutschland", name: "Deutschland", titel: "Deutschland Ausmalbilder: Sehenswürdigkeiten & Landkarte",
+    intro: "Vom Brandenburger Tor bis zum Leuchtturm an der Nordsee: Diese Deutschland-Ausmalbilder zeigen bekannte Bauwerke und die Landkarte zum Ausmalen. Passend zum Tag der Deutschen Einheit, für den Sachunterricht oder vor der nächsten Reise.",
+    bilder: [
+      { slug: "brandenburger-tor", titel: "Brandenburger Tor", alt: "Das Brandenburger Tor in Berlin mit Säulen und dem Pferdegespann obenauf, davor Bäume und Tauben", prompt: "the Brandenburg Gate in Berlin seen from the front: a wide neoclassical gate with six tall columns forming five passages, a chariot pulled by four horses on top, a few trees and pigeons in front, sky with simple clouds, complete gate fully visible" },
+      { slug: "deutschlandkarte", titel: "Deutschlandkarte", alt: "Umriss von Deutschland als leere Landkarte mit Nordsee- und Ostseeküste und einigen Flüssen", prompt: "a blank silhouette outline of the country Germany, geographically accurate shape as on a real map: North Sea coast in the northwest, the narrow land bridge to Denmark in the north between North Sea and Baltic Sea, Baltic Sea coast with the island of Rügen in the northeast, Alps border in the south, Lake Constance in the southwest corner, one single thick outline drawn small and centered on the page, inside the outline only a few gentle wavy lines for rivers, no internal borders, no words, no letters, no labels, no neighbouring countries, plain white page around it, the complete outline fully visible inside the page with a very wide white margin on all four sides, nothing cut off at the edges" },
+      { slug: "koelner-dom", titel: "Kölner Dom", alt: "Der Kölner Dom mit seinen zwei hohen Türmen, daneben die Rheinbrücke und ein Schiff auf dem Rhein", prompt: "Cologne Cathedral, a huge gothic cathedral with two very tall pointed spires and many small pinnacles, seen from across the river Rhine, a simple arched steel railway bridge and a small river boat in front, the complete cathedral fully visible including the tops of both spires" },
+      { slug: "schloss-neuschwanstein", titel: "Schloss Neuschwanstein", alt: "Schloss Neuschwanstein mit vielen Türmen auf einem Felsen vor den Bergen, davor Tannen", prompt: "Neuschwanstein Castle in Bavaria, a romantic white castle with many slender round towers and pointed roofs standing on a rocky hill, high mountains behind it, fir trees in front, the complete castle fully visible" },
+      { slug: "holstentor-luebeck", titel: "Holstentor in Lübeck", alt: "Das Holstentor in Lübeck mit zwei runden Türmen und spitzen Dächern, davor Enten auf dem Wasser", prompt: "the Holstentor in Lübeck: a medieval brick city gate with two round towers with conical pointed roofs and a gabled middle section with an arched gateway, seen from the front, ducks on the water in front, the complete gate fully visible, no inscription" },
+      { slug: "leuchtturm-nordsee", titel: "Leuchtturm an der Nordsee", alt: "Gestreifter Leuchtturm mit zwei kleinen Häusern auf dem Deich, davor Schafe, ein Priel und Möwen am Himmel", prompt: "a tall striped lighthouse standing behind a grassy dike on the flat North Sea coast, two small houses at its foot, sheep grazing on the dike in front, seagulls in the sky, salt marsh with little creeks, wide sky" },
+    ],
+  },
+  {
     slug: "halloween", name: "Halloween", titel: "Halloween Ausmalbilder",
     intro: "Gruselig, aber nicht zu sehr: Halloween-Ausmalbilder mit Kürbis, kleinem Gespenst und Hexenkatze – passend für Kinder.",
     bilder: [

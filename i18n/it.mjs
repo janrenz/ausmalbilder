@@ -154,6 +154,12 @@ export default {
       "intro": "Foglie colorate, ricci e aquiloni: disegni dell'autunno da colorare per la scuola, l'asilo e i pomeriggi accoglienti a casa.",
       "pfad": "autunno"
     },
+    "deutschland": {
+      "name": "Germania",
+      "titel": "Disegni della Germania da colorare: monumenti e cartina",
+      "intro": "Dalla Porta di Brandeburgo al faro sul Mare del Nord: questi disegni da colorare mostrano monumenti famosi della Germania e la cartina del paese. Perfetti per la scuola o per prepararsi a un viaggio.",
+      "pfad": "germania"
+    },
     "halloween": {
       "name": "Halloween",
       "titel": "Disegni di Halloween da colorare",
@@ -561,6 +567,36 @@ export default {
       "titel": "Bambino con l'ombrello",
       "alt": "Bambino con gli stivali di gomma che salta in una pozzanghera con l'ombrello",
       "pfad": "bambino-ombrello"
+    },
+    "brandenburger-tor": {
+      "titel": "Porta di Brandeburgo",
+      "alt": "La Porta di Brandeburgo a Berlino con le colonne e la quadriga in cima, davanti alberi e piccioni",
+      "pfad": "porta-di-brandeburgo"
+    },
+    "deutschlandkarte": {
+      "titel": "Cartina della Germania",
+      "alt": "Contorno della Germania come cartina muta con le coste del Mare del Nord e del Baltico e alcuni fiumi",
+      "pfad": "cartina-germania"
+    },
+    "koelner-dom": {
+      "titel": "Duomo di Colonia",
+      "alt": "Il Duomo di Colonia con le sue due alte guglie, accanto il ponte sul Reno e una barca sul fiume",
+      "pfad": "duomo-di-colonia"
+    },
+    "schloss-neuschwanstein": {
+      "titel": "Castello di Neuschwanstein",
+      "alt": "Il castello di Neuschwanstein con tante torri su una rupe davanti alle montagne, abeti in primo piano",
+      "pfad": "castello-di-neuschwanstein"
+    },
+    "holstentor-luebeck": {
+      "titel": "Holstentor di Lubecca",
+      "alt": "La porta Holstentor di Lubecca con due torri rotonde e tetti a punta, davanti anatre sull'acqua",
+      "pfad": "holstentor-lubecca"
+    },
+    "leuchtturm-nordsee": {
+      "titel": "Faro sul Mare del Nord",
+      "alt": "Faro a strisce con due casette sull'argine, pecore, un canale di marea e gabbiani nel cielo",
+      "pfad": "faro-mare-del-nord"
     },
     "kuerbis": {
       "titel": "Zucca sorridente",
