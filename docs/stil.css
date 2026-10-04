@@ -1,0 +1,84 @@
+:root {
+  --papier: #fff9f1; --karte: #ffffff; --tinte: #2a2320; --leise: #6b5f58;
+  --akzent: #c4520f; --akzent-hell: #ffe2cc; --auf-akzent: #fff; --gruen: #2f8f6b; --rand: #f0e2d4;
+  --rund: 18px;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --papier: #1d1917; --karte: #2a2421; --tinte: #f5ede6; --leise: #c4b5aa;
+    --akzent: #ff9a5c; --akzent-hell: #4a2c1b; --auf-akzent: #1d1917; --rand: #3d3430; color-scheme: dark;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--papier); color: var(--tinte);
+  font: 1.0625rem/1.6 ui-rounded, "SF Pro Rounded", "Nunito", "Segoe UI", system-ui, sans-serif;
+}
+h1, h2 { line-height: 1.2; letter-spacing: -0.01em; }
+h1 { font-size: clamp(1.8rem, 4.5vw, 2.8rem); margin: .4em 0 .3em; }
+h2 { font-size: 1.5rem; margin: 2em 0 .8em; }
+a { color: var(--akzent); }
+img { max-width: 100%; height: auto; }
+.skip { position: absolute; left: -999px; }
+.skip:focus { left: 16px; top: 8px; background: var(--karte); padding: 8px; z-index: 9; }
+
+.kopf {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px 24px;
+  padding: 14px max(16px, calc((100% - 1160px) / 2)); background: var(--karte);
+  border-bottom: 3px dashed var(--rand);
+}
+.marke { font-weight: 800; font-size: 1.4rem; text-decoration: none; color: var(--tinte); }
+.kopf ul { display: flex; flex-wrap: wrap; gap: 4px 14px; list-style: none; margin: 0; padding: 0; font-size: .95rem; }
+.kopf nav a { color: var(--leise); text-decoration: none; }
+.kopf nav a:hover { color: var(--akzent); }
+
+main { max-width: 1160px; margin: 0 auto; padding: 0 16px 48px; }
+.lead { font-size: 1.15rem; color: var(--leise); max-width: 62ch; }
+
+.held { display: grid; grid-template-columns: 1.4fr 1fr; gap: 32px; align-items: center; padding: 32px 0 8px; }
+.held img { border-radius: var(--rund); background: #fff; box-shadow: 0 10px 30px rgba(120, 60, 20, .15); transform: rotate(2deg); max-height: 440px; width: auto; justify-self: center; }
+.raster { gap: 14px; }
+@media (max-width: 720px) { .held { grid-template-columns: 1fr; } .held img { max-height: 320px; } }
+
+.knopf {
+  display: inline-block; background: var(--akzent); color: var(--auf-akzent); border: 0; cursor: pointer;
+  font: inherit; font-weight: 700; padding: 12px 22px; border-radius: 999px; text-decoration: none;
+}
+.knopf:hover { filter: brightness(1.08); }
+.knopf.zweit { background: var(--akzent-hell); color: var(--tinte); }
+.knoepfe { display: flex; flex-wrap: wrap; gap: 10px; }
+
+.raster { list-style: none; padding: 0; margin: 0; display: grid; gap: 20px; grid-template-columns: repeat(auto-fill, minmax(min(150px, 42vw), 1fr)); }
+.karte a, .themakarte a {
+  display: block; background: var(--karte); border: 2px solid var(--rand); border-radius: var(--rund);
+  overflow: hidden; text-decoration: none; color: var(--tinte); transition: transform .15s, box-shadow .15s;
+}
+.karte a:hover, .themakarte a:hover { transform: translateY(-3px) rotate(-.5deg); box-shadow: 0 8px 20px rgba(120, 60, 20, .14); }
+.karte img, .themakarte img { display: block; width: 100%; aspect-ratio: 3/4; object-fit: cover; background: #fff; }
+.karte span { display: block; padding: 10px 14px; font-weight: 700; }
+.themakarte span { display: flex; flex-direction: column; padding: 10px 14px; }
+.themakarte small { color: var(--leise); }
+
+.krumen ol { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; padding: 0; margin: 20px 0 0; font-size: .9rem; color: var(--leise); }
+.krumen li + li::before { content: "›"; margin-right: 6px; }
+
+.bild { display: grid; grid-template-columns: minmax(0, 1.1fr) 1fr; gap: 32px; align-items: start; margin-top: 16px; }
+.bild figure { margin: 0; }
+.malbild { display: block; background: #fff; border-radius: var(--rund); border: 2px solid var(--rand); }
+.bild h1 { margin-top: 0; }
+.klein { font-size: .9rem; color: var(--leise); }
+@media (max-width: 760px) { .bild { grid-template-columns: 1fr; } }
+
+.text { max-width: 70ch; }
+.fuss { border-top: 3px dashed var(--rand); padding: 24px max(16px, calc((100% - 1160px) / 2)); color: var(--leise); font-size: .95rem; }
+.fuss a { color: var(--leise); }
+
+@media print {
+  @page { size: A4; margin: 10mm; }
+  body { background: #fff; }
+  .kopf, .fuss, .krumen, .info, section, .skip { display: none !important; }
+  main { padding: 0; max-width: none; }
+  .bild { display: block; }
+  .malbild { border: 0; width: 100%; height: auto; max-height: 270mm; object-fit: contain; }
+}
