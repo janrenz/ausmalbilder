@@ -7,7 +7,13 @@ export PATH="$HOME/.local/bin:$HOME/.local/share/mise/shims:$HOME/.local/share/m
 REPO="$HOME/code/ausmalbilder"
 WT="$HOME/.local/share/malkiste/automatik-worktree"   # eigener Arbeitsbaum, berührt deine Arbeitskopie nicht
 STAND="$HOME/.local/state/malkiste"
-MIN="${MIN:-50}"; [ "${1:-}" = "--min" ] && MIN="$2"
+MIN="${MIN:-50}"; WEITER=0
+while [ $# -gt 0 ]; do case "$1" in
+  --min) MIN="$2"; shift 2;;
+  --weiter) WEITER=1; shift;;   # abgebrochenen Lauf ab der Prüfung fortsetzen, ohne neuen Claude-Lauf
+  *) echo "unbekannte Option $1"; exit 2;;
+esac; done
+export LC_ALL=C   # comm braucht Byte-Sortierung
 MAX_BILDER=5
 HEUTE=$(date +%F)
 BRANCH="auto/neue-bilder-$HEUTE"
@@ -17,6 +23,15 @@ exec > >(tee -a "$LOG") 2>&1
 echo "== $(date -Is) Lauf startet (Schwelle $MIN)"
 
 melde() { notify-send -a Malkiste "Malkiste" "$1" 2>/dev/null || true; echo "$1"; }
+
+slugs() { node -e 'import("./katalog.mjs").then(({themen})=>console.log(themen.flatMap(t=>t.bilder.map(b=>b.slug)).join("\n")))' | sort; }
+
+if [ $WEITER -eq 1 ]; then
+  cd "$WT"
+  BIS=$(node -e 'console.log(Date.parse(JSON.parse(require("fs").readFileSync(".pruef/statistik.json","utf8")).zeitraum.bis))')
+  sort -o .pruef/vorher.txt .pruef/vorher.txt
+  echo "Setze Lauf im bestehenden Arbeitsbaum fort ($(git branch --show-current))"
+else
 
 # Nicht stapeln: solange ein automatischer PR offen ist, nichts Neues anfangen
 offen=$(gh pr list -R janrenz/ausmalbilder --state open --json headRefName --jq '[.[] | select(.headRefName | startswith("auto/"))] | length')
@@ -40,7 +55,6 @@ if [ $status -eq 3 ]; then echo "Zu wenig neue Downloads – nichts zu tun."; ex
 [ $status -ne 0 ] && { melde "Statistik-Abfrage fehlgeschlagen (siehe $LOG)"; exit 1; }
 BIS=$(date +%s000)
 
-slugs() { node -e 'import("./katalog.mjs").then(({themen})=>console.log(themen.flatMap(t=>t.bilder.map(b=>b.slug)).sort().join("\n")))'; }
 slugs > .pruef/vorher.txt
 
 # 2. Claude: nur Katalog, Übersetzungen, Bilder – kein Git, kein Build, kein Netz außer gen-image
@@ -52,6 +66,7 @@ claude -p "$(cat automatik/auftrag.md)" \
   --disallowedTools "Bash(git:*)" "Bash(gh:*)" "Bash(curl:*)" "WebFetch" "WebSearch" \
   > .pruef/claude-ausgabe.txt || { melde "Claude-Lauf fehlgeschlagen (siehe $LOG)"; cat .pruef/claude-ausgabe.txt; exit 1; }
 cat .pruef/claude-ausgabe.txt
+fi
 
 # 3. Ergebnis prüfen
 slugs > .pruef/nachher.txt
