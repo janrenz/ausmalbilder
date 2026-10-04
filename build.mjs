@@ -271,7 +271,7 @@ for (const L of sprachen) {
     <p class="lead">${esc(fuelle(u.heldLead, { n, t: themen.length }))}</p>
     <p><a class="knopf" href="#themen">${esc(u.themenAnsehen)}</a></p>
   </div>
-  <img src="${url(`bilder/${themen[0].bilder[0].slug}.webp`)}" width="480" height="643" alt="${esc(fuelle(u.bildAlt, { alt: L.bilder[themen[0].bilder[0].slug].alt }))}" fetchpriority="high">
+  <a class="heldbild" href="${url(pfadBild(L, themen[0], themen[0].bilder[0]))}"><img src="${url(`bilder/${themen[0].bilder[0].slug}.webp`)}" width="480" height="643" alt="${esc(fuelle(u.bildAlt, { alt: L.bilder[themen[0].bilder[0].slug].alt }))}" fetchpriority="high"></a>
 </section>
 
 ${SAISON.length ? `<section aria-labelledby="saison">

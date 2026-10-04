@@ -38,7 +38,9 @@ main { max-width: 1160px; margin: 0 auto; padding: 0 16px 48px; }
 .lead { font-size: 1.15rem; color: var(--leise); max-width: 62ch; }
 
 .held { display: grid; grid-template-columns: 1.4fr 1fr; gap: 32px; align-items: center; padding: 32px 0 8px; }
-.held img { border-radius: var(--rund); background: #fff; box-shadow: 0 10px 30px rgba(120, 60, 20, .15); transform: rotate(2deg); max-height: 440px; width: auto; justify-self: center; }
+.heldbild { justify-self: center; display: block; border-radius: var(--rund); transition: transform .15s; }
+.heldbild:hover { transform: translateY(-3px) rotate(-.5deg); }
+.held img { display: block; border-radius: var(--rund); background: #fff; box-shadow: 0 10px 30px rgba(120, 60, 20, .15); transform: rotate(2deg); max-height: 440px; width: auto; }
 .raster { gap: 14px; }
 @media (max-width: 720px) { .held { grid-template-columns: 1fr; } .held img { max-height: 320px; } }
 
