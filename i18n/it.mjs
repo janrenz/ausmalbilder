@@ -73,7 +73,7 @@ export default {
     "einhorn": {
       "name": "Unicorno",
       "titel": "Disegni di unicorni da colorare",
-      "intro": "Gli unicorni sono tra i soggetti più amati in assoluto. Qui trovi tre sognanti disegni di unicorni da colorare con arcobaleno, stelle e prato fiorito, da stampare gratis.",
+      "intro": "Gli unicorni sono tra i soggetti più amati in assoluto. Qui trovi sognanti disegni di unicorni da colorare con arcobaleno, stelle e prato fiorito, da stampare gratis.",
       "pfad": "unicorno"
     },
     "dinosaurier": {
@@ -157,7 +157,7 @@ export default {
     "mandala": {
       "name": "Mandala",
       "titel": "Mandala da colorare per bambini",
-      "intro": "I mandala rilassano e allenano la motricità fine. Questi tre mandala sono a misura di bambino: con animali, fiori e stelle.",
+      "intro": "I mandala rilassano e allenano la motricità fine. Questi mandala sono a misura di bambino: con animali, fiori e stelle.",
       "pfad": "mandala-bambini"
     },
     "maerchen": {

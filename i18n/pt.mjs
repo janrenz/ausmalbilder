@@ -105,7 +105,7 @@ export default {
     },
   },
   themen: {
-    "einhorn": { name: "Unicórnio", titel: "Desenhos de unicórnio para colorir", pfad: "unicornio", intro: "Os unicórnios estão entre os motivos preferidos de sempre. Aqui encontras cinco desenhos de unicórnio sonhadores, com arco-íris, estrelas e prados floridos – para imprimir grátis e colorir." },
+    "einhorn": { name: "Unicórnio", titel: "Desenhos de unicórnio para colorir", pfad: "unicornio", intro: "Os unicórnios estão entre os motivos preferidos de sempre. Aqui encontras desenhos de unicórnio sonhadores, com arco-íris, estrelas e prados floridos – para imprimir grátis e colorir." },
     "dinosaurier": { name: "Dinossauros", titel: "Desenhos de dinossauros para colorir", pfad: "dinossauros", intro: "T-Rex, braquiossauro ou tricerátops: estes desenhos de dinossauros têm um traço simpático e áreas grandes, que até as crianças do infantário conseguem colorir bem." },
     "pferde": { name: "Cavalos", titel: "Desenhos de cavalos para colorir", pfad: "cavalos", intro: "Desenhos de cavalos para pequenos e grandes fãs: um potro no prado, um pónei com a crina entrançada e um cavalo a saltar." },
     "tiere": { name: "Animais de estimação", titel: "Desenhos de animais para colorir: gato, cão e coelho", pfad: "animais-de-estimacao", intro: "Gato, cão e coelho: os animais de estimação são um clássico para colorir. Os desenhos são simples e ideais para crianças a partir dos 3 anos." },
@@ -119,7 +119,7 @@ export default {
     "sankt-martin": { name: "São Martinho", titel: "Desenhos de São Martinho e lanternas para colorir", pfad: "sao-martinho", intro: "Desfile das lanternas: desenhos para colorir sobre São Martinho e o desfile de lanternas de novembro." },
     "weihnachten": { name: "Natal", titel: "Desenhos de Natal para colorir", pfad: "natal", intro: "Pinheiro de Natal, Pai Natal e boneco de neve: desenhos de Natal para o tempo do Advento." },
     "ostern": { name: "Páscoa", titel: "Desenhos de Páscoa para colorir", pfad: "pascoa", intro: "Coelho da Páscoa, ovos de Páscoa e pintainhos: desenhos para colorir para o cesto e a decoração de Páscoa." },
-    "mandala": { name: "Mandala", titel: "Mandalas para colorir para crianças", pfad: "mandalas-para-criancas", intro: "As mandalas acalmam e ajudam a desenvolver a motricidade fina. Estas cinco mandalas são adequadas para crianças: com animais, flores e estrelas." },
+    "mandala": { name: "Mandala", titel: "Mandalas para colorir para crianças", pfad: "mandalas-para-criancas", intro: "As mandalas acalmam e ajudam a desenvolver a motricidade fina. Estas mandalas são adequadas para crianças: com animais, flores e estrelas." },
     "maerchen": { name: "Cavaleiros e princesas", titel: "Desenhos de cavaleiros, princesas e dragões para colorir", pfad: "cavaleiros-princesas-dragoes", intro: "Desenhos de contos de fadas para colorir: um castelo, um dragão simpático, uma princesa e um cavaleiro – todas personagens originais." },
     "natur": { name: "Flores e borboletas", titel: "Desenhos de flores e borboletas para colorir", pfad: "flores-borboletas", intro: "A primavera para colorir: borboletas, girassóis e joaninhas – ora simples, ora com um pouco mais de pormenor." },
     "zoo": { name: "Animais do jardim zoológico", titel: "Desenhos do jardim zoológico para colorir: leão, elefante e girafa", pfad: "jardim-zoologico", intro: "Uma ida ao jardim zoológico para colorir: leão, elefante, girafa, zebra e macaco – desenhados de forma simpática, com áreas grandes." },

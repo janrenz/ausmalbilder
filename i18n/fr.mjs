@@ -73,7 +73,7 @@ export default {
     "einhorn": {
       "name": "Licorne",
       "titel": "Coloriages de licornes à imprimer gratuitement",
-      "intro": "Les licornes sont parmi les motifs préférés des enfants. Voici cinq coloriages de licornes rêveuses avec arc-en-ciel, étoiles et prairie fleurie, à imprimer gratuitement.",
+      "intro": "Les licornes sont parmi les motifs préférés des enfants. Voici des coloriages de licornes rêveuses avec arc-en-ciel, étoiles et prairie fleurie, à imprimer gratuitement.",
       "pfad": "licorne"
     },
     "dinosaurier": {

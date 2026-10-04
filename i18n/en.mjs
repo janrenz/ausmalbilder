@@ -73,7 +73,7 @@ export default {
     "einhorn": {
       "name": "Unicorns",
       "titel": "Unicorn Colouring Pages",
-      "intro": "Unicorns are among the most popular colouring subjects of all. Here are five dreamy unicorn colouring pages with rainbows, stars and flower meadows, free to print.",
+      "intro": "Unicorns are among the most popular colouring subjects of all. Here are dreamy unicorn colouring pages with rainbows, stars and flower meadows, free to print.",
       "pfad": "unicorns"
     },
     "dinosaurier": {
@@ -157,7 +157,7 @@ export default {
     "mandala": {
       "name": "Mandala",
       "titel": "Mandala Colouring Pages for Kids",
-      "intro": "Mandalas are calming and help develop fine motor skills. These three mandalas are child-friendly, with animals, flowers and stars.",
+      "intro": "Mandalas are calming and help develop fine motor skills. These mandalas are child-friendly, with animals, flowers and stars.",
       "pfad": "kids-mandalas"
     },
     "maerchen": {

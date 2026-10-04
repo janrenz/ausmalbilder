@@ -3,7 +3,7 @@
 export const themen = [
   {
     slug: "einhorn", name: "Einhorn", titel: "Einhorn Ausmalbilder",
-    intro: "Einhörner gehören zu den beliebtesten Motiven überhaupt. Hier gibt es drei verträumte Einhorn-Ausmalbilder mit Regenbogen, Sternen und Blumenwiese – zum kostenlosen Ausdrucken.",
+    intro: "Einhörner gehören zu den beliebtesten Motiven überhaupt. Hier gibt es verträumte Einhorn-Ausmalbilder mit Regenbogen, Sternen und Blumenwiese – zum kostenlosen Ausdrucken.",
     bilder: [
       { slug: "einhorn-regenbogen", titel: "Einhorn mit Regenbogen", alt: "Einhorn auf einer Blumenwiese mit Regenbogen und lächelnden Wolken", prompt: "a cute unicorn standing in a meadow with flowers and a rainbow with smiling clouds" },
       { slug: "einhorn-sterne", titel: "Fliegendes Einhorn mit Sternen", alt: "Einhorn mit Flügeln fliegt zwischen Sternen und Mond", prompt: "a cute winged unicorn flying through the night sky with a crescent moon and big stars" },
@@ -156,7 +156,7 @@ export const themen = [
   },
   {
     slug: "mandala", name: "Mandala", titel: "Mandala Ausmalbilder für Kinder",
-    intro: "Mandalas beruhigen und fördern die Feinmotorik. Diese drei Mandalas sind kindgerecht: mit Tieren, Blumen und Sternen.",
+    intro: "Mandalas beruhigen und fördern die Feinmotorik. Diese Mandalas sind kindgerecht: mit Tieren, Blumen und Sternen.",
     bilder: [
       { slug: "mandala-blume", titel: "Blumen-Mandala", alt: "Rundes Mandala aus Blüten und Blättern", prompt: "a circular symmetric flower mandala with petals and leaves, medium detail suitable for children aged 6-10, centered on the page" },
       { slug: "mandala-tiere", titel: "Tier-Mandala", alt: "Rundes Mandala mit Schmetterlingen und Marienkäfern", prompt: "a circular symmetric mandala made of butterflies, ladybugs and leaves, medium detail for children, centered" },

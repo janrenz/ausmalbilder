@@ -104,7 +104,7 @@ export default {
     },
   },
   themen: {
-    "einhorn": { name: "Unicornio", titel: "Dibujos de unicornios para colorear", pfad: "unicornios", intro: "Los unicornios están entre los motivos favoritos de los peques. Aquí tienes cinco dibujos de unicornios para colorear, soñadores, con arcoíris, estrellas y un prado lleno de flores, para imprimir gratis." },
+    "einhorn": { name: "Unicornio", titel: "Dibujos de unicornios para colorear", pfad: "unicornios", intro: "Los unicornios están entre los motivos favoritos de los peques. Aquí tienes dibujos de unicornios para colorear, soñadores, con arcoíris, estrellas y un prado lleno de flores, para imprimir gratis." },
     "dinosaurier": { name: "Dinosaurios", titel: "Dibujos de dinosaurios para colorear", pfad: "dinosaurios", intro: "Ya sea un T-Rex, un cuello largo o un triceratops, estos dibujos de dinosaurios para colorear tienen un trazo simpático y zonas grandes que incluso los niños de infantil pueden colorear sin problema." },
     "pferde": { name: "Caballos", titel: "Dibujos de caballos para colorear", pfad: "caballos", intro: "Dibujos de caballos para colorear para pequeños y grandes aficionados: un potrillo en el prado, un poni con la crin trenzada y un caballo saltando." },
     "tiere": { name: "Mascotas", titel: "Dibujos de animales para colorear: gato, perro y conejo", pfad: "mascotas", intro: "Gato, perro y conejo: las mascotas son un clásico para colorear. Los dibujos son sencillos y especialmente adecuados para niños a partir de 3 años." },
@@ -118,7 +118,7 @@ export default {
     "sankt-martin": { name: "San Martín", titel: "Dibujos de San Martín y farolillos para colorear", pfad: "san-martin", intro: "Ich geh mit meiner Laterne: dibujos para colorear de San Martín y del desfile de farolillos de noviembre, una tradición muy querida en Alemania." },
     "weihnachten": { name: "Navidad", titel: "Dibujos de Navidad para colorear", pfad: "navidad", intro: "Árbol de Navidad, Papá Noel y muñeco de nieve: dibujos de Navidad para colorear para el Adviento." },
     "ostern": { name: "Pascua", titel: "Dibujos de Pascua para colorear", pfad: "pascua", intro: "Conejo de Pascua, huevos y pollitos: dibujos para colorear para la cesta de Pascua y la decoración de estas fiestas." },
-    "mandala": { name: "Mandala", titel: "Mandalas para colorear para niños", pfad: "mandalas-ninos", intro: "Los mandalas relajan y ejercitan la motricidad fina. Estos cinco mandalas son aptos para niños: con animales, flores y estrellas." },
+    "mandala": { name: "Mandala", titel: "Mandalas para colorear para niños", pfad: "mandalas-ninos", intro: "Los mandalas relajan y ejercitan la motricidad fina. Estos mandalas son aptos para niños: con animales, flores y estrellas." },
     "maerchen": { name: "Caballeros y princesas", titel: "Dibujos de caballeros, princesas y dragones para colorear", pfad: "caballeros-princesas", intro: "Dibujos de cuento para colorear: un castillo, un dragón simpático, una princesa y un caballero. Todos son personajes originales." },
     "natur": { name: "Flores y mariposas", titel: "Dibujos de flores y mariposas para colorear", pfad: "flores-mariposas", intro: "La primavera para colorear: mariposas, girasoles y mariquitas, unos más sencillos y otros algo más detallados." },
     "zoo": { name: "Animales del zoo", titel: "Dibujos de animales del zoo para colorear: león, elefante y jirafa", pfad: "animales-zoo", intro: "Una excursión al zoo para colorear: león, elefante, jirafa, cebra y mono, con un trazo simpático y zonas grandes." },

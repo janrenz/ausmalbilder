@@ -105,7 +105,7 @@ export default {
     },
   },
   themen: {
-    "einhorn": { name: "Jednorożec", titel: "Jednorożec – kolorowanki do druku", pfad: "jednorozec", intro: "Jednorożce należą do najbardziej lubianych motywów. Znajdziesz tu pięć rozmarzonych kolorowanek z jednorożcem, tęczą, gwiazdami i kwiecistą łąką – do darmowego wydrukowania." },
+    "einhorn": { name: "Jednorożec", titel: "Jednorożec – kolorowanki do druku", pfad: "jednorozec", intro: "Jednorożce należą do najbardziej lubianych motywów. Znajdziesz tu rozmarzone kolorowanki z jednorożcem, tęczą, gwiazdami i kwiecistą łąką – do darmowego wydrukowania." },
     "dinosaurier": { name: "Dinozaury", titel: "Dinozaury – kolorowanki do druku", pfad: "dinozaury", intro: "T-rex, brachiozaur czy triceratops: te kolorowanki z dinozaurami są przyjaźnie narysowane i mają duże powierzchnie, które bez trudu pokolorują nawet przedszkolaki." },
     "pferde": { name: "Konie", titel: "Konie – kolorowanki do druku", pfad: "konie", intro: "Kolorowanki z koniami dla małych i dużych miłośników koni: źrebak na pastwisku, kucyk z zaplecioną grzywą i koń skaczący przez przeszkodę." },
     "tiere": { name: "Zwierzęta domowe", titel: "Zwierzęta – kolorowanki: kot, pies i królik", pfad: "zwierzeta-domowe", intro: "Kot, pies i królik: zwierzęta domowe to klasyka kolorowania. Obrazki są proste i szczególnie nadają się dla dzieci od 3 lat." },
@@ -119,7 +119,7 @@ export default {
     "sankt-martin": { name: "Święty Marcin", titel: "Święty Marcin i lampiony – kolorowanki", pfad: "swiety-marcin", intro: "Idę z moim lampionem: kolorowanki o świętym Marcinie i pochodzie z lampionami w listopadzie." },
     "weihnachten": { name: "Boże Narodzenie", titel: "Boże Narodzenie – kolorowanki do druku", pfad: "boze-narodzenie", intro: "Choinka, Święty Mikołaj i bałwan: świąteczne kolorowanki na czas adwentu." },
     "ostern": { name: "Wielkanoc", titel: "Wielkanoc – kolorowanki do druku", pfad: "wielkanoc", intro: "Zajączek, pisanki i kurczaczki: kolorowanki do koszyczka i na wielkanocne dekoracje." },
-    "mandala": { name: "Mandale", titel: "Mandale dla dzieci – kolorowanki do druku", pfad: "mandale-dla-dzieci", intro: "Mandale uspokajają i ćwiczą sprawność rąk. Te pięć mandali jest dostosowanych do dzieci: ze zwierzętami, kwiatami i gwiazdami." },
+    "mandala": { name: "Mandale", titel: "Mandale dla dzieci – kolorowanki do druku", pfad: "mandale-dla-dzieci", intro: "Mandale uspokajają i ćwiczą sprawność rąk. Te mandale są dostosowane do dzieci: ze zwierzętami, kwiatami i gwiazdami." },
     "maerchen": { name: "Rycerz i księżniczka", titel: "Rycerz, księżniczka i smok – kolorowanki", pfad: "rycerz-ksiezniczka", intro: "Bajkowe kolorowanki: zamek, przyjazny smok oraz księżniczka i rycerz – wszystko to nasze własne postacie." },
     "natur": { name: "Kwiaty i motyle", titel: "Kwiaty i motyle – kolorowanki do druku", pfad: "kwiaty-i-motyle", intro: "Wiosna do kolorowania: motyle, słoneczniki i biedronki – raz prościej, raz nieco bardziej szczegółowo." },
     "zoo": { name: "Zwierzęta w zoo", titel: "Zoo – kolorowanki: lew, słoń i żyrafa", pfad: "zoo", intro: "Wycieczka do zoo do kolorowania: lew, słoń, żyrafa, zebra i małpka – przyjaźnie narysowane, z dużymi powierzchniami." },

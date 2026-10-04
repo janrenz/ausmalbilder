@@ -103,7 +103,7 @@ export default {
     },
   },
   themen: {
-    "einhorn": { name: "Eenhoorn", titel: "Eenhoorn kleurplaten", intro: "Eenhoorns zijn een van de populairste thema's. Hier vind je vijf dromerige eenhoorn-kleurplaten met regenboog, sterren en bloemenweide – gratis om te printen.", pfad: "eenhoorn" },
+    "einhorn": { name: "Eenhoorn", titel: "Eenhoorn kleurplaten", intro: "Eenhoorns zijn een van de populairste thema's. Hier vind je dromerige eenhoorn-kleurplaten met regenboog, sterren en bloemenweide – gratis om te printen.", pfad: "eenhoorn" },
     "dinosaurier": { name: "Dinosaurus", titel: "Dinosaurus kleurplaten", intro: "T-rex, brachiosaurus of triceratops: deze dinosaurus-kleurplaten zijn vriendelijk getekend en hebben grote vlakken die al kleuters mooi kunnen inkleuren.", pfad: "dinosaurus" },
     "pferde": { name: "Paarden", titel: "Paarden kleurplaten", intro: "Paarden-kleurplaten voor kleine en grote paardenfans: een veulen in de wei, een pony met gevlochten manen en een paard dat over een hindernis springt.", pfad: "paarden" },
     "tiere": { name: "Huisdieren", titel: "Dieren kleurplaten: kat, hond & konijn", intro: "Kat, hond en konijn: huisdieren zijn een klassieker om in te kleuren. De kleurplaten zijn eenvoudig en vooral geschikt voor kinderen vanaf 3 jaar.", pfad: "huisdieren" },
@@ -117,7 +117,7 @@ export default {
     "sankt-martin": { name: "Sint-Maarten", titel: "Sint-Maarten & lampionnen kleurplaten", intro: "Sint-Maarten, Sint-Maarten, de koeien hebben staarten: kleurplaten voor Sint-Maarten en de lampionnenoptocht in november.", pfad: "sint-maarten" },
     "weihnachten": { name: "Kerst", titel: "Kerst kleurplaten", intro: "Kerstboom, kerstman en sneeuwpop: kerst-kleurplaten voor de decembermaand.", pfad: "kerst" },
     "ostern": { name: "Pasen", titel: "Pasen kleurplaten", intro: "Paashaas, paaseieren en kuikentjes: kleurplaten voor het paasmandje en de paasversiering.", pfad: "pasen" },
-    "mandala": { name: "Mandala", titel: "Mandala kleurplaten voor kinderen", intro: "Mandala's werken rustgevend en trainen de fijne motoriek. Deze vijf mandala's zijn kindvriendelijk: met dieren, bloemen en sterren.", pfad: "mandala" },
+    "mandala": { name: "Mandala", titel: "Mandala kleurplaten voor kinderen", intro: "Mandala's werken rustgevend en trainen de fijne motoriek. Deze mandala's zijn kindvriendelijk: met dieren, bloemen en sterren.", pfad: "mandala" },
     "maerchen": { name: "Ridder & prinses", titel: "Ridder, prinses & draak kleurplaten", intro: "Sprookjesachtige kleurplaten: een kasteel, een vriendelijke draak en prinses en ridder – allemaal eigen figuren.", pfad: "ridder-prinses-draak" },
     "natur": { name: "Bloemen & vlinders", titel: "Bloemen & vlinders kleurplaten", intro: "De lente om in te kleuren: vlinders, zonnebloemen en lieveheersbeestjes – soms eenvoudig, soms wat gedetailleerder.", pfad: "bloemen-vlinders" },
     "zoo": { name: "Dierentuindieren", titel: "Dierentuin kleurplaten: leeuw, olifant & giraf", intro: "Een uitstapje naar de dierentuin om in te kleuren: leeuw, olifant, giraf, zebra en aap – vriendelijk getekend met grote vlakken.", pfad: "dierentuin" },
