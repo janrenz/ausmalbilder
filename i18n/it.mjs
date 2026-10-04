@@ -73,7 +73,7 @@ export default {
     "einhorn": {
       "name": "Unicorno",
       "titel": "Disegni di unicorni da colorare",
-      "intro": "Gli unicorni sono tra i soggetti più amati in assoluto. Qui trovi tre sognanti disegni di unicorni da colorare con arcobaleno, stelle e prato fiorito, da stampare gratis.",
+      "intro": "Gli unicorni sono tra i soggetti più amati in assoluto. Qui trovi sognanti disegni di unicorni da colorare con arcobaleno, stelle e prato fiorito, da stampare gratis.",
       "pfad": "unicorno"
     },
     "dinosaurier": {
@@ -157,7 +157,7 @@ export default {
     "mandala": {
       "name": "Mandala",
       "titel": "Mandala da colorare per bambini",
-      "intro": "I mandala rilassano e allenano la motricità fine. Questi tre mandala sono a misura di bambino: con animali, fiori e stelle.",
+      "intro": "I mandala rilassano e allenano la motricità fine. Questi mandala sono a misura di bambino: con animali, fiori e stelle.",
       "pfad": "mandala-bambini"
     },
     "maerchen": {
@@ -312,6 +312,16 @@ export default {
       "titel": "Unicorno con la torta di compleanno",
       "alt": "Unicorno con il cappellino da festa accanto a una torta con le candeline",
       "pfad": "unicorno-torta"
+    },
+    "einhorn-herbst": {
+      "titel": "Unicorno tra le foglie d'autunno",
+      "alt": "Unicorno che salta sopra un mucchio di foglie secche, con zucche e funghi intorno",
+      "pfad": "unicorno-foglie-autunno"
+    },
+    "einhorn-wolke": {
+      "titel": "Unicorno che dorme su una nuvola",
+      "alt": "Unicorno raggomitolato che dorme su una nuvola sotto la luna e le stelle",
+      "pfad": "unicorno-dorme-nuvola"
     },
     "dino-t-rex": {
       "titel": "T-Rex simpatico",
@@ -552,6 +562,11 @@ export default {
       "titel": "Piccolo pipistrello",
       "alt": "Pipistrello sorridente appeso a testa in giù a un ramo",
       "pfad": "piccolo-pipistrello"
+    },
+    "kuerbis-familie": {
+      "titel": "Famiglia di zucche sui gradini",
+      "alt": "Quattro zucche intagliate di diverse grandezze sui gradini di legno di una casa, un gufo appollaiato sulla ringhiera",
+      "pfad": "famiglia-di-zucche"
     },
     "martin-mantel": {
       "titel": "San Martino divide il mantello",

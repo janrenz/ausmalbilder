@@ -73,7 +73,7 @@ export default {
     "einhorn": {
       "name": "Unicorns",
       "titel": "Unicorn Colouring Pages",
-      "intro": "Unicorns are among the most popular colouring subjects of all. Here are five dreamy unicorn colouring pages with rainbows, stars and flower meadows, free to print.",
+      "intro": "Unicorns are among the most popular colouring subjects of all. Here are dreamy unicorn colouring pages with rainbows, stars and flower meadows, free to print.",
       "pfad": "unicorns"
     },
     "dinosaurier": {
@@ -157,7 +157,7 @@ export default {
     "mandala": {
       "name": "Mandala",
       "titel": "Mandala Colouring Pages for Kids",
-      "intro": "Mandalas are calming and help develop fine motor skills. These three mandalas are child-friendly, with animals, flowers and stars.",
+      "intro": "Mandalas are calming and help develop fine motor skills. These mandalas are child-friendly, with animals, flowers and stars.",
       "pfad": "kids-mandalas"
     },
     "maerchen": {
@@ -312,6 +312,16 @@ export default {
       "titel": "Unicorn with Birthday Cake",
       "alt": "Unicorn in a party hat next to a cake with candles",
       "pfad": "unicorn-with-birthday-cake"
+    },
+    "einhorn-herbst": {
+      "titel": "Unicorn in Autumn Leaves",
+      "alt": "Unicorn leaping over a pile of autumn leaves, with pumpkins and mushrooms nearby",
+      "pfad": "unicorn-autumn-leaves"
+    },
+    "einhorn-wolke": {
+      "titel": "Unicorn Sleeping on a Cloud",
+      "alt": "Unicorn curled up asleep on a cloud under the moon and stars",
+      "pfad": "unicorn-sleeping-on-a-cloud"
     },
     "dino-t-rex": {
       "titel": "Friendly T-Rex",
@@ -552,6 +562,11 @@ export default {
       "titel": "Little Bat",
       "alt": "Smiling bat hanging upside down from a branch",
       "pfad": "little-bat"
+    },
+    "kuerbis-familie": {
+      "titel": "Pumpkin Family on the Porch Steps",
+      "alt": "Four carved pumpkins of different sizes on wooden porch steps, with an owl perched on the railing",
+      "pfad": "pumpkin-family"
     },
     "martin-mantel": {
       "titel": "Saint Martin Shares His Cloak",
