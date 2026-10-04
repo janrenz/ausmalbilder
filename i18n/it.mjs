@@ -313,6 +313,16 @@ export default {
       "alt": "Unicorno con il cappellino da festa accanto a una torta con le candeline",
       "pfad": "unicorno-torta"
     },
+    "einhorn-herbst": {
+      "titel": "Unicorno tra le foglie d'autunno",
+      "alt": "Unicorno che salta sopra un mucchio di foglie secche, con zucche e funghi intorno",
+      "pfad": "unicorno-foglie-autunno"
+    },
+    "einhorn-wolke": {
+      "titel": "Unicorno che dorme su una nuvola",
+      "alt": "Unicorno raggomitolato che dorme su una nuvola sotto la luna e le stelle",
+      "pfad": "unicorno-dorme-nuvola"
+    },
     "dino-t-rex": {
       "titel": "T-Rex simpatico",
       "alt": "Tirannosauro rex sorridente tra palme e vulcano",
@@ -552,6 +562,11 @@ export default {
       "titel": "Piccolo pipistrello",
       "alt": "Pipistrello sorridente appeso a testa in giù a un ramo",
       "pfad": "piccolo-pipistrello"
+    },
+    "kuerbis-familie": {
+      "titel": "Famiglia di zucche sui gradini",
+      "alt": "Quattro zucche intagliate di diverse grandezze sui gradini di legno di una casa, un gufo appollaiato sulla ringhiera",
+      "pfad": "famiglia-di-zucche"
     },
     "martin-mantel": {
       "titel": "San Martino divide il mantello",

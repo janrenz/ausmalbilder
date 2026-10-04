@@ -10,6 +10,8 @@ export const themen = [
       { slug: "einhorn-baby", titel: "Baby-Einhorn mit Mama", alt: "Einhorn-Mama und Baby-Einhorn kuscheln zwischen Herzen", prompt: "a mother unicorn and a baby unicorn cuddling together, surrounded by a few hearts and flowers" },
       { slug: "einhorn-schloss", titel: "Einhorn vor dem Schloss", alt: "Einhorn steht vor einem Märchenschloss mit Türmen", prompt: "a unicorn standing in front of a fairy tale castle with towers and a path of flowers" },
       { slug: "einhorn-kuchen", titel: "Einhorn mit Geburtstagskuchen", alt: "Einhorn mit Partyhut neben einem Kuchen mit Kerzen", prompt: "a cute unicorn wearing a party hat next to a big layered cake with candles and balloons" },
+      { slug: "einhorn-herbst", titel: "Einhorn im Herbstlaub", alt: "Einhorn springt über einen Haufen Herbstblätter, daneben Kürbisse und Pilze", prompt: "a cute unicorn happily jumping through a pile of big autumn leaves, a few pumpkins and mushrooms on the ground, leaves falling from a tree" },
+      { slug: "einhorn-wolke", titel: "Einhorn schläft auf einer Wolke", alt: "Einhorn schläft zusammengerollt auf einer Wolke unter Mond und Sternen", prompt: "a cute unicorn sleeping curled up on a big fluffy cloud, a crescent moon and big stars above, peaceful bedtime scene" },
     ],
   },
   {
@@ -118,6 +120,7 @@ export const themen = [
       { slug: "hexe-katze", titel: "Hexenkatze auf dem Besen", alt: "Katze mit Hexenhut fliegt auf einem Besen am Mond vorbei", prompt: "a cute cat wearing a witch hat flying on a broomstick past the moon, not scary" },
       { slug: "kostuem-kinder", titel: "Kinder im Kostüm", alt: "Kinder als Gespenst, Hexe und Kürbis mit Süßigkeitenkörben", prompt: "three children in costumes (ghost, witch, pumpkin) holding candy baskets, cute not scary" },
       { slug: "fledermaus", titel: "Kleine Fledermaus", alt: "Lächelnde Fledermaus hängt kopfüber an einem Ast", prompt: "a cute smiling bat hanging upside down from a tree branch under a full moon" },
+      { slug: "kuerbis-familie", titel: "Kürbisfamilie auf der Treppe", alt: "Vier geschnitzte Kürbisse in verschiedenen Größen auf einer Holztreppe vor dem Haus, eine Eule sitzt auf dem Geländer", prompt: "three carved jack-o-lantern pumpkins of different sizes (big, medium, small) with friendly smiling faces sitting on wooden porch steps, autumn leaves and a cute owl on the railing, not scary" },
     ],
   },
   {

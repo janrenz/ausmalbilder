@@ -313,6 +313,16 @@ export default {
       "alt": "Licorne avec un chapeau de fête à côté d'un gâteau avec des bougies",
       "pfad": "licorne-gateau-anniversaire"
     },
+    "einhorn-herbst": {
+      "titel": "Licorne dans les feuilles d'automne",
+      "alt": "Une licorne saute par-dessus un tas de feuilles mortes, avec des citrouilles et des champignons",
+      "pfad": "licorne-feuilles-automne"
+    },
+    "einhorn-wolke": {
+      "titel": "Licorne endormie sur un nuage",
+      "alt": "Une licorne dort, roulée en boule sur un nuage, sous la lune et les étoiles",
+      "pfad": "licorne-endormie-nuage"
+    },
     "dino-t-rex": {
       "titel": "T-rex sympathique",
       "alt": "Tyrannosaure rieur entre des palmiers et un volcan",
@@ -552,6 +562,11 @@ export default {
       "titel": "Petite chauve-souris",
       "alt": "Une chauve-souris souriante pend la tête en bas à une branche",
       "pfad": "petite-chauve-souris"
+    },
+    "kuerbis-familie": {
+      "titel": "Famille citrouille sur les marches",
+      "alt": "Quatre citrouilles sculptées de différentes tailles sur les marches en bois d'une maison, une chouette perchée sur la rampe",
+      "pfad": "famille-citrouille"
     },
     "martin-mantel": {
       "titel": "Saint Martin partage son manteau",
