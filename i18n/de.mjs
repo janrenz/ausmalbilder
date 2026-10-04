@@ -14,7 +14,7 @@ export default {
     startTitel: "Ausmalbilder kostenlos ausdrucken – {n} Motive für Kinder und Erwachsene",
     startBeschreibung: "{n} kostenlose Ausmalbilder zum Ausdrucken: Einhorn, Dinosaurier, Pferde, Fahrzeuge, Halloween, Weihnachten, Mandalas für Erwachsene, Autos und Mode für größere Kinder. Als A4-PDF, ohne Anmeldung.",
     heldH1: "Kostenlose Ausmalbilder zum Ausdrucken",
-    heldLead: "{n} liebevoll gestaltete Ausmalbilder in {t} Themen – vom Einhorn für die Kleinsten über Autos und Raumfahrt für größere Kinder bis zu feinen Mandalas für Erwachsene. Jedes Bild gibt es als druckfertiges A4-PDF. Ohne Anmeldung, ohne Werbung, ohne Tracking.",
+    heldLead: "{n} liebevoll gestaltete Ausmalbilder in {t} Themen – vom Einhorn für die Kleinsten über Autos und Raumfahrt für größere Kinder bis zu feinen Mandalas für Erwachsene. Jedes Bild gibt es als druckfertiges A4-PDF. Ohne Anmeldung, ohne Werbung, ohne Cookies.",
     themenAnsehen: "Themen ansehen",
     saison: "Passend zur Jahreszeit",
     kleineKinder: "Für Kinder von 3 bis 8",
@@ -87,16 +87,20 @@ export default {
       pfad: "datenschutz",
       nav: "Datenschutz",
       titel: "Datenschutz",
-      beschreibung: "Datenschutzhinweise: kein Tracking, keine Cookies, nur technisch notwendige Server-Logs beim Hoster.",
+      beschreibung: "Datenschutzhinweise: keine Cookies, anonyme Reichweitenmessung mit selbst gehostetem Umami, technisch notwendige Server-Logs beim Hoster.",
       html: `<h1>Datenschutzhinweise</h1>
 <h2>Kurz gesagt</h2>
-<p>Diese Seite setzt <strong>keine Cookies</strong>, verwendet <strong>kein Tracking</strong>, keine Werbung und lädt <strong>keine Inhalte von Drittanbietern</strong> (keine externen Schriften, keine Skripte). Es gibt keine Formulare und keine Anmeldung.</p>
+<p>Diese Seite setzt <strong>keine Cookies</strong>, zeigt keine Werbung und lädt <strong>keine Inhalte von Drittanbietern</strong> (keine externen Schriften). Für eine anonyme Reichweitenmessung nutze ich ein selbst gehostetes, cookieloses Zählskript (siehe unten). Es gibt keine Formulare und keine Anmeldung.</p>
 <h2>Verantwortlicher</h2>
 <p>Jan Renz, Hans Thoma Str. 3, 14467 Potsdam, Deutschland, <a href="mailto:kontakt@janrenz.de">kontakt@janrenz.de</a></p>
 <h2>Hosting</h2>
 <p>Diese Seite wird bei GitHub Pages gehostet: GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA. Beim Aufruf der Seite verarbeitet der Hoster in sogenannten Logfiles Daten, die dein Browser übermittelt: IP-Adresse, Datum und Uhrzeit der Anfrage, aufgerufene Adresse, Referrer, HTTP-Statuscode, übertragene Datenmenge sowie Informationen zu Browser und Betriebssystem.</p>
 <p>Das ist erforderlich, um die Seite auszuliefern und ihre Stabilität und Sicherheit zu gewährleisten. Rechtsgrundlage ist das berechtigte Interesse nach Art. 6 Abs. 1 lit. f DSGVO. Ich selbst habe keinen Zugriff auf diese Logdaten und führe sie nicht mit anderen Daten zusammen.</p>
 <p>GitHub ist unter dem EU-US Data Privacy Framework zertifiziert und setzt zusätzlich EU-Standardvertragsklauseln ein. Weitere Informationen: <a href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement">Datenschutzerklärung von GitHub</a>.</p>
+<h2>Reichweitenmessung mit Umami</h2>
+<p>Um zu erfahren, welche Ausmalbilder gefragt sind, zähle ich Seitenaufrufe und Klicks auf „PDF herunterladen“, „Drucken“ und „PNG“ mit der Open-Source-Software Umami. Umami läuft auf einem eigenen Server (umami-wwuskowincn5xs0nx5pucyc0.uds.university), setzt <strong>keine Cookies</strong>, speichert nichts auf deinem Gerät und bildet keine Profile über mehrere Websites hinweg.</p>
+<p>Erfasst werden: aufgerufene Seite, verweisende Seite, Browser, Betriebssystem, Gerätetyp, Bildschirmgröße, Sprache sowie das aus der IP-Adresse abgeleitete Land, die Region und die Stadt. Die IP-Adresse selbst wird nicht gespeichert; wiederkehrende Besuche werden nur über eine monatlich wechselnde, nicht umkehrbare Prüfsumme erkannt. Sendet dein Browser das Signal „Do Not Track“, wird nichts erfasst.</p>
+<p>Rechtsgrundlage ist mein berechtigtes Interesse an einer datensparsamen Reichweitenmessung (Art. 6 Abs. 1 lit. f DSGVO). Der Statistik-Server ist über Cloudflare angebunden (Cloudflare Inc., 101 Townsend St, San Francisco, CA 94107, USA). Cloudflare verarbeitet dabei die Verbindungsdaten als Auftragsverarbeiter und ist unter dem EU-US Data Privacy Framework zertifiziert.</p>
 <h2>E-Mail-Kontakt</h2>
 <p>Wenn du mir eine E-Mail schreibst, verarbeite ich deine Angaben nur zur Beantwortung deiner Anfrage (Art. 6 Abs. 1 lit. f DSGVO) und lösche sie, sobald sie dafür nicht mehr nötig sind.</p>
 <h2>Deine Rechte</h2>

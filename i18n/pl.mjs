@@ -11,7 +11,7 @@ export default {
     startTitel: "Kolorowanki do druku za darmo – {n} motywów dla dzieci i dorosłych",
     startBeschreibung: "{n} darmowych kolorowanek do druku: jednorożec, dinozaury, konie, pojazdy, Halloween, Boże Narodzenie, mandale dla dorosłych, samochody i moda dla starszych dzieci. W formacie PDF A4, bez rejestracji.",
     heldH1: "Darmowe kolorowanki do druku",
-    heldLead: "{n} starannie narysowanych kolorowanek w {t} tematach – od jednorożca dla najmłodszych, przez samochody i kosmos dla starszych dzieci, po misterne mandale dla dorosłych. Każdy obrazek jest dostępny jako gotowy do wydruku plik PDF w formacie A4. Bez rejestracji, bez reklam, bez śledzenia.",
+    heldLead: "{n} starannie narysowanych kolorowanek w {t} tematach – od jednorożca dla najmłodszych, przez samochody i kosmos dla starszych dzieci, po misterne mandale dla dorosłych. Każdy obrazek jest dostępny jako gotowy do wydruku plik PDF w formacie A4. Bez rejestracji, bez reklam, bez plików cookie.",
     themenAnsehen: "Zobacz tematy",
     saison: "Na aktualną porę roku",
     kleineKinder: "Dla dzieci w wieku 3–8 lat",
@@ -84,16 +84,20 @@ export default {
       pfad: "polityka-prywatnosci",
       nav: "Ochrona danych",
       titel: "Polityka prywatności",
-      beschreibung: "Informacje o ochronie danych: bez śledzenia, bez plików cookie, tylko technicznie niezbędne logi serwera u dostawcy hostingu.",
+      beschreibung: "Informacje o ochronie danych: bez plików cookie, anonimowe statystyki z własnym Umami, technicznie niezbędne logi serwera u dostawcy hostingu.",
       html: `<h1>Polityka prywatności</h1>
 <h2>W skrócie</h2>
-<p>Ta strona <strong>nie używa plików cookie</strong>, <strong>nie stosuje śledzenia</strong>, nie wyświetla reklam i <strong>nie ładuje treści od podmiotów trzecich</strong> (żadnych zewnętrznych czcionek ani skryptów). Nie ma formularzy ani rejestracji.</p>
+<p>Ta strona <strong>nie używa plików cookie</strong>, nie wyświetla reklam i <strong>nie ładuje treści od podmiotów trzecich</strong> (żadnych zewnętrznych czcionek). Do anonimowego pomiaru oglądalności używam własnego, hostowanego u mnie skryptu zliczającego bez plików cookie (zob. niżej). Nie ma formularzy ani rejestracji.</p>
 <h2>Administrator danych</h2>
 <p>Jan Renz, Hans Thoma Str. 3, 14467 Potsdam, Niemcy, <a href="mailto:kontakt@janrenz.de">kontakt@janrenz.de</a></p>
 <h2>Hosting</h2>
 <p>Ta strona jest hostowana w usłudze GitHub Pages: GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA. Podczas wyświetlania strony dostawca hostingu przetwarza w tzw. plikach logów dane przesyłane przez Twoją przeglądarkę: adres IP, datę i godzinę żądania, wywołany adres, adres strony odsyłającej (referrer), kod statusu HTTP, ilość przesłanych danych oraz informacje o przeglądarce i systemie operacyjnym.</p>
 <p>Jest to konieczne, aby dostarczyć stronę oraz zapewnić jej stabilność i bezpieczeństwo. Podstawą prawną jest prawnie uzasadniony interes zgodnie z art. 6 ust. 1 lit. f RODO. Sam nie mam dostępu do tych logów i nie łączę ich z innymi danymi.</p>
 <p>GitHub posiada certyfikat w ramach EU-US Data Privacy Framework i dodatkowo stosuje unijne standardowe klauzule umowne. Więcej informacji: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">Oświadczenie GitHub o ochronie prywatności</a> (w języku angielskim).</p>
+<h2>Statystyki odwiedzin z Umami</h2>
+<p>Aby wiedzieć, które kolorowanki cieszą się największym zainteresowaniem, zliczam wyświetlenia stron oraz kliknięcia „Pobierz PDF”, „Drukuj” i „PNG” za pomocą otwartego oprogramowania Umami. Umami działa na moim własnym serwerze (umami-wwuskowincn5xs0nx5pucyc0.uds.university), <strong>nie używa plików cookie</strong>, niczego nie zapisuje na Twoim urządzeniu i nie tworzy profili obejmujących różne strony.</p>
+<p>Rejestrowane są: odwiedzona strona, strona odsyłająca, przeglądarka, system operacyjny, typ urządzenia, rozmiar ekranu, język oraz kraj, region i miasto ustalone na podstawie adresu IP. Sam adres IP nie jest zapisywany; powtórne wizyty są rozpoznawane wyłącznie za pomocą nieodwracalnego skrótu zmienianego co miesiąc. Jeśli Twoja przeglądarka wysyła sygnał „Do Not Track”, nic nie jest rejestrowane.</p>
+<p>Podstawą prawną jest mój prawnie uzasadniony interes w oszczędnym pod względem danych pomiarze oglądalności (art. 6 ust. 1 lit. f RODO). Serwer statystyk jest podłączony przez Cloudflare (Cloudflare Inc., 101 Townsend St, San Francisco, CA 94107, USA), który przetwarza dane połączenia jako podmiot przetwarzający i posiada certyfikację w ramach EU-US Data Privacy Framework.</p>
 <h2>Kontakt e-mailowy</h2>
 <p>Jeśli napiszesz do mnie e-mail, przetwarzam Twoje dane wyłącznie w celu udzielenia odpowiedzi na wiadomość (art. 6 ust. 1 lit. f RODO) i usuwam je, gdy tylko przestaną być do tego potrzebne.</p>
 <h2>Twoje prawa</h2>

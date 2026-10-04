@@ -10,7 +10,7 @@ export default {
     startTitel: "Dibujos para colorear gratis para imprimir – {n} láminas para niños y adultos",
     startBeschreibung: "{n} dibujos para colorear gratis para imprimir: unicornios, dinosaurios, caballos, vehículos, Halloween, Navidad, mandalas para adultos, coches y moda para niños mayores. En PDF tamaño A4, sin registro.",
     heldH1: "Dibujos para colorear gratis para imprimir",
-    heldLead: "{n} dibujos para colorear hechos con cariño en {t} temas: desde el unicornio para los más pequeños, pasando por coches y espacio para niños mayores, hasta mandalas delicados para adultos. Cada dibujo está disponible en PDF A4 listo para imprimir. Sin registro, sin publicidad y sin rastreo.",
+    heldLead: "{n} dibujos para colorear hechos con cariño en {t} temas: desde el unicornio para los más pequeños, pasando por coches y espacio para niños mayores, hasta mandalas delicados para adultos. Cada dibujo está disponible en PDF A4 listo para imprimir. Sin registro, sin publicidad y sin cookies.",
     themenAnsehen: "Ver los temas",
     saison: "Según la época del año",
     kleineKinder: "Para niños de 3 a 8 años",
@@ -83,16 +83,20 @@ export default {
       pfad: "privacidad",
       nav: "Privacidad",
       titel: "Privacidad",
-      beschreibung: "Información sobre protección de datos: sin rastreo, sin cookies, solo los registros técnicos necesarios del servidor del proveedor de alojamiento.",
+      beschreibung: "Información sobre protección de datos: sin cookies, medición de audiencia anónima con Umami autoalojado y registros técnicos necesarios del proveedor de alojamiento.",
       html: `<h1>Información sobre protección de datos</h1>
 <h2>En resumen</h2>
-<p>Esta web <strong>no usa cookies</strong>, <strong>no utiliza rastreo</strong>, no muestra publicidad y <strong>no carga contenidos de terceros</strong> (ni fuentes externas ni scripts). No hay formularios ni registro de usuarios.</p>
+<p>Esta web <strong>no usa cookies</strong>, no muestra publicidad y <strong>no carga contenidos de terceros</strong> (ni fuentes externas). Para medir la audiencia de forma anónima utilizo un script de recuento alojado en mi propio servidor y sin cookies (ver más abajo). No hay formularios ni registro de usuarios.</p>
 <h2>Responsable del tratamiento</h2>
 <p>Jan Renz, Hans Thoma Str. 3, 14467 Potsdam, Alemania, <a href="mailto:kontakt@janrenz.de">kontakt@janrenz.de</a></p>
 <h2>Alojamiento</h2>
 <p>Esta web está alojada en GitHub Pages: GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, EE. UU. Cuando accedes a la web, el proveedor de alojamiento trata en los llamados archivos de registro los datos que transmite tu navegador: dirección IP, fecha y hora de la solicitud, dirección solicitada, referente, código de estado HTTP, volumen de datos transferido e información sobre el navegador y el sistema operativo.</p>
 <p>Esto es necesario para servir la web y garantizar su estabilidad y seguridad. La base jurídica es el interés legítimo conforme al art. 6, apartado 1, letra f), del RGPD. Yo no tengo acceso a estos datos de registro ni los combino con otros datos.</p>
 <p>GitHub está certificada conforme al Marco de Privacidad de Datos UE-EE. UU. y aplica además las cláusulas contractuales tipo de la UE. Más información: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">Declaración de privacidad de GitHub</a>.</p>
+<h2>Medición de audiencia con Umami</h2>
+<p>Para saber qué dibujos son los más populares, cuento las visitas a las páginas y los clics en «Descargar PDF», «Imprimir» y «PNG» con el software de código abierto Umami. Umami funciona en mi propio servidor (umami-wwuskowincn5xs0nx5pucyc0.uds.university), <strong>no usa cookies</strong>, no guarda nada en tu dispositivo y no crea perfiles entre distintas webs.</p>
+<p>Se registran: la página visitada, la página de procedencia, el navegador, el sistema operativo, el tipo de dispositivo, el tamaño de pantalla, el idioma y el país, la región y la ciudad deducidos de la dirección IP. La dirección IP en sí no se guarda; las visitas repetidas solo se reconocen mediante un hash irreversible que cambia cada mes. Si tu navegador envía la señal «Do Not Track», no se registra nada.</p>
+<p>La base jurídica es mi interés legítimo en una medición de audiencia respetuosa con la privacidad (art. 6, apartado 1, letra f, del RGPD). El servidor de estadísticas está conectado a través de Cloudflare (Cloudflare Inc., 101 Townsend St, San Francisco, CA 94107, EE. UU.), que trata los datos de conexión como encargado del tratamiento y está certificado conforme al Marco de Privacidad de Datos UE-EE. UU.</p>
 <h2>Contacto por correo electrónico</h2>
 <p>Si me escribes un correo electrónico, trato tus datos únicamente para responder a tu consulta (art. 6, apartado 1, letra f), del RGPD) y los elimino en cuanto dejan de ser necesarios para ello.</p>
 <h2>Tus derechos</h2>

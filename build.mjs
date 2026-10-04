@@ -15,6 +15,8 @@ const SRC = "src/bilder";
 const HEUTE = new Date().toISOString().slice(0, 10);
 const CODES = ["de", "en", "fr", "es", "it", "nl", "pl", "pt"];
 const SAISON = ["halloween", "herbst", "sankt-martin", "weihnachten"];
+// Reichweitenmessung (Umami, selbst gehostet, cookielos). Ohne umami.json wird kein Skript eingebunden.
+const UMAMI = existsSync("umami.json") ? JSON.parse(readFileSync("umami.json", "utf8")) : null;
 
 const alleBilder = themen.flatMap((t) => t.bilder.map((b) => ({ ...b, thema: t })));
 
@@ -103,6 +105,7 @@ ${robots ? `<meta name="robots" content="${robots}">` : ""}
 <meta name="theme-color" content="#ff8a3d">
 <link rel="icon" href="${url("favicon.svg")}" type="image/svg+xml">
 <link rel="stylesheet" href="${url("stil.css")}">
+${UMAMI ? `<script defer src="${UMAMI.url}/script.js" data-website-id="${UMAMI.id}" data-domains="${new URL(SITE).hostname}" data-do-not-track="true"></script>` : ""}
 ${jsonld.map((j) => `<script type="application/ld+json">${JSON.stringify(j)}</script>`).join("\n")}
 </head>
 <body>
@@ -241,6 +244,7 @@ for (const L of sprachen) {
       const naechstes = t.bilder[(i + 1) % t.bilder.length];
       const bildV = (S) => pfadBild(S, t, b);
       const datei = `${u.dateiname}-${B.pfad}`;
+      const ereignis = `data-umami-event-bild="${b.slug}" data-umami-event-thema="${t.slug}" data-umami-event-sprache="${L.code}"`;
       schreibe(pfadBild(L, t, b), seite(L, {
         pfad: pfadBild(L, t, b), varianten: bildV,
         titel: `${fuelle(u.bildTitel, { titel: B.titel })} | ${NAME}`,
@@ -262,9 +266,9 @@ for (const L of sprachen) {
     ${alterLabel(L, t) ? `<p class="alter">${esc(alterLabel(L, t))}</p>` : ""}
     <p>${fuelle(esc(u.bildText), { alt: esc(B.alt), link: `<a href="${url(pfadThema(L, t))}">${esc(T.name)}</a>` })}</p>
     <p class="knoepfe">
-      <a class="knopf" href="${url(`bilder/${b.slug}.pdf`)}" download="${datei}.pdf">${esc(u.pdf)}</a>
-      <button class="knopf zweit" type="button" onclick="window.print()">${esc(u.drucken)}</button>
-      <a class="knopf zweit" href="${url(`bilder/${b.slug}.png`)}" download="${datei}.png">PNG</a>
+      <a class="knopf" href="${url(`bilder/${b.slug}.pdf`)}" download="${datei}.pdf" data-umami-event="pdf" ${ereignis}>${esc(u.pdf)}</a>
+      <button class="knopf zweit" type="button" onclick="window.print()" data-umami-event="drucken" ${ereignis}>${esc(u.drucken)}</button>
+      <a class="knopf zweit" href="${url(`bilder/${b.slug}.png`)}" download="${datei}.png" data-umami-event="png" ${ereignis}>PNG</a>
     </p>
     <p class="klein">${esc(u.cc0)} <a href="${ueberPfad}">${esc(u.zurNutzung)}</a></p>
     <p><a href="${url(pfadBild(L, t, naechstes))}">${esc(fuelle(u.naechstes, { titel: L.bilder[naechstes.slug].titel }))}</a></p>

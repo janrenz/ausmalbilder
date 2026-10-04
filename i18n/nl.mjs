@@ -9,7 +9,7 @@ export default {
     startTitel: "Kleurplaten gratis printen – {n} kleurplaten voor kinderen en volwassenen",
     startBeschreibung: "{n} gratis kleurplaten om te printen: eenhoorn, dinosaurus, paarden, voertuigen, Halloween, Kerst, mandala's voor volwassenen, auto's en mode voor oudere kinderen. Als A4-pdf, zonder account.",
     heldH1: "Gratis kleurplaten om te printen",
-    heldLead: "{n} liefdevol getekende kleurplaten in {t} thema's – van de eenhoorn voor de allerkleinsten en auto's en ruimtevaart voor oudere kinderen tot fijne mandala's voor volwassenen. Elke kleurplaat is er als printklare A4-pdf. Zonder account, zonder reclame, zonder tracking.",
+    heldLead: "{n} liefdevol getekende kleurplaten in {t} thema's – van de eenhoorn voor de allerkleinsten en auto's en ruimtevaart voor oudere kinderen tot fijne mandala's voor volwassenen. Elke kleurplaat is er als printklare A4-pdf. Zonder account, zonder reclame, zonder cookies.",
     themenAnsehen: "Bekijk de thema's",
     saison: "Passend bij het seizoen",
     kleineKinder: "Voor kinderen van 3 tot 8 jaar",
@@ -82,16 +82,20 @@ export default {
       pfad: "privacy",
       nav: "Privacy",
       titel: "Privacyverklaring",
-      beschreibung: "Privacyverklaring: geen tracking, geen cookies, alleen technisch noodzakelijke serverlogs bij de hostingprovider.",
+      beschreibung: "Privacyverklaring: geen cookies, anonieme bezoekersstatistieken met zelf gehoste Umami, technisch noodzakelijke serverlogs bij de hostingprovider.",
       html: `<h1>Privacyverklaring</h1>
 <h2>In het kort</h2>
-<p>Deze website plaatst <strong>geen cookies</strong>, gebruikt <strong>geen tracking</strong>, toont geen reclame en laadt <strong>geen inhoud van derden</strong> (geen externe lettertypen, geen scripts). Er zijn geen formulieren en geen inlog.</p>
+<p>Deze website plaatst <strong>geen cookies</strong>, toont geen reclame en laadt <strong>geen inhoud van derden</strong> (geen externe lettertypen). Voor anonieme bezoekersstatistieken gebruik ik een zelf gehost telscript zonder cookies (zie hieronder). Er zijn geen formulieren en geen inlog.</p>
 <h2>Verwerkingsverantwoordelijke</h2>
 <p>Jan Renz, Hans Thoma Str. 3, 14467 Potsdam, Duitsland, <a href="mailto:kontakt@janrenz.de">kontakt@janrenz.de</a></p>
 <h2>Hosting</h2>
 <p>Deze website wordt gehost bij GitHub Pages: GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, VS. Wanneer je de website bezoekt, verwerkt de hostingprovider in zogenoemde logbestanden gegevens die je browser doorgeeft: IP-adres, datum en tijd van het verzoek, opgevraagd adres, referrer, HTTP-statuscode, hoeveelheid overgedragen gegevens en informatie over browser en besturingssysteem.</p>
 <p>Dit is nodig om de website te leveren en de stabiliteit en veiligheid ervan te waarborgen. De rechtsgrond is het gerechtvaardigd belang op grond van art. 6 lid 1, onder f, AVG. Ikzelf heb geen toegang tot deze loggegevens en voeg ze niet samen met andere gegevens.</p>
 <p>GitHub is gecertificeerd onder het EU-US Data Privacy Framework en past daarnaast de standaardcontractbepalingen van de EU toe. Meer informatie: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">privacyverklaring van GitHub</a>.</p>
+<h2>Bezoekersstatistieken met Umami</h2>
+<p>Om te weten welke kleurplaten populair zijn, tel ik paginaweergaven en klikken op „Pdf downloaden”, „Printen” en „PNG” met de opensourcesoftware Umami. Umami draait op mijn eigen server (umami-wwuskowincn5xs0nx5pucyc0.uds.university), plaatst <strong>geen cookies</strong>, slaat niets op je apparaat op en maakt geen profielen over websites heen.</p>
+<p>Vastgelegd worden: de bezochte pagina, de verwijzende pagina, browser, besturingssysteem, type apparaat, schermgrootte, taal en het land, de regio en de stad die uit het IP-adres worden afgeleid. Het IP-adres zelf wordt niet opgeslagen; terugkerende bezoeken worden alleen herkend via een maandelijks wisselende, onomkeerbare hash. Stuurt je browser het signaal „Do Not Track”, dan wordt er niets vastgelegd.</p>
+<p>De rechtsgrond is mijn gerechtvaardigd belang bij privacyvriendelijke bezoekersmeting (art. 6, lid 1, onder f, AVG). De statistiekserver is via Cloudflare aangesloten (Cloudflare Inc., 101 Townsend St, San Francisco, CA 94107, VS). Cloudflare verwerkt daarbij de verbindingsgegevens als verwerker en is gecertificeerd onder het EU-VS Data Privacy Framework.</p>
 <h2>Contact per e-mail</h2>
 <p>Als je me een e-mail stuurt, verwerk ik je gegevens alleen om je vraag te beantwoorden (art. 6 lid 1, onder f, AVG) en verwijder ik ze zodra ze daarvoor niet meer nodig zijn.</p>
 <h2>Je rechten</h2>
