@@ -134,7 +134,10 @@
   <span>Nyhavn Kopenhagen</span></a></li><li class="karte"><a href="/staedte-welt/strassenbahn-lissabon/">
   <img src="/bilder/strassenbahn-lissabon.webp" width="480" height="643" alt="Ausmalbild: Eine alte Straßenbahn fährt eine steile Gasse hinauf" loading="lazy" decoding="async">
   <span>Straßenbahn Lissabon</span></a></li></ul></section>
-<dialog class="malen" id="malen" aria-labelledby="malen-titel" data-bild="/bilder/tafelberg-kapstadt.png" data-datei="ausmalbild-tafelberg-kapstadt-ausgemalt">
+<dialog class="malen" id="malen" aria-labelledby="malen-titel" data-bild="/bilder/tafelberg-kapstadt.png" data-datei="ausmalbild-tafelberg-kapstadt-ausgemalt"
+  data-titel="Tafelberg Kapstadt" data-seite="malkiste.eu" data-teilentext="Mein Ausmalbild „Tafelberg Kapstadt“ – selbst ausmalen: https://malkiste.eu/staedte-welt/tafelberg-kapstadt/"
+  data-videoschluss="Jetzt selbst ausmalen!" data-videoleer="Mal zuerst etwas aus – dann zeigt das Video, wie dein Bild entsteht." data-videoerstellen="Dein Mal-Video entsteht …"
+  data-videofertig="Dein Mal-Video ist fertig!" data-videofehler="Das Video konnte in diesem Browser leider nicht erstellt werden.">
 <div class="buehne"><div class="malflaeche"><canvas width="896" height="1200" aria-label="Ausmalbild: Der flache Tafelberg über Kapstadt, davor Strand und Ruderboote"></canvas><img alt="" width="896" height="1200" draggable="false"></div>
   <div class="zoom"><button type="button" data-zoom="rein" title="Vergrößern" aria-label="Vergrößern">+</button><button type="button" data-zoom="raus" title="Verkleinern" aria-label="Verkleinern">−</button><button type="button" data-zoom="ganz" title="Ganzes Bild" aria-label="Ganzes Bild">⤢</button></div></div>
 <form class="malleiste" method="dialog">
@@ -153,9 +156,17 @@
     <button class="knopf zweit" type="button" data-aktion="zurueck" disabled>↶ Rückgängig</button>
     <button class="knopf zweit" type="button" data-aktion="neu" data-frage="Alles löschen und neu anfangen?">Neu anfangen</button>
     <button class="knopf" type="button" data-aktion="speichern" data-umami-event="ausgemalt" data-umami-event-bild="tafelberg-kapstadt" data-umami-event-thema="staedte-welt" data-umami-event-sprache="de">Bild speichern</button>
+    <button class="knopf" type="button" data-aktion="teilen" data-umami-event="bild-teilen" data-umami-event-bild="tafelberg-kapstadt" data-umami-event-thema="staedte-welt" data-umami-event-sprache="de" hidden>Teilen</button>
+    <button class="knopf" type="button" data-aktion="video" data-umami-event="mal-video" data-umami-event-bild="tafelberg-kapstadt" data-umami-event-thema="staedte-welt" data-umami-event-sprache="de">🎬 Mal-Video</button>
     <button class="knopf zweit" value="zu">✕ Schließen</button>
   </div>
 </form>
+<div class="videofenster" hidden><div class="videokarte" role="status" aria-live="polite">
+  <p class="videotext"></p><progress max="1" value="0"></progress>
+  <video playsinline controls hidden></video>
+  <div class="videoknoepfe" hidden><button class="knopf" type="button" data-video="teilen" data-umami-event="video-teilen" data-umami-event-bild="tafelberg-kapstadt" data-umami-event-thema="staedte-welt" data-umami-event-sprache="de">Teilen</button><button class="knopf zweit" type="button" data-video="speichern" data-umami-event="video-speichern" data-umami-event-bild="tafelberg-kapstadt" data-umami-event-thema="staedte-welt" data-umami-event-sprache="de">Video speichern</button></div>
+  <button class="knopf zweit" type="button" data-video="zu">✕ Schließen</button>
+</div></div>
 </dialog>
 </main>
 <footer class="fuss">

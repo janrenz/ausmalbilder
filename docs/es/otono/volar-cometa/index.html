@@ -94,7 +94,10 @@
   <span>Cosecha de calabazas</span></a></li><li class="karte"><a href="/es/otono/nino-paraguas/">
   <img src="/bilder/regenschirm.webp" width="480" height="643" alt="Dibujo para colorear: Niño con botas de agua saltando en un charco con un paraguas" loading="lazy" decoding="async">
   <span>Niño con paraguas</span></a></li></ul></section>
-<dialog class="malen" id="malen" aria-labelledby="malen-titel" data-bild="/bilder/drachen-steigen.png" data-datei="dibujo-para-colorear-volar-cometa-coloreado">
+<dialog class="malen" id="malen" aria-labelledby="malen-titel" data-bild="/bilder/drachen-steigen.png" data-datei="dibujo-para-colorear-volar-cometa-coloreado"
+  data-titel="Volar una cometa" data-seite="malkiste.eu" data-teilentext="Mi dibujo «Volar una cometa» – coloréalo tú también: https://malkiste.eu/es/otono/volar-cometa/"
+  data-videoschluss="¡Coloréalo tú también!" data-videoleer="Primero colorea algo y el vídeo mostrará cómo nace tu dibujo." data-videoerstellen="Se está creando tu vídeo …"
+  data-videofertig="¡Tu vídeo está listo!" data-videofehler="Lo sentimos, este navegador no ha podido crear el vídeo.">
 <div class="buehne"><div class="malflaeche"><canvas width="896" height="1200" aria-label="Dibujo para colorear: Niño volando una cometa sobre un campo"></canvas><img alt="" width="896" height="1200" draggable="false"></div>
   <div class="zoom"><button type="button" data-zoom="rein" title="Ampliar" aria-label="Ampliar">+</button><button type="button" data-zoom="raus" title="Reducir" aria-label="Reducir">−</button><button type="button" data-zoom="ganz" title="Dibujo completo" aria-label="Dibujo completo">⤢</button></div></div>
 <form class="malleiste" method="dialog">
@@ -113,9 +116,17 @@
     <button class="knopf zweit" type="button" data-aktion="zurueck" disabled>↶ Deshacer</button>
     <button class="knopf zweit" type="button" data-aktion="neu" data-frage="¿Borrar todo y empezar de nuevo?">Empezar de nuevo</button>
     <button class="knopf" type="button" data-aktion="speichern" data-umami-event="ausgemalt" data-umami-event-bild="drachen-steigen" data-umami-event-thema="herbst" data-umami-event-sprache="es">Guardar dibujo</button>
+    <button class="knopf" type="button" data-aktion="teilen" data-umami-event="bild-teilen" data-umami-event-bild="drachen-steigen" data-umami-event-thema="herbst" data-umami-event-sprache="es" hidden>Compartir</button>
+    <button class="knopf" type="button" data-aktion="video" data-umami-event="mal-video" data-umami-event-bild="drachen-steigen" data-umami-event-thema="herbst" data-umami-event-sprache="es">🎬 Vídeo del dibujo</button>
     <button class="knopf zweit" value="zu">✕ Cerrar</button>
   </div>
 </form>
+<div class="videofenster" hidden><div class="videokarte" role="status" aria-live="polite">
+  <p class="videotext"></p><progress max="1" value="0"></progress>
+  <video playsinline controls hidden></video>
+  <div class="videoknoepfe" hidden><button class="knopf" type="button" data-video="teilen" data-umami-event="video-teilen" data-umami-event-bild="drachen-steigen" data-umami-event-thema="herbst" data-umami-event-sprache="es">Compartir</button><button class="knopf zweit" type="button" data-video="speichern" data-umami-event="video-speichern" data-umami-event-bild="drachen-steigen" data-umami-event-thema="herbst" data-umami-event-sprache="es">Guardar vídeo</button></div>
+  <button class="knopf zweit" type="button" data-video="zu">✕ Cerrar</button>
+</div></div>
 </dialog>
 </main>
 <footer class="fuss">

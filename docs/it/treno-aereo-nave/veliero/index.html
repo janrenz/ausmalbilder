@@ -94,7 +94,10 @@
   <span>Elicottero</span></a></li><li class="karte"><a href="/it/treno-aereo-nave/mongolfiera/">
   <img src="/bilder/heissluftballon.webp" width="480" height="643" alt="Disegno da colorare: Tre mongolfiere sopra le colline" loading="lazy" decoding="async">
   <span>Mongolfiera</span></a></li></ul></section>
-<dialog class="malen" id="malen" aria-labelledby="malen-titel" data-bild="/bilder/segelschiff.png" data-datei="disegno-da-colorare-veliero-colorato">
+<dialog class="malen" id="malen" aria-labelledby="malen-titel" data-bild="/bilder/segelschiff.png" data-datei="disegno-da-colorare-veliero-colorato"
+  data-titel="Veliero" data-seite="malkiste.eu" data-teilentext="Il mio disegno «Veliero» – coloralo anche tu: https://malkiste.eu/it/treno-aereo-nave/veliero/"
+  data-videoschluss="Coloralo anche tu!" data-videoleer="Prima colora qualcosa: poi il video mostrerà come nasce il tuo disegno." data-videoerstellen="Stiamo creando il tuo video …"
+  data-videofertig="Il tuo video è pronto!" data-videofehler="Purtroppo questo browser non è riuscito a creare il video.">
 <div class="buehne"><div class="malflaeche"><canvas width="896" height="1200" aria-label="Disegno da colorare: Veliero in mare con i gabbiani"></canvas><img alt="" width="896" height="1200" draggable="false"></div>
   <div class="zoom"><button type="button" data-zoom="rein" title="Ingrandisci" aria-label="Ingrandisci">+</button><button type="button" data-zoom="raus" title="Riduci" aria-label="Riduci">−</button><button type="button" data-zoom="ganz" title="Disegno intero" aria-label="Disegno intero">⤢</button></div></div>
 <form class="malleiste" method="dialog">
@@ -113,9 +116,17 @@
     <button class="knopf zweit" type="button" data-aktion="zurueck" disabled>↶ Annulla</button>
     <button class="knopf zweit" type="button" data-aktion="neu" data-frage="Cancellare tutto e ricominciare?">Ricomincia</button>
     <button class="knopf" type="button" data-aktion="speichern" data-umami-event="ausgemalt" data-umami-event-bild="segelschiff" data-umami-event-thema="verkehr" data-umami-event-sprache="it">Salva disegno</button>
+    <button class="knopf" type="button" data-aktion="teilen" data-umami-event="bild-teilen" data-umami-event-bild="segelschiff" data-umami-event-thema="verkehr" data-umami-event-sprache="it" hidden>Condividi</button>
+    <button class="knopf" type="button" data-aktion="video" data-umami-event="mal-video" data-umami-event-bild="segelschiff" data-umami-event-thema="verkehr" data-umami-event-sprache="it">🎬 Video del disegno</button>
     <button class="knopf zweit" value="zu">✕ Chiudi</button>
   </div>
 </form>
+<div class="videofenster" hidden><div class="videokarte" role="status" aria-live="polite">
+  <p class="videotext"></p><progress max="1" value="0"></progress>
+  <video playsinline controls hidden></video>
+  <div class="videoknoepfe" hidden><button class="knopf" type="button" data-video="teilen" data-umami-event="video-teilen" data-umami-event-bild="segelschiff" data-umami-event-thema="verkehr" data-umami-event-sprache="it">Condividi</button><button class="knopf zweit" type="button" data-video="speichern" data-umami-event="video-speichern" data-umami-event-bild="segelschiff" data-umami-event-thema="verkehr" data-umami-event-sprache="it">Salva il video</button></div>
+  <button class="knopf zweit" type="button" data-video="zu">✕ Chiudi</button>
+</div></div>
 </dialog>
 </main>
 <footer class="fuss">

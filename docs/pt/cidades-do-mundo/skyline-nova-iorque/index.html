@@ -134,7 +134,10 @@
   <span>Nyhavn em Copenhaga</span></a></li><li class="karte"><a href="/pt/cidades-do-mundo/eletrico-lisboa/">
   <img src="/bilder/strassenbahn-lissabon.webp" width="480" height="643" alt="Desenho para colorir: Um elétrico antigo sobe uma rua íngreme" loading="lazy" decoding="async">
   <span>Elétrico de Lisboa</span></a></li></ul></section>
-<dialog class="malen" id="malen" aria-labelledby="malen-titel" data-bild="/bilder/skyline-new-york.png" data-datei="desenho-para-colorir-skyline-nova-iorque-pintado">
+<dialog class="malen" id="malen" aria-labelledby="malen-titel" data-bild="/bilder/skyline-new-york.png" data-datei="desenho-para-colorir-skyline-nova-iorque-pintado"
+  data-titel="Skyline de Nova Iorque" data-seite="malkiste.eu" data-teilentext="O meu desenho «Skyline de Nova Iorque» – pinta tu também: https://malkiste.eu/pt/cidades-do-mundo/skyline-nova-iorque/"
+  data-videoschluss="Pinta tu também!" data-videoleer="Pinta primeiro alguma coisa – depois o vídeo mostra como nasce o teu desenho." data-videoerstellen="O teu vídeo está a ser criado …"
+  data-videofertig="O teu vídeo está pronto!" data-videofehler="Infelizmente este navegador não conseguiu criar o vídeo.">
 <div class="buehne"><div class="malflaeche"><canvas width="896" height="1200" aria-label="Desenho para colorir: Arranha-céus de Manhattan com um táxi amarelo em primeiro plano"></canvas><img alt="" width="896" height="1200" draggable="false"></div>
   <div class="zoom"><button type="button" data-zoom="rein" title="Ampliar" aria-label="Ampliar">+</button><button type="button" data-zoom="raus" title="Reduzir" aria-label="Reduzir">−</button><button type="button" data-zoom="ganz" title="Desenho inteiro" aria-label="Desenho inteiro">⤢</button></div></div>
 <form class="malleiste" method="dialog">
@@ -153,9 +156,17 @@
     <button class="knopf zweit" type="button" data-aktion="zurueck" disabled>↶ Anular</button>
     <button class="knopf zweit" type="button" data-aktion="neu" data-frage="Apagar tudo e recomeçar?">Recomeçar</button>
     <button class="knopf" type="button" data-aktion="speichern" data-umami-event="ausgemalt" data-umami-event-bild="skyline-new-york" data-umami-event-thema="staedte-welt" data-umami-event-sprache="pt">Guardar desenho</button>
+    <button class="knopf" type="button" data-aktion="teilen" data-umami-event="bild-teilen" data-umami-event-bild="skyline-new-york" data-umami-event-thema="staedte-welt" data-umami-event-sprache="pt" hidden>Partilhar</button>
+    <button class="knopf" type="button" data-aktion="video" data-umami-event="mal-video" data-umami-event-bild="skyline-new-york" data-umami-event-thema="staedte-welt" data-umami-event-sprache="pt">🎬 Vídeo da pintura</button>
     <button class="knopf zweit" value="zu">✕ Fechar</button>
   </div>
 </form>
+<div class="videofenster" hidden><div class="videokarte" role="status" aria-live="polite">
+  <p class="videotext"></p><progress max="1" value="0"></progress>
+  <video playsinline controls hidden></video>
+  <div class="videoknoepfe" hidden><button class="knopf" type="button" data-video="teilen" data-umami-event="video-teilen" data-umami-event-bild="skyline-new-york" data-umami-event-thema="staedte-welt" data-umami-event-sprache="pt">Partilhar</button><button class="knopf zweit" type="button" data-video="speichern" data-umami-event="video-speichern" data-umami-event-bild="skyline-new-york" data-umami-event-thema="staedte-welt" data-umami-event-sprache="pt">Guardar vídeo</button></div>
+  <button class="knopf zweit" type="button" data-video="zu">✕ Fechar</button>
+</div></div>
 </dialog>
 </main>
 <footer class="fuss">

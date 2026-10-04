@@ -94,7 +94,10 @@
   <span>Nasz Układ Słoneczny</span></a></li><li class="karte"><a href="/pl/kosmos/stacja-kosmiczna/">
   <img src="/bilder/raumstation.webp" width="480" height="643" alt="Kolorowanka: stacja kosmiczna z panelami słonecznymi nad Ziemią" loading="lazy" decoding="async">
   <span>Stacja kosmiczna</span></a></li></ul></section>
-<dialog class="malen" id="malen" aria-labelledby="malen-titel" data-bild="/bilder/rakete.png" data-datei="kolorowanka-rakieta-w-kosmosie-pokolorowany">
+<dialog class="malen" id="malen" aria-labelledby="malen-titel" data-bild="/bilder/rakete.png" data-datei="kolorowanka-rakieta-w-kosmosie-pokolorowany"
+  data-titel="Rakieta w kosmosie" data-seite="malkiste.eu" data-teilentext="Moja kolorowanka „Rakieta w kosmosie” – pokoloruj sam: https://malkiste.eu/pl/kosmos/rakieta-w-kosmosie/"
+  data-videoschluss="Pokoloruj sam!" data-videoleer="Najpierw coś pokoloruj – wtedy film pokaże, jak powstaje twój obrazek." data-videoerstellen="Twój film powstaje …"
+  data-videofertig="Twój film jest gotowy!" data-videofehler="Niestety ta przeglądarka nie mogła utworzyć filmu.">
 <div class="buehne"><div class="malflaeche"><canvas width="896" height="1200" aria-label="Kolorowanka: rakieta leci obok planet i gwiazd"></canvas><img alt="" width="896" height="1200" draggable="false"></div>
   <div class="zoom"><button type="button" data-zoom="rein" title="Powiększ" aria-label="Powiększ">+</button><button type="button" data-zoom="raus" title="Pomniejsz" aria-label="Pomniejsz">−</button><button type="button" data-zoom="ganz" title="Cały obrazek" aria-label="Cały obrazek">⤢</button></div></div>
 <form class="malleiste" method="dialog">
@@ -113,9 +116,17 @@
     <button class="knopf zweit" type="button" data-aktion="zurueck" disabled>↶ Cofnij</button>
     <button class="knopf zweit" type="button" data-aktion="neu" data-frage="Wyczyścić wszystko i zacząć od nowa?">Zacznij od nowa</button>
     <button class="knopf" type="button" data-aktion="speichern" data-umami-event="ausgemalt" data-umami-event-bild="rakete" data-umami-event-thema="weltraum" data-umami-event-sprache="pl">Zapisz obrazek</button>
+    <button class="knopf" type="button" data-aktion="teilen" data-umami-event="bild-teilen" data-umami-event-bild="rakete" data-umami-event-thema="weltraum" data-umami-event-sprache="pl" hidden>Udostępnij</button>
+    <button class="knopf" type="button" data-aktion="video" data-umami-event="mal-video" data-umami-event-bild="rakete" data-umami-event-thema="weltraum" data-umami-event-sprache="pl">🎬 Film z kolorowania</button>
     <button class="knopf zweit" value="zu">✕ Zamknij</button>
   </div>
 </form>
+<div class="videofenster" hidden><div class="videokarte" role="status" aria-live="polite">
+  <p class="videotext"></p><progress max="1" value="0"></progress>
+  <video playsinline controls hidden></video>
+  <div class="videoknoepfe" hidden><button class="knopf" type="button" data-video="teilen" data-umami-event="video-teilen" data-umami-event-bild="rakete" data-umami-event-thema="weltraum" data-umami-event-sprache="pl">Udostępnij</button><button class="knopf zweit" type="button" data-video="speichern" data-umami-event="video-speichern" data-umami-event-bild="rakete" data-umami-event-thema="weltraum" data-umami-event-sprache="pl">Zapisz film</button></div>
+  <button class="knopf zweit" type="button" data-video="zu">✕ Zamknij</button>
+</div></div>
 </dialog>
 </main>
 <footer class="fuss">

@@ -134,7 +134,10 @@
   <span>Nyhavn w Kopenhadze</span></a></li><li class="karte"><a href="/pl/miasta-swiata/tramwaj-lizbona/">
   <img src="/bilder/strassenbahn-lissabon.webp" width="480" height="643" alt="Kolorowanka: stary tramwaj jedzie pod górę stromą uliczką" loading="lazy" decoding="async">
   <span>Tramwaj w Lizbonie</span></a></li></ul></section>
-<dialog class="malen" id="malen" aria-labelledby="malen-titel" data-bild="/bilder/akropolis-athen.png" data-datei="kolorowanka-akropol-ateny-pokolorowany">
+<dialog class="malen" id="malen" aria-labelledby="malen-titel" data-bild="/bilder/akropolis-athen.png" data-datei="kolorowanka-akropol-ateny-pokolorowany"
+  data-titel="Akropol w Atenach" data-seite="malkiste.eu" data-teilentext="Moja kolorowanka „Akropol w Atenach” – pokoloruj sam: https://malkiste.eu/pl/miasta-swiata/akropol-ateny/"
+  data-videoschluss="Pokoloruj sam!" data-videoleer="Najpierw coś pokoloruj – wtedy film pokaże, jak powstaje twój obrazek." data-videoerstellen="Twój film powstaje …"
+  data-videofertig="Twój film jest gotowy!" data-videofehler="Niestety ta przeglądarka nie mogła utworzyć filmu.">
 <div class="buehne"><div class="malflaeche"><canvas width="896" height="1200" aria-label="Kolorowanka: świątynia Partenon z kolumnami na skale nad miastem"></canvas><img alt="" width="896" height="1200" draggable="false"></div>
   <div class="zoom"><button type="button" data-zoom="rein" title="Powiększ" aria-label="Powiększ">+</button><button type="button" data-zoom="raus" title="Pomniejsz" aria-label="Pomniejsz">−</button><button type="button" data-zoom="ganz" title="Cały obrazek" aria-label="Cały obrazek">⤢</button></div></div>
 <form class="malleiste" method="dialog">
@@ -153,9 +156,17 @@
     <button class="knopf zweit" type="button" data-aktion="zurueck" disabled>↶ Cofnij</button>
     <button class="knopf zweit" type="button" data-aktion="neu" data-frage="Wyczyścić wszystko i zacząć od nowa?">Zacznij od nowa</button>
     <button class="knopf" type="button" data-aktion="speichern" data-umami-event="ausgemalt" data-umami-event-bild="akropolis-athen" data-umami-event-thema="staedte-welt" data-umami-event-sprache="pl">Zapisz obrazek</button>
+    <button class="knopf" type="button" data-aktion="teilen" data-umami-event="bild-teilen" data-umami-event-bild="akropolis-athen" data-umami-event-thema="staedte-welt" data-umami-event-sprache="pl" hidden>Udostępnij</button>
+    <button class="knopf" type="button" data-aktion="video" data-umami-event="mal-video" data-umami-event-bild="akropolis-athen" data-umami-event-thema="staedte-welt" data-umami-event-sprache="pl">🎬 Film z kolorowania</button>
     <button class="knopf zweit" value="zu">✕ Zamknij</button>
   </div>
 </form>
+<div class="videofenster" hidden><div class="videokarte" role="status" aria-live="polite">
+  <p class="videotext"></p><progress max="1" value="0"></progress>
+  <video playsinline controls hidden></video>
+  <div class="videoknoepfe" hidden><button class="knopf" type="button" data-video="teilen" data-umami-event="video-teilen" data-umami-event-bild="akropolis-athen" data-umami-event-thema="staedte-welt" data-umami-event-sprache="pl">Udostępnij</button><button class="knopf zweit" type="button" data-video="speichern" data-umami-event="video-speichern" data-umami-event-bild="akropolis-athen" data-umami-event-thema="staedte-welt" data-umami-event-sprache="pl">Zapisz film</button></div>
+  <button class="knopf zweit" type="button" data-video="zu">✕ Zamknij</button>
+</div></div>
 </dialog>
 </main>
 <footer class="fuss">

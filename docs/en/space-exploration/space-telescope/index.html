@@ -94,7 +94,10 @@
   <span>Spacewalk</span></a></li><li class="karte"><a href="/en/space-exploration/moon-landing/">
   <img src="/bilder/raumfahrt-mondlandung.webp" width="480" height="643" alt="Colouring page: Lunar module on the moon, with an astronaut and footprints" loading="lazy" decoding="async">
   <span>Moon Landing</span></a></li></ul></section>
-<dialog class="malen" id="malen" aria-labelledby="malen-titel" data-bild="/bilder/raumfahrt-teleskop.png" data-datei="colouring-page-space-telescope-coloured">
+<dialog class="malen" id="malen" aria-labelledby="malen-titel" data-bild="/bilder/raumfahrt-teleskop.png" data-datei="colouring-page-space-telescope-coloured"
+  data-titel="Space Telescope" data-seite="malkiste.eu" data-teilentext="My colouring page “Space Telescope” – colour it in yourself: https://malkiste.eu/en/space-exploration/space-telescope/"
+  data-videoschluss="Colour it in yourself!" data-videoleer="Colour something in first – then the video shows how your picture came together." data-videoerstellen="Making your colouring video …"
+  data-videofertig="Your colouring video is ready!" data-videofehler="Sorry, this browser couldn't create the video.">
 <div class="buehne"><div class="malflaeche"><canvas width="896" height="1200" aria-label="Colouring page: Space telescope with golden mirror segments in front of galaxies"></canvas><img alt="" width="896" height="1200" draggable="false"></div>
   <div class="zoom"><button type="button" data-zoom="rein" title="Zoom in" aria-label="Zoom in">+</button><button type="button" data-zoom="raus" title="Zoom out" aria-label="Zoom out">−</button><button type="button" data-zoom="ganz" title="Whole picture" aria-label="Whole picture">⤢</button></div></div>
 <form class="malleiste" method="dialog">
@@ -113,9 +116,17 @@
     <button class="knopf zweit" type="button" data-aktion="zurueck" disabled>↶ Undo</button>
     <button class="knopf zweit" type="button" data-aktion="neu" data-frage="Clear everything and start again?">Start again</button>
     <button class="knopf" type="button" data-aktion="speichern" data-umami-event="ausgemalt" data-umami-event-bild="raumfahrt-teleskop" data-umami-event-thema="raumfahrt" data-umami-event-sprache="en">Save picture</button>
+    <button class="knopf" type="button" data-aktion="teilen" data-umami-event="bild-teilen" data-umami-event-bild="raumfahrt-teleskop" data-umami-event-thema="raumfahrt" data-umami-event-sprache="en" hidden>Share</button>
+    <button class="knopf" type="button" data-aktion="video" data-umami-event="mal-video" data-umami-event-bild="raumfahrt-teleskop" data-umami-event-thema="raumfahrt" data-umami-event-sprache="en">🎬 Colouring video</button>
     <button class="knopf zweit" value="zu">✕ Close</button>
   </div>
 </form>
+<div class="videofenster" hidden><div class="videokarte" role="status" aria-live="polite">
+  <p class="videotext"></p><progress max="1" value="0"></progress>
+  <video playsinline controls hidden></video>
+  <div class="videoknoepfe" hidden><button class="knopf" type="button" data-video="teilen" data-umami-event="video-teilen" data-umami-event-bild="raumfahrt-teleskop" data-umami-event-thema="raumfahrt" data-umami-event-sprache="en">Share</button><button class="knopf zweit" type="button" data-video="speichern" data-umami-event="video-speichern" data-umami-event-bild="raumfahrt-teleskop" data-umami-event-thema="raumfahrt" data-umami-event-sprache="en">Save video</button></div>
+  <button class="knopf zweit" type="button" data-video="zu">✕ Close</button>
+</div></div>
 </dialog>
 </main>
 <footer class="fuss">

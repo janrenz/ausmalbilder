@@ -98,7 +98,10 @@
   <span>Jednorożec w jesiennych liściach</span></a></li><li class="karte"><a href="/pl/jednorozec/jednorozec-na-chmurce/">
   <img src="/bilder/einhorn-wolke.webp" width="480" height="643" alt="Kolorowanka: jednorożec zwinięty w kłębek śpi na chmurce pod księżycem i gwiazdami" loading="lazy" decoding="async">
   <span>Jednorożec śpi na chmurce</span></a></li></ul></section>
-<dialog class="malen" id="malen" aria-labelledby="malen-titel" data-bild="/bilder/einhorn-baby.png" data-datei="kolorowanka-jednorozec-z-mama-pokolorowany">
+<dialog class="malen" id="malen" aria-labelledby="malen-titel" data-bild="/bilder/einhorn-baby.png" data-datei="kolorowanka-jednorozec-z-mama-pokolorowany"
+  data-titel="Mały jednorożec z mamą" data-seite="malkiste.eu" data-teilentext="Moja kolorowanka „Mały jednorożec z mamą” – pokoloruj sam: https://malkiste.eu/pl/jednorozec/jednorozec-z-mama/"
+  data-videoschluss="Pokoloruj sam!" data-videoleer="Najpierw coś pokoloruj – wtedy film pokaże, jak powstaje twój obrazek." data-videoerstellen="Twój film powstaje …"
+  data-videofertig="Twój film jest gotowy!" data-videofehler="Niestety ta przeglądarka nie mogła utworzyć filmu.">
 <div class="buehne"><div class="malflaeche"><canvas width="896" height="1200" aria-label="Kolorowanka: mama jednorożec i małe jednorożątko tulą się wśród serduszek"></canvas><img alt="" width="896" height="1200" draggable="false"></div>
   <div class="zoom"><button type="button" data-zoom="rein" title="Powiększ" aria-label="Powiększ">+</button><button type="button" data-zoom="raus" title="Pomniejsz" aria-label="Pomniejsz">−</button><button type="button" data-zoom="ganz" title="Cały obrazek" aria-label="Cały obrazek">⤢</button></div></div>
 <form class="malleiste" method="dialog">
@@ -117,9 +120,17 @@
     <button class="knopf zweit" type="button" data-aktion="zurueck" disabled>↶ Cofnij</button>
     <button class="knopf zweit" type="button" data-aktion="neu" data-frage="Wyczyścić wszystko i zacząć od nowa?">Zacznij od nowa</button>
     <button class="knopf" type="button" data-aktion="speichern" data-umami-event="ausgemalt" data-umami-event-bild="einhorn-baby" data-umami-event-thema="einhorn" data-umami-event-sprache="pl">Zapisz obrazek</button>
+    <button class="knopf" type="button" data-aktion="teilen" data-umami-event="bild-teilen" data-umami-event-bild="einhorn-baby" data-umami-event-thema="einhorn" data-umami-event-sprache="pl" hidden>Udostępnij</button>
+    <button class="knopf" type="button" data-aktion="video" data-umami-event="mal-video" data-umami-event-bild="einhorn-baby" data-umami-event-thema="einhorn" data-umami-event-sprache="pl">🎬 Film z kolorowania</button>
     <button class="knopf zweit" value="zu">✕ Zamknij</button>
   </div>
 </form>
+<div class="videofenster" hidden><div class="videokarte" role="status" aria-live="polite">
+  <p class="videotext"></p><progress max="1" value="0"></progress>
+  <video playsinline controls hidden></video>
+  <div class="videoknoepfe" hidden><button class="knopf" type="button" data-video="teilen" data-umami-event="video-teilen" data-umami-event-bild="einhorn-baby" data-umami-event-thema="einhorn" data-umami-event-sprache="pl">Udostępnij</button><button class="knopf zweit" type="button" data-video="speichern" data-umami-event="video-speichern" data-umami-event-bild="einhorn-baby" data-umami-event-thema="einhorn" data-umami-event-sprache="pl">Zapisz film</button></div>
+  <button class="knopf zweit" type="button" data-video="zu">✕ Zamknij</button>
+</div></div>
 </dialog>
 </main>
 <footer class="fuss">

@@ -96,7 +96,10 @@
   <span>Enfants déguisés</span></a></li><li class="karte"><a href="/fr/halloween/petite-chauve-souris/">
   <img src="/bilder/fledermaus.webp" width="480" height="643" alt="Coloriage : Une chauve-souris souriante pend la tête en bas à une branche" loading="lazy" decoding="async">
   <span>Petite chauve-souris</span></a></li></ul></section>
-<dialog class="malen" id="malen" aria-labelledby="malen-titel" data-bild="/bilder/kuerbis-familie.png" data-datei="coloriage-famille-citrouille-colorie">
+<dialog class="malen" id="malen" aria-labelledby="malen-titel" data-bild="/bilder/kuerbis-familie.png" data-datei="coloriage-famille-citrouille-colorie"
+  data-titel="Famille citrouille sur les marches" data-seite="malkiste.eu" data-teilentext="Mon coloriage « Famille citrouille sur les marches » – à toi de colorier : https://malkiste.eu/fr/halloween/famille-citrouille/"
+  data-videoschluss="À toi de colorier !" data-videoleer="Colorie d'abord quelque chose – la vidéo montrera ensuite comment ton dessin prend vie." data-videoerstellen="Ta vidéo est en cours de création …"
+  data-videofertig="Ta vidéo est prête !" data-videofehler="Désolé, ce navigateur n'a pas pu créer la vidéo.">
 <div class="buehne"><div class="malflaeche"><canvas width="896" height="1200" aria-label="Coloriage : Quatre citrouilles sculptées de différentes tailles sur les marches en bois d'une maison, une chouette perchée sur la rampe"></canvas><img alt="" width="896" height="1200" draggable="false"></div>
   <div class="zoom"><button type="button" data-zoom="rein" title="Agrandir" aria-label="Agrandir">+</button><button type="button" data-zoom="raus" title="Réduire" aria-label="Réduire">−</button><button type="button" data-zoom="ganz" title="Image entière" aria-label="Image entière">⤢</button></div></div>
 <form class="malleiste" method="dialog">
@@ -115,9 +118,17 @@
     <button class="knopf zweit" type="button" data-aktion="zurueck" disabled>↶ Annuler</button>
     <button class="knopf zweit" type="button" data-aktion="neu" data-frage="Tout effacer et recommencer ?">Recommencer</button>
     <button class="knopf" type="button" data-aktion="speichern" data-umami-event="ausgemalt" data-umami-event-bild="kuerbis-familie" data-umami-event-thema="halloween" data-umami-event-sprache="fr">Enregistrer l’image</button>
+    <button class="knopf" type="button" data-aktion="teilen" data-umami-event="bild-teilen" data-umami-event-bild="kuerbis-familie" data-umami-event-thema="halloween" data-umami-event-sprache="fr" hidden>Partager</button>
+    <button class="knopf" type="button" data-aktion="video" data-umami-event="mal-video" data-umami-event-bild="kuerbis-familie" data-umami-event-thema="halloween" data-umami-event-sprache="fr">🎬 Vidéo du coloriage</button>
     <button class="knopf zweit" value="zu">✕ Fermer</button>
   </div>
 </form>
+<div class="videofenster" hidden><div class="videokarte" role="status" aria-live="polite">
+  <p class="videotext"></p><progress max="1" value="0"></progress>
+  <video playsinline controls hidden></video>
+  <div class="videoknoepfe" hidden><button class="knopf" type="button" data-video="teilen" data-umami-event="video-teilen" data-umami-event-bild="kuerbis-familie" data-umami-event-thema="halloween" data-umami-event-sprache="fr">Partager</button><button class="knopf zweit" type="button" data-video="speichern" data-umami-event="video-speichern" data-umami-event-bild="kuerbis-familie" data-umami-event-thema="halloween" data-umami-event-sprache="fr">Enregistrer la vidéo</button></div>
+  <button class="knopf zweit" type="button" data-video="zu">✕ Fermer</button>
+</div></div>
 </dialog>
 </main>
 <footer class="fuss">

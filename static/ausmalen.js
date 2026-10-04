@@ -1,7 +1,9 @@
 // Online ausmalen: Die Farbe liegt in einem Canvas, die Strichzeichnung als <img> darüber (mix-blend-mode: multiply),
 // so bleiben die Linien immer sichtbar. Der Farbeimer füllt die Fläche, die die Linien umschließen.
-// Nichts wird gespeichert oder hochgeladen; „Bild speichern“ erzeugt die PNG-Datei im Browser.
+// Nichts wird gespeichert oder hochgeladen; „Bild speichern“ erzeugt die PNG-Datei im Browser, „Teilen“ und das
+// Mal-Video (ausmalen-video.mjs) nutzen das Teilen-Menü des Geräts.
 (() => {
+  const SKRIPT = document.currentScript?.src || location.href;
   const dlg = document.getElementById("malen");
   if (!dlg) return;
   const leinwand = dlg.querySelector("canvas");
@@ -11,6 +13,9 @@
   const GROESSE = { klein: 6, mittel: 14, gross: 32 };
   const verlauf = [];
   const MAX_VERLAUF = 12;
+  // Jede Aktion für das Mal-Video: {a:"f",x,y,c} Füllung, {a:"s",w,g,c,p:[x,y,…]} Strich, {a:"n"} neu anfangen.
+  // sichern() legt einen Platz an, rueckgaengig() nimmt die letzte Aktion mit zurück.
+  const aktionen = [];
   let wand = null; // 1 = Linie der Zeichnung, dort hört der Farbeimer auf
   let laden = null;
   let stift = null;
@@ -45,11 +50,12 @@
   function sichern() {
     verlauf.push(ctx.getImageData(0, 0, W, H));
     if (verlauf.length > MAX_VERLAUF) verlauf.shift();
+    aktionen.push(null);
     zurueck.disabled = false;
   }
   function rueckgaengig() {
     const d = verlauf.pop();
-    if (d) ctx.putImageData(d, 0, 0);
+    if (d) { ctx.putImageData(d, 0, 0); aktionen.pop(); }
     zurueck.disabled = !verlauf.length;
   }
 
@@ -75,9 +81,11 @@
   }
   const rgb = (hex) => [1, 3, 5].map((i) => parseInt(hex.slice(i, i + 2), 16));
 
-  function strich(x0, y0, x1, y1) {
-    const w = wert("werkzeug");
-    let breite = GROESSE[wert("groesse")] || 14;
+  const merke = (a) => { aktionen[aktionen.length - 1] = a; };
+  const r1 = (v) => Math.round(v * 10) / 10;
+  const strich = (x0, y0, x1, y1) => zeichneStrich(ctx, wert("werkzeug"), wert("groesse"), farbe(), x0, y0, x1, y1);
+  function zeichneStrich(ctx, w, g, hex, x0, y0, x1, y1) {
+    let breite = GROESSE[g] || 14;
     ctx.save();
     ctx.lineCap = ctx.lineJoin = "round";
     if (w === "radierer") {
@@ -85,12 +93,12 @@
       ctx.strokeStyle = "#000";
       breite *= 1.5;
     } else if (w === "buntstift") {
-      ctx.strokeStyle = koernung(farbe(), 32, 0.45, 0.35);
+      ctx.strokeStyle = koernung(hex, 32, 0.45, 0.35);
     } else if (w === "wachsmaler") {
-      ctx.strokeStyle = koernung(farbe(), 48, 0.8, 0.7);
+      ctx.strokeStyle = koernung(hex, 48, 0.8, 0.7);
       breite *= 1.4;
     } else {
-      ctx.strokeStyle = farbe();
+      ctx.strokeStyle = hex;
     }
     ctx.lineWidth = breite;
     ctx.beginPath();
@@ -102,8 +110,21 @@
 
   // ---------- Farbeimer ----------
   function fuellen(x, y, hex) {
+    const flaeche = maskeVon(x, y);
+    if (!flaeche) return false;
+    const bild = ctx.getImageData(0, 0, W, H), d = bild.data;
+    const [r, g, b] = rgb(hex);
+    for (let p = 0; p < flaeche.length; p++) {
+      if (!flaeche[p]) continue;
+      d[p * 4] = r; d[p * 4 + 1] = g; d[p * 4 + 2] = b; d[p * 4 + 3] = 255;
+    }
+    ctx.putImageData(bild, 0, 0);
+    return true;
+  }
+  // Die Fläche, die der Farbeimer an (x, y) füllt, als Maske (1 = gehört dazu); null auf einer Linie
+  function maskeVon(x, y) {
     const start = (y | 0) * W + (x | 0);
-    if (wand[start]) return false;
+    if (wand[start]) return null;
     const flaeche = new Uint8Array(W * H);
     const stapel = [start];
     flaeche[start] = 1;
@@ -125,14 +146,7 @@
       }
       for (const p of neu) flaeche[p] = 1;
     }
-    const bild = ctx.getImageData(0, 0, W, H), d = bild.data;
-    const [r, g, b] = rgb(hex);
-    for (let p = 0; p < flaeche.length; p++) {
-      if (!flaeche[p]) continue;
-      d[p * 4] = r; d[p * 4 + 1] = g; d[p * 4 + 2] = b; d[p * 4 + 3] = 255;
-    }
-    ctx.putImageData(bild, 0, 0);
-    return true;
+    return flaeche;
   }
 
   // ---------- Zoom ----------
@@ -206,6 +220,7 @@
     if (w === "fuellen") { tippen = { id: e.pointerId, x: e.clientX, y: e.clientY, px: x, py: y }; return; }
     sichern();
     stift = { id: e.pointerId, x, y };
+    merke({ a: "s", w, g: wert("groesse"), c: farbe(), p: [r1(x), r1(y)] });
     strich(x, y, x, y);
     geaendert = true;
   });
@@ -232,13 +247,15 @@
       const [x, y] = punkt(ev);
       strich(stift.x, stift.y, x, y);
       stift.x = x; stift.y = y;
+      aktionen[aktionen.length - 1]?.p?.push(r1(x), r1(y));
     }
   });
   const ende = (e) => {
     if (!finger.delete(e.pointerId)) return;
     if (e.type === "pointerup" && tippen?.id === e.pointerId && !geste) {
       sichern();
-      if (fuellen(tippen.px, tippen.py, farbe())) geaendert = true;
+      const hex = farbe();
+      if (fuellen(tippen.px, tippen.py, hex)) { geaendert = true; merke({ a: "f", x: tippen.px | 0, y: tippen.py | 0, c: hex }); }
       else rueckgaengig();
     }
     tippen = null;
@@ -254,11 +271,12 @@
   dlg.querySelector('[data-aktion="neu"]').addEventListener("click", (e) => {
     if (!confirm(e.currentTarget.dataset.frage)) return;
     sichern();
+    merke({ a: "n" });
     ctx.clearRect(0, 0, W, H);
     geaendert = false;
   });
-  dlg.querySelector('[data-aktion="speichern"]').addEventListener("click", () => {
-    // Die Vorlage ist höher als die Leinwand: Der Streifen mit „malkiste.eu“ kommt mit ins gespeicherte Bild
+  // Die Vorlage ist höher als die Leinwand: Der Streifen mit „malkiste.eu“ kommt mit ins gespeicherte Bild
+  const bildDatei = () => new Promise((ok) => {
     const c = document.createElement("canvas");
     c.width = W; c.height = Math.max(H, linien.naturalHeight);
     const x = c.getContext("2d");
@@ -266,16 +284,69 @@
     x.drawImage(leinwand, 0, 0);
     x.globalCompositeOperation = "multiply";
     x.drawImage(linien, 0, 0);
-    c.toBlob((blob) => {
-      const a = document.createElement("a");
-      a.href = URL.createObjectURL(blob);
-      a.download = `${dlg.dataset.datei}.png`;
-      document.body.append(a);
-      a.click();
-      a.remove();
-      setTimeout(() => URL.revokeObjectURL(a.href), 10000);
-      geaendert = false;
-    }, "image/png");
+    c.toBlob((blob) => ok(new File([blob], `${dlg.dataset.datei}.png`, { type: "image/png" })), "image/png");
+  });
+  function herunterladen(datei) {
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(datei);
+    a.download = datei.name;
+    document.body.append(a);
+    a.click();
+    a.remove();
+    setTimeout(() => URL.revokeObjectURL(a.href), 10000);
+  }
+  // Teilen-Menü des Geräts (Handy, Tablet, manche Desktop-Browser); ohne Web Share bleibt nur Speichern
+  const kannTeilen = (datei) => !!navigator.canShare?.({ files: [datei] });
+  async function teilen(datei) {
+    try {
+      await navigator.share({ files: [datei], title: dlg.dataset.titel, text: dlg.dataset.teilentext });
+      return true;
+    } catch (e) {
+      if (e.name !== "AbortError") herunterladen(datei);
+      return false;
+    }
+  }
+  dlg.querySelector('[data-aktion="speichern"]').addEventListener("click", async () => {
+    herunterladen(await bildDatei());
+    geaendert = false;
+  });
+  const teilenKnopf = dlg.querySelector('[data-aktion="teilen"]');
+  teilenKnopf.hidden = !kannTeilen(new File([""], "x.png", { type: "image/png" }));
+  teilenKnopf.addEventListener("click", async () => { if (await teilen(await bildDatei())) geaendert = false; });
+
+  // ---------- Mal-Video ----------
+  const fenster = dlg.querySelector(".videofenster");
+  const vtext = fenster.querySelector(".videotext"), balken = fenster.querySelector("progress");
+  const vorschau = fenster.querySelector("video"), vknoepfe = fenster.querySelector(".videoknoepfe");
+  let videoDatei = null, abbruch = false;
+  dlg.querySelector('[data-aktion="video"]').addEventListener("click", async () => {
+    if (!aktionen.some(Boolean)) { alert(dlg.dataset.videoleer); return; }
+    abbruch = false; videoDatei = null;
+    fenster.hidden = false; vorschau.hidden = vknoepfe.hidden = true; balken.hidden = false; balken.value = 0;
+    vtext.textContent = dlg.dataset.videoerstellen;
+    try {
+      const { erstelleVideo } = await import(new URL("ausmalen-video.mjs", SKRIPT));
+      const { blob, endung } = await erstelleVideo({
+        W, H, aktionen, maskeVon, zeichneStrich, linien, logo: new URL("logo.svg", SKRIPT).href,
+        titel: dlg.dataset.titel, schluss: dlg.dataset.videoschluss, seite: dlg.dataset.seite,
+      }, (a) => { balken.value = a; });
+      if (abbruch) return;
+      videoDatei = new File([blob], `${dlg.dataset.datei}.${endung}`, { type: blob.type });
+      vorschau.src = URL.createObjectURL(videoDatei);
+      vorschau.onloadedmetadata = () => { vorschau.currentTime = Math.max(0, vorschau.duration - 0.3); }; // fertiges Bild als Vorschau
+      vorschau.hidden = vknoepfe.hidden = false; balken.hidden = true;
+      vtext.textContent = dlg.dataset.videofertig;
+      fenster.querySelector('[data-video="teilen"]').hidden = !kannTeilen(videoDatei);
+    } catch (e) {
+      console.error(e);
+      vtext.textContent = dlg.dataset.videofehler; balken.hidden = true;
+    }
+  });
+  fenster.querySelector('[data-video="teilen"]').addEventListener("click", () => videoDatei && teilen(videoDatei));
+  fenster.querySelector('[data-video="speichern"]').addEventListener("click", () => videoDatei && herunterladen(videoDatei));
+  fenster.querySelector('[data-video="zu"]').addEventListener("click", () => {
+    abbruch = true; fenster.hidden = true; vorschau.pause();
+    if (vorschau.src) { URL.revokeObjectURL(vorschau.src); vorschau.removeAttribute("src"); }
   });
   dlg.addEventListener("keydown", (e) => {
     if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "z") { e.preventDefault(); rueckgaengig(); }

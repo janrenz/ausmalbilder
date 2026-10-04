@@ -134,7 +134,10 @@
   <span>Puerto de Lindau</span></a></li><li class="karte"><a href="/es/ciudades-de-alemania/catedral-imperial-espira/">
   <img src="/bilder/kaiserdom-speyer.webp" width="480" height="643" alt="Dibujo para colorear: La catedral románica con cuatro torres y dos cúpulas, delante un parque con árboles" loading="lazy" decoding="async">
   <span>Catedral imperial de Espira</span></a></li></ul></section>
-<dialog class="malen" id="malen" aria-labelledby="malen-titel" data-bild="/bilder/porta-nigra-trier.png" data-datei="dibujo-para-colorear-porta-nigra-treveris-coloreado">
+<dialog class="malen" id="malen" aria-labelledby="malen-titel" data-bild="/bilder/porta-nigra-trier.png" data-datei="dibujo-para-colorear-porta-nigra-treveris-coloreado"
+  data-titel="Porta Nigra de Tréveris" data-seite="malkiste.eu" data-teilentext="Mi dibujo «Porta Nigra de Tréveris» – coloréalo tú también: https://malkiste.eu/es/ciudades-de-alemania/porta-nigra-treveris/"
+  data-videoschluss="¡Coloréalo tú también!" data-videoleer="Primero colorea algo y el vídeo mostrará cómo nace tu dibujo." data-videoerstellen="Se está creando tu vídeo …"
+  data-videofertig="¡Tu vídeo está listo!" data-videofehler="Lo sentimos, este navegador no ha podido crear el vídeo.">
 <div class="buehne"><div class="malflaeche"><canvas width="896" height="1200" aria-label="Dibujo para colorear: La gran puerta romana de piedra oscura con dos arcos"></canvas><img alt="" width="896" height="1200" draggable="false"></div>
   <div class="zoom"><button type="button" data-zoom="rein" title="Ampliar" aria-label="Ampliar">+</button><button type="button" data-zoom="raus" title="Reducir" aria-label="Reducir">−</button><button type="button" data-zoom="ganz" title="Dibujo completo" aria-label="Dibujo completo">⤢</button></div></div>
 <form class="malleiste" method="dialog">
@@ -153,9 +156,17 @@
     <button class="knopf zweit" type="button" data-aktion="zurueck" disabled>↶ Deshacer</button>
     <button class="knopf zweit" type="button" data-aktion="neu" data-frage="¿Borrar todo y empezar de nuevo?">Empezar de nuevo</button>
     <button class="knopf" type="button" data-aktion="speichern" data-umami-event="ausgemalt" data-umami-event-bild="porta-nigra-trier" data-umami-event-thema="staedte-deutschland" data-umami-event-sprache="es">Guardar dibujo</button>
+    <button class="knopf" type="button" data-aktion="teilen" data-umami-event="bild-teilen" data-umami-event-bild="porta-nigra-trier" data-umami-event-thema="staedte-deutschland" data-umami-event-sprache="es" hidden>Compartir</button>
+    <button class="knopf" type="button" data-aktion="video" data-umami-event="mal-video" data-umami-event-bild="porta-nigra-trier" data-umami-event-thema="staedte-deutschland" data-umami-event-sprache="es">🎬 Vídeo del dibujo</button>
     <button class="knopf zweit" value="zu">✕ Cerrar</button>
   </div>
 </form>
+<div class="videofenster" hidden><div class="videokarte" role="status" aria-live="polite">
+  <p class="videotext"></p><progress max="1" value="0"></progress>
+  <video playsinline controls hidden></video>
+  <div class="videoknoepfe" hidden><button class="knopf" type="button" data-video="teilen" data-umami-event="video-teilen" data-umami-event-bild="porta-nigra-trier" data-umami-event-thema="staedte-deutschland" data-umami-event-sprache="es">Compartir</button><button class="knopf zweit" type="button" data-video="speichern" data-umami-event="video-speichern" data-umami-event-bild="porta-nigra-trier" data-umami-event-thema="staedte-deutschland" data-umami-event-sprache="es">Guardar vídeo</button></div>
+  <button class="knopf zweit" type="button" data-video="zu">✕ Cerrar</button>
+</div></div>
 </dialog>
 </main>
 <footer class="fuss">

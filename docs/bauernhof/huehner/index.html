@@ -90,7 +90,10 @@
   <span>Scheune mit Tieren</span></a></li><li class="karte"><a href="/bauernhof/kuh/">
   <img src="/bilder/kuh.webp" width="480" height="643" alt="Ausmalbild: Lächelnde Kuh mit Glocke auf einer Blumenwiese" loading="lazy" decoding="async">
   <span>Kuh auf der Wiese</span></a></li></ul></section>
-<dialog class="malen" id="malen" aria-labelledby="malen-titel" data-bild="/bilder/huehner.png" data-datei="ausmalbild-huehner-ausgemalt">
+<dialog class="malen" id="malen" aria-labelledby="malen-titel" data-bild="/bilder/huehner.png" data-datei="ausmalbild-huehner-ausgemalt"
+  data-titel="Henne mit Küken" data-seite="malkiste.eu" data-teilentext="Mein Ausmalbild „Henne mit Küken“ – selbst ausmalen: https://malkiste.eu/bauernhof/huehner/"
+  data-videoschluss="Jetzt selbst ausmalen!" data-videoleer="Mal zuerst etwas aus – dann zeigt das Video, wie dein Bild entsteht." data-videoerstellen="Dein Mal-Video entsteht …"
+  data-videofertig="Dein Mal-Video ist fertig!" data-videofehler="Das Video konnte in diesem Browser leider nicht erstellt werden.">
 <div class="buehne"><div class="malflaeche"><canvas width="896" height="1200" aria-label="Ausmalbild: Henne mit Küken neben einem Nest mit Eiern"></canvas><img alt="" width="896" height="1200" draggable="false"></div>
   <div class="zoom"><button type="button" data-zoom="rein" title="Vergrößern" aria-label="Vergrößern">+</button><button type="button" data-zoom="raus" title="Verkleinern" aria-label="Verkleinern">−</button><button type="button" data-zoom="ganz" title="Ganzes Bild" aria-label="Ganzes Bild">⤢</button></div></div>
 <form class="malleiste" method="dialog">
@@ -109,9 +112,17 @@
     <button class="knopf zweit" type="button" data-aktion="zurueck" disabled>↶ Rückgängig</button>
     <button class="knopf zweit" type="button" data-aktion="neu" data-frage="Alles löschen und neu anfangen?">Neu anfangen</button>
     <button class="knopf" type="button" data-aktion="speichern" data-umami-event="ausgemalt" data-umami-event-bild="huehner" data-umami-event-thema="bauernhof" data-umami-event-sprache="de">Bild speichern</button>
+    <button class="knopf" type="button" data-aktion="teilen" data-umami-event="bild-teilen" data-umami-event-bild="huehner" data-umami-event-thema="bauernhof" data-umami-event-sprache="de" hidden>Teilen</button>
+    <button class="knopf" type="button" data-aktion="video" data-umami-event="mal-video" data-umami-event-bild="huehner" data-umami-event-thema="bauernhof" data-umami-event-sprache="de">🎬 Mal-Video</button>
     <button class="knopf zweit" value="zu">✕ Schließen</button>
   </div>
 </form>
+<div class="videofenster" hidden><div class="videokarte" role="status" aria-live="polite">
+  <p class="videotext"></p><progress max="1" value="0"></progress>
+  <video playsinline controls hidden></video>
+  <div class="videoknoepfe" hidden><button class="knopf" type="button" data-video="teilen" data-umami-event="video-teilen" data-umami-event-bild="huehner" data-umami-event-thema="bauernhof" data-umami-event-sprache="de">Teilen</button><button class="knopf zweit" type="button" data-video="speichern" data-umami-event="video-speichern" data-umami-event-bild="huehner" data-umami-event-thema="bauernhof" data-umami-event-sprache="de">Video speichern</button></div>
+  <button class="knopf zweit" type="button" data-video="zu">✕ Schließen</button>
+</div></div>
 </dialog>
 </main>
 <footer class="fuss">

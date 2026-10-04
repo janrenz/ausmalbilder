@@ -98,7 +98,10 @@
   <span>Jardim botânico</span></a></li><li class="karte"><a href="/pt/flores-padroes-adultos/asas-de-borboleta/">
   <img src="/bilder/muster-schmetterling.webp" width="480" height="643" alt="Desenho para colorir: Borboleta grande com asas ornamentadas" loading="lazy" decoding="async">
   <span>Asas de borboleta</span></a></li></ul></section>
-<dialog class="malen" id="malen" aria-labelledby="malen-titel" data-bild="/bilder/muster-mosaik.png" data-datei="desenho-para-colorir-padrao-mosaico-pintado">
+<dialog class="malen" id="malen" aria-labelledby="malen-titel" data-bild="/bilder/muster-mosaik.png" data-datei="desenho-para-colorir-padrao-mosaico-pintado"
+  data-titel="Padrão de mosaico" data-seite="malkiste.eu" data-teilentext="O meu desenho «Padrão de mosaico» – pinta tu também: https://malkiste.eu/pt/flores-padroes-adultos/padrao-mosaico/"
+  data-videoschluss="Pinta tu também!" data-videoleer="Pinta primeiro alguma coisa – depois o vídeo mostra como nasce o teu desenho." data-videoerstellen="O teu vídeo está a ser criado …"
+  data-videofertig="O teu vídeo está pronto!" data-videofehler="Infelizmente este navegador não conseguiu criar o vídeo.">
 <div class="buehne"><div class="malflaeche"><canvas width="896" height="1200" aria-label="Desenho para colorir: Mosaico de azulejos com motivos de flores e estrelas"></canvas><img alt="" width="896" height="1200" draggable="false"></div>
   <div class="zoom"><button type="button" data-zoom="rein" title="Ampliar" aria-label="Ampliar">+</button><button type="button" data-zoom="raus" title="Reduzir" aria-label="Reduzir">−</button><button type="button" data-zoom="ganz" title="Desenho inteiro" aria-label="Desenho inteiro">⤢</button></div></div>
 <form class="malleiste" method="dialog">
@@ -117,9 +120,17 @@
     <button class="knopf zweit" type="button" data-aktion="zurueck" disabled>↶ Anular</button>
     <button class="knopf zweit" type="button" data-aktion="neu" data-frage="Apagar tudo e recomeçar?">Recomeçar</button>
     <button class="knopf" type="button" data-aktion="speichern" data-umami-event="ausgemalt" data-umami-event-bild="muster-mosaik" data-umami-event-thema="muster-erwachsene" data-umami-event-sprache="pt">Guardar desenho</button>
+    <button class="knopf" type="button" data-aktion="teilen" data-umami-event="bild-teilen" data-umami-event-bild="muster-mosaik" data-umami-event-thema="muster-erwachsene" data-umami-event-sprache="pt" hidden>Partilhar</button>
+    <button class="knopf" type="button" data-aktion="video" data-umami-event="mal-video" data-umami-event-bild="muster-mosaik" data-umami-event-thema="muster-erwachsene" data-umami-event-sprache="pt">🎬 Vídeo da pintura</button>
     <button class="knopf zweit" value="zu">✕ Fechar</button>
   </div>
 </form>
+<div class="videofenster" hidden><div class="videokarte" role="status" aria-live="polite">
+  <p class="videotext"></p><progress max="1" value="0"></progress>
+  <video playsinline controls hidden></video>
+  <div class="videoknoepfe" hidden><button class="knopf" type="button" data-video="teilen" data-umami-event="video-teilen" data-umami-event-bild="muster-mosaik" data-umami-event-thema="muster-erwachsene" data-umami-event-sprache="pt">Partilhar</button><button class="knopf zweit" type="button" data-video="speichern" data-umami-event="video-speichern" data-umami-event-bild="muster-mosaik" data-umami-event-thema="muster-erwachsene" data-umami-event-sprache="pt">Guardar vídeo</button></div>
+  <button class="knopf zweit" type="button" data-video="zu">✕ Fechar</button>
+</div></div>
 </dialog>
 </main>
 <footer class="fuss">

@@ -96,7 +96,10 @@
   <span>Kasteel Neuschwanstein</span></a></li><li class="karte"><a href="/nl/duitsland/vuurtoren-noordzee/">
   <img src="/bilder/leuchtturm-nordsee.webp" width="480" height="643" alt="Kleurplaat: Gestreepte vuurtoren met twee huisjes op de dijk, schapen, een geul en meeuwen in de lucht" loading="lazy" decoding="async">
   <span>Vuurtoren aan de Noordzee</span></a></li></ul></section>
-<dialog class="malen" id="malen" aria-labelledby="malen-titel" data-bild="/bilder/holstentor-luebeck.png" data-datei="kleurplaat-holstentor-lubeck-ingekleurd">
+<dialog class="malen" id="malen" aria-labelledby="malen-titel" data-bild="/bilder/holstentor-luebeck.png" data-datei="kleurplaat-holstentor-lubeck-ingekleurd"
+  data-titel="Holstentor in Lübeck" data-seite="malkiste.eu" data-teilentext="Mijn kleurplaat ‘Holstentor in Lübeck’ – kleur hem zelf in: https://malkiste.eu/nl/duitsland/holstentor-lubeck/"
+  data-videoschluss="Kleur hem zelf in!" data-videoleer="Kleur eerst iets in – dan laat de video zien hoe je tekening ontstaat." data-videoerstellen="Je kleurvideo wordt gemaakt …"
+  data-videofertig="Je kleurvideo is klaar!" data-videofehler="Helaas kon deze browser de video niet maken.">
 <div class="buehne"><div class="malflaeche"><canvas width="896" height="1200" aria-label="Kleurplaat: De Holstentor in Lübeck met twee ronde torens en spitse daken, eenden op het water ervoor"></canvas><img alt="" width="896" height="1200" draggable="false"></div>
   <div class="zoom"><button type="button" data-zoom="rein" title="Inzoomen" aria-label="Inzoomen">+</button><button type="button" data-zoom="raus" title="Uitzoomen" aria-label="Uitzoomen">−</button><button type="button" data-zoom="ganz" title="Hele tekening" aria-label="Hele tekening">⤢</button></div></div>
 <form class="malleiste" method="dialog">
@@ -115,9 +118,17 @@
     <button class="knopf zweit" type="button" data-aktion="zurueck" disabled>↶ Ongedaan maken</button>
     <button class="knopf zweit" type="button" data-aktion="neu" data-frage="Alles wissen en opnieuw beginnen?">Opnieuw beginnen</button>
     <button class="knopf" type="button" data-aktion="speichern" data-umami-event="ausgemalt" data-umami-event-bild="holstentor-luebeck" data-umami-event-thema="deutschland" data-umami-event-sprache="nl">Tekening opslaan</button>
+    <button class="knopf" type="button" data-aktion="teilen" data-umami-event="bild-teilen" data-umami-event-bild="holstentor-luebeck" data-umami-event-thema="deutschland" data-umami-event-sprache="nl" hidden>Delen</button>
+    <button class="knopf" type="button" data-aktion="video" data-umami-event="mal-video" data-umami-event-bild="holstentor-luebeck" data-umami-event-thema="deutschland" data-umami-event-sprache="nl">🎬 Kleurvideo</button>
     <button class="knopf zweit" value="zu">✕ Sluiten</button>
   </div>
 </form>
+<div class="videofenster" hidden><div class="videokarte" role="status" aria-live="polite">
+  <p class="videotext"></p><progress max="1" value="0"></progress>
+  <video playsinline controls hidden></video>
+  <div class="videoknoepfe" hidden><button class="knopf" type="button" data-video="teilen" data-umami-event="video-teilen" data-umami-event-bild="holstentor-luebeck" data-umami-event-thema="deutschland" data-umami-event-sprache="nl">Delen</button><button class="knopf zweit" type="button" data-video="speichern" data-umami-event="video-speichern" data-umami-event-bild="holstentor-luebeck" data-umami-event-thema="deutschland" data-umami-event-sprache="nl">Video opslaan</button></div>
+  <button class="knopf zweit" type="button" data-video="zu">✕ Sluiten</button>
+</div></div>
 </dialog>
 </main>
 <footer class="fuss">

@@ -96,7 +96,10 @@
   <span>Porta Holstentor em Lübeck</span></a></li><li class="karte"><a href="/pt/alemanha/farol-mar-do-norte/">
   <img src="/bilder/leuchtturm-nordsee.webp" width="480" height="643" alt="Desenho para colorir: Farol às riscas com duas casinhas no dique, ovelhas, um canal de maré e gaivotas no céu" loading="lazy" decoding="async">
   <span>Farol no mar do Norte</span></a></li></ul></section>
-<dialog class="malen" id="malen" aria-labelledby="malen-titel" data-bild="/bilder/brandenburger-tor.png" data-datei="desenho-para-colorir-porta-de-brandemburgo-pintado">
+<dialog class="malen" id="malen" aria-labelledby="malen-titel" data-bild="/bilder/brandenburger-tor.png" data-datei="desenho-para-colorir-porta-de-brandemburgo-pintado"
+  data-titel="Porta de Brandemburgo" data-seite="malkiste.eu" data-teilentext="O meu desenho «Porta de Brandemburgo» – pinta tu também: https://malkiste.eu/pt/alemanha/porta-de-brandemburgo/"
+  data-videoschluss="Pinta tu também!" data-videoleer="Pinta primeiro alguma coisa – depois o vídeo mostra como nasce o teu desenho." data-videoerstellen="O teu vídeo está a ser criado …"
+  data-videofertig="O teu vídeo está pronto!" data-videofehler="Infelizmente este navegador não conseguiu criar o vídeo.">
 <div class="buehne"><div class="malflaeche"><canvas width="896" height="1200" aria-label="Desenho para colorir: A Porta de Brandemburgo em Berlim com as colunas e a quadriga no topo, à frente árvores e pombos"></canvas><img alt="" width="896" height="1200" draggable="false"></div>
   <div class="zoom"><button type="button" data-zoom="rein" title="Ampliar" aria-label="Ampliar">+</button><button type="button" data-zoom="raus" title="Reduzir" aria-label="Reduzir">−</button><button type="button" data-zoom="ganz" title="Desenho inteiro" aria-label="Desenho inteiro">⤢</button></div></div>
 <form class="malleiste" method="dialog">
@@ -115,9 +118,17 @@
     <button class="knopf zweit" type="button" data-aktion="zurueck" disabled>↶ Anular</button>
     <button class="knopf zweit" type="button" data-aktion="neu" data-frage="Apagar tudo e recomeçar?">Recomeçar</button>
     <button class="knopf" type="button" data-aktion="speichern" data-umami-event="ausgemalt" data-umami-event-bild="brandenburger-tor" data-umami-event-thema="deutschland" data-umami-event-sprache="pt">Guardar desenho</button>
+    <button class="knopf" type="button" data-aktion="teilen" data-umami-event="bild-teilen" data-umami-event-bild="brandenburger-tor" data-umami-event-thema="deutschland" data-umami-event-sprache="pt" hidden>Partilhar</button>
+    <button class="knopf" type="button" data-aktion="video" data-umami-event="mal-video" data-umami-event-bild="brandenburger-tor" data-umami-event-thema="deutschland" data-umami-event-sprache="pt">🎬 Vídeo da pintura</button>
     <button class="knopf zweit" value="zu">✕ Fechar</button>
   </div>
 </form>
+<div class="videofenster" hidden><div class="videokarte" role="status" aria-live="polite">
+  <p class="videotext"></p><progress max="1" value="0"></progress>
+  <video playsinline controls hidden></video>
+  <div class="videoknoepfe" hidden><button class="knopf" type="button" data-video="teilen" data-umami-event="video-teilen" data-umami-event-bild="brandenburger-tor" data-umami-event-thema="deutschland" data-umami-event-sprache="pt">Partilhar</button><button class="knopf zweit" type="button" data-video="speichern" data-umami-event="video-speichern" data-umami-event-bild="brandenburger-tor" data-umami-event-thema="deutschland" data-umami-event-sprache="pt">Guardar vídeo</button></div>
+  <button class="knopf zweit" type="button" data-video="zu">✕ Fechar</button>
+</div></div>
 </dialog>
 </main>
 <footer class="fuss">

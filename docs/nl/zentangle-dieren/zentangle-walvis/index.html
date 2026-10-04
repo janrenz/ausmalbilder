@@ -98,7 +98,10 @@
   <span>Zentangle-hert</span></a></li><li class="karte"><a href="/nl/zentangle-dieren/zentangle-leeuw/">
   <img src="/bilder/zentangle-loewe.webp" width="480" height="643" alt="Kleurplaat: Leeuwenkop met gedecoreerde manen" loading="lazy" decoding="async">
   <span>Zentangle-leeuw</span></a></li></ul></section>
-<dialog class="malen" id="malen" aria-labelledby="malen-titel" data-bild="/bilder/zentangle-wal.png" data-datei="kleurplaat-zentangle-walvis-ingekleurd">
+<dialog class="malen" id="malen" aria-labelledby="malen-titel" data-bild="/bilder/zentangle-wal.png" data-datei="kleurplaat-zentangle-walvis-ingekleurd"
+  data-titel="Zentangle-walvis" data-seite="malkiste.eu" data-teilentext="Mijn kleurplaat ‘Zentangle-walvis’ – kleur hem zelf in: https://malkiste.eu/nl/zentangle-dieren/zentangle-walvis/"
+  data-videoschluss="Kleur hem zelf in!" data-videoleer="Kleur eerst iets in – dan laat de video zien hoe je tekening ontstaat." data-videoerstellen="Je kleurvideo wordt gemaakt …"
+  data-videofertig="Je kleurvideo is klaar!" data-videofehler="Helaas kon deze browser de video niet maken.">
 <div class="buehne"><div class="malflaeche"><canvas width="896" height="1200" aria-label="Kleurplaat: Walvis van golf- en ornamentpatronen"></canvas><img alt="" width="896" height="1200" draggable="false"></div>
   <div class="zoom"><button type="button" data-zoom="rein" title="Inzoomen" aria-label="Inzoomen">+</button><button type="button" data-zoom="raus" title="Uitzoomen" aria-label="Uitzoomen">−</button><button type="button" data-zoom="ganz" title="Hele tekening" aria-label="Hele tekening">⤢</button></div></div>
 <form class="malleiste" method="dialog">
@@ -117,9 +120,17 @@
     <button class="knopf zweit" type="button" data-aktion="zurueck" disabled>↶ Ongedaan maken</button>
     <button class="knopf zweit" type="button" data-aktion="neu" data-frage="Alles wissen en opnieuw beginnen?">Opnieuw beginnen</button>
     <button class="knopf" type="button" data-aktion="speichern" data-umami-event="ausgemalt" data-umami-event-bild="zentangle-wal" data-umami-event-thema="zentangle-tiere" data-umami-event-sprache="nl">Tekening opslaan</button>
+    <button class="knopf" type="button" data-aktion="teilen" data-umami-event="bild-teilen" data-umami-event-bild="zentangle-wal" data-umami-event-thema="zentangle-tiere" data-umami-event-sprache="nl" hidden>Delen</button>
+    <button class="knopf" type="button" data-aktion="video" data-umami-event="mal-video" data-umami-event-bild="zentangle-wal" data-umami-event-thema="zentangle-tiere" data-umami-event-sprache="nl">🎬 Kleurvideo</button>
     <button class="knopf zweit" value="zu">✕ Sluiten</button>
   </div>
 </form>
+<div class="videofenster" hidden><div class="videokarte" role="status" aria-live="polite">
+  <p class="videotext"></p><progress max="1" value="0"></progress>
+  <video playsinline controls hidden></video>
+  <div class="videoknoepfe" hidden><button class="knopf" type="button" data-video="teilen" data-umami-event="video-teilen" data-umami-event-bild="zentangle-wal" data-umami-event-thema="zentangle-tiere" data-umami-event-sprache="nl">Delen</button><button class="knopf zweit" type="button" data-video="speichern" data-umami-event="video-speichern" data-umami-event-bild="zentangle-wal" data-umami-event-thema="zentangle-tiere" data-umami-event-sprache="nl">Video opslaan</button></div>
+  <button class="knopf zweit" type="button" data-video="zu">✕ Sluiten</button>
+</div></div>
 </dialog>
 </main>
 <footer class="fuss">

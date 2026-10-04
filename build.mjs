@@ -243,11 +243,15 @@ const krumenLd = (teile) => ({
 const FARBEN = ["#e53935", "#fb8c00", "#fdd835", "#7cb342", "#2e7d32", "#26a69a", "#4fc3f7", "#1e88e5",
   "#283593", "#8e24aa", "#f48fb1", "#8d6e63", "#f5cba7", "#9e9e9e", "#212121", "#ffffff"];
 const WERKZEUGE = [["fuellen", "🪣"], ["filzstift", "🖊️"], ["buntstift", "✏️"], ["wachsmaler", "🖍️"], ["radierer", "🧽"], ["verschieben", "✋"]];
-const malDialog = (L, b, datei, ereignis) => {
+const malDialog = (L, b, datei, ereignis, seitenUrl) => {
   const u = L.ui;
+  const titel = L.bilder[b.slug].titel;
   const namen = u.farbnamen.split("|");
   const wahl = (name, wert, inhalt, an) => `<label><input type="radio" name="${name}" value="${wert}"${an ? " checked" : ""}>${inhalt}</label>`;
-  return `<dialog class="malen" id="malen" aria-labelledby="malen-titel" data-bild="${url(`bilder/${b.slug}.png`)}" data-datei="${esc(`${datei}-${u.ausmalenDatei}`)}">
+  return `<dialog class="malen" id="malen" aria-labelledby="malen-titel" data-bild="${url(`bilder/${b.slug}.png`)}" data-datei="${esc(`${datei}-${u.ausmalenDatei}`)}"
+  data-titel="${esc(titel)}" data-seite="${esc(new URL(SITE).hostname)}" data-teilentext="${esc(fuelle(u.teilenText, { titel, url: seitenUrl }))}"
+  data-videoschluss="${esc(u.videoSchluss)}" data-videoleer="${esc(u.videoLeer)}" data-videoerstellen="${esc(u.videoErstellen)}"
+  data-videofertig="${esc(u.videoFertig)}" data-videofehler="${esc(u.videoFehler)}">
 <div class="buehne"><div class="malflaeche"><canvas width="896" height="1200" aria-label="${esc(fuelle(u.bildAlt, { alt: L.bilder[b.slug].alt }))}"></canvas><img alt="" width="896" height="1200" draggable="false"></div>
   <div class="zoom"><button type="button" data-zoom="rein" title="${esc(u.zoomRein)}" aria-label="${esc(u.zoomRein)}">+</button><button type="button" data-zoom="raus" title="${esc(u.zoomRaus)}" aria-label="${esc(u.zoomRaus)}">−</button><button type="button" data-zoom="ganz" title="${esc(u.zoomGanz)}" aria-label="${esc(u.zoomGanz)}">⤢</button></div></div>
 <form class="malleiste" method="dialog">
@@ -266,9 +270,17 @@ const malDialog = (L, b, datei, ereignis) => {
     <button class="knopf zweit" type="button" data-aktion="zurueck" disabled>↶ ${esc(u.rueckgaengig)}</button>
     <button class="knopf zweit" type="button" data-aktion="neu" data-frage="${esc(u.neuFrage)}">${esc(u.neuAnfangen)}</button>
     <button class="knopf" type="button" data-aktion="speichern" data-umami-event="ausgemalt" ${ereignis}>${esc(u.speichern)}</button>
+    <button class="knopf" type="button" data-aktion="teilen" data-umami-event="bild-teilen" ${ereignis} hidden>${esc(u.teilen)}</button>
+    <button class="knopf" type="button" data-aktion="video" data-umami-event="mal-video" ${ereignis}>🎬 ${esc(u.video)}</button>
     <button class="knopf zweit" value="zu">✕ ${esc(u.schliessen)}</button>
   </div>
 </form>
+<div class="videofenster" hidden><div class="videokarte" role="status" aria-live="polite">
+  <p class="videotext"></p><progress max="1" value="0"></progress>
+  <video playsinline controls hidden></video>
+  <div class="videoknoepfe" hidden><button class="knopf" type="button" data-video="teilen" data-umami-event="video-teilen" ${ereignis}>${esc(u.teilen)}</button><button class="knopf zweit" type="button" data-video="speichern" data-umami-event="video-speichern" ${ereignis}>${esc(u.videoSpeichern)}</button></div>
+  <button class="knopf zweit" type="button" data-video="zu">✕ ${esc(u.schliessen)}</button>
+</div></div>
 </dialog>`;
 };
 
@@ -414,7 +426,7 @@ ${SAISON.length ? `<section aria-labelledby="saison">
 </article>
 <section aria-labelledby="aehnlich"><h2 id="aehnlich">${esc(fuelle(u.mehrVon, { thema: T.name }))}</h2>
 <ul class="raster">${t.bilder.filter((x) => x !== b).map((x) => karte(L, t, x)).join("")}</ul></section>
-${malDialog(L, b, datei, ereignis)}`,
+${malDialog(L, b, datei, ereignis, `${SITE}/${pfadBild(L, t, b)}`)}`,
       }));
       if (L.code === "de") sitemap.push([bildV, datum([b])]);
     });
