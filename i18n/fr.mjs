@@ -315,6 +315,18 @@ export default {
       "titel": "Coloriages de mandalas pour adultes à imprimer",
       "intro": "Des mandalas fins et détaillés pour se détendre : fleurs, ornements, plumes, animaux et motifs zentangle, gratuits en PDF A4.",
       "pfad": "mandala-adulte"
+    },
+    "zentangle-tiere": {
+      "name": "Animaux zentangle",
+      "titel": "Coloriages d'animaux zentangle pour adultes",
+      "intro": "Éléphant, lion, chat et colibri composés de motifs zentangle fins : des coloriages d'animaux détaillés pour se détendre, gratuits en PDF A4.",
+      "pfad": "animaux-zentangle"
+    },
+    "muster-erwachsene": {
+      "name": "Fleurs et motifs",
+      "titel": "Coloriages de fleurs et motifs pour adultes",
+      "intro": "Pivoines, paisley, kaléidoscope et mosaïque : des coloriages de fleurs et de motifs fins pour adultes, gratuits en PDF A4.",
+      "pfad": "fleurs-motifs-adulte"
     }
   },
   "bilder": {
@@ -1242,6 +1254,106 @@ export default {
       "titel": "Motif zentangle",
       "alt": "Un motif zentangle qui remplit toute la page",
       "pfad": "motif-zentangle"
+    },
+    "mandala-ozean": {
+      "titel": "Mandala océan",
+      "alt": "Mandala circulaire fait de vagues, de coquillages et de poissons",
+      "pfad": "mandala-ocean"
+    },
+    "mandala-sonne": {
+      "titel": "Mandala soleil",
+      "alt": "Mandala avec des rayons de soleil et des ornements fins",
+      "pfad": "mandala-soleil"
+    },
+    "mandala-schneeflocke": {
+      "titel": "Mandala flocon de neige",
+      "alt": "Mandala hexagonal fait de cristaux de glace",
+      "pfad": "mandala-flocon-de-neige"
+    },
+    "mandala-herbstlaub": {
+      "titel": "Mandala feuilles d'automne",
+      "alt": "Mandala de feuilles d'érable, de glands et de baies",
+      "pfad": "mandala-feuilles-automne"
+    },
+    "mandala-geometrisch": {
+      "titel": "Mandala géométrique",
+      "alt": "Mandala de triangles, de cercles et d'étoiles",
+      "pfad": "mandala-geometrique"
+    },
+    "mandala-rosen": {
+      "titel": "Mandala roses",
+      "alt": "Mandala de roses et de vrilles",
+      "pfad": "mandala-roses"
+    },
+    "zentangle-elefant": {
+      "titel": "Éléphant zentangle",
+      "alt": "Un éléphant composé de motifs zentangle fins",
+      "pfad": "elephant-zentangle"
+    },
+    "zentangle-schildkroete": {
+      "titel": "Tortue zentangle",
+      "alt": "Une tortue de mer à la carapace ornée",
+      "pfad": "tortue-zentangle"
+    },
+    "zentangle-katze": {
+      "titel": "Chat zentangle",
+      "alt": "Un chat assis composé d'ornements",
+      "pfad": "chat-zentangle"
+    },
+    "zentangle-wal": {
+      "titel": "Baleine zentangle",
+      "alt": "Une baleine faite de vagues et d'ornements",
+      "pfad": "baleine-zentangle"
+    },
+    "zentangle-kolibri": {
+      "titel": "Colibri zentangle",
+      "alt": "Un colibri finement décoré près d'une fleur",
+      "pfad": "colibri-zentangle"
+    },
+    "zentangle-hirsch": {
+      "titel": "Cerf zentangle",
+      "alt": "Une tête de cerf aux bois ornés",
+      "pfad": "cerf-zentangle"
+    },
+    "zentangle-loewe": {
+      "titel": "Lion zentangle",
+      "alt": "Une tête de lion à la crinière décorée de motifs",
+      "pfad": "lion-zentangle"
+    },
+    "muster-pfingstrosen": {
+      "titel": "Pivoines",
+      "alt": "Un bouquet généreux de pivoines et de feuilles",
+      "pfad": "pivoines"
+    },
+    "muster-lebensbaum": {
+      "titel": "Arbre de vie",
+      "alt": "Un arbre de vie orné avec des racines et des fleurs",
+      "pfad": "arbre-de-vie"
+    },
+    "muster-paisley": {
+      "titel": "Motif paisley",
+      "alt": "Un motif paisley qui remplit toute la page",
+      "pfad": "motif-paisley"
+    },
+    "muster-kaleidoskop": {
+      "titel": "Kaléidoscope",
+      "alt": "Un motif de kaléidoscope en forme d'étoile",
+      "pfad": "kaleidoscope"
+    },
+    "muster-botanisch": {
+      "titel": "Jardin botanique",
+      "alt": "Fougères, feuilles et fleurs dans une composition dense",
+      "pfad": "jardin-botanique"
+    },
+    "muster-schmetterling": {
+      "titel": "Ailes de papillon",
+      "alt": "Un grand papillon aux ailes ornementées",
+      "pfad": "ailes-de-papillon"
+    },
+    "muster-mosaik": {
+      "titel": "Motif mosaïque",
+      "alt": "Une mosaïque de carreaux avec des motifs de fleurs et d'étoiles",
+      "pfad": "motif-mosaique"
     }
   }
 };

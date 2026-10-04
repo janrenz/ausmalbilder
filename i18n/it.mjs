@@ -315,6 +315,18 @@ export default {
       "titel": "Mandala per adulti da stampare e colorare",
       "intro": "Mandala fini e ricchi di dettagli per rilassarsi: fiori, ornamenti, piume, animali e motivi zentangle, gratis in PDF A4.",
       "pfad": "mandala-adulti"
+    },
+    "zentangle-tiere": {
+      "name": "Animali zentangle",
+      "titel": "Animali zentangle: disegni da colorare per adulti",
+      "intro": "Elefante, leone, gatto e colibrì fatti di fini motivi zentangle: disegni di animali ricchi di dettagli per rilassarsi, gratis in PDF A4.",
+      "pfad": "animali-zentangle"
+    },
+    "muster-erwachsene": {
+      "name": "Fiori e motivi",
+      "titel": "Fiori e motivi: disegni da colorare per adulti",
+      "intro": "Peonie, paisley, caleidoscopio e mosaico: disegni di fiori e motivi fini per adulti, gratis in PDF A4.",
+      "pfad": "fiori-motivi-adulti"
     }
   },
   "bilder": {
@@ -1242,6 +1254,106 @@ export default {
       "titel": "Motivo zentangle",
       "alt": "Motivo zentangle a tutta pagina",
       "pfad": "motivo-zentangle"
+    },
+    "mandala-ozean": {
+      "titel": "Mandala dell'oceano",
+      "alt": "Mandala circolare fatto di onde, conchiglie e pesci",
+      "pfad": "mandala-oceano"
+    },
+    "mandala-sonne": {
+      "titel": "Mandala del sole",
+      "alt": "Mandala con raggi di sole e ornamenti fini",
+      "pfad": "mandala-sole"
+    },
+    "mandala-schneeflocke": {
+      "titel": "Mandala fiocco di neve",
+      "alt": "Mandala esagonale fatto di cristalli di ghiaccio",
+      "pfad": "mandala-fiocco-di-neve"
+    },
+    "mandala-herbstlaub": {
+      "titel": "Mandala di foglie d'autunno",
+      "alt": "Mandala di foglie d'acero, ghiande e bacche",
+      "pfad": "mandala-foglie-autunno"
+    },
+    "mandala-geometrisch": {
+      "titel": "Mandala geometrico",
+      "alt": "Mandala di triangoli, cerchi e stelle",
+      "pfad": "mandala-geometrico"
+    },
+    "mandala-rosen": {
+      "titel": "Mandala di rose",
+      "alt": "Mandala di rose e viticci",
+      "pfad": "mandala-rose"
+    },
+    "zentangle-elefant": {
+      "titel": "Elefante zentangle",
+      "alt": "Elefante fatto di fini motivi zentangle",
+      "pfad": "elefante-zentangle"
+    },
+    "zentangle-schildkroete": {
+      "titel": "Tartaruga zentangle",
+      "alt": "Tartaruga marina con il guscio decorato",
+      "pfad": "tartaruga-zentangle"
+    },
+    "zentangle-katze": {
+      "titel": "Gatto zentangle",
+      "alt": "Gatto seduto fatto di ornamenti",
+      "pfad": "gatto-zentangle"
+    },
+    "zentangle-wal": {
+      "titel": "Balena zentangle",
+      "alt": "Balena fatta di onde e motivi ornamentali",
+      "pfad": "balena-zentangle"
+    },
+    "zentangle-kolibri": {
+      "titel": "Colibrì zentangle",
+      "alt": "Colibrì finemente decorato accanto a un fiore",
+      "pfad": "colibri-zentangle"
+    },
+    "zentangle-hirsch": {
+      "titel": "Cervo zentangle",
+      "alt": "Testa di cervo con corna decorate",
+      "pfad": "cervo-zentangle"
+    },
+    "zentangle-loewe": {
+      "titel": "Leone zentangle",
+      "alt": "Testa di leone con la criniera a motivi",
+      "pfad": "leone-zentangle"
+    },
+    "muster-pfingstrosen": {
+      "titel": "Peonie",
+      "alt": "Rigoglioso mazzo di peonie e foglie",
+      "pfad": "peonie"
+    },
+    "muster-lebensbaum": {
+      "titel": "Albero della vita",
+      "alt": "Albero della vita decorato con radici e fiori",
+      "pfad": "albero-della-vita"
+    },
+    "muster-paisley": {
+      "titel": "Motivo paisley",
+      "alt": "Motivo paisley a tutta pagina",
+      "pfad": "motivo-paisley"
+    },
+    "muster-kaleidoskop": {
+      "titel": "Caleidoscopio",
+      "alt": "Motivo a caleidoscopio a forma di stella",
+      "pfad": "caleidoscopio"
+    },
+    "muster-botanisch": {
+      "titel": "Giardino botanico",
+      "alt": "Felci, foglie e fiori in una composizione fitta",
+      "pfad": "giardino-botanico"
+    },
+    "muster-schmetterling": {
+      "titel": "Ali di farfalla",
+      "alt": "Grande farfalla con le ali ornate",
+      "pfad": "ali-di-farfalla"
+    },
+    "muster-mosaik": {
+      "titel": "Motivo a mosaico",
+      "alt": "Mosaico di piastrelle con motivi di fiori e stelle",
+      "pfad": "motivo-mosaico"
     }
   }
 };

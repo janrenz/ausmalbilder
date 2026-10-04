@@ -315,6 +315,18 @@ export default {
       "titel": "Mandalas for Adults to Print",
       "intro": "Fine, detailed mandalas for relaxing: flowers, ornaments, feathers, animals and zentangle patterns, free as A4 PDFs.",
       "pfad": "mandalas-for-adults"
+    },
+    "zentangle-tiere": {
+      "name": "Zentangle Animals",
+      "titel": "Zentangle Animals: Colouring Pages for Adults",
+      "intro": "An elephant, lion, cat and hummingbird made of fine zentangle patterns: detailed animal colouring pages for relaxing, free as A4 PDFs.",
+      "pfad": "zentangle-animals"
+    },
+    "muster-erwachsene": {
+      "name": "Flowers & Patterns",
+      "titel": "Flowers & Patterns: Colouring Pages for Adults",
+      "intro": "Peonies, paisley, kaleidoscopes and mosaics: intricate flower and pattern pictures for adults, free as A4 PDFs.",
+      "pfad": "flowers-and-patterns-for-adults"
     }
   },
   "bilder": {
@@ -1242,6 +1254,106 @@ export default {
       "titel": "Zentangle Pattern",
       "alt": "Full-page zentangle pattern",
       "pfad": "zentangle-pattern"
+    },
+    "mandala-ozean": {
+      "titel": "Ocean Mandala",
+      "alt": "Circular mandala of waves, seashells and fish",
+      "pfad": "ocean-mandala"
+    },
+    "mandala-sonne": {
+      "titel": "Sun Mandala",
+      "alt": "Mandala with sunbeams and fine ornaments",
+      "pfad": "sun-mandala"
+    },
+    "mandala-schneeflocke": {
+      "titel": "Snowflake Mandala",
+      "alt": "Hexagonal mandala made of ice crystals",
+      "pfad": "snowflake-mandala"
+    },
+    "mandala-herbstlaub": {
+      "titel": "Autumn Leaves Mandala",
+      "alt": "Mandala of maple leaves, acorns and berries",
+      "pfad": "autumn-leaves-mandala"
+    },
+    "mandala-geometrisch": {
+      "titel": "Geometric Mandala",
+      "alt": "Mandala of triangles, circles and stars",
+      "pfad": "geometric-mandala"
+    },
+    "mandala-rosen": {
+      "titel": "Rose Mandala",
+      "alt": "Mandala of rose blossoms and tendrils",
+      "pfad": "rose-mandala"
+    },
+    "zentangle-elefant": {
+      "titel": "Zentangle Elephant",
+      "alt": "Elephant made of fine zentangle patterns",
+      "pfad": "zentangle-elephant"
+    },
+    "zentangle-schildkroete": {
+      "titel": "Zentangle Turtle",
+      "alt": "Sea turtle with an ornate shell",
+      "pfad": "zentangle-turtle"
+    },
+    "zentangle-katze": {
+      "titel": "Zentangle Cat",
+      "alt": "Sitting cat made of ornaments",
+      "pfad": "zentangle-cat"
+    },
+    "zentangle-wal": {
+      "titel": "Zentangle Whale",
+      "alt": "Whale made of wave and ornament patterns",
+      "pfad": "zentangle-whale"
+    },
+    "zentangle-kolibri": {
+      "titel": "Zentangle Hummingbird",
+      "alt": "Finely patterned hummingbird at a flower",
+      "pfad": "zentangle-hummingbird"
+    },
+    "zentangle-hirsch": {
+      "titel": "Zentangle Stag",
+      "alt": "Stag's head with ornate antlers",
+      "pfad": "zentangle-stag"
+    },
+    "zentangle-loewe": {
+      "titel": "Zentangle Lion",
+      "alt": "Lion's head with a patterned mane",
+      "pfad": "zentangle-lion"
+    },
+    "muster-pfingstrosen": {
+      "titel": "Peonies",
+      "alt": "Lush bouquet of peonies and leaves",
+      "pfad": "peonies"
+    },
+    "muster-lebensbaum": {
+      "titel": "Tree of Life",
+      "alt": "Ornate tree of life with roots and blossoms",
+      "pfad": "tree-of-life"
+    },
+    "muster-paisley": {
+      "titel": "Paisley Pattern",
+      "alt": "Full-page paisley pattern",
+      "pfad": "paisley-pattern"
+    },
+    "muster-kaleidoskop": {
+      "titel": "Kaleidoscope",
+      "alt": "Star-shaped kaleidoscope pattern",
+      "pfad": "kaleidoscope"
+    },
+    "muster-botanisch": {
+      "titel": "Botanical Garden",
+      "alt": "Ferns, leaves and flowers in a dense arrangement",
+      "pfad": "botanical-garden"
+    },
+    "muster-schmetterling": {
+      "titel": "Butterfly Wings",
+      "alt": "Large butterfly with ornamented wings",
+      "pfad": "butterfly-wings"
+    },
+    "muster-mosaik": {
+      "titel": "Mosaic Pattern",
+      "alt": "Tile mosaic with flower and star motifs",
+      "pfad": "mosaic-pattern"
     }
   }
 };
