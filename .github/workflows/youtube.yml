@@ -1,5 +1,6 @@
 name: YouTube
-# Lädt täglich ein Motiv als Short auf den Kanal Malkiste (automatik/youtube/). Läuft nach der Bilder-Automatik
+# Lädt täglich ein Motiv als privates Short auf den Kanal Malkiste (automatik/youtube/); öffentlich wird es nach
+# Jans Freigabe (automatik/youtube/freigabe.md, youtube-freigabe.yml). Läuft nach der Bilder-Automatik
 # (08:00 UTC), damit neue Motive schon auf malkiste.eu sind. Aus, solange die Variable YOUTUBE_AKTIV nicht 1 ist.
 on:
   schedule:
@@ -41,7 +42,7 @@ jobs:
           YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
-          YOUTUBE_SICHTBARKEIT: ${{ vars.YOUTUBE_SICHTBARKEIT || 'public' }}
+          YOUTUBE_SICHTBARKEIT: ${{ vars.YOUTUBE_SICHTBARKEIT || 'private' }} # öffentlich erst nach Freigabe (youtube-freigabe.yml)
           YOUTUBE_PRO_LAUF: ${{ inputs.anzahl || '1' }}
         run: |
           set -- ${{ inputs.trocken && '--trocken' || '' }}
@@ -52,7 +53,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: youtube-video
-          path: .pruef/youtube/*.mp4
+          path: .pruef/youtube/
       - name: Stand sichern
         if: always() && !inputs.trocken
         run: |

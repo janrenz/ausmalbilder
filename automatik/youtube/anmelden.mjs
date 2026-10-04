@@ -14,7 +14,8 @@ if (!datei) { console.error("Aufruf: node automatik/youtube/anmelden.mjs <client
 const c = JSON.parse(readFileSync(datei, "utf8")).installed;
 if (!c) { console.error("Die JSON-Datei ist kein OAuth-Client vom Typ „Desktop-App“."); process.exit(2); }
 
-const SCOPES = ["https://www.googleapis.com/auth/youtube.upload", "https://www.googleapis.com/auth/youtube.readonly"];
+// „youtube“ statt nur „youtube.upload“: die Freigabe stellt Videos per videos.update auf öffentlich
+const SCOPES = ["https://www.googleapis.com/auth/youtube"];
 const pruefer = randomBytes(32).toString("base64url");
 const zustand = randomBytes(16).toString("hex");
 

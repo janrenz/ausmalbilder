@@ -2,27 +2,42 @@
 // Reihenfolge: zuerst Motive, die in den letzten 14 Tagen dazugekommen sind (neuester Tag zuerst), dann das Thema
 // mit den wenigsten Videos, damit es abwechslungsreich bleibt, bei Gleichstand „Passend zur Jahreszeit“
 // (docs/saison.txt).
+// Hochgeladen wird privat; öffentlich wird ein Video erst nach Jans Freigabe (freigeben.mjs, freigabe.md).
 // Umgebung: YOUTUBE_CLIENT_ID, YOUTUBE_CLIENT_SECRET, YOUTUBE_REFRESH_TOKEN (aus anmelden.mjs);
-// optional YOUTUBE_PRO_LAUF (Standard 1), YOUTUBE_SICHTBARKEIT (public|unlisted|private, Standard public).
-// Aufruf: node automatik/youtube/hochladen.mjs [--liste] [--trocken] [--slug <slug>]
-//   --liste    nur zeigen, welche Motive als Nächstes drankommen
-//   --trocken  nur auswählen und Video erzeugen (nach .pruef/youtube/), nichts hochladen, keine Zugangsdaten nötig
+// optional YOUTUBE_PRO_LAUF (Standard 1), YOUTUBE_SICHTBARKEIT (private|unlisted|public, Standard private).
+// Aufruf: node automatik/youtube/hochladen.mjs [--liste] [--trocken] [--ordner <pfad>] [--slug <slug>]
+//   --liste     nur zeigen, welche Motive als Nächstes drankommen
+//   --trocken   nur Video und <slug>.txt (Titel, Beschreibung, Stichwörter) erzeugen, nichts hochladen
+//   --ordner    wohin die Videos kommen (Standard .pruef/youtube/)
+//   --eintragen <slug> <video-id>   ein von Hand hochgeladenes Video eintragen, damit es nicht doppelt kommt
 import { execFileSync } from "node:child_process";
 import { readFileSync, writeFileSync, existsSync, mkdirSync, statSync, rmSync } from "node:fs";
+import { resolve } from "node:path";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { katalog, angaben } from "./angaben.mjs";
 import { video } from "./video.mjs";
+import { zugang, ladeStand, speichereStand } from "./zugang.mjs";
 
 const WURZEL = join(dirname(fileURLToPath(import.meta.url)), "../..");
-const STAND = join(WURZEL, "automatik/youtube.json");
 const args = process.argv.slice(2);
 const TROCKEN = args.includes("--trocken");
 const LISTE = args.includes("--liste");
-const NUR = args.includes("--slug") ? args[args.indexOf("--slug") + 1] : null;
+const wert = (n, i = 1) => (args.includes(n) ? args[args.indexOf(n) + i] : null);
+const NUR = wert("--slug");
 const ANZAHL = Number(process.env.YOUTUBE_PRO_LAUF || 1);
 
-const stand = existsSync(STAND) ? JSON.parse(readFileSync(STAND, "utf8")) : { videos: {} };
+const stand = ladeStand();
+
+if (wert("--eintragen")) {
+  const [slug, id] = [wert("--eintragen"), wert("--eintragen", 2)];
+  if (!id) { console.error("Aufruf: --eintragen <slug> <video-id>"); process.exit(2); }
+  await angaben(slug); // prüft, dass es das Motiv gibt
+  stand.videos[slug] = { id, datum: new Date().toISOString().slice(0, 10), sichtbarkeit: "public", freigabe: "ja", vonHand: true };
+  speichereStand(stand);
+  console.log(`${slug} eingetragen: https://youtube.com/shorts/${id}`);
+  process.exit(0);
+}
 
 async function auswahl() {
   const themen = await katalog();
@@ -51,21 +66,6 @@ async function auswahl() {
   return gewaehlt;
 }
 
-async function zugang() {
-  for (const v of ["YOUTUBE_CLIENT_ID", "YOUTUBE_CLIENT_SECRET", "YOUTUBE_REFRESH_TOKEN"])
-    if (!process.env[v]) throw new Error(`Umgebungsvariable ${v} fehlt (siehe automatik/youtube/README.md)`);
-  const r = await fetch("https://oauth2.googleapis.com/token", {
-    method: "POST",
-    body: new URLSearchParams({
-      client_id: process.env.YOUTUBE_CLIENT_ID, client_secret: process.env.YOUTUBE_CLIENT_SECRET,
-      refresh_token: process.env.YOUTUBE_REFRESH_TOKEN, grant_type: "refresh_token",
-    }),
-  });
-  const j = await r.json();
-  if (!r.ok) throw new Error(`Token abgelehnt: ${j.error} ${j.error_description || ""} (Refresh-Token abgelaufen? anmelden.mjs neu ausführen)`);
-  return j.access_token;
-}
-
 // Fortsetzbarer Upload (resumable): erst Angaben schicken, dann die Datei an die zurückgegebene Adresse
 async function hochladen(token, datei, a) {
   const groesse = statSync(datei).size;
@@ -85,7 +85,7 @@ async function hochladen(token, datei, a) {
 const slugs = NUR ? [NUR] : await auswahl();
 if (!slugs.length) { console.log("Alle Motive sind schon auf YouTube."); process.exit(0); }
 if (LISTE) { console.log(slugs.join("\n")); process.exit(0); }
-const ordner = join(WURZEL, ".pruef/youtube");
+const ordner = wert("--ordner") ? resolve(wert("--ordner")) : join(WURZEL, ".pruef/youtube");
 mkdirSync(ordner, { recursive: true });
 const token = TROCKEN ? null : await zugang();
 for (const slug of slugs) {
@@ -93,11 +93,20 @@ for (const slug of slugs) {
   const datei = join(ordner, `${slug}.mp4`);
   await video(slug, datei);
   console.log(`${slug}: „${a.snippet.title}“ · ${a.status.selfDeclaredMadeForKids ? "für Kinder" : "nicht speziell für Kinder"} · ${a.status.privacyStatus}`);
-  if (TROCKEN) { console.log(`  trocken, Video: ${datei}`); continue; }
+  if (TROCKEN) {
+    writeFileSync(join(ordner, `${slug}.txt`), [
+      `TITEL\n${a.snippet.title}`, `BESCHREIBUNG\n${a.snippet.description}`, `TAGS\n${a.snippet.tags.join(", ")}`,
+      `SPEZIELL FÜR KINDER\n${a.status.selfDeclaredMadeForKids ? "Ja" : "Nein"}`,
+      `NACH DEM HOCHLADEN\nnode automatik/youtube/hochladen.mjs --eintragen ${slug} <video-id>`,
+    ].join("\n\n") + "\n");
+    console.log(`  trocken: ${datei} und ${slug}.txt`);
+    continue;
+  }
   const v = await hochladen(token, datei, a);
   if (v.status?.uploadStatus === "rejected") throw new Error(`YouTube hat ${slug} abgelehnt: ${v.status.rejectionReason}`);
-  stand.videos[slug] = { id: v.id, datum: new Date().toISOString().slice(0, 10), sichtbarkeit: v.status?.privacyStatus };
-  writeFileSync(STAND, JSON.stringify(stand, null, 1) + "\n");
+  const sichtbarkeit = v.status?.privacyStatus;
+  stand.videos[slug] = { id: v.id, datum: new Date().toISOString().slice(0, 10), sichtbarkeit, freigabe: sichtbarkeit === "public" ? "ja" : "offen" };
+  speichereStand(stand);
   rmSync(datei);
   console.log(`  hochgeladen: https://youtube.com/shorts/${v.id}`);
 }

@@ -51,7 +51,7 @@ export async function angaben(slug) {
       defaultAudioLanguage: "de",
     },
     status: {
-      privacyStatus: process.env.YOUTUBE_SICHTBARKEIT || "public",
+      privacyStatus: process.env.YOUTUBE_SICHTBARKEIT || "private",
       selfDeclaredMadeForKids: m.fuerKinder,
       embeddable: true,
       license: "youtube",
