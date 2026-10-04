@@ -1,0 +1,63 @@
+name: YouTube
+# Lädt täglich ein Motiv als Short auf den Kanal Malkiste (automatik/youtube/). Läuft nach der Bilder-Automatik
+# (08:00 UTC), damit neue Motive schon auf malkiste.eu sind. Aus, solange die Variable YOUTUBE_AKTIV nicht 1 ist.
+on:
+  schedule:
+    - cron: "30 15 * * *"
+  workflow_dispatch:
+    inputs:
+      anzahl:
+        description: "Wie viele Videos"
+        default: "1"
+      slug:
+        description: "Bestimmtes Motiv (leer = automatisch)"
+        default: ""
+      trocken:
+        description: "Nur Video erzeugen, nicht hochladen"
+        type: boolean
+        default: false
+permissions:
+  contents: write
+concurrency:
+  group: youtube
+  cancel-in-progress: false
+jobs:
+  hochladen:
+    if: vars.YOUTUBE_AKTIV == '1' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Datum, an dem ein Motiv dazukam, kommt aus der git-Historie
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Werkzeuge
+        run: |
+          sudo bash automatik/werkzeuge.sh
+          sudo apt-get install -y -qq ffmpeg fonts-noto-core >/dev/null
+      - name: Video erzeugen und hochladen
+        env:
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          YOUTUBE_SICHTBARKEIT: ${{ vars.YOUTUBE_SICHTBARKEIT || 'public' }}
+          YOUTUBE_PRO_LAUF: ${{ inputs.anzahl || '1' }}
+        run: |
+          set -- ${{ inputs.trocken && '--trocken' || '' }}
+          [ -n "${{ inputs.slug }}" ] && set -- "$@" --slug "${{ inputs.slug }}"
+          node automatik/youtube/hochladen.mjs "$@"
+      - name: Video als Artefakt (trocken)
+        if: inputs.trocken
+        uses: actions/upload-artifact@v4
+        with:
+          name: youtube-video
+          path: .pruef/youtube/*.mp4
+      - name: Stand sichern
+        if: always() && !inputs.trocken
+        run: |
+          git diff --quiet automatik/youtube.json && exit 0
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -q -m "YouTube: $(git diff -U0 automatik/youtube.json | grep -oE '^\+  "[a-z0-9-]+"' | tr -d '+" ' | paste -sd ' ')" automatik/youtube.json
+          git pull -q --rebase origin main && git push -q origin HEAD:main

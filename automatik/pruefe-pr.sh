@@ -25,7 +25,7 @@ done
 for l in en fr es it nl pl pt; do node i18n/pruefe.mjs "$l" >/dev/null && gut "Übersetzung $l" || { node i18n/pruefe.mjs "$l" || true; schlecht "Übersetzung $l"; }; done
 
 # Skripte lassen sich laden
-for f in build.mjs saison.mjs katalog.mjs static/ausmalen.js automatik/statistik.mjs; do node --check "$f" && gut "Syntax $f" || schlecht "Syntax $f"; done
+for f in build.mjs saison.mjs katalog.mjs static/ausmalen.js automatik/statistik.mjs automatik/youtube/*.mjs; do node --check "$f" && gut "Syntax $f" || schlecht "Syntax $f"; done
 
 # Bauen und vergleichen: docs/ im PR muss genau dem entsprechen, was der Build aus den Quellen macht
 if node build.mjs >/dev/null; then

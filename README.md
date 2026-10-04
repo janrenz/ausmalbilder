@@ -14,6 +14,10 @@ Statische Seite mit gemeinfreien (CC0) Ausmalbildern in 8 Sprachen: https://malk
 
 Neues Motiv: Eintrag in `katalog.mjs` und in jeder `i18n/<code>.mjs`, `./gen.sh`, Bild ansehen (keine Schrift, keine Farbe, keine echten Marken/Figuren), `node build.mjs`, committen.
 
+## YouTube
+
+Die GitHub Action „YouTube“ lädt täglich ein Motiv als Short auf den Kanal Malkiste hoch, das Video zeigt, wie sich das Bild Fläche für Fläche füllt. Einrichtung und Ablauf: `automatik/youtube/README.md`. Aus, bis die Repo-Variable `YOUTUBE_AKTIV` auf 1 steht.
+
 ## Automatik: neue Bilder nach Nachfrage
 
 Läuft täglich als **Claude-Code-Routine in der Cloud** (Ablauf: `automatik/cloud.md`), der Laptop muss nicht an sein. Die PRs prüft die GitHub Action „Prüfung“ (`automatik/pruefe-pr.sh`) und merged sie bei grünem Ergebnis automatisch, sofern sie nur Inhalte ändern. Umgebung der Routine: Setup installiert ImageMagick, rsvg und google-genai; Variablen `GOOGLE_SA_KEY_JSON`, `GOOGLE_CLOUD_PROJECT`, `GOOGLE_CLOUD_LOCATION`, `GENAI_IMAGE_MODEL`, `UMAMI_URL`, `UMAMI_USER`, `UMAMI_PASSWORD`; Netzwerk „Custom“ mit der Umami-Domain.
