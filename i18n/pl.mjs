@@ -327,7 +327,7 @@ export default {
     "schnecke": { titel: "Ślimak", alt: "ślimak z wzorzystą muszlą na liściu", pfad: "slimak" },
     "raupe": { titel: "Gąsienica", alt: "gąsienica podgryza jabłko", pfad: "gasienica" },
     "libelle": { titel: "Ważka", alt: "ważka nad stawem z liliami wodnymi", pfad: "wazka" },
-    "ameise": { titel: "Mrówki", alt: "mrówki niosą liście i okruszki do swojego kopca", pfad: "mrowki" },
+    "ameise": { titel: "Mrówka", alt: "mrówka idzie przez łąkę do swojego mrowiska", pfad: "mrowki" },
     "mode-outfits": { titel: "Projektowanie strojów", alt: "troje młodych modeli w różnych stylizacjach: streetwear, sukienka i kurtka jeansowa", pfad: "projektowanie-strojow" },
     "mode-laufsteg": { titel: "Wybieg", alt: "modelka idzie po wybiegu, wokół publiczność i reflektory", pfad: "wybieg" },
     "mode-sneaker": { titel: "Projektowanie sneakersów", alt: "dwa duże sneakersy ze wzorami do ozdabiania", pfad: "projektowanie-sneakersow" },

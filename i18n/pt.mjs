@@ -327,7 +327,7 @@ export default {
     "schnecke": { titel: "Caracol", alt: "Caracol com concha decorada numa folha", pfad: "caracol" },
     "raupe": { titel: "Lagarta", alt: "Lagarta a roer uma maçã", pfad: "lagarta" },
     "libelle": { titel: "Libélula", alt: "Libélula sobre um lago com nenúfares", pfad: "libelula" },
-    "ameise": { titel: "Formigas", alt: "Formigas a levar folhas e migalhas para o formigueiro", pfad: "formigas" },
+    "ameise": { titel: "Formiga", alt: "Uma formiga atravessa o prado em direção ao formigueiro", pfad: "formigas" },
     "mode-outfits": { titel: "Criar conjuntos", alt: "Três jovens modelos com conjuntos diferentes: streetwear, vestido e casaco de ganga", pfad: "criar-conjuntos" },
     "mode-laufsteg": { titel: "Passerelle", alt: "Modelo a desfilar numa passerelle com público e focos de luz", pfad: "passerelle" },
     "mode-sneaker": { titel: "Personalizar ténis", alt: "Dois ténis grandes com padrões para personalizar", pfad: "personalizar-tenis" },

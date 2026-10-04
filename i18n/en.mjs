@@ -1114,8 +1114,8 @@ export default {
       "pfad": "dragonfly"
     },
     "ameise": {
-      "titel": "Ants",
-      "alt": "Ants carrying leaves and crumbs to their nest",
+      "titel": "Ant",
+      "alt": "An ant walking across the meadow to its anthill",
       "pfad": "ants"
     },
     "mode-outfits": {

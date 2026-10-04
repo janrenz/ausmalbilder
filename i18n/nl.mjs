@@ -325,7 +325,7 @@ export default {
     "schnecke": { titel: "Slak", alt: "Slak met een gestreept huisje op een blad", pfad: "slak" },
     "raupe": { titel: "Rups", alt: "Rups knabbelt aan een appel", pfad: "rups" },
     "libelle": { titel: "Libelle", alt: "Libelle boven een vijver met waterlelies", pfad: "libelle" },
-    "ameise": { titel: "Mieren", alt: "Mieren dragen blaadjes en kruimels naar hun hoop", pfad: "mieren" },
+    "ameise": { titel: "Mier", alt: "Een mier loopt over de wei naar haar mierenhoop", pfad: "mieren" },
     "mode-outfits": { titel: "Outfits ontwerpen", alt: "Drie jonge modellen in verschillende outfits: streetwear, jurk en spijkerjasje", pfad: "outfits-ontwerpen" },
     "mode-laufsteg": { titel: "Catwalk", alt: "Model loopt over een catwalk met publiek en spotlights", pfad: "catwalk" },
     "mode-sneaker": { titel: "Sneakers ontwerpen", alt: "Twee grote sneakers met patronen om zelf te ontwerpen", pfad: "sneakers-ontwerpen" },

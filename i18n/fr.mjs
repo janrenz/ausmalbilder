@@ -1114,8 +1114,8 @@ export default {
       "pfad": "libellule"
     },
     "ameise": {
-      "titel": "Fourmis",
-      "alt": "Des fourmis portent des feuilles et des miettes vers leur fourmilière",
+      "titel": "Fourmi",
+      "alt": "Une fourmi traverse la prairie vers sa fourmilière",
       "pfad": "fourmis"
     },
     "mode-outfits": {

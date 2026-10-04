@@ -1114,8 +1114,8 @@ export default {
       "pfad": "libellula"
     },
     "ameise": {
-      "titel": "Formiche",
-      "alt": "Formiche che portano foglie e briciole al formicaio",
+      "titel": "Formica",
+      "alt": "Una formica attraversa il prato verso il suo formicaio",
       "pfad": "formiche"
     },
     "mode-outfits": {
