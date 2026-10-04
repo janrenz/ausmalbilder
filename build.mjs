@@ -456,17 +456,27 @@ schreibe("404.html", seite(sprachen[0], {
 <ul>${sprachen.map((S) => `<li lang="${S.code}"><a href="${url(pfadStart(S))}">${esc(S.sprachname)}</a></li>`).join("")}</ul></section>`,
 }));
 
-// Sitemap mit hreflang-Alternativen: jede Sprachvariante als eigener Eintrag
-schreibe("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-${sitemap.flatMap(([v, lastmod]) => {
-  const alt = sprachen.map((S) => `<xhtml:link rel="alternate" hreflang="${S.code}" href="${SITE}/${v(S)}"/>`).join("") +
+// Sitemaps mit hreflang-Alternativen: je Sprache eine Datei (sitemap-de.xml …), sitemap.xml ist der Index darauf.
+// Kleinere Dateien liest Search Console zuverlässiger, und dort sieht man je Sprache, was indexiert ist.
+const sitemapEintrag = (S, [v, lastmod]) => {
+  const alt = sprachen.map((A) => `<xhtml:link rel="alternate" hreflang="${A.code}" href="${SITE}/${v(A)}"/>`).join("") +
     `<xhtml:link rel="alternate" hreflang="x-default" href="${SITE}/${v(sprachen[0])}"/>`;
   const bild = alleBilder.find((b) => v(sprachen[0]).endsWith(`/${b.slug}/`));
   const img = bild ? `<image:image><image:loc>${SITE}/bilder/${bild.slug}.png</image:loc></image:image>` : "";
-  return sprachen.map((S) => `<url><loc>${SITE}/${v(S)}</loc>${lastmod ? `<lastmod>${lastmod}</lastmod>` : ""}${alt}${img}</url>`);
-}).join("\n")}
+  return `<url><loc>${SITE}/${v(S)}</loc>${lastmod ? `<lastmod>${lastmod}</lastmod>` : ""}${alt}${img}</url>`;
+};
+const neuestes = sitemap.map(([, l]) => l).filter(Boolean).sort().at(-1);
+for (const S of sprachen) {
+  schreibe(`sitemap-${S.code}.xml`, `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+${sitemap.map((e) => sitemapEintrag(S, e)).join("\n")}
 </urlset>
+`);
+}
+schreibe("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${sprachen.map((S) => `<sitemap><loc>${SITE}/sitemap-${S.code}.xml</loc>${neuestes ? `<lastmod>${neuestes}</lastmod>` : ""}</sitemap>`).join("\n")}
+</sitemapindex>
 `);
 schreibe("robots.txt", `User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`);
 schreibe(".nojekyll", "");
