@@ -13,7 +13,7 @@ export default {
     heldLead: "{n} dibujos para colorear hechos con cariño en {t} temas, desde unicornios para los más pequeños y coches y el espacio para los mayores hasta mandalas detallados para adultos. Imprime cada dibujo en PDF A4 o coloréalo directamente en el navegador, en tablet, móvil u ordenador, y guarda tu dibujo terminado. Sin registro, sin publicidad, sin cookies.",
     themenAnsehen: "Ver los temas",
     saison: "Según la época del año",
-    kleineKinder: "Para niños de 3 a 8 años",
+    kleineKinder: "Para niños a partir de 3 años",
     groessereKinder: "Para niños mayores y adultos",
     anzahl: "{n} dibujos para colorear",
     ab8: "a partir de 8 años",
@@ -80,10 +80,10 @@ export default {
 <h2>¿Puedo usar los dibujos?</h2>
 <p>Sí. Todos los dibujos para colorear de esta web son de <strong>dominio público</strong> y están bajo <a href="{cc0}" rel="license">CC0 1.0</a>. Puedes imprimirlos, fotocopiarlos, repartirlos en la guardería, en el colegio o en tu asociación, modificarlos y compartirlos sin pedir permiso, y sin citar la fuente. Aun así, me alegra que enlaces a la web.</p>
 <h2>¿Cómo se crearon los dibujos?</h2>
-<p>Las láminas se generaron con un modelo de imágenes de IA (Google Gemini) a partir de descripciones propias; después las revisé a mano, las seleccioné y las preparé para imprimir. Las imágenes con texto, logotipos o parecido con personajes conocidos se descartaron y se volvieron a crear.</p>
+<p>Las láminas se crearon con ayuda de la IA a partir de descripciones propias; después las revisé a mano, las seleccioné y las preparé para imprimir. Las imágenes con texto, logotipos o parecido con personajes conocidos se descartaron y se volvieron a crear.</p>
 <p>A propósito, aquí <strong>no</strong> hay personajes de películas, series o libros (como los de Disney, La Patrulla Canina o Pokémon) ni marcas de coches reales: están protegidos por derechos de autor y de marca y no se pueden difundir libremente como dibujos para colorear. En su lugar encontrarás personajes propios y vehículos totalmente inventados.</p>
 <h2>¿Para qué edad?</h2>
-<p>La mayoría de los temas están pensados para niños de 3 a 8 años: líneas gruesas y zonas grandes. La moda, los coches, el espacio y la tecnología son más detallados y están pensados para niños a partir de unos 8 años. Los mandalas para adultos son muy finos y sirven para relajarse.</p>
+<p>La mayoría de los temas están pensados para niños a partir de 3 años: líneas gruesas y zonas grandes. La moda, los coches, el espacio y la tecnología son más detallados y están pensados para niños a partir de unos 8 años. Los mandalas para adultos son muy finos y sirven para relajarse.</p>
 <h2>¿Has visto un error o quieres pedir un tema?</h2>
 <p>Si ves un dibujo que no encaja o te gustaría que hubiera un tema nuevo, escribe a <a href="mailto:kontakt@janrenz.de">kontakt@janrenz.de</a>.</p>`,
     },

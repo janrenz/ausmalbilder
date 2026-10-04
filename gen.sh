@@ -8,11 +8,13 @@ declare -A STIL=(
   [detail]="Coloring page for older kids and teens aged 8-14. Detailed, more realistic illustration with medium-fine outlines, many areas to color, cool and modern look, not babyish. $GEMEINSAM"
   [erwachsen]="Coloring page for adults. Very intricate and finely detailed line art with thin precise outlines and many small sections. $GEMEINSAM"
 )
+# Bilderzeugung: lokal das installierte gen-image, in der Cloud die Kopie im Repo
+GEN=(gen-image); command -v gen-image >/dev/null || GEN=(python3 automatik/gen-image.py)
 node -e 'import("./katalog.mjs").then(({themen})=>{for(const t of themen)for(const b of t.bilder)console.log(b.slug+"\t"+(t.stil||"kind")+"\t"+b.prompt)})' > .liste
 while IFS=$'\t' read -r slug stil prompt; do
   [ -f "src/bilder/$slug.png" ] && continue
   while [ "$(jobs -rp | wc -l)" -ge 8 ]; do wait -n; done
-  ( gen-image -a 3:4 -o "src/bilder/$slug.png" -p "${STIL[$stil]} Motif: $prompt" >/dev/null 2>&1 &&
+  ( "${GEN[@]}" -a 3:4 -o "src/bilder/$slug.png" -p "${STIL[$stil]} Motif: $prompt" >/dev/null 2>&1 &&
     # Farbanteil vor der Graustufen-Umwandlung festhalten (automatik/pruefbogen.sh wertet ihn aus)
     printf '%s\t%s\n' "$slug" "$(magick "src/bilder/$slug.png" -resize 150x -fx '(max(r,max(g,b))-min(r,min(g,b)))>0.15' -format '%[fx:mean]' info:)" >> .pruef/farbe.tsv &&
     magick "src/bilder/$slug.png" -colorspace Gray -define png:color-type=0 "src/bilder/$slug.png" &&

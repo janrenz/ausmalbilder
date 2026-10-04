@@ -14,7 +14,7 @@ export default {
     heldLead: "{n} starannie narysowanych kolorowanek w {t} tematach – od jednorożców dla najmłodszych, przez samochody i kosmos dla starszych dzieci, po szczegółowe mandale dla dorosłych. Każdy obrazek wydrukujesz jako PDF A4 albo pokolorujesz od razu w przeglądarce na tablecie, telefonie lub komputerze i zapiszesz gotowy obrazek. Bez rejestracji, bez reklam, bez plików cookie.",
     themenAnsehen: "Zobacz tematy",
     saison: "Na aktualną porę roku",
-    kleineKinder: "Dla dzieci w wieku 3–8 lat",
+    kleineKinder: "Dla dzieci od 3 lat",
     groessereKinder: "Dla starszych dzieci i dorosłych",
     anzahl: "Kolorowanek: {n}",
     ab8: "od 8 lat",
@@ -81,10 +81,10 @@ export default {
 <h2>Czy mogę korzystać z obrazków?</h2>
 <p>Tak. Wszystkie kolorowanki na tej stronie są w <strong>domenie publicznej</strong> i objęte licencją <a href="{cc0}" rel="license">CC0 1.0</a>. Możesz je bez pytania drukować, kopiować, rozdawać w przedszkolu, w szkole czy w klubie, zmieniać i udostępniać dalej – także bez podawania źródła. Mimo to ucieszę się z linku.</p>
 <h2>Jak powstały obrazki?</h2>
-<p>Motywy zostały wygenerowane za pomocą modelu graficznego AI (Google Gemini) na podstawie własnych opisów, a następnie przejrzane ręcznie, wyselekcjonowane i przygotowane do druku. Obrazki z napisami, logo lub podobieństwem do znanych postaci odrzucono i stworzono od nowa.</p>
+<p>Motywy zostały stworzone przy wsparciu AI na podstawie własnych opisów, a następnie przejrzane ręcznie, wyselekcjonowane i przygotowane do druku. Obrazki z napisami, logo lub podobieństwem do znanych postaci odrzucono i stworzono od nowa.</p>
 <p>Celowo <strong>nie ma</strong> tu postaci z filmów, seriali ani książek (np. od Disneya, z Psiego Patrolu czy Pokémonów) ani prawdziwych marek samochodów: są chronione prawem autorskim i znakami towarowymi i nie wolno ich swobodnie rozpowszechniać jako kolorowanek. Zamiast tego znajdziesz własne postacie i wymyślone pojazdy.</p>
 <h2>Dla jakiego wieku?</h2>
-<p>Większość tematów jest narysowana dla dzieci w wieku 3–8 lat: grube linie i duże powierzchnie. Moda, samochody, kosmos i technika są bardziej szczegółowe i przeznaczone dla dzieci od około 8 lat. Mandale dla dorosłych są bardzo drobne i świetnie nadają się do relaksu.</p>
+<p>Większość tematów jest narysowana dla dzieci od 3 lat: grube linie i duże powierzchnie. Moda, samochody, kosmos i technika są bardziej szczegółowe i przeznaczone dla dzieci od około 8 lat. Mandale dla dorosłych są bardzo drobne i świetnie nadają się do relaksu.</p>
 <h2>Błąd lub propozycja motywu?</h2>
 <p>Jeśli zauważysz obrazek, który się nie sprawdza, albo chcesz zaproponować nowy temat, napisz na <a href="mailto:kontakt@janrenz.de">kontakt@janrenz.de</a>.</p>`,
     },

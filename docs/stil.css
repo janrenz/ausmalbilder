@@ -30,6 +30,14 @@ img { max-width: 100%; height: auto; }
 }
 .marke { display: block; line-height: 0; text-decoration: none; }
 .marke svg { display: block; height: 42px; width: auto; }
+/* Beim Überfahren malt sich das M fertig aus: die zusätzlichen Striche im Logo zeichnen sich nacheinander */
+@keyframes nachmalen { to { stroke-dashoffset: 0; } }
+.marke:hover .nachmalen, .marke:focus-visible .nachmalen, .fusslogo:hover .nachmalen, .fusslogo:focus-visible .nachmalen {
+  animation: nachmalen .22s ease-out forwards; animation-delay: calc(var(--i) * 80ms);
+}
+@media (prefers-reduced-motion: reduce) {
+  .marke:hover .nachmalen, .marke:focus-visible .nachmalen, .fusslogo:hover .nachmalen, .fusslogo:focus-visible .nachmalen { animation: none; stroke-dashoffset: 0; }
+}
 .kopf ul { display: flex; flex-wrap: wrap; gap: 4px 14px; list-style: none; margin: 0; padding: 0; font-size: .95rem; }
 .kopf nav a { color: var(--leise); text-decoration: none; }
 .kopf nav a:hover { color: var(--akzent); }
@@ -76,6 +84,9 @@ main { max-width: 1160px; margin: 0 auto; padding: 0 16px 48px; }
 .text { max-width: 70ch; }
 .fuss { border-top: 3px dashed var(--rand); padding: 24px max(16px, calc((100% - 1160px) / 2)); color: var(--leise); font-size: .95rem; }
 .fuss a { color: var(--leise); }
+.fusskopf { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 12px; }
+.fusslogo { display: block; line-height: 0; }
+.fusslogo svg { display: block; height: 30px; width: auto; }
 
 @media print {
   @page { size: A4; margin: 10mm; }

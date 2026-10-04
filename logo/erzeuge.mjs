@@ -10,10 +10,16 @@ const font = opentype.parse(readFileSync(process.argv[2]).buffer);
 
 const M = "M10 54V12H21L32 30L43 12H54V54H44V29L35 43H29L20 29V54Z";
 const KRITZEL = "M4 50L22 8M8 58L30 10M16 58L36 14M24 60L40 24";
+// Weitere Striche, die das M beim Überfahren mit der Maus fertig ausmalen (stil.css, .marke:hover).
+// Ohne CSS (Favicon, <img> im Footer) bleiben sie über stroke-dashoffset unsichtbar.
+const NACHMALEN = ["M30 62L46 22", "M36 64L52 24", "M40 34L56 2", "M44 64L60 26", "M50 64L64 34", "M46 36L62 4"];
 // Symbol im 64er-Raster; `linie` ist die Umrissfarbe, `farbe` die Ausmalfarbe
-const symbol = (id, linie, farbe) => `<clipPath id="${id}"><path d="${M}"/></clipPath>
+const symbol = (id, linie, farbe, nachmalen = false) => `<clipPath id="${id}"><path d="${M}"/></clipPath>
 <path d="${M}" fill="#fff"/>
-<g clip-path="url(#${id})"><path d="${KRITZEL}" stroke="${farbe}" stroke-width="5.5" stroke-linecap="round" fill="none"/></g>
+${nachmalen
+  ? `<g clip-path="url(#${id})" stroke="${farbe}" stroke-width="5.5" stroke-linecap="round" fill="none"><path d="${KRITZEL}"/>${
+    NACHMALEN.map((d, i) => `<path class="nachmalen" style="--i:${i}" d="${d}" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>`).join("")}</g>`
+  : `<g clip-path="url(#${id})"><path d="${KRITZEL}" stroke="${farbe}" stroke-width="5.5" stroke-linecap="round" fill="none"/></g>`}
 <path d="${M}" fill="none" stroke="${linie}" stroke-width="3" stroke-linejoin="round"/>`;
 
 // Pfaddaten selbst schreiben: toPathData() von opentype.js gibt bei manchen Koordinaten „NaN“ aus
@@ -40,7 +46,7 @@ function wort(text, x, groesse, strich, farbe, gefuellt = false) {
 const w = wort("Malkiste", 76, 46, 2.2, "#2a2320");
 const breite = Math.ceil(w.ende + 3);
 writeFileSync("static/logo.svg", `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${breite} 64" aria-hidden="true">
-${symbol("logo-m", "#2a2320", "#ff8a3d")}
+${symbol("logo-m", "#2a2320", "#ff8a3d", true)}
 ${w.svg}
 </svg>
 `);

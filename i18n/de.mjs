@@ -17,7 +17,7 @@ export default {
     heldLead: "{n} liebevoll gestaltete Ausmalbilder in {t} Themen – vom Einhorn für die Kleinsten über Autos und Raumfahrt für größere Kinder bis zu feinen Mandalas für Erwachsene. Jedes Bild gibt es als druckfertiges A4-PDF – oder du malst es direkt im Browser aus, am Tablet, Handy oder Computer, und speicherst dein fertiges Bild. Ohne Anmeldung, ohne Werbung, ohne Cookies.",
     themenAnsehen: "Themen ansehen",
     saison: "Passend zur Jahreszeit",
-    kleineKinder: "Für Kinder von 3 bis 8",
+    kleineKinder: "Für Kinder ab 3",
     groessereKinder: "Für größere Kinder und Erwachsene",
     anzahl: "{n} Ausmalbilder",
     ab8: "ab 8 Jahren",
@@ -85,10 +85,10 @@ export default {
 <h2>Darf ich die Bilder verwenden?</h2>
 <p>Ja. Alle Ausmalbilder auf dieser Seite sind <strong>gemeinfrei</strong> und stehen unter <a href="{cc0}" rel="license">CC0 1.0</a>. Du darfst sie ohne Nachfrage ausdrucken, kopieren, in der Kita, in der Schule oder im Verein verteilen, verändern und weitergeben – auch ohne Quellenangabe. Über einen Link freue ich mich trotzdem.</p>
 <h2>Wie sind die Bilder entstanden?</h2>
-<p>Die Motive wurden mit einem KI-Bildmodell (Google Gemini) nach eigenen Beschreibungen erzeugt, anschließend von Hand gesichtet, aussortiert und für den Druck aufbereitet. Bilder mit Schrift, Logos oder Ähnlichkeit zu bekannten Figuren wurden verworfen und neu erstellt.</p>
+<p>Die Motive wurden mit KI-Unterstützung nach eigenen Beschreibungen erstellt, anschließend von Hand gesichtet, aussortiert und für den Druck aufbereitet. Bilder mit Schrift, Logos oder Ähnlichkeit zu bekannten Figuren wurden verworfen und neu erstellt.</p>
 <p>Bewusst gibt es hier <strong>keine</strong> Figuren aus Filmen, Serien oder Büchern (etwa von Disney, Paw Patrol oder Pokémon) und keine echten Automarken: Diese sind urheber- und markenrechtlich geschützt und dürfen nicht frei als Ausmalbild verbreitet werden. Stattdessen findest du eigene Figuren und frei erfundene Fahrzeuge.</p>
 <h2>Für welches Alter?</h2>
-<p>Die meisten Themen sind für Kinder von 3 bis 8 Jahren gezeichnet: dicke Linien, große Flächen. Mode, Autos, Raumfahrt und Technik sind detaillierter und für Kinder ab etwa 8 Jahren gedacht. Die Mandalas für Erwachsene sind sehr fein und eignen sich zum Entspannen.</p>
+<p>Die meisten Themen sind für Kinder ab 3 Jahren gezeichnet: dicke Linien, große Flächen. Mode, Autos, Raumfahrt und Technik sind detaillierter und für Kinder ab etwa 8 Jahren gedacht. Die Mandalas für Erwachsene sind sehr fein und eignen sich zum Entspannen.</p>
 <h2>Fehler oder Wunschmotiv?</h2>
 <p>Wenn dir ein Bild auffällt, das nicht passt, oder du dir ein Thema wünschst, schreib an <a href="mailto:kontakt@janrenz.de">kontakt@janrenz.de</a>.</p>`,
     },

@@ -1,7 +1,8 @@
 // Baut die statische Seite nach docs/ (GitHub Pages, Branch main, Ordner /docs).
 // Aufruf: node build.mjs   (SITE_URL=https://example.org node build.mjs für eine eigene Domain)
 // Deutsch liegt im Wurzelverzeichnis, alle anderen Sprachen unter /<code>/ mit übersetzten Pfaden.
-import { execFileSync } from "node:child_process";
+import { execFileSync, spawnSync } from "node:child_process";
+import { createHash } from "node:crypto";
 import { existsSync, mkdirSync, rmSync, statSync, writeFileSync, copyFileSync, readdirSync, readFileSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { themen } from "./katalog.mjs";
@@ -56,18 +57,39 @@ const pfadBild = (L, t, b) => `${pfadThema(L, t)}${L.bilder[b.slug].pfad}/`;
 const pfadSeite = (L, k) => `${prefix(L)}${L.seiten[k].pfad}/`;
 
 // ---------- Bilder ----------
+// Lokal liegt ImageMagick 7 („magick“), in der Cloud und auf GitHub nur ImageMagick 6 („convert“)
+const IM = spawnSync("magick", ["-version"]).status === 0 ? "magick" : "convert";
+const magick = (...args) => execFileSync(IM, args, { stdio: "inherit" });
+const rsvg = (...args) => execFileSync("rsvg-convert", args, { stdio: "inherit" });
 const veraltet = (ziel, quelle) => !existsSync(ziel) || statSync(ziel).mtimeMs < statSync(quelle).mtimeMs;
-const magick = (...args) => execFileSync("magick", args, { stdio: "inherit" });
+const sha = (...teile) => { const h = createHash("sha256"); for (const t of teile) h.update(t); return h.digest("hex").slice(0, 16); };
 const MARKE_HOEHE = 44;
 // Logo (logo/erzeuge.mjs): im Kopf direkt eingebettet, der Stempel landet als Bild unter jedem Download
 const LOGO = readFileSync("static/logo.svg", "utf8").trim();
-const STEMPEL = join(".cache", "stempel.png");
 const CACHE = ".cache"; // aufbereitete Bilder bleiben zwischen Builds erhalten
+const STEMPEL = join(CACHE, "stempel.png");
 mkdirSync(CACHE, { recursive: true });
-if (veraltet(STEMPEL, "logo/stempel.svg")) magick("-background", "none", "-density", "300", "logo/stempel.svg", "-resize", "x30", STEMPEL);
+if (veraltet(STEMPEL, "logo/stempel.svg")) rsvg("-h", "30", "logo/stempel.svg", "-o", STEMPEL);
+
+// Fingerabdruck je Bild: Quelle + Stempel + Verarbeitung. docs/bilder/quellen.json hält fest, woraus die
+// veröffentlichten Dateien entstanden sind. Ein frischer Klon ohne .cache (Cloud, GitHub) übernimmt sie von dort,
+// statt alle Bilder neu zu rechnen – sonst wären nach jedem Lauf alle Bilddateien geändert.
+const VERARBEITUNG = sha("2", readFileSync("logo/stempel.svg"), String(MARKE_HOEHE));
+const QUELLEN = join(OUT, "bilder", "quellen.json");
+const veroeffentlicht = existsSync(QUELLEN) ? JSON.parse(readFileSync(QUELLEN, "utf8")) : {};
+const fingerabdruck = {};
+const ausgaben = (slug) => [[`${slug}.webp`, `${slug}.webp`], [`${slug}-gross.webp`, `${slug}-gross.webp`],
+  [`${slug}-og.jpg`, `${slug}-og.jpg`], [`${slug}-marke.png`, `${slug}.png`], [`${slug}.pdf`, `${slug}.pdf`]]; // [Cache, docs/bilder]
 for (const b of alleBilder) {
   const q = join(SRC, `${b.slug}.png`);
   if (!existsSync(q)) throw new Error(`Bild fehlt: ${q}`);
+  const fp = (fingerabdruck[b.slug] = sha(readFileSync(q), VERARBEITUNG));
+  const fertig = ausgaben(b.slug);
+  // Unverändertes Bild: die veröffentlichte Fassung gilt, auch wenn der Cache fehlt oder anders ist
+  if (veroeffentlicht[b.slug] === fp && fertig.every(([, d]) => existsSync(join(OUT, "bilder", d)))) {
+    for (const [c, d] of fertig) copyFileSync(join(OUT, "bilder", d), join(CACHE, c));
+    continue;
+  }
   const druck = join(CACHE, `${b.slug}.png`);
   if (veraltet(druck, q)) {
     magick(q, "-colorspace", "Gray", "-level", "15%,85%", "-strip",
@@ -82,7 +104,7 @@ for (const b of alleBilder) {
     magick(druck, "-resize", "x630", "-background", "#fff7ec", "-gravity", "center",
       "-extent", "1200x630", "-quality", "80", og);
   }
-  // Download-Fassung: weißer Streifen unten mit „malkiste.eu“, damit der Hinweis nie im Motiv liegt
+  // Download-Fassung: weißer Streifen unten mit dem Stempel, damit der Hinweis nie im Motiv liegt
   const marke = join(CACHE, `${b.slug}-marke.png`);
   if (veraltet(marke, druck) || veraltet(marke, STEMPEL)) {
     magick(druck, "-background", "white", "-gravity", "south", "-splice", `0x${MARKE_HOEHE}`,
@@ -167,7 +189,7 @@ ${jsonld.map((j) => `<script type="application/ld+json">${JSON.stringify(j)}</sc
 ${inhalt}
 </main>
 <footer class="fuss">
-  <p><strong>${NAME}</strong> – ${esc(u.fussText)}</p>
+  <p class="fusskopf"><a class="fusslogo" href="${url(pfadStart(L))}" aria-label="${NAME}">${LOGO.replaceAll("logo-m", "fuss-m")}</a> <span>${esc(u.fussText)}</span></p>
   <nav aria-label="${esc(u.rechtliches)}">${["ueber", "impressum", "datenschutz"].map((k) => `<a href="${url(pfadSeite(L, k))}">${esc(L.seiten[k].nav)}</a>`).join(" · ")}</nav>
   ${alternativen.length > 1 ? `<p class="sprachen">${alternativen.map(([S, p]) => `<a href="${url(p)}" hreflang="${S.code}" lang="${S.code}">${esc(S.sprachname)}</a>`).join(" · ")}</p>` : ""}
 </footer>
@@ -237,15 +259,14 @@ const schreibe = (p, inhalt) => {
 
 mkdirSync(join(OUT, "bilder"), { recursive: true });
 // bilder/<slug>.png ist die Download-Fassung mit Hinweis, die unmarkierte Druckvorlage bleibt im Cache
-for (const f of readdirSync(CACHE)) {
-  if (f.endsWith(".png") && !f.endsWith("-marke.png")) continue; // auch stempel.png
-  copyFileSync(join(CACHE, f), join(OUT, "bilder", f.replace(/-marke\.png$/, ".png")));
-}
+for (const b of alleBilder) for (const [c, d] of ausgaben(b.slug)) copyFileSync(join(CACHE, c), join(OUT, "bilder", d));
+writeFileSync(QUELLEN, `${JSON.stringify(fingerabdruck, null, 1)}\n`);
 for (const f of readdirSync("static")) copyFileSync(join("static", f), join(OUT, f));
 if (existsSync("CNAME")) copyFileSync("CNAME", join(OUT, "CNAME"));
 copyFileSync(join(CACHE, `${themen[0].bilder[0].slug}-og.jpg`), join(OUT, "og.jpg"));
-magick("-background", "white", "-density", "600", join("static", "favicon.svg"), "-resize", "140x140", "-gravity", "center", "-extent", "180x180", "-flatten", join(OUT, "apple-touch-icon.png"));
-magick("-background", "none", "-density", "300", join("static", "favicon.svg"), "-resize", "32x32", join(OUT, "favicon-32.png"));
+rsvg("-w", "140", "-h", "140", "-b", "white", join("static", "favicon.svg"), "-o", join(CACHE, "apple-touch-140.png"));
+magick(join(CACHE, "apple-touch-140.png"), "-background", "white", "-gravity", "center", "-extent", "180x180", "-strip", join(OUT, "apple-touch-icon.png"));
+rsvg("-w", "32", "-h", "32", join("static", "favicon.svg"), "-o", join(OUT, "favicon-32.png"));
 copyFileSync("logo/stempel.svg", join(OUT, "stempel.svg"));
 
 const sitemap = []; // [varianten-Funktion, lastmod]

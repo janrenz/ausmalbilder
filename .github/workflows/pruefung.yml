@@ -1,0 +1,50 @@
+name: Prüfung
+# Prüft jeden Pull Request. PRs der Automatik werden bei grüner Prüfung automatisch gemergt,
+# aber nur, wenn sie ausschließlich Inhalte ändern (Katalog, Übersetzungen, Bilder, docs/, Stand).
+on:
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+concurrency:
+  group: pruefung-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+jobs:
+  pruefen:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # git-Daten für lastmod in der Sitemap
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Werkzeuge
+        run: sudo bash automatik/werkzeuge.sh
+      - name: Prüfen
+        run: bash automatik/pruefe-pr.sh "origin/${{ github.base_ref }}"
+
+  automerge:
+    needs: pruefen
+    if: >-
+      github.event.pull_request.user.login == 'janrenz' &&
+      (startsWith(github.head_ref, 'auto/') || contains(github.event.pull_request.body, '<!-- malkiste-automatik -->'))
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Nur Inhalte geändert?
+        run: |
+          andere=$(git diff --name-only "origin/${{ github.base_ref }}"...HEAD \
+            | grep -vE '^(katalog\.mjs|i18n/[a-z]{2}\.mjs|src/bilder/[a-z0-9-]+\.png|docs/.*|automatik/stand\.json)$' || true)
+          if [ -n "$andere" ]; then
+            echo "Kein automatisches Mergen, der PR ändert auch:"; echo "$andere"; exit 1
+          fi
+      - name: Mergen
+        run: gh pr merge "${{ github.event.pull_request.number }}" --squash --delete-branch -R "${{ github.repository }}"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

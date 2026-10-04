@@ -1,7 +1,8 @@
 // Fragt Umami nach Downloads/Drucken seit dem letzten Lauf und gibt eine Zusammenfassung als JSON aus.
 // Aufruf: node automatik/statistik.mjs [--min 50] [--seit <ms>]
 // Exit 0 = genug Daten, 3 = zu wenig neue Downloads (Lauf überspringen), 1 = Fehler.
-// Zugang aus ~/.config/malkiste/umami.env, Website-ID aus umami.json, Stand aus ~/.local/state/malkiste/letzter-lauf.
+// Zugang aus den Umgebungsvariablen UMAMI_URL/UMAMI_USER/UMAMI_PASSWORD (Cloud) oder ~/.config/malkiste/umami.env (Laptop),
+// Website-ID aus umami.json, Stand aus automatik/stand.json (früher ~/.local/state/malkiste/letzter-lauf).
 import { readFileSync, existsSync } from "node:fs";
 import { homedir } from "node:os";
 import { join } from "node:path";
@@ -12,15 +13,19 @@ const arg = (name, standard) => {
   return i > 0 ? process.argv[i + 1] : standard;
 };
 const MIN = Number(arg("--min", 50));
-const STAND = join(homedir(), ".local/state/malkiste/letzter-lauf");
+const STAND = new URL("stand.json", import.meta.url);
+const STAND_ALT = join(homedir(), ".local/state/malkiste/letzter-lauf");
 const START_DER_SEITE = Date.parse("2026-10-04T00:00:00Z");
 
-const env = Object.fromEntries(
-  readFileSync(join(homedir(), ".config/malkiste/umami.env"), "utf8")
+const DATEI = join(homedir(), ".config/malkiste/umami.env");
+const env = process.env.UMAMI_URL ? process.env : Object.fromEntries(
+  readFileSync(DATEI, "utf8")
     .split("\n").filter((z) => z.includes("=")).map((z) => [z.slice(0, z.indexOf("=")), z.slice(z.indexOf("=") + 1)]),
 );
 const { id: WEBSITE } = JSON.parse(readFileSync(new URL("../umami.json", import.meta.url), "utf8"));
-const seit = Number(arg("--seit", existsSync(STAND) ? readFileSync(STAND, "utf8").trim() : START_DER_SEITE));
+const seit = Number(arg("--seit",
+  existsSync(STAND) ? JSON.parse(readFileSync(STAND, "utf8")).nachfrageBis
+  : existsSync(STAND_ALT) ? readFileSync(STAND_ALT, "utf8").trim() : START_DER_SEITE));
 const bis = Date.now();
 
 const login = await fetch(`${env.UMAMI_URL}/api/auth/login`, {

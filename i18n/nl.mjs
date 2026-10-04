@@ -12,7 +12,7 @@ export default {
     heldLead: "{n} met zorg getekende kleurplaten in {t} thema’s, van eenhoorns voor de kleintjes en auto’s en ruimtevaart voor oudere kinderen tot fijne mandala’s voor volwassenen. Print elke kleurplaat als A4-pdf of kleur hem direct in je browser in, op tablet, telefoon of computer, en sla je tekening op. Zonder account, zonder reclame, zonder cookies.",
     themenAnsehen: "Bekijk de thema's",
     saison: "Passend bij het seizoen",
-    kleineKinder: "Voor kinderen van 3 tot 8 jaar",
+    kleineKinder: "Voor kinderen vanaf 3 jaar",
     groessereKinder: "Voor oudere kinderen en volwassenen",
     anzahl: "{n} kleurplaten",
     ab8: "vanaf 8 jaar",
@@ -79,10 +79,10 @@ export default {
 <h2>Mag ik de kleurplaten gebruiken?</h2>
 <p>Ja. Alle kleurplaten op deze website zijn <strong>vrij van rechten</strong> en vallen onder <a href="{cc0}" rel="license">CC0 1.0</a>. Je mag ze zonder te vragen printen, kopiëren, uitdelen op de opvang, op school of in de club, aanpassen en doorgeven – ook zonder bronvermelding. Een link vind ik natuurlijk wel leuk.</p>
 <h2>Hoe zijn de kleurplaten gemaakt?</h2>
-<p>De afbeeldingen zijn met een AI-beeldmodel (Google Gemini) gemaakt op basis van eigen beschrijvingen en daarna met de hand bekeken, uitgezocht en klaargemaakt voor het printen. Afbeeldingen met tekst, logo's of gelijkenis met bekende figuren zijn weggegooid en opnieuw gemaakt.</p>
+<p>De afbeeldingen zijn met ondersteuning van AI gemaakt op basis van eigen beschrijvingen en daarna met de hand bekeken, uitgezocht en klaargemaakt voor het printen. Afbeeldingen met tekst, logo's of gelijkenis met bekende figuren zijn weggegooid en opnieuw gemaakt.</p>
 <p>Bewust zijn er hier <strong>geen</strong> figuren uit films, series of boeken (zoals van Disney, Paw Patrol of Pokémon) en geen echte automerken: die zijn beschermd door auteursrecht en merkenrecht en mogen niet zomaar als kleurplaat worden verspreid. In plaats daarvan vind je eigen figuren en verzonnen voertuigen.</p>
 <h2>Voor welke leeftijd?</h2>
-<p>De meeste thema's zijn getekend voor kinderen van 3 tot 8 jaar: dikke lijnen, grote vlakken. Mode, auto's, ruimtevaart en techniek zijn gedetailleerder en bedoeld voor kinderen vanaf ongeveer 8 jaar. De mandala's voor volwassenen zijn heel fijn en geschikt om bij te ontspannen.</p>
+<p>De meeste thema's zijn getekend voor kinderen vanaf 3 jaar: dikke lijnen, grote vlakken. Mode, auto's, ruimtevaart en techniek zijn gedetailleerder en bedoeld voor kinderen vanaf ongeveer 8 jaar. De mandala's voor volwassenen zijn heel fijn en geschikt om bij te ontspannen.</p>
 <h2>Een fout gevonden of een wens voor een thema?</h2>
 <p>Zie je een afbeelding die niet klopt, of wil je graag een bepaald thema? Stuur dan een mail naar <a href="mailto:kontakt@janrenz.de">kontakt@janrenz.de</a>.</p>`,
     },
