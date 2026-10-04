@@ -1,0 +1,11 @@
+[Unit]
+Description=Malkiste: täglicher Blick auf die Statistik
+
+[Timer]
+OnCalendar=*-*-* 10:00
+RandomizedDelaySec=20min
+# Verpasste Läufe (Laptop aus) nach dem Einschalten nachholen
+Persistent=true
+
+[Install]
+WantedBy=timers.target

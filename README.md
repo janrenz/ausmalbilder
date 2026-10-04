@@ -10,3 +10,14 @@ Statische Seite mit gemeinfreien (CC0) Ausmalbildern in 8 Sprachen: https://malk
 - GitHub Pages liefert `docs/` vom Branch `main` aus. Eigene Domain: Datei `CNAME` mit dem Domainnamen anlegen, neu bauen.
 
 Neues Motiv: Eintrag in `katalog.mjs` und in jeder `i18n/<code>.mjs`, `./gen.sh`, Bild ansehen (keine Schrift, keine Farbe, keine echten Marken/Figuren), `node build.mjs`, committen.
+
+## Automatik: neue Bilder nach Nachfrage
+
+Ein systemd-User-Timer (`automatik/systemd/`, verlinkt nach `~/.config/systemd/user/`) startet täglich `automatik/lauf.sh`:
+
+1. `automatik/statistik.mjs` fragt Umami nach Downloads/Drucken seit dem letzten Lauf. Unter 50 passiert nichts.
+2. `claude -p` arbeitet `automatik/auftrag.md` ab: höchstens 5 neue Motive in den gefragtesten Themen, Bilder erzeugen und prüfen, alle Sprachen ergänzen.
+3. Das Skript prüft (keine entfernten Bilder, Übersetzungen vollständig, keine Farbe), baut und öffnet einen Pull Request mit Vorschau. Live erst nach dem Merge.
+
+Läuft in einem eigenen Worktree (`~/.local/share/malkiste/automatik-worktree`), solange ein `auto/`-PR offen ist, wird übersprungen.
+Logs: `~/.local/state/malkiste/logs/`. Von Hand: `automatik/lauf.sh --min 10`. Status: `systemctl --user list-timers malkiste-automatik.timer`.

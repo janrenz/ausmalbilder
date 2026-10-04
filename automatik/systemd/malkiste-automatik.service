@@ -1,0 +1,11 @@
+[Unit]
+Description=Malkiste: neue Ausmalbilder nach Nachfrage (Pull Request)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=%h/code/ausmalbilder/automatik/lauf.sh
+# Bildbau, Claude-Lauf und Build zusammen dauern selten über 30 Minuten
+TimeoutStartSec=90min
+Nice=10
