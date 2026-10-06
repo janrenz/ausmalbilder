@@ -22,6 +22,13 @@ X
 fi
 
 if [ "${1:-}" = "--bilder" ]; then
-  pip install -q --break-system-packages google-genai 2>/dev/null || pip install -q google-genai
+  # Über python3 -m pip: In der Cloud ist python3 ein 3.11 unter /usr/local/bin, das nackte pip gehört aber zu
+  # /usr/bin/python3 (3.13) und installierte am python3 von gen-image.py vorbei. cryptography/cffi braucht 3.11
+  # als eigene Kopie, sonst greift es auf das Debian-Paket für 3.13 zu (_cffi_backend fehlt, Anmeldung bricht ab).
+  python3 -m pip --version >/dev/null 2>&1 || apt-get install -y -qq python3-pip >/dev/null
+  python3 -m pip install -q --break-system-packages google-genai 2>/dev/null || python3 -m pip install -q google-genai
+  python3 -m pip install -q --break-system-packages --ignore-installed cryptography cffi 2>/dev/null ||
+    python3 -m pip install -q --ignore-installed cryptography cffi
+  python3 -c 'import google.genai, cryptography.hazmat.bindings._rust' || { echo "google-genai für $(command -v python3) fehlt"; exit 1; }
 fi
 magick -version | head -1
