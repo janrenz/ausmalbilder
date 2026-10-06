@@ -424,6 +424,7 @@ export default {
     "mandala-herbstlaub": { titel: "Mandala z jesiennych liści", alt: "mandala z liści klonu, żołędzi i jagód", pfad: "mandala-z-jesiennych-lisci" },
     "mandala-geometrisch": { titel: "Mandala geometryczna", alt: "mandala z trójkątów, kół i gwiazd", pfad: "mandala-geometryczna" },
     "mandala-rosen": { titel: "Mandala z różami", alt: "mandala z kwiatów róż i pnączy", pfad: "mandala-z-rozami" },
+    "mandala-kuerbis": { titel: "Mandala z dyniami", alt: "okrągła mandala z dyń, jesiennych liści i pnączy", pfad: "mandala-z-dyniami" },
     "zentangle-elefant": { titel: "Słoń zentangle", alt: "słoń z drobnych wzorów zentangle", pfad: "slon-zentangle" },
     "zentangle-schildkroete": { titel: "Żółw zentangle", alt: "żółw morski z ozdobną skorupą", pfad: "zolw-zentangle" },
     "zentangle-katze": { titel: "Kot zentangle", alt: "siedzący kot z ornamentów", pfad: "kot-zentangle" },

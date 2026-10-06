@@ -1558,6 +1558,11 @@ export default {
       "alt": "Mandala di rose e viticci",
       "pfad": "mandala-rose"
     },
+    "mandala-kuerbis": {
+      "titel": "Mandala di zucche",
+      "alt": "Mandala rotondo di zucche, foglie d'autunno e viticci",
+      "pfad": "mandala-zucche"
+    },
     "zentangle-elefant": {
       "titel": "Elefante zentangle",
       "alt": "Elefante fatto di fini motivi zentangle",

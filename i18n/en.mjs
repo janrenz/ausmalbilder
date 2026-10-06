@@ -1558,6 +1558,11 @@ export default {
       "alt": "Mandala of rose blossoms and tendrils",
       "pfad": "rose-mandala"
     },
+    "mandala-kuerbis": {
+      "titel": "Pumpkin Mandala",
+      "alt": "Round mandala of pumpkins, autumn leaves and vines",
+      "pfad": "pumpkin-mandala"
+    },
     "zentangle-elefant": {
       "titel": "Zentangle Elephant",
       "alt": "Elephant made of fine zentangle patterns",

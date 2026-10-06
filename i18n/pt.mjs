@@ -424,6 +424,7 @@ export default {
     "mandala-herbstlaub": { titel: "Mandala de folhas de outono", alt: "Mandala de folhas de ácer, bolotas e bagas", pfad: "mandala-folhas-outono" },
     "mandala-geometrisch": { titel: "Mandala geométrica", alt: "Mandala de triângulos, círculos e estrelas", pfad: "mandala-geometrica" },
     "mandala-rosen": { titel: "Mandala de rosas", alt: "Mandala de rosas e gavinhas", pfad: "mandala-rosas" },
+    "mandala-kuerbis": { titel: "Mandala de abóboras", alt: "Mandala redonda de abóboras, folhas de outono e gavinhas", pfad: "mandala-aboboras" },
     "zentangle-elefant": { titel: "Elefante zentangle", alt: "Elefante feito de padrões zentangle delicados", pfad: "elefante-zentangle" },
     "zentangle-schildkroete": { titel: "Tartaruga zentangle", alt: "Tartaruga marinha com a carapaça decorada", pfad: "tartaruga-zentangle" },
     "zentangle-katze": { titel: "Gato zentangle", alt: "Gato sentado feito de ornamentos", pfad: "gato-zentangle" },
