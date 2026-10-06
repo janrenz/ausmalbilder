@@ -158,15 +158,22 @@ const url = (p) => `${BASE}/${p}`;
 const fuelle = (s, werte) => s.replace(/\{(\w+)\}/g, (m, k) => (k in werte ? werte[k] : m));
 
 // `varianten`: Funktion L -> Pfad dieser Seite in Sprache L (für hreflang und Sprachwahl)
-// Nur die deutsche Startseite (zugleich x-default): wer von außen kommt, landet in seiner Browsersprache.
-// Kein Speichern auf dem Gerät: wer innerhalb der Seite auf „/“ klickt (Referrer von hier), bleibt.
-// Crawler werden nicht umgeleitet, damit die deutsche Startseite indexiert bleibt.
-const sprachweiche = () => `<script>(function(){var z=${JSON.stringify(Object.fromEntries(sprachen.map((S) => [S.code, url(pfadStart(S))])))};
+// Sprachweiche auf jeder deutschen Seite (zugleich x-default): wer von außen kommt, z. B. über einen Link aus
+// YouTube, landet auf derselben Seite in seiner Browsersprache. `?sprache=auto` blendet dort einen Hinweis ein.
+// Kein Speichern auf dem Gerät: wer innerhalb der Seite navigiert (Referrer von hier), bleibt.
+// Crawler werden nicht umgeleitet, damit die deutschen Seiten indexiert bleiben.
+const sprachweiche = (varianten) => `<script>(function(){var z=${JSON.stringify(Object.fromEntries(sprachen.map((S) => [S.code, url(varianten(S))])))};
 try{if(document.referrer&&new URL(document.referrer).host===location.host)return}catch(e){}
 if(/bot|crawl|spider|slurp|preview|lighthouse|headless/i.test(navigator.userAgent))return;
 var l=navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||""],c="en";
 for(var i=0;i<l.length;i++){var k=String(l[i]).slice(0,2).toLowerCase();if(z[k]){c=k;break}}
-if(c!=="de")location.replace(z[c]+location.hash)})()</script>`;
+if(c!=="de")location.replace(z[c]+"?sprache=auto"+location.hash)})()</script>`;
+// Hinweis nach der Umleitung, mit Link zurück zur deutschen Fassung. Der Parameter verschwindet aus der Adresse,
+// damit ein geteilter Link den Hinweis nicht mitnimmt.
+const sprachhinweis = (L, varianten) => `<div class="sprachhinweis" role="status" hidden><p>${esc(L.ui.umgeleitet)} <a href="${url(varianten(sprachen[0]))}" hreflang="de" lang="de">Auf Deutsch ansehen</a></p><button type="button" aria-label="${esc(L.ui.schliessen)}">✕</button></div>
+<script>(function(){var s=new URLSearchParams(location.search);if(s.get("sprache")!=="auto")return;
+var h=document.currentScript.previousElementSibling;h.hidden=false;h.querySelector("button").onclick=function(){h.hidden=true};
+s.delete("sprache");var q=s.toString();history.replaceState(null,"",location.pathname+(q?"?"+q:"")+location.hash)})()</script>`;
 
 function seite(L, { pfad, titel, beschreibung, inhalt, ogBild, jsonld = [], robots, varianten, skript }) {
   const u = L.ui;
@@ -178,7 +185,7 @@ function seite(L, { pfad, titel, beschreibung, inhalt, ogBild, jsonld = [], robo
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-${L.code === "de" && pfad === "" ? sprachweiche() : ""}
+${L.code === "de" && alternativen.length > 1 ? sprachweiche(varianten) : ""}
 <title>${esc(titel)}</title>
 <meta name="description" content="${esc(beschreibung)}">
 <link rel="canonical" href="${kanon}">
@@ -218,6 +225,7 @@ ${jsonld.map((j) => `<script type="application/ld+json">${JSON.stringify(j)}</sc
     ${alternativen.map(([S, p]) => `<li><a href="${url(p)}" hreflang="${S.code}" lang="${S.code}"${S === L ? ' aria-current="true"' : ""}>${esc(S.sprachname)}</a></li>`).join("")}
   </ul></details>` : ""}
 </header>
+${L.code !== "de" && alternativen.length > 1 ? sprachhinweis(L, varianten) : ""}
 <main id="inhalt">
 ${inhalt}
 </main>

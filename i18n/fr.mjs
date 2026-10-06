@@ -7,6 +7,7 @@ export default {
     "navThemen": "Thèmes",
     "alleThemen": "Tous les thèmes",
     "sprache": "Langue",
+    "umgeleitet": "Cette page s’est ouverte automatiquement en français, selon la langue de ton navigateur.",
     "startTitel": "Coloriages gratuits – à imprimer ou à colorier en ligne",
     "startBeschreibung": "{n} coloriages gratuits à imprimer ou à colorier en ligne : licornes, dinosaures, chevaux, Halloween, mandalas et plus. PDF A4, sans inscription.",
     "heldH1": "Coloriages gratuits à imprimer et à colorier en ligne",

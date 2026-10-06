@@ -11,6 +11,7 @@ export default {
     navThemen: "Themen",
     alleThemen: "Alle Themen",
     sprache: "Sprache",
+    umgeleitet: "Diese Seite wurde automatisch auf Deutsch geöffnet, passend zur Sprache deines Browsers.",
     startTitel: "Kostenlose Ausmalbilder – ausdrucken oder online ausmalen",
     startBeschreibung: "{n} kostenlose Ausmalbilder zum Ausdrucken oder Online-Ausmalen: Einhorn, Dinosaurier, Pferde, Halloween, Mandalas und mehr. A4-PDF, ohne Anmeldung.",
     heldH1: "Kostenlose Ausmalbilder zum Ausdrucken und Online-Ausmalen",

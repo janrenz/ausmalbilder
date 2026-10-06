@@ -7,6 +7,7 @@ export default {
     navThemen: "Temas",
     alleThemen: "Todos los temas",
     sprache: "Idioma",
+    umgeleitet: "Esta página se ha abierto automáticamente en español, según el idioma de tu navegador.",
     startTitel: "Dibujos para colorear gratis – imprimir o colorear online",
     startBeschreibung: "{n} dibujos para colorear gratis para imprimir o colorear online: unicornios, dinosaurios, caballos, Halloween, mandalas y más. PDF A4, sin registro.",
     heldH1: "Dibujos para colorear gratis para imprimir y colorear online",

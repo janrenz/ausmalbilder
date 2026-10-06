@@ -7,6 +7,7 @@ export default {
     "navThemen": "Temi",
     "alleThemen": "Tutti i temi",
     "sprache": "Lingua",
+    "umgeleitet": "Questa pagina si è aperta automaticamente in italiano, in base alla lingua del tuo browser.",
     "startTitel": "Disegni da colorare gratis – da stampare o colorare online",
     "startBeschreibung": "{n} disegni da colorare gratis da stampare o colorare online: unicorni, dinosauri, cavalli, Halloween, mandala e altro. PDF A4, senza registrazione.",
     "heldH1": "Disegni da colorare gratis da stampare e colorare online",

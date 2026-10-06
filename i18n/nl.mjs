@@ -6,6 +6,7 @@ export default {
     navThemen: "Thema's",
     alleThemen: "Alle thema's",
     sprache: "Taal",
+    umgeleitet: "Deze pagina is automatisch in het Nederlands geopend, op basis van de taal van je browser.",
     startTitel: "Gratis kleurplaten – printen of online kleuren",
     startBeschreibung: "{n} gratis kleurplaten om te printen of online te kleuren: eenhoorns, dinosaurussen, paarden, Halloween, mandala’s en meer. A4-pdf, zonder account.",
     heldH1: "Gratis kleurplaten om te printen en online te kleuren",

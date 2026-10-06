@@ -7,6 +7,7 @@ export default {
     "navThemen": "Topics",
     "alleThemen": "All topics",
     "sprache": "Language",
+    "umgeleitet": "This page opened in English automatically, based on your browser language.",
     "startTitel": "Free Colouring Pages – Print or Colour Online",
     "startBeschreibung": "{n} free colouring pages to print or colour online: unicorns, dinosaurs, horses, Halloween, mandalas and more. A4 PDF, no sign-up.",
     "heldH1": "Free Colouring Pages to Print and Colour Online",

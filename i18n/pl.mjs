@@ -8,6 +8,7 @@ export default {
     navThemen: "Tematy",
     alleThemen: "Wszystkie tematy",
     sprache: "Język",
+    umgeleitet: "Ta strona otworzyła się automatycznie po polsku, zgodnie z językiem twojej przeglądarki.",
     startTitel: "Darmowe kolorowanki – do druku lub kolorowania online",
     startBeschreibung: "{n} darmowych kolorowanek do druku lub kolorowania online: jednorożce, dinozaury, konie, Halloween, mandale i więcej. PDF A4, bez rejestracji.",
     heldH1: "Darmowe kolorowanki do druku i kolorowania online",

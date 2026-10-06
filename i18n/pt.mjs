@@ -8,6 +8,7 @@ export default {
     navThemen: "Temas",
     alleThemen: "Todos os temas",
     sprache: "Idioma",
+    umgeleitet: "Esta página abriu automaticamente em português, de acordo com o idioma do teu navegador.",
     startTitel: "Desenhos para colorir grátis – imprimir ou pintar online",
     startBeschreibung: "{n} desenhos para colorir grátis para imprimir ou pintar online: unicórnios, dinossauros, cavalos, Halloween, mandalas e mais. PDF A4, sem registo.",
     heldH1: "Desenhos para colorir grátis para imprimir e pintar online",

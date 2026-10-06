@@ -28,6 +28,14 @@ img { max-width: 100%; height: auto; }
   padding: 14px max(16px, calc((100% - 1160px) / 2)); background: var(--karte);
   border-bottom: 3px dashed var(--rand);
 }
+.sprachhinweis {
+  display: flex; align-items: center; gap: 12px; margin: 0;
+  padding: 10px max(16px, calc((100% - 1160px) / 2)); background: var(--akzent-hell); color: var(--tinte);
+}
+.sprachhinweis[hidden] { display: none; }
+.sprachhinweis p { margin: 0; flex: 1; }
+.sprachhinweis a { font-weight: 700; white-space: nowrap; }
+.sprachhinweis button { background: none; border: 0; color: inherit; font: inherit; font-size: 1.1rem; cursor: pointer; padding: 4px 8px; }
 .marke { display: block; line-height: 0; text-decoration: none; }
 .marke svg { display: block; height: 42px; width: auto; }
 /* Beim Überfahren malt sich das M fertig aus: die zusätzlichen Striche im Logo zeichnen sich nacheinander */
@@ -91,7 +99,7 @@ main { max-width: 1160px; margin: 0 auto; padding: 0 16px 48px; }
 @media print {
   @page { size: A4; margin: 10mm; }
   body { background: #fff; }
-  .kopf, .fuss, .krumen, .info, section, .skip { display: none !important; }
+  .kopf, .fuss, .krumen, .info, section, .skip, .sprachhinweis { display: none !important; }
   main { padding: 0; max-width: none; }
   .bild { display: block; }
   .malbild { border: 0; width: 100%; height: auto; max-height: 265mm; object-fit: contain; }
