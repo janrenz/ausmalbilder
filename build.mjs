@@ -15,7 +15,7 @@ const NAME = "Malkiste";
 const OUT = "docs";
 const SRC = "src/bilder";
 const HEUTE = new Date().toISOString().slice(0, 10);
-const CODES = ["de", "en", "fr", "es", "it", "nl", "pl", "pt"];
+const CODES = ["de", "en", "fr", "es", "it", "nl", "pl", "pt", "sv", "da"];
 // Reichweitenmessung (Umami, selbst gehostet, cookielos). Ohne umami.json wird kein Skript eingebunden.
 const UMAMI = existsSync("umami.json") ? JSON.parse(readFileSync("umami.json", "utf8")) : null;
 

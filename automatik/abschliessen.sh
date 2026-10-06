@@ -24,7 +24,7 @@ echo "Neue Bilder: ${#NEU[@]} (${NEU[*]:-})"
 for s in "${NEU[@]}"; do [ -f "src/bilder/$s.png" ] || fehler "Bild $s fehlt."; done
 # Bunte Originale von Bildern, die Claude wieder verworfen hat, nicht mit einchecken
 for f in src/farben/*.jpg; do [ -e "$f" ] && ! grep -qxF "$(basename "$f" .jpg)" .pruef/nachher.txt && rm -f "$f"; done
-for l in en fr es it nl pl pt; do node i18n/pruefe.mjs "$l" || fehler "Übersetzung $l unvollständig."; done
+for l in en fr es it nl pl pt sv da; do node i18n/pruefe.mjs "$l" || fehler "Übersetzung $l unvollständig."; done
 # Unabhängige Prüfung (automatik/qs.md): jedes neue Bild braucht ein "ok": true in .pruef/qs.json
 for s in "${NEU[@]}"; do
   node -e 'const q=JSON.parse(require("fs").readFileSync(".pruef/qs.json","utf8"));const e=q.find(x=>x.slug===process.argv[1]);process.exit(e&&e.ok===true?0:1)' "$s" 2>/dev/null \
