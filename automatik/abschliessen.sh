@@ -22,6 +22,8 @@ echo "Neue Bilder: ${#NEU[@]} (${NEU[*]:-})"
 [ "$WEG" -eq 0 ] || fehler "Claude hat bestehende Bilder entfernt."
 [ ${#NEU[@]} -le $MAX_BILDER ] || fehler "${#NEU[@]} neue Bilder statt höchstens $MAX_BILDER."
 for s in "${NEU[@]}"; do [ -f "src/bilder/$s.png" ] || fehler "Bild $s fehlt."; done
+# Bunte Originale von Bildern, die Claude wieder verworfen hat, nicht mit einchecken
+for f in src/farben/*.jpg; do [ -e "$f" ] && ! grep -qxF "$(basename "$f" .jpg)" .pruef/nachher.txt && rm -f "$f"; done
 for l in en fr es it nl pl pt; do node i18n/pruefe.mjs "$l" || fehler "Übersetzung $l unvollständig."; done
 # Unabhängige Prüfung (automatik/qs.md): jedes neue Bild braucht ein "ok": true in .pruef/qs.json
 for s in "${NEU[@]}"; do

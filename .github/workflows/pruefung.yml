@@ -40,7 +40,7 @@ jobs:
       - name: Nur Inhalte geändert?
         run: |
           andere=$(git diff --name-only "origin/${{ github.base_ref }}"...HEAD \
-            | grep -vE '^(katalog\.mjs|i18n/[a-z]{2}\.mjs|src/bilder/[a-z0-9-]+\.png|docs/.*|automatik/stand\.json)$' || true)
+            | grep -vE '^(katalog\.mjs|i18n/[a-z]{2}\.mjs|src/bilder/[a-z0-9-]+\.png|src/farben/[a-z0-9-]+\.jpg|docs/.*|automatik/stand\.json)$' || true)
           if [ -n "$andere" ]; then
             echo "Kein automatisches Mergen, der PR ändert auch:"; echo "$andere"; exit 1
           fi

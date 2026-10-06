@@ -1,5 +1,7 @@
 // Erzeugt ein YouTube-Short (1080×1920, 30 fps, ~30 s) zu einem Motiv: Das Ausmalbild füllt sich Fläche für
 // Fläche wie mit dem Farbeimer beim Online-Ausmalen, am Ende ersetzt ein englischer Hinweis auf malkiste.eu den Titel.
+// Farben: aus dem bunten Original src/farben/<slug>.jpg (gen.sh), aus dem die Strichzeichnung entstanden ist –
+// je Fläche ihre Farbe dort. Ältere Motive ohne buntes Original bekommen Farben aus festen Paletten.
 // Ton: ruhige Akkorde und ein leiser Ton je gefüllter Fläche, im Skript erzeugt (keine fremde Musik, keine Lizenzfrage).
 // Braucht nur ImageMagick (magick), rsvg-convert, ffmpeg und eine fette Schrift (fc-match "Noto Sans:bold").
 // Aufruf: node automatik/youtube/video.mjs <slug> [ausgabe.mp4]
@@ -28,6 +30,33 @@ const PALETTEN = [
   ["#264653", "#2a9d8f", "#8ab17d", "#e9c46a", "#f4a261"],
   ["#3d405b", "#e07a5f", "#81b29a", "#f2cc8f", "#f4f1de"],
 ];
+
+// Farbe je Fläche aus dem bunten Original: Median der Pixel, ohne die schwarzen Linien des Originals. Ist eine große
+// Fläche dort deutlich mehrfarbig (Lücke in einer Linie, durch die der Hintergrund ins Motiv läuft), bekommt sie
+// die Farben des Originals Pixel für Pixel.
+function farbenAusOriginal(liste, rgb) {
+  const DUNKEL = 45;
+  for (const f of liste) {
+    const hist = [new Uint32Array(256), new Uint32Array(256), new Uint32Array(256)];
+    let n = 0;
+    for (const p of f.pixel) {
+      const o = p * 3;
+      if (Math.max(rgb[o], rgb[o + 1], rgb[o + 2]) < DUNKEL) continue;
+      for (let k = 0; k < 3; k++) hist[k][rgb[o + k]]++;
+      n++;
+    }
+    if (n < 5) { f.farbe = [...rgb.subarray(f.pixel[0] * 3, f.pixel[0] * 3 + 3)]; continue; } // im Original fast nur Linie
+    f.farbe = hist.map((h) => { let s = 0, i = 0; for (; i < 255 && (s += h[i]) * 2 < n; i++); return i; });
+    if (f.anzahl > BILD_B * BILD_H * 0.01) {
+      let weit = 0;
+      for (const p of f.pixel) {
+        const o = p * 3;
+        if (Math.hypot(rgb[o] - f.farbe[0], rgb[o + 1] - f.farbe[1], rgb[o + 2] - f.farbe[2]) > 60) weit++;
+      }
+      if (weit > 0.2 * f.anzahl) f.jePixel = true;
+    }
+  }
+}
 
 const hex = (h) => [1, 3, 5].map((i) => parseInt(h.slice(i, i + 2), 16));
 const roh = (args) => execFileSync("magick", args, { maxBuffer: 64 << 20 });
@@ -132,6 +161,8 @@ export async function video(slug, ziel) {
       "-depth", "8", join(tmp, "grund.png")]);
     const grund = roh([join(tmp, "grund.png"), "rgb:-"]);
     const grau = roh([join(tmp, "linien.png"), "-depth", "8", "gray:-"]);
+    const original = join(WURZEL, "src/farben", `${slug}.jpg`);
+    const rgb = existsSync(original) ? roh([original, "-resize", `${BILD_B}x${BILD_H}!`, "-depth", "8", "rgb:-"]) : null;
 
     // Schlusstafel: ersetzt oben den Titel, das Bild bleibt frei. Englisch, weil die Shorts international laufen
     // und malkiste.eu Besucher in ihre Sprache weiterleitet.
@@ -145,11 +176,12 @@ export async function video(slug, ziel) {
     const rnd = zufall(slug);
     // Eine Fläche, die alle vier Bildränder berührt, ist der Papierrand um den Bildrahmen: bleibt weiß
     const liste = flaechen(grau).filter((f) => !f.rand);
-    const palette = m.stil === "erwachsen" ? PALETTEN[Math.floor(rnd() * PALETTEN.length)] : null;
+    const palette = !rgb && m.stil === "erwachsen" ? PALETTEN[Math.floor(rnd() * PALETTEN.length)] : null;
     const waehle = (l) => hex(l[Math.floor(rnd() * l.length)]);
+    if (rgb) farbenAusOriginal(liste, rgb);
     for (const f of liste) {
       const gross = f.anzahl > BILD_B * BILD_H * 0.02;
-      f.farbe = palette ? waehle(palette) : waehle(gross ? HELL : KRAEFTIG);
+      if (!rgb) f.farbe = palette ? waehle(palette) : waehle(gross ? HELL : KRAEFTIG);
       f.schluessel = f.cy / BILD_H + f.cx / BILD_B * 0.25 + (rnd() - 0.5) * 0.15 - (gross ? 0.05 : 0);
     }
     liste.sort((a, b) => a.schluessel - b.schluessel);
@@ -172,10 +204,11 @@ export async function video(slug, ziel) {
       const t = i / MALEN, ziel = summe * (t * t * (3 - 2 * t));
       for (; naechste < liste.length && (gefaerbt < ziel || i === MALEN); naechste++) {
         gefaerbt += liste[naechste].anzahl;
-        const { pixel, farbe } = liste[naechste];
+        const { pixel, farbe, jePixel } = liste[naechste];
         for (const p of pixel) {
           const g = grau[p] / 255, o = ((BILD_Y + ((p / BILD_B) | 0)) * B + BILD_X + (p % BILD_B)) * 3;
-          bild[o] = farbe[0] * g; bild[o + 1] = farbe[1] * g; bild[o + 2] = farbe[2] * g;
+          const c = jePixel && Math.max(rgb[p * 3], rgb[p * 3 + 1], rgb[p * 3 + 2]) >= 45 ? rgb.subarray(p * 3, p * 3 + 3) : farbe;
+          bild[o] = c[0] * g; bild[o + 1] = c[1] * g; bild[o + 2] = c[2] * g;
         }
       }
       await schreibe(bild);
@@ -198,7 +231,7 @@ export async function video(slug, ziel) {
     writeFileSync(tonDatei, ton(toene, gesamt, INTRO + MALEN + HALTEN, rnd));
     execFileSync("ffmpeg", ["-v", "error", "-y", "-i", nurBild, "-f", "f32le", "-ar", String(RATE), "-ac", "2", "-i", tonDatei,
       "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-c:a", "aac", "-b:a", "128k", "-shortest", "-movflags", "+faststart", ziel]);
-    return { flaechen: liste.length, sekunden: (INTRO + MALEN + HALTEN + ENDE) / FPS };
+    return { flaechen: liste.length, original: !!rgb, sekunden: (INTRO + MALEN + HALTEN + ENDE) / FPS };
   } finally {
     rmSync(tmp, { recursive: true, force: true });
   }
@@ -208,5 +241,5 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const [slug, ziel = `${process.argv[2]}.mp4`] = process.argv.slice(2);
   if (!slug) { console.error("Aufruf: node automatik/youtube/video.mjs <slug> [ausgabe.mp4]"); process.exit(2); }
   const r = await video(slug, ziel);
-  console.log(`${ziel}: ${r.sekunden} s, ${r.flaechen} Flächen`);
+  console.log(`${ziel}: ${r.sekunden} s, ${r.flaechen} Flächen, Farben ${r.original ? "aus src/farben" : "aus Paletten"}`);
 }
