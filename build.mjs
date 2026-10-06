@@ -15,7 +15,7 @@ const NAME = "Malkiste";
 const OUT = "docs";
 const SRC = "src/bilder";
 const HEUTE = new Date().toISOString().slice(0, 10);
-const CODES = ["de", "en", "fr", "es", "it", "nl", "pl", "pt", "sv", "da"];
+const CODES = ["de", "en", "fr", "es", "it", "nl", "pl", "pt", "sv", "da", "no"];
 // Reichweitenmessung (Umami, selbst gehostet, cookielos). Ohne umami.json wird kein Skript eingebunden.
 const UMAMI = existsSync("umami.json") ? JSON.parse(readFileSync("umami.json", "utf8")) : null;
 
@@ -161,12 +161,13 @@ const fuelle = (s, werte) => s.replace(/\{(\w+)\}/g, (m, k) => (k in werte ? wer
 // Sprachweiche auf jeder deutschen Seite (zugleich x-default): wer von außen kommt, z. B. über einen Link aus
 // YouTube, landet auf derselben Seite in seiner Browsersprache. `?sprache=auto` blendet dort einen Hinweis ein.
 // Kein Speichern auf dem Gerät: wer innerhalb der Seite navigiert (Referrer von hier), bleibt.
+// Norwegisch melden Browser meist als nb oder nn, die Seite führt es unter no.
 // Crawler werden nicht umgeleitet, damit die deutschen Seiten indexiert bleiben.
 const sprachweiche = (varianten) => `<script>(function(){var z=${JSON.stringify(Object.fromEntries(sprachen.map((S) => [S.code, url(varianten(S))])))};
 try{if(document.referrer&&new URL(document.referrer).host===location.host)return}catch(e){}
 if(/bot|crawl|spider|slurp|preview|lighthouse|headless/i.test(navigator.userAgent))return;
 var l=navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||""],c="en";
-for(var i=0;i<l.length;i++){var k=String(l[i]).slice(0,2).toLowerCase();if(z[k]){c=k;break}}
+for(var i=0;i<l.length;i++){var k=String(l[i]).slice(0,2).toLowerCase();if(k==="nb"||k==="nn")k="no";if(z[k]){c=k;break}}
 if(c!=="de")location.replace(z[c]+"?sprache=auto"+location.hash)})()</script>`;
 // Hinweis nach der Umleitung, mit Link zurück zur deutschen Fassung. Der Parameter verschwindet aus der Adresse,
 // damit ein geteilter Link den Hinweis nicht mitnimmt.

@@ -1,13 +1,13 @@
 # Auftrag: neue Ausmalbilder nach Nachfrage
 
-Du arbeitest im Repo der Seite **Malkiste** (https://malkiste.eu), kostenlose CC0-Ausmalbilder in 10 Sprachen.
+Du arbeitest im Repo der Seite **Malkiste** (https://malkiste.eu), kostenlose CC0-Ausmalbilder in 11 Sprachen.
 Ein Skript hat dich gestartet; Git, Build und Pull Request übernimmt es nach dir. **Du committest nicht, pushst nicht und baust nicht.**
 
 ## Eingaben
 
 - `.pruef/statistik.json` – Umami-Auswertung seit dem letzten Lauf: Downloads/Drucke pro Bild (`bilder`), pro Thema (`themen`), pro Sprache (`sprachen`), meistbesuchte Seiten, Herkunft.
 - `katalog.mjs` – alle Themen und Bilder (deutsche Texte, englische Motiv-Prompts, `stil`).
-- `i18n/*.mjs` – Übersetzungen (en, fr, es, it, nl, pl, pt, sv, da) mit eigenen URL-Pfaden.
+- `i18n/*.mjs` – Übersetzungen (en, fr, es, it, nl, pl, pt, sv, da, no) mit eigenen URL-Pfaden.
 
 ## Ziel
 
@@ -28,7 +28,7 @@ Steht am Ende dieses Auftrags ein **Anlass für diesen Lauf**, legst du dieses T
 - Für kleine Kinder (kein `stil`), außer die Ideen verlangen Details.
 - Keine Flaggen in Farbe (die Bilder sind ohnehin schwarz-weiß), keine Wappen, Hoheitszeichen, Parteien oder Personen des öffentlichen Lebens.
 - Landkarten und Umrisse (z. B. Deutschlandkarte) müssen **erkennbar stimmen**. Vergleiche mit deinem Wissen über die echte Form. Ist der Umriss nach 3 Versuchen verzerrt, lass das Bild weg.
-- Übersetzungen wie bei jedem neuen Thema in allen neun Sprachen, mit übersetzten `pfad`-Werten.
+- Übersetzungen wie bei jedem neuen Thema in allen zehn Sprachen, mit übersetzten `pfad`-Werten.
 - In der Zusammenfassung ein eigener Punkt **Anlass-Thema** mit den Bildern und was verworfen wurde.
 
 ## Umsetzung
@@ -49,8 +49,8 @@ Erlaubt sind nur diese Befehle, **genau so, ohne Pipes, Umleitungen oder `&&`**:
    - der Stil nicht zum Thema passt (kleine Kinder: dicke Linien, große Flächen; `detail`: feiner und realistischer; `erwachsen`: sehr fein).
    Höchstens 3 Versuche pro Bild; klappt es dann nicht, nimm das Bild wieder aus dem Katalog.
    Wenn du einen Prompt änderst, passe auch `alt` an das an, was das Bild **tatsächlich** zeigt.
-4. **Übersetzen:** Für jedes neue Bild (und ggf. Thema) Einträge in **allen neun** `i18n/<code>.mjs` ergänzen: `bilder.<slug> = { titel, alt, pfad }` bzw. `themen.<slug> = { name, titel, intro, pfad }`. Natürliche Sprache, wie eine muttersprachliche Redakteurin für Eltern schreiben würde; `pfad` ist ein kurzer URL-Slug in der jeweiligen Sprache (nur a–z, 0–9, Bindestriche, ohne Akzente), eindeutig innerhalb des Themas. Halte dich an die Schreibweise der jeweiligen Datei.
-5. **Kontrolle:** `node i18n/pruefe.mjs <code>` für alle neun Sprachen muss „ok“ melden.
+4. **Übersetzen:** Für jedes neue Bild (und ggf. Thema) Einträge in **allen zehn** `i18n/<code>.mjs` ergänzen: `bilder.<slug> = { titel, alt, pfad }` bzw. `themen.<slug> = { name, titel, intro, pfad }`. Natürliche Sprache, wie eine muttersprachliche Redakteurin für Eltern schreiben würde; `pfad` ist ein kurzer URL-Slug in der jeweiligen Sprache (nur a–z, 0–9, Bindestriche, ohne Akzente), eindeutig innerhalb des Themas. Halte dich an die Schreibweise der jeweiligen Datei.
+5. **Kontrolle:** `node i18n/pruefe.mjs <code>` für alle zehn Sprachen muss „ok“ melden.
 
 ## Abschluss
 
