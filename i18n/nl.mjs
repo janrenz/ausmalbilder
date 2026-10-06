@@ -422,6 +422,7 @@ export default {
     "mandala-herbstlaub": { titel: "Herfstbladmandala", alt: "Mandala van esdoornbladeren, eikels en bessen", pfad: "herfstbladmandala" },
     "mandala-geometrisch": { titel: "Geometrische mandala", alt: "Mandala van driehoeken, cirkels en sterren", pfad: "geometrische-mandala" },
     "mandala-rosen": { titel: "Rozenmandala", alt: "Mandala van rozen en ranken", pfad: "rozenmandala" },
+    "mandala-kuerbis": { titel: "Pompoenmandala", alt: "Ronde mandala van pompoenen, herfstbladeren en ranken", pfad: "pompoenmandala" },
     "zentangle-elefant": { titel: "Zentangle-olifant", alt: "Olifant van fijne zentangle-patronen", pfad: "zentangle-olifant" },
     "zentangle-schildkroete": { titel: "Zentangle-schildpad", alt: "Zeeschildpad met een versierd schild", pfad: "zentangle-schildpad" },
     "zentangle-katze": { titel: "Zentangle-kat", alt: "Zittende kat van ornamenten", pfad: "zentangle-kat" },

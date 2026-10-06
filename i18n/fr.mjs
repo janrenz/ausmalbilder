@@ -1558,6 +1558,11 @@ export default {
       "alt": "Mandala de roses et de vrilles",
       "pfad": "mandala-roses"
     },
+    "mandala-kuerbis": {
+      "titel": "Mandala citrouilles",
+      "alt": "Mandala rond de citrouilles, de feuilles d'automne et de vrilles",
+      "pfad": "mandala-citrouilles"
+    },
     "zentangle-elefant": {
       "titel": "Éléphant zentangle",
       "alt": "Un éléphant composé de motifs zentangle fins",
