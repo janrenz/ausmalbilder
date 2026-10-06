@@ -2,12 +2,13 @@
 // Fläche wie mit dem Farbeimer beim Online-Ausmalen, am Ende ersetzt ein englischer Hinweis auf malkiste.eu den Titel.
 // Farben: aus dem bunten Original src/farben/<slug>.jpg (gen.sh), aus dem die Strichzeichnung entstanden ist –
 // je Fläche ihre Farbe dort. Ältere Motive ohne buntes Original bekommen Farben aus festen Paletten.
-// Ton: ruhige Akkorde und ein leiser Ton je gefüllter Fläche, im Skript erzeugt (keine fremde Musik, keine Lizenzfrage).
+// Ton: ein Stück aus der YouTube-Audiobibliothek (siehe musikStueck). Ohne den privaten Musikordner ruhige Akkorde
+// und ein leiser Ton je gefüllter Fläche, im Skript erzeugt.
 // Braucht nur ImageMagick (magick), rsvg-convert, ffmpeg und eine fette Schrift (fc-match "Noto Sans:bold").
 // Aufruf: node automatik/youtube/video.mjs <slug> [ausgabe.mp4]
 import { execFileSync, spawn } from "node:child_process";
-import { mkdtempSync, rmSync, existsSync, writeFileSync } from "node:fs";
-import { tmpdir } from "node:os";
+import { mkdtempSync, rmSync, existsSync, writeFileSync, readFileSync } from "node:fs";
+import { tmpdir, homedir } from "node:os";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { motiv } from "./angaben.mjs";
@@ -93,6 +94,22 @@ function flaechen(grau) {
   for (let p = 0; p < n; p++) if (marke[p] >= 0) alle[pos[marke[p]]++] = p;
   for (const f of liste) f.pixel = alle.subarray(start[f.id], start[f.id + 1]);
   return liste;
+}
+
+// Musik aus der YouTube-Audiobibliothek. Die Lizenz erlaubt sie im Video, aber nicht die Weitergabe der Dateien, deshalb
+// liegen sie nicht hier, sondern im privaten Repo janrenz/malkiste-videos (musik/ mit stuecke.json). Ordner über
+// MALKISTE_MUSIK, Standard ~/code/malkiste-videos/musik. Genommen werden nur geprüfte Stücke ohne Namensnennungspflicht;
+// jedes Motiv bekommt fest eines (über den slug). Ohne Ordner: null, dann erzeugt ton() die Musik.
+export function musikStueck(slug) {
+  const ordner = process.env.MALKISTE_MUSIK || join(homedir(), "code/malkiste-videos/musik");
+  if (!existsSync(join(ordner, "stuecke.json"))) return null;
+  const stuecke = JSON.parse(readFileSync(join(ordner, "stuecke.json"), "utf8")).stuecke
+    .filter((s) => !s.nennung && !/prüfen/i.test(s.lizenz || "") && existsSync(join(ordner, s.datei)));
+  if (!stuecke.length) return null;
+  let h = 0;
+  for (const c of slug) h = (h * 31 + c.charCodeAt(0)) >>> 0;
+  const s = stuecke[h % stuecke.length];
+  return { ...s, pfad: join(ordner, s.datei) };
 }
 
 // Ton: weiche Akkordflächen (C-Dur-Umfeld, je 4 s), dazu ein kurzer, glockenartiger Ton aus der C-Dur-Pentatonik,
@@ -228,10 +245,19 @@ export async function video(slug, ziel) {
     ff.stdin.end();
     await fertig;
     const gesamt = INTRO + MALEN + HALTEN + ENDE;
-    writeFileSync(tonDatei, ton(toene, gesamt, INTRO + MALEN + HALTEN, rnd));
-    execFileSync("ffmpeg", ["-v", "error", "-y", "-i", nurBild, "-f", "f32le", "-ar", String(RATE), "-ac", "2", "-i", tonDatei,
-      "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-c:a", "aac", "-b:a", "128k", "-shortest", "-movflags", "+faststart", ziel]);
-    return { flaechen: liste.length, original: !!rgb, sekunden: (INTRO + MALEN + HALTEN + ENDE) / FPS };
+    const musik = musikStueck(slug), dauer = gesamt / FPS;
+    if (musik) {
+      // Weich ein- und ausblenden, Lautheit auf YouTube-Niveau (-14 LUFS)
+      execFileSync("ffmpeg", ["-v", "error", "-y", "-i", nurBild, "-ss", String(musik.start || 0), "-i", musik.pfad,
+        "-map", "0:v", "-map", "1:a", "-c:v", "copy",
+        "-af", `afade=t=in:d=0.8,afade=t=out:st=${(dauer - 3).toFixed(2)}:d=3,loudnorm=I=-14:TP=-1.5`,
+        "-c:a", "aac", "-b:a", "192k", "-t", dauer.toFixed(2), "-movflags", "+faststart", ziel]);
+    } else {
+      writeFileSync(tonDatei, ton(toene, gesamt, INTRO + MALEN + HALTEN, rnd));
+      execFileSync("ffmpeg", ["-v", "error", "-y", "-i", nurBild, "-f", "f32le", "-ar", String(RATE), "-ac", "2", "-i", tonDatei,
+        "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-c:a", "aac", "-b:a", "128k", "-shortest", "-movflags", "+faststart", ziel]);
+    }
+    return { flaechen: liste.length, original: !!rgb, musik: musik ? `${musik.titel} – ${musik.kuenstler}` : null, sekunden: dauer };
   } finally {
     rmSync(tmp, { recursive: true, force: true });
   }
@@ -241,5 +267,5 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const [slug, ziel = `${process.argv[2]}.mp4`] = process.argv.slice(2);
   if (!slug) { console.error("Aufruf: node automatik/youtube/video.mjs <slug> [ausgabe.mp4]"); process.exit(2); }
   const r = await video(slug, ziel);
-  console.log(`${ziel}: ${r.sekunden} s, ${r.flaechen} Flächen, Farben ${r.original ? "aus src/farben" : "aus Paletten"}`);
+  console.log(`${ziel}: ${r.sekunden} s, ${r.flaechen} Flächen, Farben ${r.original ? "aus src/farben" : "aus Paletten"}, Musik ${r.musik || "erzeugt"}`);
 }

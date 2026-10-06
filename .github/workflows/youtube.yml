@@ -37,6 +37,16 @@ jobs:
         run: |
           sudo bash automatik/werkzeuge.sh
           sudo apt-get install -y -qq ffmpeg fonts-noto-core >/dev/null
+      - name: Musik (YouTube-Audiobibliothek, privat)
+        # Die Stücke liegen in janrenz/malkiste-videos, weil ihre Lizenz die Weitergabe der Dateien nicht erlaubt.
+        # Ohne das Secret MALKISTE_VIDEOS_TOKEN (Lesezugriff auf dieses Repo) erzeugt video.mjs die Musik selbst.
+        env:
+          TOKEN: ${{ secrets.MALKISTE_VIDEOS_TOKEN }}
+        run: |
+          [ -n "$TOKEN" ] || { echo "Kein MALKISTE_VIDEOS_TOKEN, Musik wird im Skript erzeugt."; exit 0; }
+          git clone -q --depth 1 --filter=blob:none --sparse "https://x-access-token:$TOKEN@github.com/janrenz/malkiste-videos.git" "$RUNNER_TEMP/malkiste-videos"
+          git -C "$RUNNER_TEMP/malkiste-videos" sparse-checkout set musik
+          echo "MALKISTE_MUSIK=$RUNNER_TEMP/malkiste-videos/musik" >> "$GITHUB_ENV"
       - name: Video erzeugen und hochladen
         env:
           YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
