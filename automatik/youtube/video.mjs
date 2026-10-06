@@ -1,9 +1,10 @@
-// Erzeugt ein YouTube-Short (1080×1920, 30 fps, ~19 s) zu einem Motiv: Das Ausmalbild füllt sich Fläche für
-// Fläche wie mit dem Farbeimer beim Online-Ausmalen, am Ende ein Hinweis auf malkiste.eu.
+// Erzeugt ein YouTube-Short (1080×1920, 30 fps, ~30 s) zu einem Motiv: Das Ausmalbild füllt sich Fläche für
+// Fläche wie mit dem Farbeimer beim Online-Ausmalen, am Ende ersetzt ein englischer Hinweis auf malkiste.eu den Titel.
+// Ton: ruhige Akkorde und ein leiser Ton je gefüllter Fläche, im Skript erzeugt (keine fremde Musik, keine Lizenzfrage).
 // Braucht nur ImageMagick (magick), rsvg-convert, ffmpeg und eine fette Schrift (fc-match "Noto Sans:bold").
 // Aufruf: node automatik/youtube/video.mjs <slug> [ausgabe.mp4]
 import { execFileSync, spawn } from "node:child_process";
-import { mkdtempSync, rmSync, existsSync } from "node:fs";
+import { mkdtempSync, rmSync, existsSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -13,7 +14,8 @@ const WURZEL = join(dirname(fileURLToPath(import.meta.url)), "../..");
 const B = 1080, H = 1920, FPS = 30;
 const BILD_B = 880, BILD_H = 1179, BILD_X = (B - BILD_B) / 2, BILD_Y = 380; // unten bleibt Platz für die Shorts-Leiste
 const PAPIER = "#fff9f1", TINTE = "#2a2320", AKZENT = "#c4520f";
-const INTRO = 30, MALEN = 330, HALTEN = 60, ENDE = 150, EINBLENDEN = 12;
+const INTRO = 45, MALEN = 600, HALTEN = 90, ENDE = 165, EINBLENDEN = 15;
+const RATE = 48000;
 
 // Kräftige Farben für kleine Flächen, helle für große (Himmel, Wiese), damit das Bild ruhig bleibt
 const KRAEFTIG = ["#ff8a3d", "#ffc94a", "#7cc96b", "#4fb3d9", "#e86a92", "#9b7ede", "#f25f4c", "#3fbf9f", "#ffa8c5", "#b5d86a", "#6c9cf0", "#ffb36b"];
@@ -64,6 +66,52 @@ function flaechen(grau) {
   return liste;
 }
 
+// Ton: weiche Akkordflächen (C-Dur-Umfeld, je 4 s), dazu ein kurzer, glockenartiger Ton aus der C-Dur-Pentatonik,
+// wenn sich Flächen füllen (höchstens alle 0,2 s, Tonhöhe wandert zufällig), und ein Dreiklang, wenn die Tafel kommt.
+function ton(toene, frames, endeFrame, rnd) {
+  const n = Math.ceil(frames / FPS * RATE), l = new Float32Array(n), r = new Float32Array(n);
+  const hz = (m) => 440 * 2 ** ((m - 69) / 12);
+  const AKKORDE = [[48, 55, 64, 71], [45, 52, 60, 67], [41, 48, 57, 64], [43, 50, 59, 62]]; // Cmaj7, Am7, Fmaj7, G
+  const TAKT = 4 * RATE;
+  for (let i = 0; i < n; i++) {
+    const a = AKKORDE[Math.floor(i / TAKT) % 4], b = AKKORDE[(Math.floor(i / TAKT) + 1) % 4];
+    const im = (i % TAKT) / TAKT, ueber = im > 0.85 ? (im - 0.85) / 0.15 : 0; // weicher Übergang zum nächsten Akkord
+    let s = 0;
+    for (let k = 0; k < 4; k++) {
+      const f = hz(a[k]) * (1 - ueber) + hz(b[k]) * ueber, t = i / RATE;
+      s += (Math.sin(2 * Math.PI * f * t) + 0.25 * Math.sin(4 * Math.PI * f * t)) * (0.6 + 0.4 * Math.sin(2 * Math.PI * (0.1 + k * 0.03) * t));
+    }
+    s *= 0.035;
+    l[i] += s; r[i] += s;
+  }
+  const PENTA = [60, 62, 64, 67, 69, 72, 74, 76, 79, 81];
+  const glocke = (start, midi, laut, pan) => {
+    const f = hz(midi), len = Math.floor(1.6 * RATE);
+    for (let j = 0; j < len && start + j < n; j++) {
+      const t = j / RATE, huelle = Math.min(1, t * 200) * Math.exp(-t * 3.2);
+      const s = laut * huelle * (Math.sin(2 * Math.PI * f * t) + 0.3 * Math.sin(2 * Math.PI * f * 2.76 * t) * Math.exp(-t * 6));
+      l[start + j] += s * (1 - pan); r[start + j] += s * pan;
+    }
+  };
+  let stufe = 4, zuletzt = -1e9;
+  for (const fr of toene) {
+    const start = Math.floor(fr / FPS * RATE);
+    if (start - zuletzt < 0.2 * RATE) continue;
+    zuletzt = start;
+    stufe = Math.max(0, Math.min(PENTA.length - 1, stufe + Math.floor(rnd() * 5) - 2));
+    glocke(start, PENTA[stufe], 0.09 + rnd() * 0.04, 0.3 + rnd() * 0.4);
+  }
+  const e = Math.floor(endeFrame / FPS * RATE);
+  [72, 76, 79, 84].forEach((m, k) => glocke(e + k * Math.floor(0.12 * RATE), m, 0.14, 0.35 + k * 0.1));
+  // Ein- und Ausblenden, Spitzen begrenzen
+  const out = new Float32Array(n * 2), ein = 0.8 * RATE, aus = 1.5 * RATE;
+  for (let i = 0; i < n; i++) {
+    const g = Math.min(1, i / ein, (n - i) / aus);
+    out[2 * i] = Math.tanh(l[i] * g * 2.4); out[2 * i + 1] = Math.tanh(r[i] * g * 2.4);
+  }
+  return Buffer.from(out.buffer);
+}
+
 export async function video(slug, ziel) {
   const m = await motiv(slug);
   const quelle = join(WURZEL, "src/bilder", `${slug}.png`);
@@ -85,12 +133,13 @@ export async function video(slug, ziel) {
     const grund = roh([join(tmp, "grund.png"), "rgb:-"]);
     const grau = roh([join(tmp, "linien.png"), "-depth", "8", "gray:-"]);
 
-    // Schlusstafel (RGBA über dem Bild)
-    roh(["-size", "900x330", "xc:none", "-fill", AKZENT, "-draw", "roundrectangle 0,0 899,329 48,48",
-      "-fill", "white", "-font", font, "-gravity", "north", "-pointsize", "54", "-annotate", "+0+52", "Kostenlos ausdrucken\noder online ausmalen",
-      "-pointsize", "76", "-annotate", "+0+200", "malkiste.eu", "-depth", "8", join(tmp, "ende.png")]);
+    // Schlusstafel: ersetzt oben den Titel, das Bild bleibt frei. Englisch, weil die Shorts international laufen
+    // und malkiste.eu Besucher in ihre Sprache weiterleitet.
+    const EW = B, EH = 300, EX = 0, EY = 40;
+    roh(["-size", `${EW}x${EH}`, `xc:${PAPIER}`, "-fill", AKZENT, "-draw", `roundrectangle 70,20 ${EW - 71},${EH - 21} 48,48`,
+      "-fill", "white", "-font", font, "-gravity", "north", "-pointsize", "52", "-annotate", "+0+58", "Free to print or colour online",
+      "-pointsize", "104", "-annotate", "+0+124", "malkiste.eu", "-alpha", "set", "-depth", "8", join(tmp, "ende.png")]);
     const ende = roh([join(tmp, "ende.png"), "rgba:-"]);
-    const EX = (B - 900) / 2, EY = BILD_Y + Math.floor((BILD_H - 330) / 2);
 
     // Reihenfolge: von oben nach unten mit etwas Zufall, große Flächen zuerst in ihrer Zeile
     const rnd = zufall(slug);
@@ -106,9 +155,9 @@ export async function video(slug, ziel) {
     liste.sort((a, b) => a.schluessel - b.schluessel);
 
     const bild = Buffer.from(grund);
+    const nurBild = join(tmp, "bild.mp4"), tonDatei = join(tmp, "ton.f32");
     const ff = spawn("ffmpeg", ["-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", `${B}x${H}`, "-r", String(FPS), "-i", "-",
-      "-f", "lavfi", "-i", "anullsrc=r=48000:cl=stereo", "-shortest",
-      "-c:v", "libx264", "-preset", "medium", "-crf", "20", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "64k", "-movflags", "+faststart", ziel],
+      "-c:v", "libx264", "-preset", "medium", "-crf", "20", "-pix_fmt", "yuv420p", nurBild],
       { stdio: ["pipe", "inherit", "inherit"] });
     const fertig = new Promise((ok, nein) => ff.on("close", (c) => (c === 0 ? ok() : nein(new Error(`ffmpeg Exit ${c}`)))));
     const schreibe = (buf) => (ff.stdin.write(buf) ? Promise.resolve() : new Promise((ok) => ff.stdin.once("drain", ok)));
@@ -117,7 +166,9 @@ export async function video(slug, ziel) {
     // Fortschritt nach gefärbter Fläche, sanft am Anfang und am Schluss
     const summe = liste.reduce((s, f) => s + f.anzahl, 0);
     let naechste = 0, gefaerbt = 0;
+    const toene = []; // Zeitpunkte (Frame) mit neu gefüllten Flächen, für den Ton
     for (let i = 1; i <= MALEN; i++) {
+      if (naechste < liste.length) toene.push(INTRO + i);
       const t = i / MALEN, ziel = summe * (t * t * (3 - 2 * t));
       for (; naechste < liste.length && (gefaerbt < ziel || i === MALEN); naechste++) {
         gefaerbt += liste[naechste].anzahl;
@@ -134,8 +185,8 @@ export async function video(slug, ziel) {
     for (let i = 1; i <= ENDE; i++) {
       if (i <= EINBLENDEN) {
         const s = i / EINBLENDEN;
-        for (let y = 0; y < 330; y++) for (let x = 0; x < 900; x++) {
-          const q = (y * 900 + x) * 4, a = (ende[q + 3] / 255) * s, o = ((EY + y) * B + EX + x) * 3;
+        for (let y = 0; y < EH; y++) for (let x = 0; x < EW; x++) {
+          const q = (y * EW + x) * 4, a = (ende[q + 3] / 255) * s, o = ((EY + y) * B + EX + x) * 3;
           for (let k = 0; k < 3; k++) mit[o + k] = bild[o + k] * (1 - a) + ende[q + k] * a;
         }
       }
@@ -143,6 +194,10 @@ export async function video(slug, ziel) {
     }
     ff.stdin.end();
     await fertig;
+    const gesamt = INTRO + MALEN + HALTEN + ENDE;
+    writeFileSync(tonDatei, ton(toene, gesamt, INTRO + MALEN + HALTEN, rnd));
+    execFileSync("ffmpeg", ["-v", "error", "-y", "-i", nurBild, "-f", "f32le", "-ar", String(RATE), "-ac", "2", "-i", tonDatei,
+      "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-c:a", "aac", "-b:a", "128k", "-shortest", "-movflags", "+faststart", ziel]);
     return { flaechen: liste.length, sekunden: (INTRO + MALEN + HALTEN + ENDE) / FPS };
   } finally {
     rmSync(tmp, { recursive: true, force: true });

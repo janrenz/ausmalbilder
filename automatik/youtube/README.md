@@ -2,7 +2,7 @@
 
 Die GitHub Action „YouTube“ (`.github/workflows/youtube.yml`) lädt täglich um 15:30 UTC ein Motiv als **privates** Short hoch. Öffentlich wird es erst nach Jans Freigabe (siehe unten). Sie läuft nach der Bilder-Automatik (08:00 UTC), sodass neue Motive dann schon gemergt und auf malkiste.eu sind. Claude ist dafür nicht nötig: Video, Titel und Beschreibung entstehen aus `katalog.mjs`.
 
-- `video.mjs <slug>`: Short mit 1080×1920 Pixeln und 19 Sekunden Länge. Das Ausmalbild füllt sich Fläche für Fläche wie mit dem Farbeimer, am Ende erscheint eine Tafel mit „malkiste.eu“. Mandalas und Zentangles (`stil: "erwachsen"`) bekommen je Video eine abgestimmte Palette mit 5 Farben, alle anderen Motive bunte Farben. Gleiches Motiv ergibt immer dasselbe Video.
+- `video.mjs <slug>`: Short mit 1080×1920 Pixeln und 30 Sekunden Länge. Das Ausmalbild füllt sich Fläche für Fläche wie mit dem Farbeimer, dazu ruhige, im Skript erzeugte Musik und ein leiser Ton je gefüllter Fläche. Am Ende ersetzt eine englische Tafel („Free to print or colour online · malkiste.eu“) oben den Titel, das Bild bleibt frei. Mandalas und Zentangles (`stil: "erwachsen"`) bekommen je Video eine abgestimmte Palette mit 5 Farben, alle anderen Motive bunte Farben. Gleiches Motiv ergibt immer dasselbe Video.
 - `angaben.mjs <slug>`: Titel, Beschreibung mit Link zur Bildseite, Stichwörter und die Einstellung „speziell für Kinder“.
 - `hochladen.mjs`: wählt das nächste Motiv aus, erzeugt das Video, lädt es hoch und trägt es in `automatik/youtube.json` ein. Die Action committet die Datei auf `main`.
   - `--liste` zeigt nur die nächsten Motive, `--trocken` erzeugt nur die Videos (nach `.pruef/youtube/`), `--slug x` nimmt ein bestimmtes Motiv.
