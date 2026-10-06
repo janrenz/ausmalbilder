@@ -5,7 +5,7 @@ Statische Seite mit gemeinfreien (CC0) Ausmalbildern in 8 Sprachen: https://malk
 - `katalog.mjs` – Themen, Motive, deutsche Texte und Bild-Prompts (`stil`: fehlt = kleine Kinder, `detail` = ab 8, `erwachsen`)
 - `i18n/de.mjs` – deutsche Oberfläche und Rechtstexte; `i18n/<code>.mjs` – Übersetzungen (en, fr, es, it, nl, pl, pt) mit eigenen URL-Pfaden
 - `i18n/pruefe.mjs <code>` – prüft eine Übersetzung auf Vollständigkeit, Platzhalter und gültige Pfade
-- `gen.sh` – erzeugt fehlende Bilder in `src/bilder/` mit `gen-image` (Gemini) und speichert sie als Graustufen
+- `gen.sh` – erzeugt fehlende Bilder mit `gen-image` (Gemini) in zwei Schritten: erst ein buntes Bild des Motivs (`src/farben/<slug>.jpg`), daraus die Strichzeichnung (`src/bilder/<slug>.png`, Graustufen, Linien deckungsgleich). Das bunte Bild liefert die Farben für das YouTube-Video
 - `static/ausmalen.js` – Online-Ausmalen im Browser (Dialog auf jeder Bildseite, `#ausmalen` öffnet ihn direkt): Farbeimer, Filz-, Bunt-, Wachsmalstift, Radierer, Rückgängig, Speichern als PNG; nichts wird gespeichert oder hochgeladen
 - `saison.mjs` – Kalender für „Passend zur Jahreszeit“ (Zeitfenster je Thema, bewegliche Feste berechnet) und für Anlass-Themen, die die Automatik anlegt, wenn sie fehlen; `node saison.mjs saison|anlaesse [JJJJ-MM-TT]` zum Nachsehen
 - `logo/erzeuge.mjs` – erzeugt `static/logo.svg`, `static/favicon.svg` und `logo/stempel.svg` (Fredoka Bold als Pfade, keine Webfont); Anleitung im Kopf der Datei
