@@ -1,3 +1,102 @@
 {
- "videos": {}
+ "videos": {
+  "mandala-herbstlaub": {
+   "id": "BXzq2aIJGMs",
+   "datum": "2026-10-06",
+   "sichtbarkeit": "public",
+   "freigabe": "ja",
+   "vonHand": true
+  },
+  "zentangle-hirsch": {
+   "id": "nYyGvrYhxB0",
+   "datum": "2026-10-06",
+   "sichtbarkeit": "public",
+   "freigabe": "ja",
+   "vonHand": true
+  },
+  "muster-lebensbaum": {
+   "id": "0z2t813tbh8",
+   "datum": "2026-10-06",
+   "sichtbarkeit": "public",
+   "freigabe": "ja",
+   "vonHand": true
+  },
+  "mandala-eule": {
+   "id": "A1A159s5ud0",
+   "datum": "2026-10-06",
+   "sichtbarkeit": "public",
+   "freigabe": "ja",
+   "vonHand": true
+  },
+  "zentangle-elefant": {
+   "id": "pRJhAnaNHfk",
+   "datum": "2026-10-06",
+   "sichtbarkeit": "public",
+   "freigabe": "ja",
+   "vonHand": true
+  },
+  "muster-paisley": {
+   "id": "Z6wQTgV5ilc",
+   "datum": "2026-10-06",
+   "sichtbarkeit": "public",
+   "freigabe": "ja",
+   "vonHand": true
+  },
+  "mandala-feder": {
+   "id": "DGx5pbfn6MU",
+   "datum": "2026-10-06",
+   "sichtbarkeit": "public",
+   "freigabe": "ja",
+   "vonHand": true
+  },
+  "zentangle-katze": {
+   "id": "LfXynWFK41U",
+   "datum": "2026-10-06",
+   "sichtbarkeit": "public",
+   "freigabe": "ja",
+   "vonHand": true
+  },
+  "muster-kaleidoskop": {
+   "id": "EnhtiE7m-ng",
+   "datum": "2026-10-06",
+   "sichtbarkeit": "public",
+   "freigabe": "ja",
+   "vonHand": true
+  },
+  "mandala-lotus": {
+   "id": "3rDm6lyF7bg",
+   "datum": "2026-10-06",
+   "sichtbarkeit": "public",
+   "freigabe": "ja",
+   "vonHand": true
+  },
+  "zentangle-wal": {
+   "id": "tcn3MkowgqE",
+   "datum": "2026-10-06",
+   "sichtbarkeit": "public",
+   "freigabe": "ja",
+   "vonHand": true
+  },
+  "muster-pfingstrosen": {
+   "id": "Gk6NOqo7VIs",
+   "datum": "2026-10-06",
+   "sichtbarkeit": "public",
+   "freigabe": "ja",
+   "vonHand": true
+  },
+  "zentangle-schildkroete": {
+   "id": "3ME6AmHUXQI",
+   "datum": "2026-10-06",
+   "sichtbarkeit": "public",
+   "freigabe": "ja",
+   "vonHand": true
+  },
+  "mandala-ornament": {
+   "id": "k_ABK-oUThI",
+   "datum": "2026-10-06",
+   "sichtbarkeit": "public",
+   "freigabe": "ja",
+   "vonHand": true
+  }
+ }
 }
