@@ -36,7 +36,7 @@ Das erzeugt die nächsten 5 Videos und daneben je eine `<slug>.txt` mit Titel, B
 1. **Google-Cloud-Projekt** anlegen, z. B. `malkiste-youtube`, und dort die **YouTube Data API v3** aktivieren.
 2. **OAuth-Zustimmungsbildschirm:** extern, App-Name „Malkiste“, Bereich `youtube` (Hochladen und Öffentlichstellen), eigene Adresse als Testnutzer. Danach **„App veröffentlichen“** (Status „In Produktion“). Im Status „Testen“ läuft der Refresh-Token nach 7 Tagen ab. Für das eigene Konto braucht es keine Google-Prüfung: Beim Anmelden auf „Erweitert → weiter zu Malkiste“ klicken.
 3. **Anmeldedaten → OAuth-Client-ID → Desktop-App** anlegen und die JSON-Datei herunterladen.
-4. `node automatik/youtube/anmelden.mjs ~/Downloads/client_secret_….json` ausführen. Im Browser den Kanal **Malkiste** wählen, nicht den persönlichen Kanal. Das Skript nennt danach den Kanal, für den die Anmeldung gilt.
+4. `node automatik/youtube/anmelden.mjs ~/Downloads/client_secret_….json` ausführen. Im Browser den Kanal **malkiste_eu** (@malkiste_eu) wählen, nicht den persönlichen Kanal. Das Skript nennt danach den Kanal, für den die Anmeldung gilt.
 5. Geheimnisse ins Repo:
    ```sh
    set -a; . ~/.config/malkiste/youtube.env; set +a

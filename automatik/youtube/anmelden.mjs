@@ -1,5 +1,5 @@
 // Einmalige Anmeldung am YouTube-Kanal (OAuth für Desktop-Apps, mit PKCE). Öffnet den Browser; dort mit dem
-// Google-Konto anmelden und den Kanal „Malkiste“ auswählen. Schreibt Client-ID, Client-Secret und Refresh-Token
+// Google-Konto anmelden und den Kanal „malkiste_eu“ auswählen. Schreibt Client-ID, Client-Secret und Refresh-Token
 // nach ~/.config/malkiste/youtube.env (Rechte 600) und gibt keinen der Werte aus.
 // Aufruf: node automatik/youtube/anmelden.mjs <client_secret_….json>
 import { createServer } from "node:http";
