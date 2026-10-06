@@ -97,6 +97,76 @@
    "sichtbarkeit": "public",
    "freigabe": "ja",
    "vonHand": true
+  },
+  "kuerbis": {
+   "id": "67G7kObEpJs",
+   "datum": "2026-10-06",
+   "sichtbarkeit": "public",
+   "freigabe": "ja",
+   "vonHand": true
+  },
+  "hexe-katze": {
+   "id": "ep95txWsEe8",
+   "datum": "2026-10-06",
+   "sichtbarkeit": "public",
+   "freigabe": "ja",
+   "vonHand": true
+  },
+  "huehner": {
+   "id": "WPCBLt3Br4s",
+   "datum": "2026-10-06",
+   "sichtbarkeit": "public",
+   "freigabe": "ja",
+   "vonHand": true
+  },
+  "wal": {
+   "id": "aKcqchYC8hE",
+   "datum": "2026-10-06",
+   "sichtbarkeit": "public",
+   "freigabe": "ja",
+   "vonHand": true
+  },
+  "obst": {
+   "id": "B4oWejKLkKM",
+   "datum": "2026-10-06",
+   "sichtbarkeit": "public",
+   "freigabe": "ja",
+   "vonHand": true
+  },
+  "hai": {
+   "id": "c-lXj3RkeVc",
+   "datum": "2026-10-06",
+   "sichtbarkeit": "public",
+   "freigabe": "ja",
+   "vonHand": true
+  },
+  "krankenwagen": {
+   "id": "OICfa7aLdiU",
+   "datum": "2026-10-06",
+   "sichtbarkeit": "public",
+   "freigabe": "ja",
+   "vonHand": true
+  },
+  "flugzeug": {
+   "id": "95Cisy5xL8o",
+   "datum": "2026-10-06",
+   "sichtbarkeit": "public",
+   "freigabe": "ja",
+   "vonHand": true
+  },
+  "hund-knochen": {
+   "id": "8QD08HkJu_U",
+   "datum": "2026-10-06",
+   "sichtbarkeit": "public",
+   "freigabe": "ja",
+   "vonHand": true
+  },
+  "kuchen": {
+   "id": "96TwsrQoEi8",
+   "datum": "2026-10-06",
+   "sichtbarkeit": "public",
+   "freigabe": "ja",
+   "vonHand": true
   }
  }
 }
