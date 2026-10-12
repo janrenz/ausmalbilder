@@ -388,6 +388,11 @@ export default {
       "alt": "Unicorno raggomitolato che dorme su una nuvola sotto la luna e le stelle",
       "pfad": "unicorno-dorme-nuvola"
     },
+    "einhorn-blumenkranz": {
+      "titel": "Unicorno con corona di fiori",
+      "alt": "Testa di unicorno con una lunga criniera e una corona di fiori davanti a nuvole e a un prato, accanto due farfalle",
+      "pfad": "unicorno-corona-fiori"
+    },
     "dino-t-rex": {
       "titel": "T-Rex simpatico",
       "alt": "Tirannosauro rex sorridente tra palme e vulcano",
@@ -462,6 +467,11 @@ export default {
       "titel": "Pesce rosso nella boccia",
       "alt": "Pesce rosso che nuota in una boccia rotonda con le piante",
       "pfad": "pesce-rosso"
+    },
+    "katzen-koerbchen": {
+      "titel": "Gattini nel cestino",
+      "alt": "Due gattini dormono accoccolati in un cestino di vimini, davanti una palla e un topolino giocattolo",
+      "pfad": "gattini-nel-cestino"
     },
     "meerjungfrau-fels": {
       "titel": "Sirena sullo scoglio",
@@ -602,6 +612,16 @@ export default {
       "titel": "Bambino con l'ombrello",
       "alt": "Bambino con gli stivali di gomma che salta in una pozzanghera con l'ombrello",
       "pfad": "bambino-ombrello"
+    },
+    "igel-familie": {
+      "titel": "Famiglia di ricci sotto il melo",
+      "alt": "Mamma riccio con una foglia sulla schiena e due piccoli ricci camminano sotto un melo, mele e foglie nell'erba",
+      "pfad": "famiglia-ricci-melo"
+    },
+    "kastanien-sammeln": {
+      "titel": "Raccogliere le castagne",
+      "alt": "Bambino raccoglie castagne in un cestino sotto un grande ippocastano",
+      "pfad": "raccogliere-castagne"
     },
     "brandenburger-tor": {
       "titel": "Porta di Brandeburgo",
@@ -912,6 +932,11 @@ export default {
       "titel": "Famiglia di zucche sui gradini",
       "alt": "Quattro zucche intagliate di diverse grandezze sui gradini di legno di una casa, un gufo appollaiato sulla ringhiera",
       "pfad": "famiglia-di-zucche"
+    },
+    "katze-kuerbis": {
+      "titel": "Gattino nella zucca",
+      "alt": "Gattino che sbuca da una grande zucca con il coperchio in testa, foglie d'autunno e un piccolo pipistrello",
+      "pfad": "gattino-nella-zucca"
     },
     "martin-mantel": {
       "titel": "San Martino divide il mantello",

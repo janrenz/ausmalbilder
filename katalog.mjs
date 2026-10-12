@@ -12,6 +12,7 @@ export const themen = [
       { slug: "einhorn-kuchen", titel: "Einhorn mit Geburtstagskuchen", alt: "Einhorn mit Partyhut neben einem Kuchen mit Kerzen", prompt: "a cute unicorn wearing a party hat next to a big layered cake with candles and balloons" },
       { slug: "einhorn-herbst", titel: "Einhorn im Herbstlaub", alt: "Einhorn springt über einen Haufen Herbstblätter, daneben Kürbisse und Pilze", prompt: "a cute unicorn happily jumping through a pile of big autumn leaves, a few pumpkins and mushrooms on the ground, leaves falling from a tree" },
       { slug: "einhorn-wolke", titel: "Einhorn schläft auf einer Wolke", alt: "Einhorn schläft zusammengerollt auf einer Wolke unter Mond und Sternen", prompt: "a cute unicorn sleeping curled up on a big fluffy cloud, a crescent moon and big stars above, peaceful bedtime scene" },
+      { slug: "einhorn-blumenkranz", titel: "Einhorn mit Blumenkranz", alt: "Kopf eines Einhorns mit langer Mähne und einem Kranz aus Blumen vor Wolken und einer Wiese, daneben zwei Schmetterlinge", prompt: "the head and neck of a cute unicorn seen from the side, a long flowing wavy mane, a crown of big simple flowers on its head around the horn, two butterflies flying nearby, the unicorn has exactly two ears, one horn and one visible eye, the complete unicorn head fully visible inside the page with a wide white margin on all four sides, nothing cut off at the edges" },
     ],
   },
   {
@@ -45,6 +46,7 @@ export const themen = [
       { slug: "hase-karotte", titel: "Hase mit Karotte", alt: "Hase knabbert an einer Karotte im Gemüsebeet", prompt: "a cute rabbit holding a carrot in a vegetable garden" },
       { slug: "meerschweinchen", titel: "Meerschweinchen", alt: "Zwei Meerschweinchen fressen Salat", prompt: "two cute guinea pigs eating lettuce and a carrot on straw" },
       { slug: "goldfisch", titel: "Goldfisch im Glas", alt: "Goldfisch schwimmt in einem runden Glas mit Pflanzen", prompt: "a goldfish swimming in a round fishbowl with plants and pebbles, a cat watching curiously" },
+      { slug: "katzen-koerbchen", titel: "Kätzchen im Körbchen", alt: "Zwei kleine Kätzchen schlafen zusammengekuschelt in einem Weidenkorb, davor ein Ball und eine Spielzeugmaus", prompt: "two small kittens sleeping curled up together in a woven wicker basket with a soft blanket, a small ball next to the basket, each kitten has exactly one head, two ears and its own separate body, peaceful scene" },
     ],
   },
   {
@@ -109,6 +111,8 @@ export const themen = [
       { slug: "eichhoernchen", titel: "Eichhörnchen mit Nuss", alt: "Eichhörnchen hält eine Nuss auf einem Ast mit Eicheln", prompt: "a squirrel holding a nut sitting on a tree branch with acorns and oak leaves" },
       { slug: "kuerbisernte", titel: "Kürbisernte", alt: "Kürbisse, Äpfel und eine Schubkarre im Garten", prompt: "an autumn harvest scene with pumpkins, apples in a basket and a wheelbarrow in a garden" },
       { slug: "regenschirm", titel: "Kind mit Regenschirm", alt: "Kind in Gummistiefeln springt mit Regenschirm in eine Pfütze", prompt: "a child in rubber boots with an umbrella jumping into a puddle, falling leaves and raindrops" },
+      { slug: "igel-familie", titel: "Igel-Familie unterm Apfelbaum", alt: "Igel-Mama mit einem Blatt auf dem Rücken und zwei kleine Igel laufen unter einem Apfelbaum, im Gras liegen Äpfel und Laub", prompt: "a mother hedgehog and two baby hedgehogs walking in the grass under an apple tree in autumn, fallen apples and leaves on the ground, the mother carries a leaf, each hedgehog has exactly one head, one nose and four short legs, simple spines drawn as outlines" },
+      { slug: "kastanien-sammeln", titel: "Kastanien sammeln", alt: "Kind sammelt Kastanien in einen Korb unter einem großen Kastanienbaum", prompt: "a happy child crouching under a big horse chestnut tree collecting shiny chestnuts into a small basket, open spiky chestnut shells and big hand-shaped leaves on the ground, leaves falling from the tree, the child has two arms and two hands with five fingers each" },
     ],
   },
   {
@@ -195,6 +199,7 @@ export const themen = [
       { slug: "kostuem-kinder", titel: "Kinder im Kostüm", alt: "Kinder als Gespenst, Hexe und Kürbis mit Süßigkeitenkörben", prompt: "three children in costumes (ghost, witch, pumpkin) holding candy baskets, cute not scary" },
       { slug: "fledermaus", titel: "Kleine Fledermaus", alt: "Lächelnde Fledermaus hängt kopfüber an einem Ast", prompt: "a cute smiling bat hanging upside down from a tree branch under a full moon" },
       { slug: "kuerbis-familie", titel: "Kürbisfamilie auf der Treppe", alt: "Vier geschnitzte Kürbisse in verschiedenen Größen auf einer Holztreppe vor dem Haus, eine Eule sitzt auf dem Geländer", prompt: "three carved jack-o-lantern pumpkins of different sizes (big, medium, small) with friendly smiling faces sitting on wooden porch steps, autumn leaves and a cute owl on the railing, not scary" },
+      { slug: "katze-kuerbis", titel: "Kätzchen im Kürbis", alt: "Kleines Kätzchen schaut aus einem großen Kürbis, den Kürbisdeckel auf dem Kopf, daneben Herbstblätter und eine kleine Fledermaus", prompt: "a cute kitten peeking out of a big hollowed-out pumpkin with its front paws resting on the rim, a few autumn leaves on the ground and one small friendly bat in the sky, not scary, the pumpkin has no carved face" },
     ],
   },
   {
