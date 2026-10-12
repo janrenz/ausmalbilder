@@ -388,6 +388,11 @@ export default {
       "alt": "Une licorne dort, roulée en boule sur un nuage, sous la lune et les étoiles",
       "pfad": "licorne-endormie-nuage"
     },
+    "einhorn-blumenkranz": {
+      "titel": "Licorne avec une couronne de fleurs",
+      "alt": "Tête de licorne à la longue crinière avec une couronne de fleurs devant des nuages et une prairie, deux papillons à côté",
+      "pfad": "licorne-couronne-fleurs"
+    },
     "dino-t-rex": {
       "titel": "T-rex sympathique",
       "alt": "Tyrannosaure rieur entre des palmiers et un volcan",
@@ -462,6 +467,11 @@ export default {
       "titel": "Poisson rouge dans son bocal",
       "alt": "Un poisson rouge nage dans un bocal rond avec des plantes",
       "pfad": "poisson-rouge-bocal"
+    },
+    "katzen-koerbchen": {
+      "titel": "Chatons dans un panier",
+      "alt": "Deux petits chatons dorment blottis dans un panier en osier, devant une balle et une souris en jouet",
+      "pfad": "chatons-panier"
     },
     "meerjungfrau-fels": {
       "titel": "Sirène sur son rocher",
@@ -602,6 +612,16 @@ export default {
       "titel": "Enfant avec un parapluie",
       "alt": "Un enfant en bottes de pluie saute dans une flaque avec son parapluie",
       "pfad": "enfant-parapluie"
+    },
+    "igel-familie": {
+      "titel": "Famille hérisson sous le pommier",
+      "alt": "Maman hérisson avec une feuille sur le dos et deux bébés hérissons marchent sous un pommier, des pommes et des feuilles dans l'herbe",
+      "pfad": "famille-herisson-pommier"
+    },
+    "kastanien-sammeln": {
+      "titel": "Ramasser des marrons",
+      "alt": "Enfant ramasse des marrons dans un panier sous un grand marronnier",
+      "pfad": "ramasser-marrons"
     },
     "brandenburger-tor": {
       "titel": "La porte de Brandebourg",
@@ -912,6 +932,11 @@ export default {
       "titel": "Famille citrouille sur les marches",
       "alt": "Quatre citrouilles sculptées de différentes tailles sur les marches en bois d'une maison, une chouette perchée sur la rampe",
       "pfad": "famille-citrouille"
+    },
+    "katze-kuerbis": {
+      "titel": "Chaton dans une citrouille",
+      "alt": "Petit chaton qui sort la tête d'une grosse citrouille, le couvercle sur la tête, avec des feuilles d'automne et une petite chauve-souris",
+      "pfad": "chaton-citrouille"
     },
     "martin-mantel": {
       "titel": "Saint Martin partage son manteau",

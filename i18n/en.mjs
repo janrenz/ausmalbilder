@@ -388,6 +388,11 @@ export default {
       "alt": "Unicorn curled up asleep on a cloud under the moon and stars",
       "pfad": "unicorn-sleeping-on-a-cloud"
     },
+    "einhorn-blumenkranz": {
+      "titel": "Unicorn with a Flower Crown",
+      "alt": "Unicorn head with a long mane and a crown of flowers in front of clouds and a meadow, with two butterflies",
+      "pfad": "unicorn-flower-crown"
+    },
     "dino-t-rex": {
       "titel": "Friendly T-Rex",
       "alt": "Smiling Tyrannosaurus rex between palm trees and a volcano",
@@ -462,6 +467,11 @@ export default {
       "titel": "Goldfish in a Bowl",
       "alt": "Goldfish swimming in a round bowl with plants",
       "pfad": "goldfish-in-a-bowl"
+    },
+    "katzen-koerbchen": {
+      "titel": "Kittens in a Basket",
+      "alt": "Two little kittens curled up asleep in a wicker basket, with a ball and a toy mouse in front",
+      "pfad": "kittens-in-a-basket"
     },
     "meerjungfrau-fels": {
       "titel": "Mermaid on the Rock",
@@ -602,6 +612,16 @@ export default {
       "titel": "Child with an Umbrella",
       "alt": "Child in wellies jumping into a puddle with an umbrella",
       "pfad": "child-with-an-umbrella"
+    },
+    "igel-familie": {
+      "titel": "Hedgehog Family under the Apple Tree",
+      "alt": "Mother hedgehog with a leaf on her back and two baby hedgehogs walking under an apple tree, apples and leaves in the grass",
+      "pfad": "hedgehog-family-apple-tree"
+    },
+    "kastanien-sammeln": {
+      "titel": "Collecting Conkers",
+      "alt": "Child collecting conkers into a basket under a big horse chestnut tree",
+      "pfad": "collecting-conkers"
     },
     "brandenburger-tor": {
       "titel": "Brandenburg Gate",
@@ -912,6 +932,11 @@ export default {
       "titel": "Pumpkin Family on the Porch Steps",
       "alt": "Four carved pumpkins of different sizes on wooden porch steps, with an owl perched on the railing",
       "pfad": "pumpkin-family"
+    },
+    "katze-kuerbis": {
+      "titel": "Kitten in a Pumpkin",
+      "alt": "Little kitten peeking out of a big pumpkin with the pumpkin lid on its head, autumn leaves and a small bat nearby",
+      "pfad": "kitten-in-a-pumpkin"
     },
     "martin-mantel": {
       "titel": "Saint Martin Shares His Cloak",
