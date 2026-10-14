@@ -351,6 +351,12 @@ export default {
       "intro": "Elefante, leone, gatto e colibrì fatti di fini motivi zentangle: disegni di animali ricchi di dettagli per rilassarsi, gratis in PDF A4.",
       "pfad": "animali-zentangle"
     },
+    "katzen-erwachsene": {
+      "name": "Gatti per adulti",
+      "titel": "Disegni di gatti da colorare per adulti: paisley e zentangle",
+      "intro": "Gatti fatti di motivi paisley, zentangle e floreali: disegni di gatti impegnativi, con linee sottili, per rilassarsi. Gratis in PDF A4 da stampare o da colorare online.",
+      "pfad": "gatti-per-adulti"
+    },
     "muster-erwachsene": {
       "name": "Fiori e motivi",
       "titel": "Fiori e motivi: disegni da colorare per adulti",
@@ -1658,6 +1664,36 @@ export default {
       "titel": "Leone zentangle",
       "alt": "Testa di leone con la criniera a motivi",
       "pfad": "leone-zentangle"
+    },
+    "katze-paisley": {
+      "titel": "Gatto paisley",
+      "alt": "Gatto seduto visto di fronte, tutto fatto di motivi paisley e piccoli fiori",
+      "pfad": "gatto-paisley"
+    },
+    "katzenkopf-mandala": {
+      "titel": "Mandala testa di gatto",
+      "alt": "Testa di gatto simmetrica vista di fronte con ornamenti mandala e paisley",
+      "pfad": "mandala-testa-di-gatto"
+    },
+    "katze-schlafend-paisley": {
+      "titel": "Gatto addormentato decorato",
+      "alt": "Gatto addormentato acciambellato fatto di motivi paisley, con una ghirlanda di foglie e fiori intorno",
+      "pfad": "gatto-addormentato-decorato"
+    },
+    "katze-mondsichel": {
+      "titel": "Gatto sulla falce di luna",
+      "alt": "Gatto seduto su una falce di luna decorata, circondato da stelle, tutto finemente decorato",
+      "pfad": "gatto-falce-di-luna"
+    },
+    "katzenpaar-herz": {
+      "titel": "Coppia di gatti con cuore",
+      "alt": "Due gatti seduti uno di fronte all'altro, le code formano un cuore, entrambi fatti di ornamenti",
+      "pfad": "coppia-gatti-cuore"
+    },
+    "katze-blumenranken": {
+      "titel": "Gatto tra i fiori",
+      "alt": "Gatto decorato seduto tra fiori rampicanti e foglie rigogliose",
+      "pfad": "gatto-tra-i-fiori"
     },
     "muster-pfingstrosen": {
       "titel": "Peonie",

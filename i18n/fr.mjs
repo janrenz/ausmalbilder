@@ -351,6 +351,12 @@ export default {
       "intro": "Éléphant, lion, chat et colibri composés de motifs zentangle fins : des coloriages d'animaux détaillés pour se détendre, gratuits en PDF A4.",
       "pfad": "animaux-zentangle"
     },
+    "katzen-erwachsene": {
+      "name": "Chats pour adultes",
+      "titel": "Coloriages de chats pour adultes : paisley et zentangle",
+      "intro": "Des chats faits de motifs paisley, zentangle et floraux : des coloriages de chats exigeants aux traits fins, pour se détendre. Gratuits en PDF A4 à imprimer ou à colorier en ligne.",
+      "pfad": "chats-adultes"
+    },
     "muster-erwachsene": {
       "name": "Fleurs et motifs",
       "titel": "Coloriages de fleurs et motifs pour adultes",
@@ -1658,6 +1664,36 @@ export default {
       "titel": "Lion zentangle",
       "alt": "Une tête de lion à la crinière décorée de motifs",
       "pfad": "lion-zentangle"
+    },
+    "katze-paisley": {
+      "titel": "Chat paisley",
+      "alt": "Chat assis vu de face, entièrement composé de motifs paisley et de petites fleurs",
+      "pfad": "chat-paisley"
+    },
+    "katzenkopf-mandala": {
+      "titel": "Mandala tête de chat",
+      "alt": "Tête de chat symétrique vue de face avec des ornements mandala et paisley",
+      "pfad": "mandala-tete-de-chat"
+    },
+    "katze-schlafend-paisley": {
+      "titel": "Chat endormi aux ornements",
+      "alt": "Chat endormi roulé en boule, fait de motifs paisley, entouré d'une couronne de feuilles et de fleurs",
+      "pfad": "chat-endormi-ornements"
+    },
+    "katze-mondsichel": {
+      "titel": "Chat sur le croissant de lune",
+      "alt": "Chat assis sur un croissant de lune décoré, entouré d'étoiles, le tout finement orné",
+      "pfad": "chat-croissant-de-lune"
+    },
+    "katzenpaar-herz": {
+      "titel": "Couple de chats en cœur",
+      "alt": "Deux chats assis face à face, leurs queues dessinent un cœur, tous deux faits d'ornements",
+      "pfad": "couple-de-chats-coeur"
+    },
+    "katze-blumenranken": {
+      "titel": "Chat dans les fleurs",
+      "alt": "Chat orné assis parmi des fleurs, des vrilles et des feuilles luxuriantes",
+      "pfad": "chat-dans-les-fleurs"
     },
     "muster-pfingstrosen": {
       "titel": "Pivoines",

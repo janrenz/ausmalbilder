@@ -351,6 +351,12 @@ export default {
       "intro": "An elephant, lion, cat and hummingbird made of fine zentangle patterns: detailed animal colouring pages for relaxing, free as A4 PDFs.",
       "pfad": "zentangle-animals"
     },
+    "katzen-erwachsene": {
+      "name": "Cats for Adults",
+      "titel": "Cat Colouring Pages for Adults: Paisley & Zentangle",
+      "intro": "Cats made of paisley, zentangle and floral ornaments: challenging cat colouring pages with fine lines to help you unwind. Free to print as A4 PDFs or colour online.",
+      "pfad": "cats-for-adults"
+    },
     "muster-erwachsene": {
       "name": "Flowers & Patterns",
       "titel": "Flowers & Patterns: Colouring Pages for Adults",
@@ -1658,6 +1664,36 @@ export default {
       "titel": "Zentangle Lion",
       "alt": "Lion's head with a patterned mane",
       "pfad": "zentangle-lion"
+    },
+    "katze-paisley": {
+      "titel": "Paisley Cat",
+      "alt": "Sitting cat in front view, made entirely of paisley patterns and tiny flowers",
+      "pfad": "paisley-cat"
+    },
+    "katzenkopf-mandala": {
+      "titel": "Cat Head Mandala",
+      "alt": "Symmetrical cat head in front view with mandala and paisley ornaments",
+      "pfad": "cat-head-mandala"
+    },
+    "katze-schlafend-paisley": {
+      "titel": "Sleeping Ornamental Cat",
+      "alt": "Curled-up sleeping cat made of paisley patterns, with a ring of leaves and flowers around it",
+      "pfad": "sleeping-ornamental-cat"
+    },
+    "katze-mondsichel": {
+      "titel": "Cat on the Crescent Moon",
+      "alt": "Cat sitting on an ornate crescent moon surrounded by stars, all finely patterned",
+      "pfad": "cat-on-the-crescent-moon"
+    },
+    "katzenpaar-herz": {
+      "titel": "Cat Couple with a Heart",
+      "alt": "Two cats sitting face to face, their tails forming a heart, both made of ornaments",
+      "pfad": "cat-couple-with-a-heart"
+    },
+    "katze-blumenranken": {
+      "titel": "Cat among Flowering Vines",
+      "alt": "Patterned cat sitting among lush flowering vines and leaves",
+      "pfad": "cat-among-flowering-vines"
     },
     "muster-pfingstrosen": {
       "titel": "Peonies",
