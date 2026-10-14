@@ -129,6 +129,12 @@ export default {
       "intro": "Cat, dog and rabbit: pets are a classic subject for colouring. The pictures are kept simple and are especially good for children aged 3 and up.",
       "pfad": "pets"
     },
+    "katzen": {
+      "name": "Cats",
+      "titel": "Cat Colouring Pages",
+      "intro": "Kittens on the window sill, in a cardboard box or under the moon: cat colouring pages with big areas for children aged 3 and up. All pictures are free to print or colour online.",
+      "pfad": "cats"
+    },
     "meerjungfrau": {
       "name": "Mermaids",
       "titel": "Mermaid Colouring Pages",
@@ -472,6 +478,36 @@ export default {
       "titel": "Kittens in a Basket",
       "alt": "Two little kittens curled up asleep in a wicker basket, with a ball and a toy mouse in front",
       "pfad": "kittens-in-a-basket"
+    },
+    "katze-fensterbank": {
+      "titel": "Cat on the Window Sill",
+      "alt": "Cat sitting on the window sill next to a flower pot, watching two birds outside",
+      "pfad": "cat-on-the-window-sill"
+    },
+    "katze-schmetterling": {
+      "titel": "Kitten Chasing a Butterfly",
+      "alt": "Kitten leaping after a butterfly in a flower meadow",
+      "pfad": "kitten-chasing-a-butterfly"
+    },
+    "katze-karton": {
+      "titel": "Cat in a Box",
+      "alt": "Cat peeking out of an open cardboard box, with a ball of yarn and a toy mouse beside it",
+      "pfad": "cat-in-a-box"
+    },
+    "katzenfamilie": {
+      "titel": "Mother Cat with Kittens",
+      "alt": "Mother cat lying on a blanket with three kittens cuddling and playing around her",
+      "pfad": "mother-cat-with-kittens"
+    },
+    "katze-mond": {
+      "titel": "Cat on the Roof in the Moonlight",
+      "alt": "Cat sitting on a house roof by the chimney, with a big moon and stars behind it",
+      "pfad": "cat-on-the-roof-moonlight"
+    },
+    "katze-herbstlaub": {
+      "titel": "Kitten in the Autumn Leaves",
+      "alt": "Kitten playing in a pile of autumn leaves, with mushrooms and acorns nearby",
+      "pfad": "kitten-in-autumn-leaves"
     },
     "meerjungfrau-fels": {
       "titel": "Mermaid on the Rock",
