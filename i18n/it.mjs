@@ -129,6 +129,12 @@ export default {
       "intro": "Gatto, cane e coniglio: gli animali domestici sono un classico da colorare. I disegni sono semplici e adatti soprattutto ai bambini dai 3 anni.",
       "pfad": "animali-domestici"
     },
+    "katzen": {
+      "name": "Gatti",
+      "titel": "Disegni di gatti da colorare",
+      "intro": "Gattini sul davanzale, in uno scatolone o sotto la luna: disegni di gatti da colorare con grandi spazi, adatti ai bambini dai 3 anni. Tutti gratis da stampare o da colorare online.",
+      "pfad": "gatti"
+    },
     "meerjungfrau": {
       "name": "Sirena",
       "titel": "Disegni di sirene da colorare",
@@ -472,6 +478,36 @@ export default {
       "titel": "Gattini nel cestino",
       "alt": "Due gattini dormono accoccolati in un cestino di vimini, davanti una palla e un topolino giocattolo",
       "pfad": "gattini-nel-cestino"
+    },
+    "katze-fensterbank": {
+      "titel": "Gatto sul davanzale",
+      "alt": "Gatto seduto sul davanzale accanto a un vaso di fiori, osserva due uccellini fuori",
+      "pfad": "gatto-sul-davanzale"
+    },
+    "katze-schmetterling": {
+      "titel": "Gattino che insegue una farfalla",
+      "alt": "Gattino che salta dietro a una farfalla in un prato fiorito",
+      "pfad": "gattino-farfalla"
+    },
+    "katze-karton": {
+      "titel": "Gatto nella scatola",
+      "alt": "Gatto che spunta da uno scatolone aperto, accanto un gomitolo di lana e un topolino giocattolo",
+      "pfad": "gatto-nella-scatola"
+    },
+    "katzenfamilie": {
+      "titel": "Mamma gatta con i gattini",
+      "alt": "Mamma gatta sdraiata su una coperta, tre gattini si coccolano e giocano intorno a lei",
+      "pfad": "mamma-gatta-gattini"
+    },
+    "katze-mond": {
+      "titel": "Gatto sul tetto al chiaro di luna",
+      "alt": "Gatto seduto su un tetto vicino al camino, dietro una grande luna e le stelle",
+      "pfad": "gatto-tetto-chiaro-di-luna"
+    },
+    "katze-herbstlaub": {
+      "titel": "Gattino tra le foglie d'autunno",
+      "alt": "Gattino che gioca in un mucchio di foglie autunnali, vicino funghi e ghiande",
+      "pfad": "gattino-foglie-autunno"
     },
     "meerjungfrau-fels": {
       "titel": "Sirena sullo scoglio",

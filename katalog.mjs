@@ -50,6 +50,18 @@ export const themen = [
     ],
   },
   {
+    slug: "katzen", name: "Katzen", titel: "Katzen-Ausmalbilder",
+    intro: "Kätzchen auf der Fensterbank, im Karton oder unter dem Mond: Katzen-Ausmalbilder mit großen Flächen für Kinder ab 3 Jahren. Alle Bilder kostenlos zum Ausdrucken oder direkt online ausmalen.",
+    bilder: [
+      { slug: "katze-fensterbank", titel: "Katze auf der Fensterbank", alt: "Katze sitzt auf der Fensterbank neben einem Blumentopf und schaut zwei Vögeln draußen zu", prompt: "a cute cat sitting on a window sill next to a flower pot, looking out of the open window at two small birds on a tree branch, curtains on both sides, the cat has exactly one head, two ears, four paws and one tail" },
+      { slug: "katze-schmetterling", titel: "Kätzchen jagt einen Schmetterling", alt: "Kätzchen springt auf einer Blumenwiese einem Schmetterling hinterher", prompt: "a playful kitten jumping after a big butterfly in a flower meadow with tulips and daisies, a few clouds and the sun in the sky, the kitten has exactly one head, two ears, four legs and one tail" },
+      { slug: "katze-karton", titel: "Katze im Karton", alt: "Katze schaut aus einem offenen Pappkarton, daneben ein Wollknäuel und eine Spielzeugmaus", prompt: "a happy cat sitting inside an open cardboard box with only its head and front paws peeking over the edge, a ball of yarn and a toy mouse on the floor next to the box, the box is plain without any labels or writing" },
+      { slug: "katzenfamilie", titel: "Katzenmama mit Kätzchen", alt: "Katzenmama liegt auf einer Decke, drei Kätzchen kuscheln und spielen um sie herum", prompt: "a mother cat lying on a soft blanket with three small kittens around her, one kitten cuddling against her, one playing with her tail, one sitting in front, every cat has exactly one head, two ears and its own separate body, cozy and sweet" },
+      { slug: "katze-mond", titel: "Katze auf dem Dach im Mondschein", alt: "Katze sitzt auf einem Hausdach mit Schornstein, dahinter ein großer Mond und Sterne", prompt: "a cute cat sitting on a tiled house roof next to a chimney at night, a big round full moon and stars in the sky behind it, the cat seen from the side looking up at the moon, exactly one head, two ears, four paws and one long tail, not scary" },
+      { slug: "katze-herbstlaub", titel: "Kätzchen im Herbstlaub", alt: "Kätzchen spielt in einem Haufen Herbstblätter, daneben Pilze und Eicheln", prompt: "a cute kitten playing in a pile of big autumn leaves, catching a falling leaf with its front paws, a few mushrooms, acorns and a tree trunk nearby, the kitten has exactly one head, two ears, four legs and one tail" },
+    ],
+  },
+  {
     slug: "meerjungfrau", name: "Meerjungfrau", titel: "Meerjungfrau-Ausmalbilder",
     intro: "Unterwasser-Märchen zum Ausmalen: Meerjungfrauen mit Muscheln, Fischen und Seepferdchen – eigene Zeichnungen, keine bekannten Filmfiguren.",
     bilder: [

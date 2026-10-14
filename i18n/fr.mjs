@@ -129,6 +129,12 @@ export default {
       "intro": "Chat, chien et lapin : les animaux de compagnie sont un classique du coloriage. Les dessins sont simples et conviennent particulièrement aux enfants dès 3 ans.",
       "pfad": "animaux-de-compagnie"
     },
+    "katzen": {
+      "name": "Chats",
+      "titel": "Coloriages de chats à imprimer",
+      "intro": "Chatons sur le rebord de la fenêtre, dans un carton ou sous la lune : des coloriages de chats avec de grandes surfaces pour les enfants dès 3 ans. Tous les dessins sont gratuits, à imprimer ou à colorier en ligne.",
+      "pfad": "chats"
+    },
     "meerjungfrau": {
       "name": "Sirène",
       "titel": "Coloriages de sirènes à imprimer",
@@ -472,6 +478,36 @@ export default {
       "titel": "Chatons dans un panier",
       "alt": "Deux petits chatons dorment blottis dans un panier en osier, devant une balle et une souris en jouet",
       "pfad": "chatons-panier"
+    },
+    "katze-fensterbank": {
+      "titel": "Chat sur le rebord de la fenêtre",
+      "alt": "Chat assis sur le rebord de la fenêtre à côté d'un pot de fleurs, il observe deux oiseaux dehors",
+      "pfad": "chat-rebord-fenetre"
+    },
+    "katze-schmetterling": {
+      "titel": "Chaton qui chasse un papillon",
+      "alt": "Chaton qui bondit derrière un papillon dans une prairie fleurie",
+      "pfad": "chaton-papillon"
+    },
+    "katze-karton": {
+      "titel": "Chat dans un carton",
+      "alt": "Chat qui sort la tête d'un carton ouvert, à côté une pelote de laine et une souris en jouet",
+      "pfad": "chat-dans-un-carton"
+    },
+    "katzenfamilie": {
+      "titel": "Maman chat et ses chatons",
+      "alt": "Maman chat couchée sur une couverture, trois chatons se blottissent et jouent autour d'elle",
+      "pfad": "maman-chat-chatons"
+    },
+    "katze-mond": {
+      "titel": "Chat sur le toit au clair de lune",
+      "alt": "Chat assis sur un toit à côté d'une cheminée, derrière lui une grande lune et des étoiles",
+      "pfad": "chat-toit-clair-de-lune"
+    },
+    "katze-herbstlaub": {
+      "titel": "Chaton dans les feuilles d'automne",
+      "alt": "Chaton qui joue dans un tas de feuilles d'automne, à côté des champignons et des glands",
+      "pfad": "chaton-feuilles-automne"
     },
     "meerjungfrau-fels": {
       "titel": "Sirène sur son rocher",
