@@ -508,6 +508,17 @@ export const themen = [
     ],
   },
   {
+    slug: "katzen-erwachsene", name: "Katzen für Erwachsene", stil: "erwachsen", alter: "Erwachsene", titel: "Katzen-Ausmalbilder für Erwachsene: Paisley & Zentangle",
+    intro: "Katzen aus Paisley-, Zentangle- und Blütenornamenten: anspruchsvolle Katzen-Ausmalbilder mit feinen Linien zum Entspannen. Kostenlos als A4-PDF zum Ausdrucken oder online ausmalen.",
+    bilder: [
+      { slug: "katze-paisley", titel: "Paisley-Katze", alt: "Sitzende Katze von vorn, ganz aus Paisley-Mustern und kleinen Blüten", prompt: "a cat sitting upright in front view, its whole body, head and tail filled with intricate paisley teardrop patterns, tiny flowers and swirls, exactly one head, two ears, two eyes, one tail curled around its front paws, highly detailed, very fine thin lines, for adults, the complete motif fully visible inside the page with a wide white margin on all four sides, nothing cut off at the edges" },
+      { slug: "katzenkopf-mandala", titel: "Katzenkopf-Mandala", alt: "Symmetrischer Katzenkopf von vorn mit Mandala- und Paisley-Ornamenten", prompt: "the head of a cat in front view, perfectly symmetric, the face and ears filled with intricate mandala, paisley and lace ornaments, two eyes, two ears, whiskers drawn as fine lines, highly detailed, very fine thin lines, for adults, the complete motif fully visible inside the page with a wide white margin on all four sides, nothing cut off at the edges" },
+      { slug: "katze-schlafend-paisley", titel: "Schlafende Ornament-Katze", alt: "Zusammengerollte schlafende Katze aus Paisley-Mustern, Blätter und Blüten im Kreis darum", prompt: "a cat sleeping curled up into a round shape seen from above, its head resting on its front paws with closed eyes, a single clearly drawn head with exactly two pointed ears and one face, the tail wrapped around the outside of the body with a clear separate outline, its body filled with intricate paisley and floral zentangle patterns, a circular wreath of leaves and small flowers around it, exactly one head, two ears, one tail, highly detailed, very fine thin lines, for adults, the complete motif fully visible inside the page with a wide white margin on all four sides, nothing cut off at the edges" },
+      { slug: "katze-mondsichel", titel: "Katze auf der Mondsichel", alt: "Katze sitzt auf einer verzierten Mondsichel, umgeben von Sternen, alles fein gemustert", prompt: "a cat sitting on a large crescent moon, the cat and the moon filled with intricate paisley and zentangle patterns, a few ornate stars around, exactly one head, two ears, four paws, one long tail hanging down, highly detailed, very fine thin lines, for adults, the complete motif fully visible inside the page with a wide white margin on all four sides, nothing cut off at the edges" },
+      { slug: "katze-blumenranken", titel: "Katze zwischen Blumenranken", alt: "Gemusterte Katze sitzt zwischen üppigen Blumenranken und Blättern", prompt: "an ornate cat sitting among lush intricate flowers, leaves and vines, the cat filled with fine paisley and zentangle patterns, the flowers with many fine petals, exactly one head, two ears, one tail, highly detailed, very fine thin lines, for adults" },
+    ],
+  },
+  {
     slug: "muster-erwachsene", name: "Blumen & Muster", stil: "erwachsen", alter: "Erwachsene", titel: "Blumen & Muster: Ausmalbilder für Erwachsene",
     intro: "Pfingstrosen, Paisley, Kaleidoskop und Mosaik: feine Blumen- und Musterbilder für Erwachsene, kostenlos als A4-PDF.",
     bilder: [
