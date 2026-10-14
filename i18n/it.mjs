@@ -1685,11 +1685,6 @@ export default {
       "alt": "Gatto seduto su una falce di luna decorata, circondato da stelle, tutto finemente decorato",
       "pfad": "gatto-falce-di-luna"
     },
-    "katzenpaar-herz": {
-      "titel": "Coppia di gatti con cuore",
-      "alt": "Due gatti seduti uno di fronte all'altro, le code formano un cuore, entrambi fatti di ornamenti",
-      "pfad": "coppia-gatti-cuore"
-    },
     "katze-blumenranken": {
       "titel": "Gatto tra i fiori",
       "alt": "Gatto decorato seduto tra fiori rampicanti e foglie rigogliose",

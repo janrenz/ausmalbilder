@@ -447,7 +447,6 @@ export default {
     "katzenkopf-mandala": { titel: "Mandala kattenkop", alt: "Symmetrische kattenkop van voren met mandala- en paisleyornamenten", pfad: "mandala-kattenkop" },
     "katze-schlafend-paisley": { titel: "Slapende ornamentkat", alt: "Opgerolde slapende kat van paisleymotieven, met een krans van bladeren en bloemen eromheen", pfad: "slapende-ornamentkat" },
     "katze-mondsichel": { titel: "Kat op de maansikkel", alt: "Kat zit op een versierde maansikkel tussen sterren, alles fijn gedecoreerd", pfad: "kat-op-de-maansikkel" },
-    "katzenpaar-herz": { titel: "Kattenpaar met hart", alt: "Twee katten zitten tegenover elkaar, hun staarten vormen een hart, allebei van ornamenten", pfad: "kattenpaar-met-hart" },
     "katze-blumenranken": { titel: "Kat tussen bloemenranken", alt: "Gedecoreerde kat zit tussen weelderige bloemenranken en bladeren", pfad: "kat-tussen-bloemenranken" },
     "muster-pfingstrosen": { titel: "Pioenrozen", alt: "Weelderig boeket van pioenrozen en bladeren", pfad: "pioenrozen" },
     "muster-lebensbaum": { titel: "Levensboom", alt: "Versierde levensboom met wortels en bloesems", pfad: "levensboom" },

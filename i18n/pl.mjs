@@ -449,7 +449,6 @@ export default {
     "katzenkopf-mandala": { titel: "Mandala z głową kota", alt: "symetryczna głowa kota od przodu z ornamentami mandali i paisley", pfad: "mandala-glowa-kota" },
     "katze-schlafend-paisley": { titel: "Śpiący kot z ornamentów", alt: "zwinięty w kłębek śpiący kot z wzorów paisley, wokół wieniec z liści i kwiatów", pfad: "spiacy-kot-ornamenty" },
     "katze-mondsichel": { titel: "Kot na sierpie księżyca", alt: "kot siedzi na zdobionym sierpie księżyca wśród gwiazd, wszystko w drobne wzory", pfad: "kot-na-sierpie-ksiezyca" },
-    "katzenpaar-herz": { titel: "Para kotów z sercem", alt: "dwa koty siedzą naprzeciw siebie, ich ogony tworzą serce, oba z ornamentów", pfad: "para-kotow-z-sercem" },
     "katze-blumenranken": { titel: "Kot wśród kwiatów", alt: "zdobiony kot siedzi wśród bujnych pnączy kwiatów i liści", pfad: "kot-wsrod-kwiatow" },
     "muster-pfingstrosen": { titel: "Piwonie", alt: "bujny bukiet piwonii i liści", pfad: "piwonie" },
     "muster-lebensbaum": { titel: "Drzewo życia", alt: "ozdobne drzewo życia z korzeniami i kwiatami", pfad: "drzewo-zycia" },

@@ -449,7 +449,6 @@ export default {
     "katzenkopf-mandala": { titel: "Mandala de cabeça de gato", alt: "Cabeça de gato simétrica de frente com ornamentos de mandala e paisley", pfad: "mandala-cabeca-gato" },
     "katze-schlafend-paisley": { titel: "Gato adormecido ornamental", alt: "Gato adormecido enroscado, feito de padrões paisley, com uma coroa de folhas e flores à volta", pfad: "gato-adormecido-ornamental" },
     "katze-mondsichel": { titel: "Gato no quarto crescente", alt: "Gato sentado num quarto crescente decorado, rodeado de estrelas, tudo com padrões finos", pfad: "gato-quarto-crescente" },
-    "katzenpaar-herz": { titel: "Casal de gatos com coração", alt: "Dois gatos sentados frente a frente, as caudas formam um coração, ambos feitos de ornamentos", pfad: "casal-gatos-coracao" },
     "katze-blumenranken": { titel: "Gato entre flores", alt: "Gato decorado sentado entre trepadeiras floridas e folhas exuberantes", pfad: "gato-entre-flores" },
     "muster-pfingstrosen": { titel: "Peónias", alt: "Ramo exuberante de peónias e folhas", pfad: "peonias" },
     "muster-lebensbaum": { titel: "Árvore da vida", alt: "Árvore da vida decorada com raízes e flores", pfad: "arvore-da-vida" },

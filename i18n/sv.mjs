@@ -447,7 +447,6 @@ export default {
     "katzenkopf-mandala": { titel: "Kattansikte som mandala", alt: "Symmetriskt kattansikte framifrån med mandala- och paisleyornament", pfad: "kattansikte-mandala" },
     "katze-schlafend-paisley": { titel: "Sovande ornamentkatt", alt: "Hopkrupen sovande katt av paisleymönster, med en krans av blad och blommor runt omkring", pfad: "sovande-ornamentkatt" },
     "katze-mondsichel": { titel: "Katt på månskäran", alt: "Katt sitter på en dekorerad månskära bland stjärnor, allt fint mönstrat", pfad: "katt-pa-manskaran" },
-    "katzenpaar-herz": { titel: "Kattpar med hjärta", alt: "Två katter sitter mitt emot varandra, svansarna bildar ett hjärta, båda av ornament", pfad: "kattpar-med-hjarta" },
     "katze-blumenranken": { titel: "Katt bland blomrankor", alt: "Mönstrad katt sitter bland frodiga blomrankor och blad", pfad: "katt-bland-blomrankor" },
     "muster-pfingstrosen": { titel: "Pioner", alt: "Frodig bukett av pioner och blad", pfad: "pioner" },
     "muster-lebensbaum": { titel: "Livets träd", alt: "Mönstrat livets träd med rötter och blommor", pfad: "livets-trad" },

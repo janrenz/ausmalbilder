@@ -1685,11 +1685,6 @@ export default {
       "alt": "Cat sitting on an ornate crescent moon surrounded by stars, all finely patterned",
       "pfad": "cat-on-the-crescent-moon"
     },
-    "katzenpaar-herz": {
-      "titel": "Cat Couple with a Heart",
-      "alt": "Two cats sitting face to face, their tails forming a heart, both made of ornaments",
-      "pfad": "cat-couple-with-a-heart"
-    },
     "katze-blumenranken": {
       "titel": "Cat among Flowering Vines",
       "alt": "Patterned cat sitting among lush flowering vines and leaves",

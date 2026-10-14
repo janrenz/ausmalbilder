@@ -1685,11 +1685,6 @@ export default {
       "alt": "Chat assis sur un croissant de lune décoré, entouré d'étoiles, le tout finement orné",
       "pfad": "chat-croissant-de-lune"
     },
-    "katzenpaar-herz": {
-      "titel": "Couple de chats en cœur",
-      "alt": "Deux chats assis face à face, leurs queues dessinent un cœur, tous deux faits d'ornements",
-      "pfad": "couple-de-chats-coeur"
-    },
     "katze-blumenranken": {
       "titel": "Chat dans les fleurs",
       "alt": "Chat orné assis parmi des fleurs, des vrilles et des feuilles luxuriantes",
