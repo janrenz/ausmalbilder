@@ -405,6 +405,11 @@ export default {
       "alt": "Unicorn head with a long mane and a crown of flowers in front of clouds and a meadow, with two butterflies",
       "pfad": "unicorn-flower-crown"
     },
+    "einhorn-regenbogen-rutsche": {
+      "titel": "Unicorn Sliding Down a Rainbow",
+      "alt": "A happy unicorn slides down a big rainbow, with clouds and flowers below",
+      "pfad": "unicorn-rainbow-slide"
+    },
     "dino-t-rex": {
       "titel": "Friendly T-Rex",
       "alt": "Smiling Tyrannosaurus rex between palm trees and a volcano",
@@ -484,6 +489,11 @@ export default {
       "titel": "Kittens in a Basket",
       "alt": "Two little kittens curled up asleep in a wicker basket, with a ball and a toy mouse in front",
       "pfad": "kittens-in-a-basket"
+    },
+    "hund-ball": {
+      "titel": "Puppy Playing with a Ball",
+      "alt": "A playful puppy leaps after a ball in the garden, with flowers and a garden fence",
+      "pfad": "puppy-ball"
     },
     "katze-fensterbank": {
       "titel": "Cat on the Window Sill",
@@ -664,6 +674,11 @@ export default {
       "titel": "Collecting Conkers",
       "alt": "Child collecting conkers into a basket under a big horse chestnut tree",
       "pfad": "collecting-conkers"
+    },
+    "igel-pilz": {
+      "titel": "Hedgehog with a Mushroom Umbrella",
+      "alt": "A hedgehog holds a big toadstool like an umbrella in the rain, with puddles and autumn leaves around it",
+      "pfad": "hedgehog-mushroom-umbrella"
     },
     "brandenburger-tor": {
       "titel": "Brandenburg Gate",
@@ -979,6 +994,11 @@ export default {
       "titel": "Kitten in a Pumpkin",
       "alt": "Little kitten peeking out of a big pumpkin with the pumpkin lid on its head, autumn leaves and a small bat nearby",
       "pfad": "kitten-in-a-pumpkin"
+    },
+    "spukhaus": {
+      "titel": "Haunted House with Little Ghosts",
+      "alt": "A small crooked haunted house with a little tower, friendly ghosts peeking out of the windows, pumpkins in front and bats in the sky",
+      "pfad": "haunted-house"
     },
     "martin-mantel": {
       "titel": "Saint Martin Shares His Cloak",
@@ -1344,6 +1364,11 @@ export default {
       "titel": "Vegetables",
       "alt": "Carrot, tomato, broccoli and cucumber with faces",
       "pfad": "vegetables"
+    },
+    "beeren": {
+      "titel": "Berries with Faces",
+      "alt": "Strawberry, raspberry, cherries and blueberries with smiling faces on a leaf",
+      "pfad": "berries-faces"
     },
     "sandburg": {
       "titel": "Sandcastle",

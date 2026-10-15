@@ -405,6 +405,11 @@ export default {
       "alt": "Testa di unicorno con una lunga criniera e una corona di fiori davanti a nuvole e a un prato, accanto due farfalle",
       "pfad": "unicorno-corona-fiori"
     },
+    "einhorn-regenbogen-rutsche": {
+      "titel": "Unicorno che scivola sull’arcobaleno",
+      "alt": "Un unicorno allegro scivola giù da un grande arcobaleno, sotto nuvole e fiori",
+      "pfad": "unicorno-scivolo-arcobaleno"
+    },
     "dino-t-rex": {
       "titel": "T-Rex simpatico",
       "alt": "Tirannosauro rex sorridente tra palme e vulcano",
@@ -484,6 +489,11 @@ export default {
       "titel": "Gattini nel cestino",
       "alt": "Due gattini dormono accoccolati in un cestino di vimini, davanti una palla e un topolino giocattolo",
       "pfad": "gattini-nel-cestino"
+    },
+    "hund-ball": {
+      "titel": "Cucciolo che gioca con la palla",
+      "alt": "Un cucciolo giocherellone salta dietro a una palla in giardino, con fiori e uno steccato",
+      "pfad": "cucciolo-palla"
     },
     "katze-fensterbank": {
       "titel": "Gatto sul davanzale",
@@ -664,6 +674,11 @@ export default {
       "titel": "Raccogliere le castagne",
       "alt": "Bambino raccoglie castagne in un cestino sotto un grande ippocastano",
       "pfad": "raccogliere-castagne"
+    },
+    "igel-pilz": {
+      "titel": "Riccio con l’ombrello a fungo",
+      "alt": "Un riccio tiene un grande fungo come un ombrello sotto la pioggia, intorno pozzanghere e foglie d’autunno",
+      "pfad": "riccio-fungo-pioggia"
     },
     "brandenburger-tor": {
       "titel": "Porta di Brandeburgo",
@@ -979,6 +994,11 @@ export default {
       "titel": "Gattino nella zucca",
       "alt": "Gattino che sbuca da una grande zucca con il coperchio in testa, foglie d'autunno e un piccolo pipistrello",
       "pfad": "gattino-nella-zucca"
+    },
+    "spukhaus": {
+      "titel": "Casa stregata con fantasmini",
+      "alt": "Una piccola casa stregata storta con una torretta, fantasmini simpatici alle finestre, zucche davanti e pipistrelli nel cielo",
+      "pfad": "casa-stregata"
     },
     "martin-mantel": {
       "titel": "San Martino divide il mantello",
@@ -1344,6 +1364,11 @@ export default {
       "titel": "Verdura",
       "alt": "Carota, pomodoro, broccolo e cetriolo con la faccia",
       "pfad": "verdura"
+    },
+    "beeren": {
+      "titel": "Frutti di bosco con le faccine",
+      "alt": "Fragola, lampone, ciliegie e mirtilli con faccine sorridenti su una foglia",
+      "pfad": "frutti-di-bosco"
     },
     "sandburg": {
       "titel": "Castello di sabbia",
