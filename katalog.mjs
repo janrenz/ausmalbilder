@@ -13,6 +13,7 @@ export const themen = [
       { slug: "einhorn-herbst", titel: "Einhorn im Herbstlaub", alt: "Einhorn springt über einen Haufen Herbstblätter, daneben Kürbisse und Pilze", prompt: "a cute unicorn happily jumping through a pile of big autumn leaves, a few pumpkins and mushrooms on the ground, leaves falling from a tree" },
       { slug: "einhorn-wolke", titel: "Einhorn schläft auf einer Wolke", alt: "Einhorn schläft zusammengerollt auf einer Wolke unter Mond und Sternen", prompt: "a cute unicorn sleeping curled up on a big fluffy cloud, a crescent moon and big stars above, peaceful bedtime scene" },
       { slug: "einhorn-blumenkranz", titel: "Einhorn mit Blumenkranz", alt: "Kopf eines Einhorns mit langer Mähne und einem Kranz aus Blumen vor Wolken und einer Wiese, daneben zwei Schmetterlinge", prompt: "the head and neck of a cute unicorn seen from the side, a long flowing wavy mane, a crown of big simple flowers on its head around the horn, two butterflies flying nearby, the unicorn has exactly two ears, one horn and one visible eye, the complete unicorn head fully visible inside the page with a wide white margin on all four sides, nothing cut off at the edges" },
+      { slug: "einhorn-regenbogen-rutsche", titel: "Einhorn rutscht den Regenbogen hinunter", alt: "Fröhliches Einhorn rutscht auf einem großen Regenbogen hinunter, unten Wolken und Blumen", prompt: "a happy cute unicorn sliding down a big rainbow like a slide, the rainbow arches from a fluffy cloud at the top left down to a soft cloud and a flower meadow at the bottom right, a few stars and hearts in the sky, the unicorn has exactly one head, one horn, two ears and four legs, the complete rainbow and unicorn fully visible inside the page with a wide white margin on all four sides, nothing cut off at the edges" },
     ],
   },
   {
@@ -47,6 +48,7 @@ export const themen = [
       { slug: "meerschweinchen", titel: "Meerschweinchen", alt: "Zwei Meerschweinchen fressen Salat", prompt: "two cute guinea pigs eating lettuce and a carrot on straw" },
       { slug: "goldfisch", titel: "Goldfisch im Glas", alt: "Goldfisch schwimmt in einem runden Glas mit Pflanzen", prompt: "a goldfish swimming in a round fishbowl with plants and pebbles, a cat watching curiously" },
       { slug: "katzen-koerbchen", titel: "Kätzchen im Körbchen", alt: "Zwei kleine Kätzchen schlafen zusammengekuschelt in einem Weidenkorb, davor ein Ball und eine Spielzeugmaus", prompt: "two small kittens sleeping curled up together in a woven wicker basket with a soft blanket, a small ball next to the basket, each kitten has exactly one head, two ears and its own separate body, peaceful scene" },
+      { slug: "hund-ball", titel: "Welpe spielt mit Ball", alt: "Verspielter Welpe springt im Garten einem Ball hinterher, daneben Blumen und ein Gartenzaun", prompt: "a playful puppy jumping after a bouncing ball in a garden with a few flowers and a simple wooden garden fence, the puppy has exactly one head, two floppy ears, four legs and one tail, the ball is plain without any pattern or writing" },
     ],
   },
   {
@@ -125,6 +127,7 @@ export const themen = [
       { slug: "regenschirm", titel: "Kind mit Regenschirm", alt: "Kind in Gummistiefeln springt mit Regenschirm in eine Pfütze", prompt: "a child in rubber boots with an umbrella jumping into a puddle, falling leaves and raindrops" },
       { slug: "igel-familie", titel: "Igel-Familie unterm Apfelbaum", alt: "Igel-Mama mit einem Blatt auf dem Rücken und zwei kleine Igel laufen unter einem Apfelbaum, im Gras liegen Äpfel und Laub", prompt: "a mother hedgehog and two baby hedgehogs walking in the grass under an apple tree in autumn, fallen apples and leaves on the ground, the mother carries a leaf, each hedgehog has exactly one head, one nose and four short legs, simple spines drawn as outlines" },
       { slug: "kastanien-sammeln", titel: "Kastanien sammeln", alt: "Kind sammelt Kastanien in einen Korb unter einem großen Kastanienbaum", prompt: "a happy child crouching under a big horse chestnut tree collecting shiny chestnuts into a small basket, open spiky chestnut shells and big hand-shaped leaves on the ground, leaves falling from the tree, the child has two arms and two hands with five fingers each" },
+      { slug: "igel-pilz", titel: "Igel unterm Pilz im Regen", alt: "Igel hält im Regen einen großen Fliegenpilz wie einen Regenschirm, um ihn herum Pfützen und Herbstblätter", prompt: "a cute hedgehog sitting under a big mushroom using it like an umbrella while it rains, raindrops falling, a few autumn leaves and small puddles on the ground, the hedgehog has exactly one head, one nose, two eyes and four short legs, simple spines drawn as outlines" },
     ],
   },
   {
@@ -212,6 +215,7 @@ export const themen = [
       { slug: "fledermaus", titel: "Kleine Fledermaus", alt: "Lächelnde Fledermaus hängt kopfüber an einem Ast", prompt: "a cute smiling bat hanging upside down from a tree branch under a full moon" },
       { slug: "kuerbis-familie", titel: "Kürbisfamilie auf der Treppe", alt: "Vier geschnitzte Kürbisse in verschiedenen Größen auf einer Holztreppe vor dem Haus, eine Eule sitzt auf dem Geländer", prompt: "three carved jack-o-lantern pumpkins of different sizes (big, medium, small) with friendly smiling faces sitting on wooden porch steps, autumn leaves and a cute owl on the railing, not scary" },
       { slug: "katze-kuerbis", titel: "Kätzchen im Kürbis", alt: "Kleines Kätzchen schaut aus einem großen Kürbis, den Kürbisdeckel auf dem Kopf, daneben Herbstblätter und eine kleine Fledermaus", prompt: "a cute kitten peeking out of a big hollowed-out pumpkin with its front paws resting on the rim, a few autumn leaves on the ground and one small friendly bat in the sky, not scary, the pumpkin has no carved face" },
+      { slug: "spukhaus", titel: "Spukhaus mit kleinen Gespenstern", alt: "Kleines schiefes Spukhaus mit Türmchen, freundliche Gespenster schauen aus den Fenstern, davor Kürbisse und Fledermäuse am Himmel", prompt: "a small crooked haunted house with a little tower and round windows, three cute friendly little ghosts peeking out of the windows and the door, carved smiling pumpkins on the path in front, a few small cute bats and a big full moon in the sky, a bare tree beside the house, not scary, cheerful, no text and no signs, the complete house fully visible inside the page with a wide white margin on all four sides" },
     ],
   },
   {
@@ -375,6 +379,7 @@ export const themen = [
       { slug: "kuchen", titel: "Torte", alt: "Große Torte mit Früchten und Sahne", prompt: "a big layered cake with strawberries and cream on a cake stand" },
       { slug: "pizza", titel: "Pizza", alt: "Pizza mit Belag und einem Stück, das herausgezogen wird", prompt: "a whole pizza with toppings and a slice being pulled out with stretchy cheese, the complete motif fully visible inside the page with a white margin on all four sides, nothing cut off at the edges" },
       { slug: "gemuese", titel: "Gemüse", alt: "Karotte, Tomate, Brokkoli und Gurke mit Gesichtern", prompt: "cute vegetables with smiling faces: carrot, tomato, broccoli, cucumber, corn" },
+      { slug: "beeren", titel: "Beeren mit Gesichtern", alt: "Erdbeere, Himbeere, Kirschen und Heidelbeeren mit lachenden Gesichtern auf einem Blatt", prompt: "cute berries with smiling faces sitting together on a big leaf: a big strawberry, a raspberry, a pair of cherries on one stem and three blueberries, each fruit has one face with two eyes and one smile, simple shapes, the complete motif fully visible inside the page with a white margin on all four sides" },
     ],
   },
   {

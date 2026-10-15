@@ -405,6 +405,11 @@ export default {
       "alt": "Tête de licorne à la longue crinière avec une couronne de fleurs devant des nuages et une prairie, deux papillons à côté",
       "pfad": "licorne-couronne-fleurs"
     },
+    "einhorn-regenbogen-rutsche": {
+      "titel": "Licorne qui glisse sur l’arc-en-ciel",
+      "alt": "Une licorne joyeuse glisse sur un grand arc-en-ciel, avec des nuages et des fleurs en bas",
+      "pfad": "licorne-toboggan-arc-en-ciel"
+    },
     "dino-t-rex": {
       "titel": "T-rex sympathique",
       "alt": "Tyrannosaure rieur entre des palmiers et un volcan",
@@ -484,6 +489,11 @@ export default {
       "titel": "Chatons dans un panier",
       "alt": "Deux petits chatons dorment blottis dans un panier en osier, devant une balle et une souris en jouet",
       "pfad": "chatons-panier"
+    },
+    "hund-ball": {
+      "titel": "Chiot qui joue au ballon",
+      "alt": "Un chiot joueur saute après un ballon dans le jardin, avec des fleurs et une clôture",
+      "pfad": "chiot-ballon"
     },
     "katze-fensterbank": {
       "titel": "Chat sur le rebord de la fenêtre",
@@ -664,6 +674,11 @@ export default {
       "titel": "Ramasser des marrons",
       "alt": "Enfant ramasse des marrons dans un panier sous un grand marronnier",
       "pfad": "ramasser-marrons"
+    },
+    "igel-pilz": {
+      "titel": "Hérisson sous un champignon",
+      "alt": "Un hérisson tient un grand champignon comme un parapluie sous la pluie, entouré de flaques et de feuilles d’automne",
+      "pfad": "herisson-champignon"
     },
     "brandenburger-tor": {
       "titel": "La porte de Brandebourg",
@@ -979,6 +994,11 @@ export default {
       "titel": "Chaton dans une citrouille",
       "alt": "Petit chaton qui sort la tête d'une grosse citrouille, le couvercle sur la tête, avec des feuilles d'automne et une petite chauve-souris",
       "pfad": "chaton-citrouille"
+    },
+    "spukhaus": {
+      "titel": "Maison hantée et petits fantômes",
+      "alt": "Une petite maison hantée de travers avec une tourelle, des fantômes gentils aux fenêtres, des citrouilles devant et des chauves-souris dans le ciel",
+      "pfad": "maison-hantee"
     },
     "martin-mantel": {
       "titel": "Saint Martin partage son manteau",
@@ -1344,6 +1364,11 @@ export default {
       "titel": "Légumes",
       "alt": "Carotte, tomate, brocoli et concombre avec des visages",
       "pfad": "legumes"
+    },
+    "beeren": {
+      "titel": "Petits fruits rigolos",
+      "alt": "Fraise, framboise, cerises et myrtilles avec des visages souriants sur une feuille",
+      "pfad": "petits-fruits"
     },
     "sandburg": {
       "titel": "Château de sable",
