@@ -405,6 +405,7 @@ export default {
       "alt": "Testa di unicorno con una lunga criniera e una corona di fiori davanti a nuvole e a un prato, accanto due farfalle",
       "pfad": "unicorno-corona-fiori"
     },
+    "einhorn-laterne": { titel: "Unicorno con la lanterna", alt: "Un unicorno tiene in bocca un bastone con una lanterna rotonda, sotto la luna e le stelle", pfad: "unicorno-lanterna" },
     "einhorn-regenbogen-rutsche": {
       "titel": "Unicorno che scivola sull’arcobaleno",
       "alt": "Un unicorno allegro scivola giù da un grande arcobaleno, sotto nuvole e fiori",
@@ -430,6 +431,8 @@ export default {
       "alt": "Stegosauro con le placche dorsali lungo il fiume",
       "pfad": "stegosauro"
     },
+    "dino-t-rex-mama": { titel: "Mamma T-rex con il cucciolo", alt: "Una simpatica mamma T-rex si china verso il suo piccolo T-rex, tra felci e un vulcano", pfad: "mamma-t-rex-cucciolo" },
+    "dino-ankylosaurus": { titel: "Anchilosauro con la coda a mazza", alt: "Un simpatico anchilosauro con la corazza e la coda a mazza tra rocce e felci", pfad: "anchilosauro" },
     "dino-flugsaurier": {
       "titel": "Pterosauri sopra il vulcano",
       "alt": "Pterosauri volano sopra le rocce e un vulcano",
@@ -1365,6 +1368,7 @@ export default {
       "alt": "Carota, pomodoro, broccolo e cetriolo con la faccia",
       "pfad": "verdura"
     },
+    "obst-tropisch": { titel: "Frutta tropicale con le faccine", alt: "Ananas, fetta di anguria, kiwi, mango e noce di cocco sorridenti su un tavolo, dietro una palma", pfad: "frutta-tropicale" },
     "beeren": {
       "titel": "Frutti di bosco con le faccine",
       "alt": "Fragola, lampone, ciliegie e mirtilli con faccine sorridenti su una foglia",
