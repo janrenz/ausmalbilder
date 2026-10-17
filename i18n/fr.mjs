@@ -405,6 +405,7 @@ export default {
       "alt": "Tête de licorne à la longue crinière avec une couronne de fleurs devant des nuages et une prairie, deux papillons à côté",
       "pfad": "licorne-couronne-fleurs"
     },
+    "einhorn-laterne": { titel: "Licorne avec une lanterne", alt: "Une licorne porte dans sa bouche un bâton avec une lanterne ronde, sous la lune et les étoiles", pfad: "licorne-lanterne" },
     "einhorn-regenbogen-rutsche": {
       "titel": "Licorne qui glisse sur l’arc-en-ciel",
       "alt": "Une licorne joyeuse glisse sur un grand arc-en-ciel, avec des nuages et des fleurs en bas",
@@ -430,6 +431,8 @@ export default {
       "alt": "Stégosaure avec des plaques dorsales au bord d'une rivière",
       "pfad": "stegosaure"
     },
+    "dino-t-rex-mama": { titel: "Maman T-rex et son bébé", alt: "Une gentille maman T-rex se penche vers son petit bébé T-rex, avec des fougères et un volcan", pfad: "maman-t-rex-bebe" },
+    "dino-ankylosaurus": { titel: "Ankylosaure à queue en massue", alt: "Un gentil ankylosaure avec sa carapace et sa queue en massue, entre rochers et fougères", pfad: "ankylosaure" },
     "dino-flugsaurier": {
       "titel": "Ptérosaures au-dessus du volcan",
       "alt": "Des ptérosaures volent au-dessus de rochers et d'un volcan",
@@ -1365,6 +1368,7 @@ export default {
       "alt": "Carotte, tomate, brocoli et concombre avec des visages",
       "pfad": "legumes"
     },
+    "obst-tropisch": { titel: "Fruits exotiques rigolos", alt: "Ananas, tranche de pastèque, kiwi, mangue et noix de coco souriants sur une table, un palmier derrière", pfad: "fruits-exotiques" },
     "beeren": {
       "titel": "Petits fruits rigolos",
       "alt": "Fraise, framboise, cerises et myrtilles avec des visages souriants sur une feuille",

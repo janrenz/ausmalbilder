@@ -405,6 +405,7 @@ export default {
       "alt": "Unicorn head with a long mane and a crown of flowers in front of clouds and a meadow, with two butterflies",
       "pfad": "unicorn-flower-crown"
     },
+    "einhorn-laterne": { titel: "Unicorn with a lantern", alt: "A unicorn carries a stick with a round lantern in its mouth, with the moon and stars above", pfad: "unicorn-lantern" },
     "einhorn-regenbogen-rutsche": {
       "titel": "Unicorn Sliding Down a Rainbow",
       "alt": "A happy unicorn slides down a big rainbow, with clouds and flowers below",
@@ -430,6 +431,8 @@ export default {
       "alt": "Stegosaurus with back plates beside a river",
       "pfad": "stegosaurus"
     },
+    "dino-t-rex-mama": { titel: "T. rex mum and baby", alt: "A friendly T. rex mum bends down to her little baby T. rex, with ferns and a volcano nearby", pfad: "t-rex-mum-baby" },
+    "dino-ankylosaurus": { titel: "Ankylosaurus with a club tail", alt: "A friendly ankylosaurus with armour and a club tail between rocks and ferns", pfad: "ankylosaurus" },
     "dino-flugsaurier": {
       "titel": "Pterosaurs over the Volcano",
       "alt": "Pterosaurs flying over rocks and a volcano",
@@ -1365,6 +1368,7 @@ export default {
       "alt": "Carrot, tomato, broccoli and cucumber with faces",
       "pfad": "vegetables"
     },
+    "obst-tropisch": { titel: "Tropical fruits with faces", alt: "Pineapple, watermelon slice, kiwi, mango and coconut with smiling faces on a table, a palm tree behind", pfad: "tropical-fruits-faces" },
     "beeren": {
       "titel": "Berries with Faces",
       "alt": "Strawberry, raspberry, cherries and blueberries with smiling faces on a leaf",
