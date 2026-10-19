@@ -405,6 +405,8 @@ export default {
       "alt": "Testa di unicorno con una lunga criniera e una corona di fiori davanti a nuvole e a un prato, accanto due farfalle",
       "pfad": "unicorno-corona-fiori"
     },
+    "einhorn-halloween": { titel: "Unicorno con il cappello da strega", alt: "Un unicorno con un piccolo cappello da strega accanto a una zucca sorridente, con la luna e un pipistrello", pfad: "unicorno-cappello-strega" },
+    "einhorn-pfuetze": { titel: "Unicorno che salta nella pozzanghera", alt: "Un unicorno allegro salta in una pozzanghera sotto una nuvola di pioggia e un arcobaleno, mentre cadono foglie autunnali", pfad: "unicorno-pozzanghera" },
     "einhorn-laterne": { titel: "Unicorno con la lanterna", alt: "Un unicorno tiene in bocca un bastone con una lanterna rotonda, sotto la luna e le stelle", pfad: "unicorno-lanterna" },
     "einhorn-regenbogen-rutsche": {
       "titel": "Unicorno che scivola sull’arcobaleno",
@@ -678,6 +680,7 @@ export default {
       "alt": "Bambino raccoglie castagne in un cestino sotto un grande ippocastano",
       "pfad": "raccogliere-castagne"
     },
+    "vogelscheuche": { titel: "Spaventapasseri simpatico", alt: "Uno spaventapasseri sorridente con cappello di paglia e camicia rattoppata in un campo, due uccellini sul braccio, zucche e girasoli ai suoi piedi", pfad: "spaventapasseri" },
     "igel-pilz": {
       "titel": "Riccio con l’ombrello a fungo",
       "alt": "Un riccio tiene un grande fungo come un ombrello sotto la pioggia, intorno pozzanghere e foglie d’autunno",
@@ -998,6 +1001,7 @@ export default {
       "alt": "Gattino che sbuca da una grande zucca con il coperchio in testa, foglie d'autunno e un piccolo pipistrello",
       "pfad": "gattino-nella-zucca"
     },
+    "fledermaus-suessigkeiten": { titel: "Pipistrello con il cestino di caramelle", alt: "Un piccolo pipistrello sorridente vola sopra un campo di zucche con un cestino pieno di caramelle, dietro la luna piena", pfad: "pipistrello-caramelle" },
     "spukhaus": {
       "titel": "Casa stregata con fantasmini",
       "alt": "Una piccola casa stregata storta con una torretta, fantasmini simpatici alle finestre, zucche davanti e pipistrelli nel cielo",
@@ -1519,6 +1523,7 @@ export default {
       "alt": "Armadio aperto con vestiti, borse e scarpe",
       "pfad": "armadio"
     },
+    "mode-herbst": { titel: "Outfit autunnali", alt: "Due giovani modelle con outfit autunnali: cappotto lungo con sciarpa e stivaletti, maglione a trecce con gonna e berretto, tra foglie che cadono", pfad: "outfit-autunno" },
     "mode-accessoires": {
       "titel": "Accessori",
       "alt": "Borse, occhiali da sole, cappelli e gioielli",

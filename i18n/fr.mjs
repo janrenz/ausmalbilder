@@ -405,6 +405,8 @@ export default {
       "alt": "Tête de licorne à la longue crinière avec une couronne de fleurs devant des nuages et une prairie, deux papillons à côté",
       "pfad": "licorne-couronne-fleurs"
     },
+    "einhorn-halloween": { titel: "Licorne au chapeau de sorcière", alt: "Une licorne coiffée d’un petit chapeau de sorcière à côté d’une citrouille souriante, avec la lune et une petite chauve-souris", pfad: "licorne-chapeau-sorciere" },
+    "einhorn-pfuetze": { titel: "Licorne qui saute dans une flaque", alt: "Une licorne joyeuse saute dans une flaque sous un nuage de pluie et un arc-en-ciel, des feuilles d’automne tombent", pfad: "licorne-flaque" },
     "einhorn-laterne": { titel: "Licorne avec une lanterne", alt: "Une licorne porte dans sa bouche un bâton avec une lanterne ronde, sous la lune et les étoiles", pfad: "licorne-lanterne" },
     "einhorn-regenbogen-rutsche": {
       "titel": "Licorne qui glisse sur l’arc-en-ciel",
@@ -678,6 +680,7 @@ export default {
       "alt": "Enfant ramasse des marrons dans un panier sous un grand marronnier",
       "pfad": "ramasser-marrons"
     },
+    "vogelscheuche": { titel: "Gentil épouvantail", alt: "Un épouvantail souriant avec un chapeau de paille et une chemise rapiécée dans un champ, deux oiseaux sur son bras, des citrouilles et des tournesols à ses pieds", pfad: "epouvantail" },
     "igel-pilz": {
       "titel": "Hérisson sous un champignon",
       "alt": "Un hérisson tient un grand champignon comme un parapluie sous la pluie, entouré de flaques et de feuilles d’automne",
@@ -998,6 +1001,7 @@ export default {
       "alt": "Petit chaton qui sort la tête d'une grosse citrouille, le couvercle sur la tête, avec des feuilles d'automne et une petite chauve-souris",
       "pfad": "chaton-citrouille"
     },
+    "fledermaus-suessigkeiten": { titel: "Chauve-souris et panier de bonbons", alt: "Une petite chauve-souris souriante survole un champ de citrouilles avec un panier plein de bonbons, devant la pleine lune", pfad: "chauve-souris-bonbons" },
     "spukhaus": {
       "titel": "Maison hantée et petits fantômes",
       "alt": "Une petite maison hantée de travers avec une tourelle, des fantômes gentils aux fenêtres, des citrouilles devant et des chauves-souris dans le ciel",
@@ -1519,6 +1523,7 @@ export default {
       "alt": "Une penderie ouverte avec des vêtements, des sacs et des chaussures",
       "pfad": "garde-robe"
     },
+    "mode-herbst": { titel: "Tenues d’automne", alt: "Deux jeunes mannequins en tenue d’automne : long manteau avec écharpe et bottines, pull torsadé avec jupe et bonnet, et des feuilles qui tombent", pfad: "tenues-automne" },
     "mode-accessoires": {
       "titel": "Accessoires",
       "alt": "Sacs, lunettes de soleil, chapeaux et bijoux",

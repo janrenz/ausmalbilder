@@ -405,6 +405,8 @@ export default {
       "alt": "Unicorn head with a long mane and a crown of flowers in front of clouds and a meadow, with two butterflies",
       "pfad": "unicorn-flower-crown"
     },
+    "einhorn-halloween": { titel: "Unicorn with a witch hat", alt: "A unicorn in a little witch hat stands next to a smiling pumpkin, with the moon and a small bat above", pfad: "unicorn-witch-hat" },
+    "einhorn-pfuetze": { titel: "Unicorn jumping in a puddle", alt: "A happy unicorn jumps into a rain puddle under a rain cloud and a rainbow, with autumn leaves falling", pfad: "unicorn-puddle" },
     "einhorn-laterne": { titel: "Unicorn with a lantern", alt: "A unicorn carries a stick with a round lantern in its mouth, with the moon and stars above", pfad: "unicorn-lantern" },
     "einhorn-regenbogen-rutsche": {
       "titel": "Unicorn Sliding Down a Rainbow",
@@ -678,6 +680,7 @@ export default {
       "alt": "Child collecting conkers into a basket under a big horse chestnut tree",
       "pfad": "collecting-conkers"
     },
+    "vogelscheuche": { titel: "Friendly scarecrow", alt: "A smiling scarecrow with a straw hat and patched shirt stands in a field, two birds on its arm, pumpkins and sunflowers at its feet", pfad: "friendly-scarecrow" },
     "igel-pilz": {
       "titel": "Hedgehog with a Mushroom Umbrella",
       "alt": "A hedgehog holds a big toadstool like an umbrella in the rain, with puddles and autumn leaves around it",
@@ -998,6 +1001,7 @@ export default {
       "alt": "Little kitten peeking out of a big pumpkin with the pumpkin lid on its head, autumn leaves and a small bat nearby",
       "pfad": "kitten-in-a-pumpkin"
     },
+    "fledermaus-suessigkeiten": { titel: "Bat with a candy basket", alt: "A little smiling bat flies over a pumpkin patch with a basket full of sweets, the full moon behind it", pfad: "bat-candy-basket" },
     "spukhaus": {
       "titel": "Haunted House with Little Ghosts",
       "alt": "A small crooked haunted house with a little tower, friendly ghosts peeking out of the windows, pumpkins in front and bats in the sky",
@@ -1519,6 +1523,7 @@ export default {
       "alt": "Open wardrobe with clothes, bags and shoes",
       "pfad": "wardrobe"
     },
+    "mode-herbst": { titel: "Autumn outfits", alt: "Two young models in autumn outfits: a long coat with scarf and boots, and a cable-knit sweater with skirt and beanie, with falling leaves", pfad: "autumn-outfits" },
     "mode-accessoires": {
       "titel": "Accessories",
       "alt": "Bags, sunglasses, hats and jewellery",
