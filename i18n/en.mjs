@@ -681,6 +681,7 @@ export default {
       "pfad": "collecting-conkers"
     },
     "vogelscheuche": { titel: "Friendly scarecrow", alt: "A smiling scarecrow with a straw hat and patched shirt stands in a field, two birds on its arm, pumpkins and sunflowers at its feet", pfad: "friendly-scarecrow" },
+    "laubhaufen": { titel: "Jumping into a leaf pile", alt: "A child in a raincoat and rubber boots jumps laughing into a big pile of leaves, next to it a rake and a tree with falling leaves", pfad: "leaf-pile-jump" },
     "igel-pilz": {
       "titel": "Hedgehog with a Mushroom Umbrella",
       "alt": "A hedgehog holds a big toadstool like an umbrella in the rain, with puddles and autumn leaves around it",
@@ -1002,6 +1003,7 @@ export default {
       "pfad": "kitten-in-a-pumpkin"
     },
     "fledermaus-suessigkeiten": { titel: "Bat with a candy basket", alt: "A little smiling bat flies over a pumpkin patch with a basket full of sweets, the full moon behind it", pfad: "bat-candy-basket" },
+    "kuerbis-turm": { titel: "Pumpkin tower with witch hat", alt: "Three carved, smiling pumpkins stacked on top of each other, the top one wearing a witch hat, autumn leaves and a little bat nearby", pfad: "pumpkin-tower" },
     "spukhaus": {
       "titel": "Haunted House with Little Ghosts",
       "alt": "A small crooked haunted house with a little tower, friendly ghosts peeking out of the windows, pumpkins in front and bats in the sky",
@@ -1022,6 +1024,9 @@ export default {
       "alt": "Three lanterns: moon, sun and hedgehog",
       "pfad": "lanterns-to-colour-in"
     },
+    "kind-sternlaterne": { titel: "Child with a star lantern", alt: "A child in a hat and scarf carries a star lantern on a stick down a street with small houses, the moon and stars in the sky", pfad: "child-star-lantern" },
+    "martin-laternenzug": { titel: "St Martin leads the lantern parade", alt: "St Martin in a helmet and cloak rides ahead on a horse, children with lanterns walking behind him", pfad: "st-martin-lantern-parade" },
+    "martinsgans": { titel: "St Martin's goose with a lantern", alt: "A cheerful goose holds a round lantern on a stick in its beak, surrounded by autumn leaves and stars", pfad: "goose-lantern" },
     "tannenbaum": {
       "titel": "Decorated Christmas Tree",
       "alt": "Christmas tree with baubles, a star and presents",
