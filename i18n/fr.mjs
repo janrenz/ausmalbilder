@@ -681,6 +681,7 @@ export default {
       "pfad": "ramasser-marrons"
     },
     "vogelscheuche": { titel: "Gentil épouvantail", alt: "Un épouvantail souriant avec un chapeau de paille et une chemise rapiécée dans un champ, deux oiseaux sur son bras, des citrouilles et des tournesols à ses pieds", pfad: "epouvantail" },
+    "laubhaufen": { titel: "Saut dans un tas de feuilles", alt: "Un enfant en ciré et bottes de pluie saute en riant dans un gros tas de feuilles, à côté un râteau et un arbre qui perd ses feuilles", pfad: "tas-de-feuilles" },
     "igel-pilz": {
       "titel": "Hérisson sous un champignon",
       "alt": "Un hérisson tient un grand champignon comme un parapluie sous la pluie, entouré de flaques et de feuilles d’automne",
@@ -1002,6 +1003,7 @@ export default {
       "pfad": "chaton-citrouille"
     },
     "fledermaus-suessigkeiten": { titel: "Chauve-souris et panier de bonbons", alt: "Une petite chauve-souris souriante survole un champ de citrouilles avec un panier plein de bonbons, devant la pleine lune", pfad: "chauve-souris-bonbons" },
+    "kuerbis-turm": { titel: "Tour de citrouilles au chapeau de sorcière", alt: "Trois citrouilles sculptées et souriantes empilées, la plus haute porte un chapeau de sorcière, autour des feuilles d'automne et une petite chauve-souris", pfad: "tour-citrouilles" },
     "spukhaus": {
       "titel": "Maison hantée et petits fantômes",
       "alt": "Une petite maison hantée de travers avec une tourelle, des fantômes gentils aux fenêtres, des citrouilles devant et des chauves-souris dans le ciel",
@@ -1022,6 +1024,9 @@ export default {
       "alt": "Trois lanternes : lune, soleil et hérisson",
       "pfad": "lanternes-a-colorier"
     },
+    "kind-sternlaterne": { titel: "Enfant avec une lanterne étoile", alt: "Un enfant en bonnet et écharpe porte une lanterne en forme d'étoile au bout d'un bâton dans une rue aux petites maisons, la lune et les étoiles dans le ciel", pfad: "enfant-lanterne-etoile" },
+    "martin-laternenzug": { titel: "Saint Martin en tête du défilé", alt: "Saint Martin, avec casque et cape, ouvre la marche à cheval, derrière lui des enfants avec leurs lanternes", pfad: "saint-martin-defile" },
+    "martinsgans": { titel: "L'oie de la Saint-Martin et sa lanterne", alt: "Une oie joyeuse tient dans son bec une lanterne ronde au bout d'un bâton, entourée de feuilles d'automne et d'étoiles", pfad: "oie-lanterne" },
     "tannenbaum": {
       "titel": "Sapin décoré",
       "alt": "Sapin de Noël avec des boules, une étoile et des cadeaux",

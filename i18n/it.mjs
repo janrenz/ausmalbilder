@@ -681,6 +681,7 @@ export default {
       "pfad": "raccogliere-castagne"
     },
     "vogelscheuche": { titel: "Spaventapasseri simpatico", alt: "Uno spaventapasseri sorridente con cappello di paglia e camicia rattoppata in un campo, due uccellini sul braccio, zucche e girasoli ai suoi piedi", pfad: "spaventapasseri" },
+    "laubhaufen": { titel: "Salto nel mucchio di foglie", alt: "Un bambino con impermeabile e stivali di gomma salta ridendo in un grande mucchio di foglie, accanto un rastrello e un albero che perde le foglie", pfad: "mucchio-di-foglie" },
     "igel-pilz": {
       "titel": "Riccio con l’ombrello a fungo",
       "alt": "Un riccio tiene un grande fungo come un ombrello sotto la pioggia, intorno pozzanghere e foglie d’autunno",
@@ -1002,6 +1003,7 @@ export default {
       "pfad": "gattino-nella-zucca"
     },
     "fledermaus-suessigkeiten": { titel: "Pipistrello con il cestino di caramelle", alt: "Un piccolo pipistrello sorridente vola sopra un campo di zucche con un cestino pieno di caramelle, dietro la luna piena", pfad: "pipistrello-caramelle" },
+    "kuerbis-turm": { titel: "Torre di zucche con cappello da strega", alt: "Tre zucche intagliate e sorridenti una sopra l'altra, quella in cima con un cappello da strega, intorno foglie d'autunno e un pipistrello", pfad: "torre-zucche" },
     "spukhaus": {
       "titel": "Casa stregata con fantasmini",
       "alt": "Una piccola casa stregata storta con una torretta, fantasmini simpatici alle finestre, zucche davanti e pipistrelli nel cielo",
@@ -1022,6 +1024,9 @@ export default {
       "alt": "Tre lanterne: luna, sole e riccio",
       "pfad": "lanterne"
     },
+    "kind-sternlaterne": { titel: "Bambino con la lanterna a stella", alt: "Un bambino con berretto e sciarpa porta una lanterna a forma di stella su un bastone lungo una via di casette, in cielo la luna e le stelle", pfad: "bambino-lanterna-stella" },
+    "martin-laternenzug": { titel: "San Martino guida la sfilata delle lanterne", alt: "San Martino con elmo e mantello cavalca davanti, dietro di lui camminano bambini con le lanterne", pfad: "san-martino-sfilata" },
+    "martinsgans": { titel: "L'oca di San Martino con la lanterna", alt: "Un'oca allegra tiene nel becco una lanterna rotonda su un bastone, intorno foglie d'autunno e stelle", pfad: "oca-lanterna" },
     "tannenbaum": {
       "titel": "Albero di Natale addobbato",
       "alt": "Albero di Natale con palline, stella e regali",
