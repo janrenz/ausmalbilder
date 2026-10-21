@@ -1004,6 +1004,8 @@ export default {
     },
     "fledermaus-suessigkeiten": { titel: "Chauve-souris et panier de bonbons", alt: "Une petite chauve-souris souriante survole un champ de citrouilles avec un panier plein de bonbons, devant la pleine lune", pfad: "chauve-souris-bonbons" },
     "kuerbis-turm": { titel: "Tour de citrouilles au chapeau de sorcière", alt: "Trois citrouilles sculptées et souriantes empilées, la plus haute porte un chapeau de sorcière, autour des feuilles d'automne et une petite chauve-souris", pfad: "tour-citrouilles" },
+    "kuerbis-schnitzen": { titel: "Enfants qui sculptent une citrouille", alt: "Deux enfants à la table de la cuisine avec une grande citrouille sculptée : un garçon la vide avec une cuillère, une fille tient le couvercle, à côté un bol de graines de citrouille", pfad: "sculpter-citrouille" },
+    "gespenst-kuerbisfeld": { titel: "Petit fantôme dans le champ de citrouilles", alt: "Un petit fantôme gentil flotte en souriant au-dessus d'un champ de grosses citrouilles et de vrilles, avec la lune au-dessus", pfad: "fantome-champ-citrouilles" },
     "spukhaus": {
       "titel": "Maison hantée et petits fantômes",
       "alt": "Une petite maison hantée de travers avec une tourelle, des fantômes gentils aux fenêtres, des citrouilles devant et des chauves-souris dans le ciel",
@@ -1027,6 +1029,7 @@ export default {
     "kind-sternlaterne": { titel: "Enfant avec une lanterne étoile", alt: "Un enfant en bonnet et écharpe porte une lanterne en forme d'étoile au bout d'un bâton dans une rue aux petites maisons, la lune et les étoiles dans le ciel", pfad: "enfant-lanterne-etoile" },
     "martin-laternenzug": { titel: "Saint Martin en tête du défilé", alt: "Saint Martin, avec casque et cape, ouvre la marche à cheval, derrière lui des enfants avec leurs lanternes", pfad: "saint-martin-defile" },
     "martinsgans": { titel: "L'oie de la Saint-Martin et sa lanterne", alt: "Une oie joyeuse tient dans son bec une lanterne ronde au bout d'un bâton, entourée de feuilles d'automne et d'étoiles", pfad: "oie-lanterne" },
+    "laternen-basteln": { titel: "Enfants qui fabriquent des lanternes", alt: "Deux enfants à une table fabriquent des lanternes en papier, avec des ciseaux, de la colle et une lanterne terminée décorée d'étoiles", pfad: "fabriquer-lanternes" },
     "tannenbaum": {
       "titel": "Sapin décoré",
       "alt": "Sapin de Noël avec des boules, une étoile et des cadeaux",
@@ -1529,6 +1532,8 @@ export default {
       "pfad": "garde-robe"
     },
     "mode-herbst": { titel: "Tenues d’automne", alt: "Deux jeunes mannequins en tenue d’automne : long manteau avec écharpe et bottines, pull torsadé avec jupe et bonnet, et des feuilles qui tombent", pfad: "tenues-automne" },
+    "mode-winter": { titel: "Tenues d'hiver", alt: "Deux jeunes mannequins en tenue d'hiver : doudoune avec bonnet à pompon et moufles, et manteau en laine avec écharpe et bottines, entourés de flocons de neige", pfad: "tenues-hiver" },
+    "mode-kostueme": { titel: "Créer des déguisements", alt: "Trois jeunes mannequins dans des déguisements créés par eux-mêmes : sorcière avec chapeau pointu, cape et baguette, pirate avec tricorne, sac et carte au trésor, et super-héros en combinaison avec cape, masque et une étoile sur la poitrine", pfad: "creer-deguisements" },
     "mode-accessoires": {
       "titel": "Accessoires",
       "alt": "Sacs, lunettes de soleil, chapeaux et bijoux",

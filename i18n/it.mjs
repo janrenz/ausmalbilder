@@ -1004,6 +1004,8 @@ export default {
     },
     "fledermaus-suessigkeiten": { titel: "Pipistrello con il cestino di caramelle", alt: "Un piccolo pipistrello sorridente vola sopra un campo di zucche con un cestino pieno di caramelle, dietro la luna piena", pfad: "pipistrello-caramelle" },
     "kuerbis-turm": { titel: "Torre di zucche con cappello da strega", alt: "Tre zucche intagliate e sorridenti una sopra l'altra, quella in cima con un cappello da strega, intorno foglie d'autunno e un pipistrello", pfad: "torre-zucche" },
+    "kuerbis-schnitzen": { titel: "Bambini che intagliano una zucca", alt: "Due bambini al tavolo della cucina con una grande zucca intagliata: un bambino la svuota con un cucchiaio, una bambina tiene il coperchio, accanto una ciotola di semi di zucca", pfad: "intagliare-zucca" },
+    "gespenst-kuerbisfeld": { titel: "Fantasmino nel campo di zucche", alt: "Un piccolo fantasma simpatico fluttua sorridendo sopra un campo di grandi zucche e viticci, con la luna in cielo", pfad: "fantasmino-campo-zucche" },
     "spukhaus": {
       "titel": "Casa stregata con fantasmini",
       "alt": "Una piccola casa stregata storta con una torretta, fantasmini simpatici alle finestre, zucche davanti e pipistrelli nel cielo",
@@ -1027,6 +1029,7 @@ export default {
     "kind-sternlaterne": { titel: "Bambino con la lanterna a stella", alt: "Un bambino con berretto e sciarpa porta una lanterna a forma di stella su un bastone lungo una via di casette, in cielo la luna e le stelle", pfad: "bambino-lanterna-stella" },
     "martin-laternenzug": { titel: "San Martino guida la sfilata delle lanterne", alt: "San Martino con elmo e mantello cavalca davanti, dietro di lui camminano bambini con le lanterne", pfad: "san-martino-sfilata" },
     "martinsgans": { titel: "L'oca di San Martino con la lanterna", alt: "Un'oca allegra tiene nel becco una lanterna rotonda su un bastone, intorno foglie d'autunno e stelle", pfad: "oca-lanterna" },
+    "laternen-basteln": { titel: "Bambini che fanno le lanterne", alt: "Due bambini a un tavolo costruiscono lanterne di carta, con forbici, colla e una lanterna finita decorata con stelle", pfad: "costruire-lanterne" },
     "tannenbaum": {
       "titel": "Albero di Natale addobbato",
       "alt": "Albero di Natale con palline, stella e regali",
@@ -1529,6 +1532,8 @@ export default {
       "pfad": "armadio"
     },
     "mode-herbst": { titel: "Outfit autunnali", alt: "Due giovani modelle con outfit autunnali: cappotto lungo con sciarpa e stivaletti, maglione a trecce con gonna e berretto, tra foglie che cadono", pfad: "outfit-autunno" },
+    "mode-winter": { titel: "Look invernali", alt: "Due giovani modelli in abiti invernali: piumino con berretto a pon pon e muffole, e cappotto di lana con sciarpa e stivaletti, tra i fiocchi di neve", pfad: "look-invernali" },
+    "mode-kostueme": { titel: "Disegnare costumi", alt: "Tre giovani modelli in costumi ideati da loro: strega con cappello a punta, mantello e bacchetta, pirata con tricorno, borsa e mappa del tesoro, e supereroe con tuta, mantello, mascherina e una stella sul petto", pfad: "disegnare-costumi" },
     "mode-accessoires": {
       "titel": "Accessori",
       "alt": "Borse, occhiali da sole, cappelli e gioielli",

@@ -1004,6 +1004,8 @@ export default {
     },
     "fledermaus-suessigkeiten": { titel: "Bat with a candy basket", alt: "A little smiling bat flies over a pumpkin patch with a basket full of sweets, the full moon behind it", pfad: "bat-candy-basket" },
     "kuerbis-turm": { titel: "Pumpkin tower with witch hat", alt: "Three carved, smiling pumpkins stacked on top of each other, the top one wearing a witch hat, autumn leaves and a little bat nearby", pfad: "pumpkin-tower" },
+    "kuerbis-schnitzen": { titel: "Children carving a pumpkin", alt: "Two children at a kitchen table with a big carved pumpkin: a boy scoops it out with a spoon, a girl holds the lid, with a bowl of pumpkin seeds nearby", pfad: "carving-pumpkin" },
+    "gespenst-kuerbisfeld": { titel: "Little ghost in the pumpkin patch", alt: "A small, friendly ghost floats smiling above a pumpkin patch with big pumpkins and vines, with the moon above", pfad: "ghost-pumpkin-patch" },
     "spukhaus": {
       "titel": "Haunted House with Little Ghosts",
       "alt": "A small crooked haunted house with a little tower, friendly ghosts peeking out of the windows, pumpkins in front and bats in the sky",
@@ -1027,6 +1029,7 @@ export default {
     "kind-sternlaterne": { titel: "Child with a star lantern", alt: "A child in a hat and scarf carries a star lantern on a stick down a street with small houses, the moon and stars in the sky", pfad: "child-star-lantern" },
     "martin-laternenzug": { titel: "St Martin leads the lantern parade", alt: "St Martin in a helmet and cloak rides ahead on a horse, children with lanterns walking behind him", pfad: "st-martin-lantern-parade" },
     "martinsgans": { titel: "St Martin's goose with a lantern", alt: "A cheerful goose holds a round lantern on a stick in its beak, surrounded by autumn leaves and stars", pfad: "goose-lantern" },
+    "laternen-basteln": { titel: "Children making lanterns", alt: "Two children at a table making paper lanterns, with scissors, glue and a finished lantern with stars on the table", pfad: "making-lanterns" },
     "tannenbaum": {
       "titel": "Decorated Christmas Tree",
       "alt": "Christmas tree with baubles, a star and presents",
@@ -1529,6 +1532,8 @@ export default {
       "pfad": "wardrobe"
     },
     "mode-herbst": { titel: "Autumn outfits", alt: "Two young models in autumn outfits: a long coat with scarf and boots, and a cable-knit sweater with skirt and beanie, with falling leaves", pfad: "autumn-outfits" },
+    "mode-winter": { titel: "Winter outfits", alt: "Two young models in winter outfits: a puffer jacket with bobble hat and mittens, and a wool coat with scarf and boots, with snowflakes", pfad: "winter-outfits" },
+    "mode-kostueme": { titel: "Design costumes", alt: "Three young models in self-designed costumes: a witch with pointed hat, cape and wand, a pirate with tricorn hat, bag and treasure map, and a superhero costume with jumpsuit, cape, eye mask and a star on the chest", pfad: "design-costumes" },
     "mode-accessoires": {
       "titel": "Accessories",
       "alt": "Bags, sunglasses, hats and jewellery",
