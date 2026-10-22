@@ -365,6 +365,11 @@ export default {
     }
   },
   "bilder": {
+    "einhorn-drachen": { titel: "Licorne et cerf-volant", alt: "Une licorne joyeuse galope dans un pré d’automne, au-dessus d’elle un cerf-volant à queue de nœuds vole entre les nuages et des feuilles tourbillonnent", pfad: "licorne-cerf-volant" },
+    "feuerwehr-drehleiter": { titel: "Les pompiers sauvent un chaton", alt: "Camion de pompiers avec la grande échelle déployée contre un arbre, un pompier grimpe vers un chaton en haut de l’échelle", pfad: "pompiers-chaton" },
+    "zwinger-dresden": { titel: "Le Zwinger de Dresde", alt: "La porte de la Couronne, baroque, du Zwinger de Dresde avec une couronne sur sa coupole, devant les douves et un pont de pierre", pfad: "zwinger-dresde" },
+    "suesses-oder-saures": { titel: "Des bonbons ou un sort à la porte", alt: "Deux enfants déguisés en fantôme et en citrouille attendent avec leurs seaux devant une porte, une femme leur tend un saladier de bonbons, une citrouille sculptée sur la marche", pfad: "bonbons-ou-un-sort" },
+    "mandala-schmetterling": { titel: "Mandala papillon", alt: "Mandala rond avec un grand papillon au centre, entouré de fleurs, de cœurs et de spirales", pfad: "mandala-papillon" },
     "einhorn-regenbogen": {
       "titel": "Licorne avec arc-en-ciel",
       "alt": "Licorne dans une prairie fleurie avec un arc-en-ciel et des nuages souriants",

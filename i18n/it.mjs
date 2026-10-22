@@ -365,6 +365,11 @@ export default {
     }
   },
   "bilder": {
+    "einhorn-drachen": { titel: "Unicorno con l’aquilone", alt: "Un unicorno allegro galoppa in un prato autunnale, sopra di lui un aquilone con la coda di fiocchi vola tra le nuvole e le foglie volteggiano nell’aria", pfad: "unicorno-aquilone" },
+    "feuerwehr-drehleiter": { titel: "I pompieri salvano un gattino", alt: "Camion dei pompieri con la scala alzata contro un grande albero, un pompiere sale verso un gattino in cima alla scala", pfad: "pompieri-gattino" },
+    "zwinger-dresden": { titel: "Zwinger di Dresda", alt: "La barocca Porta della Corona dello Zwinger di Dresda con una corona sulla cupola, davanti il fossato con un ponte di pietra", pfad: "zwinger-dresda" },
+    "suesses-oder-saures": { titel: "Dolcetto o scherzetto alla porta", alt: "Due bambini travestiti da fantasma e da zucca aspettano con i secchielli davanti a una porta, una signora porge una ciotola di caramelle, sul gradino una zucca intagliata", pfad: "dolcetto-o-scherzetto" },
+    "mandala-schmetterling": { titel: "Mandala con farfalla", alt: "Mandala rotondo con una grande farfalla al centro, circondata da fiori, cuori e spirali", pfad: "mandala-farfalla" },
     "einhorn-regenbogen": {
       "titel": "Unicorno con l'arcobaleno",
       "alt": "Unicorno su un prato fiorito con arcobaleno e nuvole sorridenti",

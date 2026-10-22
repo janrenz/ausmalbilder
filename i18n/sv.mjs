@@ -183,6 +183,11 @@ export default {
     "muster-erwachsene": { name: "Blommor & mönster", titel: "Blommor & mönster: målarbilder för vuxna", intro: "Pioner, paisley, kalejdoskop och mosaik: fina blom- och mönstermålarbilder för vuxna – gratis som A4-pdf.", pfad: "blommor-monster-vuxna" },
   },
   bilder: {
+    "einhorn-drachen": { titel: "Enhörning med drake", alt: "En glad enhörning galopperar över en höstäng medan en drake med rosettsvans flyger mellan molnen och löv virvlar i luften", pfad: "enhorning-drake" },
+    "feuerwehr-drehleiter": { titel: "Brandkåren räddar en kattunge", alt: "Brandbil med utfälld stege mot ett stort träd, en brandman klättrar upp till en kattunge högst upp på stegen", pfad: "brandkar-kattunge" },
+    "zwinger-dresden": { titel: "Zwinger i Dresden", alt: "Den barocka Kronporten på Zwinger i Dresden med en krona på kupolen, framför vallgraven med en stenbro", pfad: "zwinger-dresden" },
+    "suesses-oder-saures": { titel: "Bus eller godis vid dörren", alt: "Två barn utklädda till spöke och pumpa står med små hinkar vid en ytterdörr, en kvinna bjuder på en skål godis, på trappan en urholkad pumpa", pfad: "bus-eller-godis" },
+    "mandala-schmetterling": { titel: "Fjärilsmandala", alt: "Rund mandala med en stor fjäril i mitten, omgiven av blommor, hjärtan och slingor", pfad: "fjarilsmandala" },
     "einhorn-regenbogen": { titel: "Enhörning med regnbåge", alt: "Enhörning på en blomsteräng med regnbåge och glada moln", pfad: "enhorning-regnbage" },
     "einhorn-sterne": { titel: "Flygande enhörning bland stjärnor", alt: "Enhörning med vingar flyger mellan stjärnor och måne", pfad: "flygande-enhorning-stjarnor" },
     "einhorn-baby": { titel: "Enhörningsbebis med mamma", alt: "Enhörningsmamma och enhörningsbebis kramas bland hjärtan", pfad: "enhorningsbebis-mamma" },

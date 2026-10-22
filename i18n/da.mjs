@@ -183,6 +183,11 @@ export default {
     "muster-erwachsene": { name: "Blomster & mønstre", titel: "Blomster & mønstre: malebog for voksne", intro: "Pæoner, paisley, kalejdoskop og mosaik: fine blomster- og mønstertegninger til voksne – gratis som A4-pdf.", pfad: "blomster-moenstre-voksne" },
   },
   bilder: {
+    "einhorn-drachen": { titel: "Enhjørning med drage", alt: "En glad enhjørning galopperer hen over en efterårseng, mens en drage med sløjfehale flyver mellem skyerne, og blade hvirvler gennem luften", pfad: "enhjorning-drage" },
+    "feuerwehr-drehleiter": { titel: "Brandvæsenet redder en killing", alt: "Brandbil med udskudt stige op ad et stort træ, en brandmand klatrer op til en killing øverst på stigen", pfad: "brandvaesen-killing" },
+    "zwinger-dresden": { titel: "Zwinger i Dresden", alt: "Den barokke Kroneport ved Zwinger i Dresden med en krone på kuplen, foran voldgraven med en stenbro", pfad: "zwinger-dresden" },
+    "suesses-oder-saures": { titel: "Slik eller ballade ved hoveddøren", alt: "To børn klædt ud som spøgelse og græskar står med små spande ved en hoveddør, en kvinde rækker dem en skål slik, på trappen et udskåret græskar", pfad: "slik-eller-ballade" },
+    "mandala-schmetterling": { titel: "Sommerfugle-mandala", alt: "Rund mandala med en stor sommerfugl i midten, omgivet af blomster, hjerter og snirkler", pfad: "sommerfugle-mandala" },
     "einhorn-regenbogen": { titel: "Enhjørning med regnbue", alt: "Enhjørning på en blomstereng med regnbue og smilende skyer", pfad: "enhjoerning-regnbue" },
     "einhorn-sterne": { titel: "Flyvende enhjørning med stjerner", alt: "Enhjørning med vinger flyver mellem stjerner og måne", pfad: "flyvende-enhjoerning-stjerner" },
     "einhorn-baby": { titel: "Enhjørningeunge med mor", alt: "Enhjørningemor og enhjørningeunge krammer mellem hjerter", pfad: "enhjoerningeunge-mor" },

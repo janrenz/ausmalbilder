@@ -185,6 +185,11 @@ export default {
     "muster-erwachsene": { name: "Kwiaty i wzory", titel: "Kwiaty i wzory – kolorowanki dla dorosłych", pfad: "kwiaty-i-wzory-dla-doroslych", intro: "Piwonie, paisley, kalejdoskop i mozaika: drobne kolorowanki z kwiatami i wzorami dla dorosłych – za darmo jako PDF w formacie A4." },
   },
   bilder: {
+    "einhorn-drachen": { titel: "Jednorożec puszcza latawiec", alt: "Wesoły jednorożec galopuje po jesiennej łące, nad nim między chmurami leci latawiec z ogonem z kokardek, a w powietrzu wirują liście", pfad: "jednorozec-latawiec" },
+    "feuerwehr-drehleiter": { titel: "Strażacy ratują kotka", alt: "Wóz strażacki z wysuniętą drabiną przy dużym drzewie, strażak wspina się do kotka na szczycie drabiny", pfad: "strazacy-kotek" },
+    "zwinger-dresden": { titel: "Zwinger w Dreźnie", alt: "Barokowa Brama Koronna drezdeńskiego Zwingera z koroną na kopule, przed nią fosa z kamiennym mostem", pfad: "zwinger-drezno" },
+    "suesses-oder-saures": { titel: "Cukierek albo psikus przy drzwiach", alt: "Dwoje dzieci przebranych za ducha i za dynię stoi z wiaderkami przy drzwiach, kobieta podaje im miskę cukierków, na schodku wydrążona dynia", pfad: "cukierek-albo-psikus" },
+    "mandala-schmetterling": { titel: "Mandala z motylem", alt: "Okrągła mandala z dużym motylem pośrodku, wokół kwiaty, serduszka i zawijasy", pfad: "mandala-motyl" },
     "einhorn-regenbogen": { titel: "Jednorożec z tęczą", alt: "jednorożec na kwiecistej łące z tęczą i uśmiechniętymi chmurkami", pfad: "jednorozec-z-tecza" },
     "einhorn-sterne": { titel: "Latający jednorożec z gwiazdami", alt: "jednorożec ze skrzydłami leci między gwiazdami i księżycem", pfad: "latajacy-jednorozec" },
     "einhorn-baby": { titel: "Mały jednorożec z mamą", alt: "mama jednorożec i małe jednorożątko tulą się wśród serduszek", pfad: "jednorozec-z-mama" },

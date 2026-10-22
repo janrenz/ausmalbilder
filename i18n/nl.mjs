@@ -183,6 +183,11 @@ export default {
     "muster-erwachsene": { name: "Bloemen & patronen", titel: "Bloemen & patronen: kleurplaten voor volwassenen", intro: "Pioenrozen, paisley, caleidoscoop en mozaïek: fijne bloem- en patroonkleurplaten voor volwassenen – gratis als A4-pdf.", pfad: "bloemen-patronen-volwassenen" },
   },
   bilder: {
+    "einhorn-drachen": { titel: "Eenhoorn laat een vlieger op", alt: "Een vrolijke eenhoorn galoppeert over een herfstweide, boven hem vliegt een vlieger met een staart van strikjes tussen de wolken en waaien bladeren door de lucht", pfad: "eenhoorn-vlieger" },
+    "feuerwehr-drehleiter": { titel: "Brandweer redt een poesje", alt: "Brandweerauto met uitgeschoven ladder tegen een grote boom, een brandweerman klimt naar een poesje boven aan de ladder", pfad: "brandweer-poesje" },
+    "zwinger-dresden": { titel: "Zwinger in Dresden", alt: "De barokke Kroonpoort van de Dresdense Zwinger met een kroon op de koepel, ervoor de slotgracht met een stenen brug", pfad: "zwinger-dresden" },
+    "suesses-oder-saures": { titel: "Snoep of je leven aan de voordeur", alt: "Twee kinderen verkleed als spook en als pompoen staan met emmertjes aan een voordeur, een vrouw houdt een schaal snoep voor, op de stoep een uitgeholde pompoen", pfad: "snoep-of-je-leven" },
+    "mandala-schmetterling": { titel: "Vlinder-mandala", alt: "Ronde mandala met een grote vlinder in het midden, omringd door bloemen, hartjes en krullen", pfad: "vlinder-mandala" },
     "einhorn-regenbogen": { titel: "Eenhoorn met regenboog", alt: "Eenhoorn op een bloemenweide met regenboog en lachende wolken", pfad: "eenhoorn-regenboog" },
     "einhorn-sterne": { titel: "Vliegende eenhoorn met sterren", alt: "Eenhoorn met vleugels vliegt tussen sterren en maan", pfad: "vliegende-eenhoorn-sterren" },
     "einhorn-baby": { titel: "Babyeenhoorn met mama", alt: "Eenhoornmama en babyeenhoorn knuffelen tussen hartjes", pfad: "babyeenhoorn-mama" },

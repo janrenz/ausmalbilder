@@ -365,6 +365,11 @@ export default {
     }
   },
   "bilder": {
+    "einhorn-drachen": { titel: "Unicorn flying a kite", alt: "A happy unicorn gallops across an autumn meadow while a kite with a bow tail flies between the clouds above it and leaves blow through the air", pfad: "unicorn-kite" },
+    "feuerwehr-drehleiter": { titel: "Fire brigade rescues a kitten", alt: "Fire engine with its ladder raised against a big tree, a firefighter climbs up to a kitten at the top of the ladder", pfad: "fire-brigade-kitten" },
+    "zwinger-dresden": { titel: "Zwinger, Dresden", alt: "The baroque Crown Gate of the Dresden Zwinger with a crown on its dome, in front the moat with a stone bridge", pfad: "zwinger-dresden" },
+    "suesses-oder-saures": { titel: "Trick or treat at the front door", alt: "Two children dressed as a ghost and a pumpkin stand with little buckets at a front door, a woman holds out a bowl of sweets, a carved pumpkin sits on the step", pfad: "trick-or-treat" },
+    "mandala-schmetterling": { titel: "Butterfly mandala", alt: "Round mandala with a big butterfly in the middle, surrounded by flowers, hearts and swirls", pfad: "butterfly-mandala" },
     "einhorn-regenbogen": {
       "titel": "Unicorn with a Rainbow",
       "alt": "Unicorn in a flower meadow with a rainbow and smiling clouds",

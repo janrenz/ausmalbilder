@@ -185,6 +185,11 @@ export default {
     "muster-erwachsene": { name: "Flores e padrões", titel: "Flores e padrões para colorir para adultos", pfad: "flores-padroes-adultos", intro: "Peónias, paisley, caleidoscópio e mosaico: desenhos delicados de flores e padrões para adultos – grátis em PDF A4." },
   },
   bilder: {
+    "einhorn-drachen": { titel: "Unicórnio com papagaio de papel", alt: "Um unicórnio alegre galopa num prado de outono, por cima dele um papagaio de papel com cauda de laços voa entre as nuvens e as folhas esvoaçam no ar", pfad: "unicornio-papagaio" },
+    "feuerwehr-drehleiter": { titel: "Os bombeiros salvam um gatinho", alt: "Carro dos bombeiros com a escada estendida junto a uma árvore grande, um bombeiro sobe até um gatinho no topo da escada", pfad: "bombeiros-gatinho" },
+    "zwinger-dresden": { titel: "Zwinger de Dresden", alt: "A barroca Porta da Coroa do Zwinger de Dresden com uma coroa na cúpula, à frente o fosso com uma ponte de pedra", pfad: "zwinger-dresden" },
+    "suesses-oder-saures": { titel: "Doçura ou travessura à porta", alt: "Duas crianças mascaradas de fantasma e de abóbora esperam com baldinhos à porta, uma senhora estende-lhes uma taça de rebuçados, no degrau uma abóbora esculpida", pfad: "doces-ou-travessuras" },
+    "mandala-schmetterling": { titel: "Mandala de borboleta", alt: "Mandala redonda com uma grande borboleta no centro, rodeada de flores, corações e espirais", pfad: "mandala-borboleta" },
     "einhorn-regenbogen": { titel: "Unicórnio com arco-íris", alt: "Unicórnio num prado de flores com arco-íris e nuvens sorridentes", pfad: "unicornio-arco-iris" },
     "einhorn-sterne": { titel: "Unicórnio voador com estrelas", alt: "Unicórnio com asas a voar entre estrelas e a lua", pfad: "unicornio-voador-estrelas" },
     "einhorn-baby": { titel: "Bebé unicórnio com a mãe", alt: "Mãe unicórnio e bebé unicórnio aninhados entre corações", pfad: "bebe-unicornio-mae" },
