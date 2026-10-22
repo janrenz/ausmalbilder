@@ -184,6 +184,11 @@ export default {
     "muster-erwachsene": { name: "Flores y patrones", titel: "Flores y patrones para colorear para adultos", pfad: "flores-patrones-adultos", intro: "Peonías, paisley, caleidoscopio y mosaico: dibujos de flores y patrones finos para adultos, gratis en PDF A4." },
   },
   bilder: {
+    "einhorn-drachen": { titel: "Unicornio con cometa", alt: "Un unicornio alegre galopa por un prado otoñal mientras una cometa con cola de lazos vuela entre las nubes y las hojas vuelan por el aire", pfad: "unicornio-cometa" },
+    "feuerwehr-drehleiter": { titel: "Los bomberos rescatan a un gatito", alt: "Camión de bomberos con la escalera extendida junto a un árbol grande, un bombero sube hacia un gatito en lo alto de la escalera", pfad: "bomberos-gatito" },
+    "zwinger-dresden": { titel: "Zwinger de Dresde", alt: "La barroca Puerta de la Corona del Zwinger de Dresde con una corona sobre la cúpula, delante el foso con un puente de piedra", pfad: "zwinger-dresde" },
+    "suesses-oder-saures": { titel: "Truco o trato en la puerta", alt: "Dos niños disfrazados de fantasma y de calabaza esperan con sus cubos en una puerta, una mujer les ofrece un cuenco de caramelos, en el escalón una calabaza tallada", pfad: "truco-o-trato" },
+    "mandala-schmetterling": { titel: "Mandala de mariposa", alt: "Mandala redondo con una gran mariposa en el centro, rodeada de flores, corazones y espirales", pfad: "mandala-mariposa" },
     "einhorn-regenbogen": { titel: "Unicornio con arcoíris", alt: "Unicornio en un prado con flores, con un arcoíris y nubes sonrientes", pfad: "unicornio-arcoiris" },
     "einhorn-sterne": { titel: "Unicornio volador con estrellas", alt: "Unicornio con alas volando entre estrellas y la luna", pfad: "unicornio-volador-estrellas" },
     "einhorn-baby": { titel: "Unicornio bebé con su mamá", alt: "Una mamá unicornio y su bebé abrazados entre corazones", pfad: "unicornio-bebe-mama" },
