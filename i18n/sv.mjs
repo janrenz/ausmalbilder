@@ -183,6 +183,11 @@ export default {
     "muster-erwachsene": { name: "Blommor & mönster", titel: "Blommor & mönster: målarbilder för vuxna", intro: "Pioner, paisley, kalejdoskop och mosaik: fina blom- och mönstermålarbilder för vuxna – gratis som A4-pdf.", pfad: "blommor-monster-vuxna" },
   },
   bilder: {
+    "einhorn-schneemann": { titel: "Enhörning bygger en snögubbe", alt: "En enhörning med halsduk står i snön bredvid en snögubbe med tofsmössa och morotsnäsa, bakom snöiga granar och en regnbåge", pfad: "enhorning-snogubbe" },
+    "hamster-sonnenblumenkerne": { titel: "Hamster med solrosfrön", alt: "En hamster med runda kinder sitter i halmen och håller ett solrosfrö, bredvid en skål med frön och en solros", pfad: "hamster-solrosfron" },
+    "torre-de-belem-lissabon": { titel: "Belémtornet i Lissabon", alt: "Det utsmyckade fästningstornet i Belém vid Tejos strand, med tinnar, hörntorn och en balkong med valv", pfad: "belemtornet-lissabon" },
+    "gamla-stan-stockholm": { titel: "Gamla stan i Stockholm", alt: "Höga gavelhus vid Stortorget i Gamla stan, med den gamla brunnen, träd och folk som promenerar på kullerstenen", pfad: "gamla-stan-stockholm" },
+    "martinsfeuer": { titel: "Barn vid Mårtensbrasan", alt: "Två barn med lyktor på pinnar står bredvid en brasa på Mårtens kväll, under månen och stjärnorna", pfad: "martensbrasa" },
     "einhorn-drachen": { titel: "Enhörning med drake", alt: "En glad enhörning galopperar över en höstäng medan en drake med rosettsvans flyger mellan molnen och löv virvlar i luften", pfad: "enhorning-drake" },
     "feuerwehr-drehleiter": { titel: "Brandkåren räddar en kattunge", alt: "Brandbil med utfälld stege mot ett stort träd, en brandman klättrar upp till en kattunge högst upp på stegen", pfad: "brandkar-kattunge" },
     "zwinger-dresden": { titel: "Zwinger i Dresden", alt: "Den barocka Kronporten på Zwinger i Dresden med en krona på kupolen, framför vallgraven med en stenbro", pfad: "zwinger-dresden" },

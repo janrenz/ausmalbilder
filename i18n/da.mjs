@@ -183,6 +183,11 @@ export default {
     "muster-erwachsene": { name: "Blomster & mønstre", titel: "Blomster & mønstre: malebog for voksne", intro: "Pæoner, paisley, kalejdoskop og mosaik: fine blomster- og mønstertegninger til voksne – gratis som A4-pdf.", pfad: "blomster-moenstre-voksne" },
   },
   bilder: {
+    "einhorn-schneemann": { titel: "Enhjørning laver en snemand", alt: "En enhjørning med halstørklæde står i sneen ved siden af en snemand med kvasthue og gulerodsnæse, bagved snedækkede grantræer og en regnbue", pfad: "enhjorning-snemand" },
+    "hamster-sonnenblumenkerne": { titel: "Hamster med solsikkekerner", alt: "En hamster med buttede kinder sidder i halmen og holder en solsikkekerne, ved siden af en skål med kerner og en solsikke", pfad: "hamster-solsikkekerner" },
+    "torre-de-belem-lissabon": { titel: "Belém-tårnet i Lissabon", alt: "Det udsmykkede fæstningstårn i Belém ved bredden af Tejo, med murtinder, hjørnetårne og en balkon med buer", pfad: "belem-taarnet-lissabon" },
+    "gamla-stan-stockholm": { titel: "Gamla Stan i Stockholm", alt: "Høje gavlhuse ved Stortorget i Stockholms gamle bydel, med en gammel brønd, træer og folk, der spadserer på brostenene", pfad: "gamla-stan-stockholm" },
+    "martinsfeuer": { titel: "Børn ved Mortensbålet", alt: "To børn med lygter på pinde står ved siden af et Mortensbål under månen og stjernerne", pfad: "mortensbaal" },
     "einhorn-drachen": { titel: "Enhjørning med drage", alt: "En glad enhjørning galopperer hen over en efterårseng, mens en drage med sløjfehale flyver mellem skyerne, og blade hvirvler gennem luften", pfad: "enhjorning-drage" },
     "feuerwehr-drehleiter": { titel: "Brandvæsenet redder en killing", alt: "Brandbil med udskudt stige op ad et stort træ, en brandmand klatrer op til en killing øverst på stigen", pfad: "brandvaesen-killing" },
     "zwinger-dresden": { titel: "Zwinger i Dresden", alt: "Den barokke Kroneport ved Zwinger i Dresden med en krone på kuplen, foran voldgraven med en stenbro", pfad: "zwinger-dresden" },

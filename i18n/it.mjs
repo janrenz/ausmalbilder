@@ -365,6 +365,11 @@ export default {
     }
   },
   "bilder": {
+    "einhorn-schneemann": { titel: "Unicorno che fa un pupazzo di neve", alt: "Un unicorno con la sciarpa nella neve accanto a un pupazzo di neve con berretto a pompon e naso di carota, dietro abeti innevati e un arcobaleno", pfad: "unicorno-pupazzo-di-neve" },
+    "hamster-sonnenblumenkerne": { titel: "Criceto con i semi di girasole", alt: "Un criceto paffuto seduto nella paglia tiene un seme di girasole, accanto a una ciotola di semi e a un girasole", pfad: "criceto-semi-girasole" },
+    "torre-de-belem-lissabon": { titel: "Torre di Belém, Lisbona", alt: "La torre fortificata di Belém, riccamente decorata, sulla riva del Tago, con merli, torrette agli angoli e una loggia ad archi", pfad: "torre-di-belem-lisbona" },
+    "gamla-stan-stockholm": { titel: "Gamla Stan, Stoccolma", alt: "Alte case con frontoni sulla piazza Stortorget, nel centro storico di Stoccolma, con un vecchio pozzo, alberi e passanti sul selciato", pfad: "gamla-stan-stoccolma" },
+    "martinsfeuer": { titel: "Bambini al falò di San Martino", alt: "Due bambini con le lanterne appese a un bastoncino accanto al falò di San Martino, sotto la luna e le stelle", pfad: "falo-san-martino" },
     "einhorn-drachen": { titel: "Unicorno con l’aquilone", alt: "Un unicorno allegro galoppa in un prato autunnale, sopra di lui un aquilone con la coda di fiocchi vola tra le nuvole e le foglie volteggiano nell’aria", pfad: "unicorno-aquilone" },
     "feuerwehr-drehleiter": { titel: "I pompieri salvano un gattino", alt: "Camion dei pompieri con la scala alzata contro un grande albero, un pompiere sale verso un gattino in cima alla scala", pfad: "pompieri-gattino" },
     "zwinger-dresden": { titel: "Zwinger di Dresda", alt: "La barocca Porta della Corona dello Zwinger di Dresda con una corona sulla cupola, davanti il fossato con un ponte di pietra", pfad: "zwinger-dresda" },
