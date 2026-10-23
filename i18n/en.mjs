@@ -365,6 +365,11 @@ export default {
     }
   },
   "bilder": {
+    "einhorn-schneemann": { titel: "Unicorn building a snowman", alt: "A unicorn in a scarf stands in the snow next to a snowman with a bobble hat and carrot nose, with snowy fir trees and a rainbow behind them", pfad: "unicorn-snowman" },
+    "hamster-sonnenblumenkerne": { titel: "Hamster with sunflower seeds", alt: "A chubby-cheeked hamster sits in straw holding a sunflower seed, next to a bowl of seeds and a sunflower", pfad: "hamster-sunflower-seeds" },
+    "torre-de-belem-lissabon": { titel: "Belém Tower, Lisbon", alt: "The ornate Belém fortress tower on the bank of the Tagus, with battlements, corner turrets and an arched balcony", pfad: "belem-tower-lisbon" },
+    "gamla-stan-stockholm": { titel: "Gamla Stan, Stockholm", alt: "Tall gabled houses on Stortorget in Stockholm's old town, with an old well house, trees and people strolling on the cobblestones", pfad: "gamla-stan-stockholm" },
+    "martinsfeuer": { titel: "Children at the St. Martin's bonfire", alt: "Two children with lanterns on sticks stand next to a St. Martin's bonfire under the moon and stars", pfad: "st-martins-bonfire" },
     "einhorn-drachen": { titel: "Unicorn flying a kite", alt: "A happy unicorn gallops across an autumn meadow while a kite with a bow tail flies between the clouds above it and leaves blow through the air", pfad: "unicorn-kite" },
     "feuerwehr-drehleiter": { titel: "Fire brigade rescues a kitten", alt: "Fire engine with its ladder raised against a big tree, a firefighter climbs up to a kitten at the top of the ladder", pfad: "fire-brigade-kitten" },
     "zwinger-dresden": { titel: "Zwinger, Dresden", alt: "The baroque Crown Gate of the Dresden Zwinger with a crown on its dome, in front the moat with a stone bridge", pfad: "zwinger-dresden" },

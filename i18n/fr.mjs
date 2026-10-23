@@ -365,6 +365,11 @@ export default {
     }
   },
   "bilder": {
+    "einhorn-schneemann": { titel: "Licorne et bonhomme de neige", alt: "Une licorne avec une écharpe se tient dans la neige à côté d’un bonhomme de neige avec bonnet à pompon et nez en carotte, derrière des sapins enneigés et un arc-en-ciel", pfad: "licorne-bonhomme-de-neige" },
+    "hamster-sonnenblumenkerne": { titel: "Hamster et graines de tournesol", alt: "Un hamster aux bonnes joues assis dans la paille tient une graine de tournesol, à côté d’un bol de graines et d’un tournesol", pfad: "hamster-graines-tournesol" },
+    "torre-de-belem-lissabon": { titel: "Tour de Belém, Lisbonne", alt: "La tour fortifiée de Belém, richement décorée, au bord du Tage, avec ses créneaux, ses tourelles d’angle et son balcon à arcades", pfad: "tour-de-belem-lisbonne" },
+    "gamla-stan-stockholm": { titel: "Gamla Stan, Stockholm", alt: "De hautes maisons à pignons sur la place Stortorget, dans la vieille ville de Stockholm, avec un ancien puits, des arbres et des promeneurs sur les pavés", pfad: "gamla-stan-stockholm" },
+    "martinsfeuer": { titel: "Enfants autour du feu de la Saint-Martin", alt: "Deux enfants tenant des lanternes au bout d’un bâton se tiennent près du feu de la Saint-Martin, sous la lune et les étoiles", pfad: "feu-saint-martin" },
     "einhorn-drachen": { titel: "Licorne et cerf-volant", alt: "Une licorne joyeuse galope dans un pré d’automne, au-dessus d’elle un cerf-volant à queue de nœuds vole entre les nuages et des feuilles tourbillonnent", pfad: "licorne-cerf-volant" },
     "feuerwehr-drehleiter": { titel: "Les pompiers sauvent un chaton", alt: "Camion de pompiers avec la grande échelle déployée contre un arbre, un pompier grimpe vers un chaton en haut de l’échelle", pfad: "pompiers-chaton" },
     "zwinger-dresden": { titel: "Le Zwinger de Dresde", alt: "La porte de la Couronne, baroque, du Zwinger de Dresde avec une couronne sur sa coupole, devant les douves et un pont de pierre", pfad: "zwinger-dresde" },

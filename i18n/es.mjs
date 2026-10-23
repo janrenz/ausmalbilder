@@ -184,6 +184,11 @@ export default {
     "muster-erwachsene": { name: "Flores y patrones", titel: "Flores y patrones para colorear para adultos", pfad: "flores-patrones-adultos", intro: "Peonías, paisley, caleidoscopio y mosaico: dibujos de flores y patrones finos para adultos, gratis en PDF A4." },
   },
   bilder: {
+    "einhorn-schneemann": { titel: "Unicornio haciendo un muñeco de nieve", alt: "Un unicornio con bufanda en la nieve junto a un muñeco de nieve con gorro de pompón y nariz de zanahoria, detrás abetos nevados y un arcoíris", pfad: "unicornio-muneco-nieve" },
+    "hamster-sonnenblumenkerne": { titel: "Hámster con pipas de girasol", alt: "Un hámster mofletudo sentado en la paja sujeta una pipa de girasol, junto a un cuenco con pipas y un girasol", pfad: "hamster-pipas" },
+    "torre-de-belem-lissabon": { titel: "Torre de Belém, Lisboa", alt: "La torre fortificada de Belém, muy decorada, a orillas del Tajo, con almenas, torrecillas en las esquinas y un balcón con arcos", pfad: "torre-belem-lisboa" },
+    "gamla-stan-stockholm": { titel: "Gamla Stan, Estocolmo", alt: "Altas casas con frontones en la plaza Stortorget del casco antiguo de Estocolmo, con un antiguo pozo, árboles y paseantes sobre los adoquines", pfad: "gamla-stan-estocolmo" },
+    "martinsfeuer": { titel: "Niños junto a la hoguera de San Martín", alt: "Dos niños con farolillos colgados de un palo junto a la hoguera de San Martín, bajo la luna y las estrellas", pfad: "hoguera-san-martin" },
     "einhorn-drachen": { titel: "Unicornio con cometa", alt: "Un unicornio alegre galopa por un prado otoñal mientras una cometa con cola de lazos vuela entre las nubes y las hojas vuelan por el aire", pfad: "unicornio-cometa" },
     "feuerwehr-drehleiter": { titel: "Los bomberos rescatan a un gatito", alt: "Camión de bomberos con la escalera extendida junto a un árbol grande, un bombero sube hacia un gatito en lo alto de la escalera", pfad: "bomberos-gatito" },
     "zwinger-dresden": { titel: "Zwinger de Dresde", alt: "La barroca Puerta de la Corona del Zwinger de Dresde con una corona sobre la cúpula, delante el foso con un puente de piedra", pfad: "zwinger-dresde" },

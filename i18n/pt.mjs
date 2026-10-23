@@ -185,6 +185,11 @@ export default {
     "muster-erwachsene": { name: "Flores e padrões", titel: "Flores e padrões para colorir para adultos", pfad: "flores-padroes-adultos", intro: "Peónias, paisley, caleidoscópio e mosaico: desenhos delicados de flores e padrões para adultos – grátis em PDF A4." },
   },
   bilder: {
+    "einhorn-schneemann": { titel: "Unicórnio a fazer um boneco de neve", alt: "Um unicórnio de cachecol na neve ao lado de um boneco de neve com gorro de pompom e nariz de cenoura, atrás pinheiros nevados e um arco-íris", pfad: "unicornio-boneco-de-neve" },
+    "hamster-sonnenblumenkerne": { titel: "Hamster com sementes de girassol", alt: "Um hamster bochechudo sentado na palha segura uma semente de girassol, ao lado de uma taça com sementes e de um girassol", pfad: "hamster-sementes-girassol" },
+    "torre-de-belem-lissabon": { titel: "Torre de Belém, Lisboa", alt: "A torre fortificada de Belém, ricamente decorada, na margem do Tejo, com ameias, guaritas nos cantos e uma varanda com arcos", pfad: "torre-de-belem" },
+    "gamla-stan-stockholm": { titel: "Gamla Stan, Estocolmo", alt: "Casas altas com empenas na praça Stortorget, no centro histórico de Estocolmo, com um poço antigo, árvores e pessoas a passear na calçada", pfad: "gamla-stan-estocolmo" },
+    "martinsfeuer": { titel: "Crianças na fogueira de São Martinho", alt: "Duas crianças com lanternas penduradas num pau estão junto à fogueira de São Martinho, sob a lua e as estrelas", pfad: "fogueira-sao-martinho" },
     "einhorn-drachen": { titel: "Unicórnio com papagaio de papel", alt: "Um unicórnio alegre galopa num prado de outono, por cima dele um papagaio de papel com cauda de laços voa entre as nuvens e as folhas esvoaçam no ar", pfad: "unicornio-papagaio" },
     "feuerwehr-drehleiter": { titel: "Os bombeiros salvam um gatinho", alt: "Carro dos bombeiros com a escada estendida junto a uma árvore grande, um bombeiro sobe até um gatinho no topo da escada", pfad: "bombeiros-gatinho" },
     "zwinger-dresden": { titel: "Zwinger de Dresden", alt: "A barroca Porta da Coroa do Zwinger de Dresden com uma coroa na cúpula, à frente o fosso com uma ponte de pedra", pfad: "zwinger-dresden" },

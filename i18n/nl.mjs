@@ -183,6 +183,11 @@ export default {
     "muster-erwachsene": { name: "Bloemen & patronen", titel: "Bloemen & patronen: kleurplaten voor volwassenen", intro: "Pioenrozen, paisley, caleidoscoop en mozaïek: fijne bloem- en patroonkleurplaten voor volwassenen – gratis als A4-pdf.", pfad: "bloemen-patronen-volwassenen" },
   },
   bilder: {
+    "einhorn-schneemann": { titel: "Eenhoorn bouwt een sneeuwpop", alt: "Een eenhoorn met sjaal staat in de sneeuw naast een sneeuwpop met pompommuts en wortelneus, met besneeuwde dennen en een regenboog op de achtergrond", pfad: "eenhoorn-sneeuwpop" },
+    "hamster-sonnenblumenkerne": { titel: "Hamster met zonnebloempitten", alt: "Een hamster met bolle wangen zit in het stro met een zonnebloempit in zijn pootjes, naast een bakje pitten en een zonnebloem", pfad: "hamster-zonnebloempitten" },
+    "torre-de-belem-lissabon": { titel: "Toren van Belém, Lissabon", alt: "De rijk versierde vestingtoren van Belém aan de oever van de Taag, met kantelen, hoektorentjes en een balkon met bogen", pfad: "toren-van-belem-lissabon" },
+    "gamla-stan-stockholm": { titel: "Gamla Stan, Stockholm", alt: "Hoge trapgevelhuizen aan het Stortorget in de oude stad van Stockholm, met een oud puthuisje, bomen en wandelaars op de kinderkopjes", pfad: "gamla-stan-stockholm" },
+    "martinsfeuer": { titel: "Kinderen bij het Sint-Maartensvuur", alt: "Twee kinderen met lampionnen aan een stokje staan naast een Sint-Maartensvuur, onder de maan en de sterren", pfad: "sint-maartensvuur" },
     "einhorn-drachen": { titel: "Eenhoorn laat een vlieger op", alt: "Een vrolijke eenhoorn galoppeert over een herfstweide, boven hem vliegt een vlieger met een staart van strikjes tussen de wolken en waaien bladeren door de lucht", pfad: "eenhoorn-vlieger" },
     "feuerwehr-drehleiter": { titel: "Brandweer redt een poesje", alt: "Brandweerauto met uitgeschoven ladder tegen een grote boom, een brandweerman klimt naar een poesje boven aan de ladder", pfad: "brandweer-poesje" },
     "zwinger-dresden": { titel: "Zwinger in Dresden", alt: "De barokke Kroonpoort van de Dresdense Zwinger met een kroon op de koepel, ervoor de slotgracht met een stenen brug", pfad: "zwinger-dresden" },

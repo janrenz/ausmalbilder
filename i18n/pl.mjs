@@ -185,6 +185,11 @@ export default {
     "muster-erwachsene": { name: "Kwiaty i wzory", titel: "Kwiaty i wzory – kolorowanki dla dorosłych", pfad: "kwiaty-i-wzory-dla-doroslych", intro: "Piwonie, paisley, kalejdoskop i mozaika: drobne kolorowanki z kwiatami i wzorami dla dorosłych – za darmo jako PDF w formacie A4." },
   },
   bilder: {
+    "einhorn-schneemann": { titel: "Jednorożec lepi bałwana", alt: "Jednorożec w szaliku stoi w śniegu obok bałwana w czapce z pomponem i z nosem z marchewki, w tle ośnieżone choinki i tęcza", pfad: "jednorozec-balwan" },
+    "hamster-sonnenblumenkerne": { titel: "Chomik z pestkami słonecznika", alt: "Pucołowaty chomik siedzi w sianie i trzyma pestkę słonecznika, obok miseczka z pestkami i słonecznik", pfad: "chomik-pestki-slonecznika" },
+    "torre-de-belem-lissabon": { titel: "Wieża Belém w Lizbonie", alt: "Bogato zdobiona wieża obronna Belém nad brzegiem Tagu, z blankami, narożnymi wieżyczkami i balkonem z łukami", pfad: "wieza-belem-lizbona" },
+    "gamla-stan-stockholm": { titel: "Gamla Stan w Sztokholmie", alt: "Wysokie kamienice ze szczytami przy placu Stortorget na starówce Sztokholmu, pośrodku stara studnia, drzewa i spacerowicze na bruku", pfad: "gamla-stan-sztokholm" },
+    "martinsfeuer": { titel: "Dzieci przy ognisku św. Marcina", alt: "Dwoje dzieci z lampionami na patykach stoi obok ogniska św. Marcina, nad nimi księżyc i gwiazdy", pfad: "ognisko-swietego-marcina" },
     "einhorn-drachen": { titel: "Jednorożec puszcza latawiec", alt: "Wesoły jednorożec galopuje po jesiennej łące, nad nim między chmurami leci latawiec z ogonem z kokardek, a w powietrzu wirują liście", pfad: "jednorozec-latawiec" },
     "feuerwehr-drehleiter": { titel: "Strażacy ratują kotka", alt: "Wóz strażacki z wysuniętą drabiną przy dużym drzewie, strażak wspina się do kotka na szczycie drabiny", pfad: "strazacy-kotek" },
     "zwinger-dresden": { titel: "Zwinger w Dreźnie", alt: "Barokowa Brama Koronna drezdeńskiego Zwingera z koroną na kopule, przed nią fosa z kamiennym mostem", pfad: "zwinger-drezno" },

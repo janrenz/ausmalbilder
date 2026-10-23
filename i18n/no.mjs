@@ -183,6 +183,11 @@ export default {
     "muster-erwachsene": { name: "Blomster & mønstre", titel: "Blomster & mønstre: fargeleggingsark for voksne", intro: "Peoner, paisley, kaleidoskop og mosaikk: fine blomster- og mønstertegninger for voksne – gratis som A4-PDF.", pfad: "blomster-monstre-voksne" },
   },
   bilder: {
+    "einhorn-schneemann": { titel: "Enhjørning lager snømann", alt: "En enhjørning med skjerf står i snøen ved siden av en snømann med dusklue og gulrotnese, bak snødekte grantrær og en regnbue", pfad: "enhjorning-snomann" },
+    "hamster-sonnenblumenkerne": { titel: "Hamster med solsikkefrø", alt: "En hamster med runde kinn sitter i halmen og holder et solsikkefrø, ved siden av en skål med frø og en solsikke", pfad: "hamster-solsikkefro" },
+    "torre-de-belem-lissabon": { titel: "Belém-tårnet i Lisboa", alt: "Det utsmykkede festningstårnet i Belém ved bredden av Tejo, med murtinder, hjørnetårn og en balkong med buer", pfad: "belem-taarnet-lisboa" },
+    "gamla-stan-stockholm": { titel: "Gamla stan i Stockholm", alt: "Høye gavlhus ved Stortorget i gamlebyen i Stockholm, med en gammel brønn, trær og folk som spaserer på brosteinen", pfad: "gamla-stan-stockholm" },
+    "martinsfeuer": { titel: "Barn ved Mortensbålet", alt: "To barn med lykter på pinner står ved siden av et Mortensbål under månen og stjernene", pfad: "mortensbal" },
     "einhorn-drachen": { titel: "Enhjørning med drage", alt: "En glad enhjørning galopperer over en høsteng mens en drage med sløyfehale flyr mellom skyene og løv virvler gjennom lufta", pfad: "enhjorning-drage" },
     "feuerwehr-drehleiter": { titel: "Brannvesenet redder en kattunge", alt: "Brannbil med utskjøvet stige mot et stort tre, en brannmann klatrer opp til en kattunge øverst på stigen", pfad: "brannvesen-kattunge" },
     "zwinger-dresden": { titel: "Zwinger i Dresden", alt: "Den barokke Kroneporten ved Zwinger i Dresden med en krone på kuppelen, foran vollgraven med en steinbro", pfad: "zwinger-dresden" },
