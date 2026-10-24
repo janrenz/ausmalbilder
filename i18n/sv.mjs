@@ -183,6 +183,11 @@ export default {
     "muster-erwachsene": { name: "Blommor & mönster", titel: "Blommor & mönster: målarbilder för vuxna", intro: "Pioner, paisley, kalejdoskop och mosaik: fina blom- och mönstermålarbilder för vuxna – gratis som A4-pdf.", pfad: "blommor-monster-vuxna" },
   },
   bilder: {
+    "maehdrescher": { titel: "Skördetröska på fältet", alt: "En stor skördetröska skördar ett sädesfält, bredvid kör en traktor med släp som tar emot säden", pfad: "skordetroska" },
+    "schwein-matsch": { titel: "Gris i lerpölen", alt: "En glad gris ligger i en lerpöl bredvid en liten kulting, bakom dem ett trästaket och blommor", pfad: "gris-lerpol" },
+    "hexe-zaubertrank": { titel: "Liten häxa brygger en trolldryck", alt: "En snäll liten häxa med spetsig hatt rör med en stor slev i en bubblande kittel, bredvid henne sitter en katt och på en hylla står små flaskor", pfad: "haxa-trolldryck" },
+    "laternenumzug-tiere": { titel: "Djur i lyktståget", alt: "En igelkott, en räv och en björn går efter varandra längs en skogsstig och bär lyktor på pinnar, under månen och stjärnorna", pfad: "djur-lykttag" },
+    "mandala-herbst-einfach": { titel: "Enkel höstmandala", alt: "Enkel rund mandala med stora ytor: ett äpple i mitten, runt omkring löv, ekollon och svampar", pfad: "enkel-hostmandala" },
     "einhorn-schneemann": { titel: "Enhörning bygger en snögubbe", alt: "En enhörning med halsduk står i snön bredvid en snögubbe med tofsmössa och morotsnäsa, bakom snöiga granar och en regnbåge", pfad: "enhorning-snogubbe" },
     "hamster-sonnenblumenkerne": { titel: "Hamster med solrosfrön", alt: "En hamster med runda kinder sitter i halmen och håller ett solrosfrö, bredvid en skål med frön och en solros", pfad: "hamster-solrosfron" },
     "torre-de-belem-lissabon": { titel: "Belémtornet i Lissabon", alt: "Det utsmyckade fästningstornet i Belém vid Tejos strand, med tinnar, hörntorn och en balkong med valv", pfad: "belemtornet-lissabon" },

@@ -365,6 +365,11 @@ export default {
     }
   },
   "bilder": {
+    "maehdrescher": { titel: "Combine harvester in the field", alt: "A big combine harvester harvests a cornfield while a tractor with a trailer drives alongside, catching the grain", pfad: "combine-harvester" },
+    "schwein-matsch": { titel: "Pig in a muddy puddle", alt: "A happy pig lies in a muddy puddle next to a little piglet, with a wooden fence and flowers behind them", pfad: "pig-muddy-puddle" },
+    "hexe-zaubertrank": { titel: "Little witch brewing a potion", alt: "A friendly little witch in a pointy hat stirs a bubbling cauldron with a big spoon, a cat sits beside her and potion bottles stand on a shelf", pfad: "witch-brewing-potion" },
+    "laternenumzug-tiere": { titel: "Animals at the lantern parade", alt: "A hedgehog, a fox and a bear walk one behind the other along a forest path carrying lanterns on sticks, under the moon and stars", pfad: "animal-lantern-parade" },
+    "mandala-herbst-einfach": { titel: "Simple autumn mandala", alt: "Simple round mandala with large shapes: an apple in the middle, surrounded by leaves, acorns and mushrooms", pfad: "simple-autumn-mandala" },
     "einhorn-schneemann": { titel: "Unicorn building a snowman", alt: "A unicorn in a scarf stands in the snow next to a snowman with a bobble hat and carrot nose, with snowy fir trees and a rainbow behind them", pfad: "unicorn-snowman" },
     "hamster-sonnenblumenkerne": { titel: "Hamster with sunflower seeds", alt: "A chubby-cheeked hamster sits in straw holding a sunflower seed, next to a bowl of seeds and a sunflower", pfad: "hamster-sunflower-seeds" },
     "torre-de-belem-lissabon": { titel: "Belém Tower, Lisbon", alt: "The ornate Belém fortress tower on the bank of the Tagus, with battlements, corner turrets and an arched balcony", pfad: "belem-tower-lisbon" },

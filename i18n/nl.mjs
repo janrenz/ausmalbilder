@@ -183,6 +183,11 @@ export default {
     "muster-erwachsene": { name: "Bloemen & patronen", titel: "Bloemen & patronen: kleurplaten voor volwassenen", intro: "Pioenrozen, paisley, caleidoscoop en mozaïek: fijne bloem- en patroonkleurplaten voor volwassenen – gratis als A4-pdf.", pfad: "bloemen-patronen-volwassenen" },
   },
   bilder: {
+    "maehdrescher": { titel: "Maaidorser op het veld", alt: "Een grote maaidorser oogst een graanveld, ernaast rijdt een tractor met aanhanger die het graan opvangt", pfad: "maaidorser" },
+    "schwein-matsch": { titel: "Varkentje in de modderplas", alt: "Een vrolijk varken ligt in een modderplas naast een klein biggetje, met een houten hek en bloemen erachter", pfad: "varken-modderplas" },
+    "hexe-zaubertrank": { titel: "Klein heksje brouwt een toverdrank", alt: "Een lief klein heksje met een punthoed roert met een grote lepel in een borrelende ketel, naast haar zit een kat en op een plank staan flesjes", pfad: "heksje-toverdrank" },
+    "laternenumzug-tiere": { titel: "Dieren in de lampionnenoptocht", alt: "Een egel, een vos en een beer lopen achter elkaar over een bospad met lampionnen aan een stokje, onder de maan en de sterren", pfad: "dieren-lampionnenoptocht" },
+    "mandala-herbst-einfach": { titel: "Eenvoudige herfstmandala", alt: "Eenvoudige ronde mandala met grote vlakken: in het midden een appel, eromheen bladeren, eikels en paddenstoelen", pfad: "eenvoudige-herfstmandala" },
     "einhorn-schneemann": { titel: "Eenhoorn bouwt een sneeuwpop", alt: "Een eenhoorn met sjaal staat in de sneeuw naast een sneeuwpop met pompommuts en wortelneus, met besneeuwde dennen en een regenboog op de achtergrond", pfad: "eenhoorn-sneeuwpop" },
     "hamster-sonnenblumenkerne": { titel: "Hamster met zonnebloempitten", alt: "Een hamster met bolle wangen zit in het stro met een zonnebloempit in zijn pootjes, naast een bakje pitten en een zonnebloem", pfad: "hamster-zonnebloempitten" },
     "torre-de-belem-lissabon": { titel: "Toren van Belém, Lissabon", alt: "De rijk versierde vestingtoren van Belém aan de oever van de Taag, met kantelen, hoektorentjes en een balkon met bogen", pfad: "toren-van-belem-lissabon" },

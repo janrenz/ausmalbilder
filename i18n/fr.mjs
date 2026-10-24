@@ -365,6 +365,11 @@ export default {
     }
   },
   "bilder": {
+    "maehdrescher": { titel: "Moissonneuse-batteuse dans le champ", alt: "Une grande moissonneuse-batteuse moissonne un champ de blé, à côté un tracteur avec une remorque recueille le grain", pfad: "moissonneuse-batteuse" },
+    "schwein-matsch": { titel: "Cochon dans la flaque de boue", alt: "Un cochon tout content est allongé dans une flaque de boue à côté d’un petit porcelet, derrière une clôture en bois et des fleurs", pfad: "cochon-flaque-de-boue" },
+    "hexe-zaubertrank": { titel: "Petite sorcière et sa potion magique", alt: "Une gentille petite sorcière au chapeau pointu remue un chaudron qui bouillonne avec une grande cuillère, un chat est assis à côté d’elle et des fioles sont posées sur une étagère", pfad: "sorciere-potion-magique" },
+    "laternenumzug-tiere": { titel: "Les animaux au défilé des lanternes", alt: "Un hérisson, un renard et un ours marchent l’un derrière l’autre sur un chemin de forêt avec des lanternes au bout d’un bâton, sous la lune et les étoiles", pfad: "animaux-defile-lanternes" },
+    "mandala-herbst-einfach": { titel: "Mandala d’automne facile", alt: "Mandala rond et simple avec de grandes surfaces : une pomme au centre, entourée de feuilles, de glands et de champignons", pfad: "mandala-automne-facile" },
     "einhorn-schneemann": { titel: "Licorne et bonhomme de neige", alt: "Une licorne avec une écharpe se tient dans la neige à côté d’un bonhomme de neige avec bonnet à pompon et nez en carotte, derrière des sapins enneigés et un arc-en-ciel", pfad: "licorne-bonhomme-de-neige" },
     "hamster-sonnenblumenkerne": { titel: "Hamster et graines de tournesol", alt: "Un hamster aux bonnes joues assis dans la paille tient une graine de tournesol, à côté d’un bol de graines et d’un tournesol", pfad: "hamster-graines-tournesol" },
     "torre-de-belem-lissabon": { titel: "Tour de Belém, Lisbonne", alt: "La tour fortifiée de Belém, richement décorée, au bord du Tage, avec ses créneaux, ses tourelles d’angle et son balcon à arcades", pfad: "tour-de-belem-lisbonne" },

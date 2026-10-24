@@ -365,6 +365,11 @@ export default {
     }
   },
   "bilder": {
+    "maehdrescher": { titel: "Mietitrebbia nel campo", alt: "Una grande mietitrebbia raccoglie il grano in un campo, accanto un trattore con il rimorchio raccoglie i chicchi", pfad: "mietitrebbia" },
+    "schwein-matsch": { titel: "Maialino nella pozzanghera di fango", alt: "Un maiale felice è sdraiato in una pozzanghera di fango accanto a un piccolo maialino, dietro uno steccato di legno e dei fiori", pfad: "maiale-pozzanghera-fango" },
+    "hexe-zaubertrank": { titel: "Piccola strega prepara una pozione", alt: "Una piccola strega simpatica con il cappello a punta mescola con un grande cucchiaio un calderone che ribolle, accanto a lei un gatto e su una mensola delle boccette", pfad: "strega-pozione-magica" },
+    "laternenumzug-tiere": { titel: "Animali alla sfilata delle lanterne", alt: "Un riccio, una volpe e un orso camminano in fila su un sentiero nel bosco con le lanterne appese a un bastoncino, sotto la luna e le stelle", pfad: "animali-sfilata-lanterne" },
+    "mandala-herbst-einfach": { titel: "Mandala d’autunno semplice", alt: "Mandala rotondo e semplice con grandi spazi: al centro una mela, intorno foglie, ghiande e funghi", pfad: "mandala-autunno-semplice" },
     "einhorn-schneemann": { titel: "Unicorno che fa un pupazzo di neve", alt: "Un unicorno con la sciarpa nella neve accanto a un pupazzo di neve con berretto a pompon e naso di carota, dietro abeti innevati e un arcobaleno", pfad: "unicorno-pupazzo-di-neve" },
     "hamster-sonnenblumenkerne": { titel: "Criceto con i semi di girasole", alt: "Un criceto paffuto seduto nella paglia tiene un seme di girasole, accanto a una ciotola di semi e a un girasole", pfad: "criceto-semi-girasole" },
     "torre-de-belem-lissabon": { titel: "Torre di Belém, Lisbona", alt: "La torre fortificata di Belém, riccamente decorata, sulla riva del Tago, con merli, torrette agli angoli e una loggia ad archi", pfad: "torre-di-belem-lisbona" },
