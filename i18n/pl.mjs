@@ -185,6 +185,11 @@ export default {
     "muster-erwachsene": { name: "Kwiaty i wzory", titel: "Kwiaty i wzory – kolorowanki dla dorosłych", pfad: "kwiaty-i-wzory-dla-doroslych", intro: "Piwonie, paisley, kalejdoskop i mozaika: drobne kolorowanki z kwiatami i wzorami dla dorosłych – za darmo jako PDF w formacie A4." },
   },
   bilder: {
+    "maehdrescher": { titel: "Kombajn na polu", alt: "Duży kombajn zbiera zboże z pola, obok jedzie traktor z przyczepą, do której sypie się ziarno", pfad: "kombajn" },
+    "schwein-matsch": { titel: "Świnka w błotnistej kałuży", alt: "Wesoła świnka leży w błotnistej kałuży obok małego prosiaczka, za nimi drewniany płot i kwiaty", pfad: "swinka-w-kaluzy" },
+    "hexe-zaubertrank": { titel: "Mała czarownica warzy eliksir", alt: "Miła mała czarownica w spiczastym kapeluszu miesza dużą łyżką bulgoczący kocioł, obok siedzi kot, a na półce stoją buteleczki", pfad: "czarownica-eliksir" },
+    "laternenumzug-tiere": { titel: "Zwierzęta w pochodzie z lampionami", alt: "Jeż, lis i miś idą jeden za drugim leśną ścieżką i niosą lampiony na patykach, nad nimi księżyc i gwiazdy", pfad: "zwierzeta-pochod-lampionow" },
+    "mandala-herbst-einfach": { titel: "Prosta jesienna mandala", alt: "Prosta okrągła mandala z dużymi polami: w środku jabłko, dookoła liście, żołędzie i grzybki", pfad: "prosta-jesienna-mandala" },
     "einhorn-schneemann": { titel: "Jednorożec lepi bałwana", alt: "Jednorożec w szaliku stoi w śniegu obok bałwana w czapce z pomponem i z nosem z marchewki, w tle ośnieżone choinki i tęcza", pfad: "jednorozec-balwan" },
     "hamster-sonnenblumenkerne": { titel: "Chomik z pestkami słonecznika", alt: "Pucołowaty chomik siedzi w sianie i trzyma pestkę słonecznika, obok miseczka z pestkami i słonecznik", pfad: "chomik-pestki-slonecznika" },
     "torre-de-belem-lissabon": { titel: "Wieża Belém w Lizbonie", alt: "Bogato zdobiona wieża obronna Belém nad brzegiem Tagu, z blankami, narożnymi wieżyczkami i balkonem z łukami", pfad: "wieza-belem-lizbona" },

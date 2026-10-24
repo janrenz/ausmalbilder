@@ -183,6 +183,11 @@ export default {
     "muster-erwachsene": { name: "Blomster & mønstre", titel: "Blomster & mønstre: fargeleggingsark for voksne", intro: "Peoner, paisley, kaleidoskop og mosaikk: fine blomster- og mønstertegninger for voksne – gratis som A4-PDF.", pfad: "blomster-monstre-voksne" },
   },
   bilder: {
+    "maehdrescher": { titel: "Skurtresker på jordet", alt: "En stor skurtresker høster en kornåker, ved siden av kjører en traktor med henger som kornet faller ned i", pfad: "skurtresker" },
+    "schwein-matsch": { titel: "Gris i gjørmepytten", alt: "En glad gris ligger i en gjørmepytt ved siden av en liten grisunge, bak dem et tregjerde og blomster", pfad: "gris-gjormepytt" },
+    "hexe-zaubertrank": { titel: "Liten heks brygger en trylledrikk", alt: "En snill liten heks med spiss hatt rører med en stor sleiv i en boblende gryte, ved siden av henne sitter en katt, og på en hylle står små flasker", pfad: "heks-trylledrikk" },
+    "laternenumzug-tiere": { titel: "Dyr i lyktetoget", alt: "Et pinnsvin, en rev og en bjørn går etter hverandre langs en skogssti og bærer lykter på pinner, under månen og stjernene", pfad: "dyr-lyktetog" },
+    "mandala-herbst-einfach": { titel: "Enkel høstmandala", alt: "Enkel rund mandala med store felt: et eple i midten, rundt det blader, eikenøtter og sopp", pfad: "enkel-hostmandala" },
     "einhorn-schneemann": { titel: "Enhjørning lager snømann", alt: "En enhjørning med skjerf står i snøen ved siden av en snømann med dusklue og gulrotnese, bak snødekte grantrær og en regnbue", pfad: "enhjorning-snomann" },
     "hamster-sonnenblumenkerne": { titel: "Hamster med solsikkefrø", alt: "En hamster med runde kinn sitter i halmen og holder et solsikkefrø, ved siden av en skål med frø og en solsikke", pfad: "hamster-solsikkefro" },
     "torre-de-belem-lissabon": { titel: "Belém-tårnet i Lisboa", alt: "Det utsmykkede festningstårnet i Belém ved bredden av Tejo, med murtinder, hjørnetårn og en balkong med buer", pfad: "belem-taarnet-lisboa" },

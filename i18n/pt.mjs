@@ -185,6 +185,11 @@ export default {
     "muster-erwachsene": { name: "Flores e padrões", titel: "Flores e padrões para colorir para adultos", pfad: "flores-padroes-adultos", intro: "Peónias, paisley, caleidoscópio e mosaico: desenhos delicados de flores e padrões para adultos – grátis em PDF A4." },
   },
   bilder: {
+    "maehdrescher": { titel: "Ceifeira-debulhadora no campo", alt: "Uma grande ceifeira-debulhadora colhe um campo de trigo e, ao lado, um trator com reboque recolhe o grão", pfad: "ceifeira-debulhadora" },
+    "schwein-matsch": { titel: "Porquinho na poça de lama", alt: "Um porco feliz deitado numa poça de lama ao lado de um leitão pequenino, atrás uma cerca de madeira e flores", pfad: "porco-poca-de-lama" },
+    "hexe-zaubertrank": { titel: "Bruxinha a preparar uma poção", alt: "Uma bruxinha simpática de chapéu pontiagudo mexe com uma colher grande um caldeirão a borbulhar, ao lado um gato e numa prateleira uns frasquinhos", pfad: "bruxinha-pocao" },
+    "laternenumzug-tiere": { titel: "Animais no desfile de lanternas", alt: "Um ouriço, uma raposa e um urso caminham em fila por um trilho na floresta com lanternas penduradas num pau, sob a lua e as estrelas", pfad: "animais-desfile-lanternas" },
+    "mandala-herbst-einfach": { titel: "Mandala de outono simples", alt: "Mandala redonda e simples com áreas grandes: uma maçã no centro, rodeada de folhas, bolotas e cogumelos", pfad: "mandala-outono-simples" },
     "einhorn-schneemann": { titel: "Unicórnio a fazer um boneco de neve", alt: "Um unicórnio de cachecol na neve ao lado de um boneco de neve com gorro de pompom e nariz de cenoura, atrás pinheiros nevados e um arco-íris", pfad: "unicornio-boneco-de-neve" },
     "hamster-sonnenblumenkerne": { titel: "Hamster com sementes de girassol", alt: "Um hamster bochechudo sentado na palha segura uma semente de girassol, ao lado de uma taça com sementes e de um girassol", pfad: "hamster-sementes-girassol" },
     "torre-de-belem-lissabon": { titel: "Torre de Belém, Lisboa", alt: "A torre fortificada de Belém, ricamente decorada, na margem do Tejo, com ameias, guaritas nos cantos e uma varanda com arcos", pfad: "torre-de-belem" },

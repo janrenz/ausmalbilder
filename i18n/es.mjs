@@ -184,6 +184,11 @@ export default {
     "muster-erwachsene": { name: "Flores y patrones", titel: "Flores y patrones para colorear para adultos", pfad: "flores-patrones-adultos", intro: "Peonías, paisley, caleidoscopio y mosaico: dibujos de flores y patrones finos para adultos, gratis en PDF A4." },
   },
   bilder: {
+    "maehdrescher": { titel: "Cosechadora en el campo", alt: "Una gran cosechadora siega un campo de trigo y a su lado un tractor con remolque recoge el grano", pfad: "cosechadora" },
+    "schwein-matsch": { titel: "Cerdito en el charco de barro", alt: "Un cerdo feliz tumbado en un charco de barro junto a un cerdito pequeño, detrás una valla de madera y flores", pfad: "cerdo-charco-barro" },
+    "hexe-zaubertrank": { titel: "Brujita preparando una poción", alt: "Una brujita simpática con sombrero puntiagudo remueve con una cuchara grande un caldero que burbujea, a su lado un gato y en una estantería unos frascos", pfad: "brujita-pocion" },
+    "laternenumzug-tiere": { titel: "Animales en el desfile de farolillos", alt: "Un erizo, un zorro y un oso caminan en fila por un sendero del bosque con farolillos colgados de un palo, bajo la luna y las estrellas", pfad: "animales-desfile-farolillos" },
+    "mandala-herbst-einfach": { titel: "Mandala de otoño sencillo", alt: "Mandala redondo y sencillo con zonas grandes: una manzana en el centro, rodeada de hojas, bellotas y setas", pfad: "mandala-otono-sencillo" },
     "einhorn-schneemann": { titel: "Unicornio haciendo un muñeco de nieve", alt: "Un unicornio con bufanda en la nieve junto a un muñeco de nieve con gorro de pompón y nariz de zanahoria, detrás abetos nevados y un arcoíris", pfad: "unicornio-muneco-nieve" },
     "hamster-sonnenblumenkerne": { titel: "Hámster con pipas de girasol", alt: "Un hámster mofletudo sentado en la paja sujeta una pipa de girasol, junto a un cuenco con pipas y un girasol", pfad: "hamster-pipas" },
     "torre-de-belem-lissabon": { titel: "Torre de Belém, Lisboa", alt: "La torre fortificada de Belém, muy decorada, a orillas del Tajo, con almenas, torrecillas en las esquinas y un balcón con arcos", pfad: "torre-belem-lisboa" },

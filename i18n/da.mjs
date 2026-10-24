@@ -183,6 +183,11 @@ export default {
     "muster-erwachsene": { name: "Blomster & mønstre", titel: "Blomster & mønstre: malebog for voksne", intro: "Pæoner, paisley, kalejdoskop og mosaik: fine blomster- og mønstertegninger til voksne – gratis som A4-pdf.", pfad: "blomster-moenstre-voksne" },
   },
   bilder: {
+    "maehdrescher": { titel: "Mejetærsker på marken", alt: "En stor mejetærsker høster en kornmark, ved siden af kører en traktor med vogn, som kornet falder ned i", pfad: "mejetaersker" },
+    "schwein-matsch": { titel: "Gris i mudderpølen", alt: "En glad gris ligger i en mudderpøl ved siden af en lille pattegris, bagved et træhegn og blomster", pfad: "gris-mudderpol" },
+    "hexe-zaubertrank": { titel: "Lille heks brygger en trylledrik", alt: "En sød lille heks med spids hat rører med en stor ske i en boblende gryde, ved siden af hende sidder en kat, og på en hylde står små flasker", pfad: "heks-trylledrik" },
+    "laternenumzug-tiere": { titel: "Dyr i lanterneoptoget", alt: "Et pindsvin, en ræv og en bjørn går efter hinanden ad en skovsti og bærer lanterner på pinde, under månen og stjernerne", pfad: "dyr-lanterneoptog" },
+    "mandala-herbst-einfach": { titel: "Nem efterårsmandala", alt: "Enkel rund mandala med store felter: et æble i midten, rundt om blade, agern og svampe", pfad: "nem-efterarsmandala" },
     "einhorn-schneemann": { titel: "Enhjørning laver en snemand", alt: "En enhjørning med halstørklæde står i sneen ved siden af en snemand med kvasthue og gulerodsnæse, bagved snedækkede grantræer og en regnbue", pfad: "enhjorning-snemand" },
     "hamster-sonnenblumenkerne": { titel: "Hamster med solsikkekerner", alt: "En hamster med buttede kinder sidder i halmen og holder en solsikkekerne, ved siden af en skål med kerner og en solsikke", pfad: "hamster-solsikkekerner" },
     "torre-de-belem-lissabon": { titel: "Belém-tårnet i Lissabon", alt: "Det udsmykkede fæstningstårn i Belém ved bredden af Tejo, med murtinder, hjørnetårne og en balkon med buer", pfad: "belem-taarnet-lissabon" },
